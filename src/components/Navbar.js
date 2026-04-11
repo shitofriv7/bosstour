@@ -24,56 +24,97 @@ export default function Navbar({ lang, setLang, t }) {
     <nav 
       style={{
         position: 'fixed',
-        top: 0,
+        top: '20px',
         left: 0,
         right: 0,
         zIndex: 2000,
-        padding: '20px',
-        transition: '0.4s',
-        display: scrolled ? 'flex' : 'block',
+        padding: '0 20px',
+        display: 'flex',
         justifyContent: 'center'
       }}
     >
-      <div 
-        className={scrolled ? "luxury-card" : ""} 
+      <motion.div 
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         style={{
           width: '100%',
-          maxWidth: '1200px',
-          padding: scrolled ? '10px 25px' : '10px 20px',
+          maxWidth: scrolled ? '1000px' : '1200px',
+          height: '70px',
+          background: 'rgba(15, 23, 42, 0.7)',
+          backdropFilter: 'blur(30px)',
+          WebkitBackdropFilter: 'blur(30px)',
+          border: '1px solid rgba(212, 175, 55, 0.2)',
+          borderRadius: '100px',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          background: scrolled ? 'rgba(0,0,0,0.6)' : 'transparent',
-          border: scrolled ? '1px solid var(--glass-border)' : 'none',
-          backdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderRadius: scrolled ? '100px' : '0'
+          padding: '0 30px',
+          transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
         }}
       >
-        <motion.div 
-          layout
-          onClick={() => window.scrollTo(0, 0)}
+        {/* Logo Section */}
+        <div 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           style={{ 
-            fontSize: '24px', 
-            fontWeight: '900', 
-            letterSpacing: '3px',
-            fontFamily: "'Playfair Display', serif",
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
             cursor: 'pointer'
           }}
         >
-          BOOS<span style={{ color: 'var(--primary)' }}>TOUR</span>
-        </motion.div>
+          <div style={{
+            width: '40px',
+            height: '40px',
+            background: 'var(--primary)',
+            borderRadius: '12px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#000',
+            fontWeight: '900',
+            fontSize: '18px',
+            boxShadow: '0 0 20px rgba(212,175,55,0.3)'
+          }}>B</div>
+          <motion.div 
+            style={{ 
+              fontSize: '20px', 
+              fontWeight: '900', 
+              letterSpacing: '5px',
+              fontFamily: "'Playfair Display', serif",
+              color: '#fff'
+            }}
+          >
+            BOOS<span style={{ color: 'var(--primary)' }}>TOUR</span>
+          </motion.div>
+        </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
-          <div className="desktop-links" style={{ display: scrolled ? 'flex' : 'none', gap: '25px' }}>
+        {/* Links Section */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
+          <div className="desktop-links" style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} style={{ fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', opacity: 0.7 }}>
+              <motion.a 
+                key={item.href}
+                href={item.href}
+                whileHover={{ scale: 1.05, color: 'var(--primary)' }}
+                style={{ 
+                  fontSize: '11px', 
+                  fontWeight: '700', 
+                  textTransform: 'uppercase', 
+                  letterSpacing: '0.2em',
+                  color: 'rgba(255,255,255,0.7)',
+                  textDecoration: 'none',
+                  transition: '0.3s'
+                }}
+              >
                 {item.name}
-              </a>
+              </motion.a>
             ))}
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            <div className="lang-switcher" style={{ display: 'flex', background: 'rgba(255,255,255,0.05)', borderRadius: '100px', padding: '3px' }}>
+            {/* Lang Dropdown Concept */}
+            <div style={{ display: 'flex', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '100px', padding: '3px' }}>
               {['en', 'tr', 'de', 'ru'].map((l) => (
                 <button
                   key={l}
@@ -82,11 +123,12 @@ export default function Navbar({ lang, setLang, t }) {
                     background: lang === l ? 'var(--primary)' : 'transparent',
                     border: 'none',
                     color: lang === l ? '#000' : '#fff',
-                    padding: '5px 10px',
+                    padding: '6px 12px',
                     borderRadius: '100px',
                     fontSize: '10px',
-                    fontWeight: '800',
-                    cursor: 'pointer'
+                    fontWeight: '900',
+                    cursor: 'pointer',
+                    textTransform: 'uppercase'
                   }}
                 >
                   {l}
@@ -94,62 +136,84 @@ export default function Navbar({ lang, setLang, t }) {
               ))}
             </div>
             
-            <Menu 
-              className="mobile-toggle" 
-              onClick={() => setMobileMenu(true)} 
-              style={{ cursor: 'pointer', color: scrolled ? '#fff' : 'var(--primary)' }} 
-            />
+            <motion.button 
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setMobileMenu(true)}
+              style={{ 
+                background: 'none', 
+                border: 'none', 
+                color: 'var(--primary)', 
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center'
+              }}
+            >
+              <Menu size={28} />
+            </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
+      {/* Modern Mobile Dashboard Overlay */}
       <AnimatePresence>
         {mobileMenu && (
           <motion.div 
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             style={{ 
               position: 'fixed', inset: 0, zIndex: 3000, 
               background: 'rgba(2, 4, 8, 0.98)', 
-              backdropFilter: 'blur(15px)',
-              padding: '40px',
+              backdropFilter: 'blur(30px)',
+              padding: '60px 40px',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '40px'
+              justifyContent: 'space-between'
             }}
           >
-            <button 
-              onClick={() => setMobileMenu(false)}
-              style={{ position: 'absolute', top: '40px', right: '40px', background: 'none', border: 'none', color: '#fff' }}
-            >
-              <X size={40} />
-            </button>
-            {navItems.map((item) => (
-              <a 
-                key={item.href} 
-                href={item.href} 
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '4px' }}>BOOS<span style={{ color: 'var(--primary)' }}>TOUR</span></div>
+              <button 
                 onClick={() => setMobileMenu(false)}
-                className="serif"
-                style={{ fontSize: '3rem', color: '#fff', textDecoration: 'none' }}
+                style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: '#fff', width: '50px', height: '50px', borderRadius: '50%', display:'flex', alignItems:'center', justifyContent:'center' }}
               >
-                {item.name}
-              </a>
-            ))}
-            <button className="btn-gold" style={{ marginTop: '20px' }} onClick={() => { setMobileMenu(false); document.getElementById('fleet').scrollIntoView(); }}>{t.nav.book}</button>
+                <X size={30} />
+              </button>
+            </div>
+
+            <nav style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+              {navItems.map((item, idx) => (
+                <motion.a 
+                  key={item.href} 
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: idx * 0.1 }}
+                  href={item.href} 
+                  onClick={() => setMobileMenu(false)}
+                  className="serif"
+                  style={{ fontSize: '3.5rem', color: '#fff', textDecoration: 'none', lineHeight: '1' }}
+                >
+                  {item.name}
+                  <motion.span style={{ color: 'var(--primary)', marginLeft: '10px' }}>.</motion.span>
+                </motion.a>
+              ))}
+            </nav>
+
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '40px', display: 'grid', gap: '15px' }}>
+              <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>CONTACT US</p>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: '700' }}>+90 (555) 000 00 00</h3>
+              <p style={{ fontSize: '14px', opacity: 0.7 }}>Antalya / Turkey</p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
       <style jsx>{`
-        .desktop-links { display: flex !important; }
-        .mobile-toggle { display: none !important; }
-
         @media (max-width: 900px) {
-          .desktop-links { display: none !important; }
-          .mobile-toggle { display: block !important; }
+          .desktop-links {
+            display: none !important;
+          }
         }
       `}</style>
     </nav>
