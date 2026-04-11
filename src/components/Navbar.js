@@ -154,3 +154,4 @@ export default function Navbar({ lang, setLang, t }) {
       `}</style>
     </nav>
   );
+}
