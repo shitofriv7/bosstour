@@ -28,9 +28,9 @@ export default function Navbar({ lang, setLang, t }) {
         left: 0,
         right: 0,
         zIndex: 2000,
-        padding: scrolled ? '15px 40px' : '30px 40px',
-        transition: 'all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)',
-        display: 'flex',
+        padding: '20px',
+        transition: '0.4s',
+        display: scrolled ? 'flex' : 'block',
         justifyContent: 'center'
       }}
     >
@@ -39,54 +39,41 @@ export default function Navbar({ lang, setLang, t }) {
         style={{
           width: '100%',
           maxWidth: '1200px',
-          padding: scrolled ? '10px 30px' : '0',
+          padding: scrolled ? '10px 25px' : '10px 20px',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          background: scrolled ? 'rgba(0,0,0,0.4)' : 'transparent',
+          background: scrolled ? 'rgba(0,0,0,0.6)' : 'transparent',
           border: scrolled ? '1px solid var(--glass-border)' : 'none',
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
           borderRadius: scrolled ? '100px' : '0'
         }}
       >
-        {/* Logo */}
         <motion.div 
           layout
+          onClick={() => window.scrollTo(0, 0)}
           style={{ 
-            fontSize: '28px', 
+            fontSize: '24px', 
             fontWeight: '900', 
-            letterSpacing: '4px',
-            fontFamily: "'Playfair Display', serif"
+            letterSpacing: '3px',
+            fontFamily: "'Playfair Display', serif",
+            cursor: 'pointer'
           }}
-          className="interactive"
         >
           BOOS<span style={{ color: 'var(--primary)' }}>TOUR</span>
         </motion.div>
 
-        {/* Desktop Nav */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '50px' }}>
-          <div className="desktop-links" style={{ display: 'flex', gap: '35px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
+          <div className="desktop-links" style={{ display: scrolled ? 'flex' : 'none', gap: '25px' }}>
             {navItems.map((item) => (
-              <motion.a 
-                key={item.href}
-                href={item.href}
-                whileHover={{ y: -2, color: 'var(--primary)' }}
-                style={{ 
-                  fontSize: '13px', 
-                  fontWeight: '600', 
-                  textTransform: 'uppercase', 
-                  letterSpacing: '0.1em',
-                  opacity: 0.8 
-                }}
-              >
+              <a key={item.href} href={item.href} style={{ fontSize: '12px', fontWeight: '600', textTransform: 'uppercase', opacity: 0.7 }}>
                 {item.name}
-              </motion.a>
+              </a>
             ))}
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            {/* Language Switcher */}
-            <div style={{ display: 'flex', background: 'rgba(255,255,255,0.05)', borderRadius: '100px', padding: '4px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <div className="lang-switcher" style={{ display: 'flex', background: 'rgba(255,255,255,0.05)', borderRadius: '100px', padding: '3px' }}>
               {['en', 'tr', 'de', 'ru'].map((l) => (
                 <button
                   key={l}
@@ -95,44 +82,75 @@ export default function Navbar({ lang, setLang, t }) {
                     background: lang === l ? 'var(--primary)' : 'transparent',
                     border: 'none',
                     color: lang === l ? '#000' : '#fff',
-                    padding: '6px 14px',
+                    padding: '5px 10px',
                     borderRadius: '100px',
-                    fontSize: '11px',
+                    fontSize: '10px',
                     fontWeight: '800',
-                    cursor: 'pointer',
-                    textTransform: 'uppercase',
-                    transition: '0.3s'
+                    cursor: 'pointer'
                   }}
                 >
                   {l}
                 </button>
               ))}
             </div>
-
-            <button className="btn-gold" style={{ padding: '12px 24px', fontSize: '13px' }}>
-              {t.nav.book}
-            </button>
             
-            {/* Mobile Toggle */}
             <Menu 
               className="mobile-toggle" 
               onClick={() => setMobileMenu(true)} 
-              style={{ display: 'none', cursor: 'pointer' }} 
+              style={{ cursor: 'pointer', color: scrolled ? '#fff' : 'var(--primary)' }} 
             />
           </div>
         </div>
       </div>
 
+      <AnimatePresence>
+        {mobileMenu && (
+          <motion.div 
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            style={{ 
+              position: 'fixed', inset: 0, zIndex: 3000, 
+              background: 'rgba(2, 4, 8, 0.98)', 
+              backdropFilter: 'blur(15px)',
+              padding: '40px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '40px'
+            }}
+          >
+            <button 
+              onClick={() => setMobileMenu(false)}
+              style={{ position: 'absolute', top: '40px', right: '40px', background: 'none', border: 'none', color: '#fff' }}
+            >
+              <X size={40} />
+            </button>
+            {navItems.map((item) => (
+              <a 
+                key={item.href} 
+                href={item.href} 
+                onClick={() => setMobileMenu(false)}
+                className="serif"
+                style={{ fontSize: '3rem', color: '#fff', textDecoration: 'none' }}
+              >
+                {item.name}
+              </a>
+            ))}
+            <button className="btn-gold" style={{ marginTop: '20px' }} onClick={() => { setMobileMenu(false); document.getElementById('fleet').scrollIntoView(); }}>{t.nav.book}</button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <style jsx>{`
-        @media (max-width: 992px) {
-          .desktop-links {
-            display: none !important;
-          }
-          .mobile-toggle {
-            display: block !important;
-          }
+        .desktop-links { display: flex !important; }
+        .mobile-toggle { display: none !important; }
+
+        @media (max-width: 900px) {
+          .desktop-links { display: none !important; }
+          .mobile-toggle { display: block !important; }
         }
       `}</style>
     </nav>
   );
-}

@@ -183,7 +183,84 @@ html, body {
   background: rgba(212, 175, 55, 0.05);
 }
 
-@media (max-width: 900px) {
-  .main-grid { grid-template-columns: 1fr; }
-  .luxury-title { font-size: 3.5rem; }
+/* Responsive Improvements */
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 92%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .luxury-title {
+    font-size: 3rem !important;
+    text-align: center;
+  }
+  
+  .luxury-para {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-gold, .btn-outline {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  section {
+    padding: 60px 0 !important;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .luxury-card {
+    padding: 20px !important;
+  }
+
+  /* Stat items fix for 1 col */
+  .main-grid > div {
+    grid-column: 1 / -1 !important;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Hero adjustments */
+  #home {
+    height: auto;
+    padding-top: 120px !important;
+    padding-bottom: 80px !important;
+    text-align: center;
+  }
+
+  #home div div {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .section-label {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+  }
 }
