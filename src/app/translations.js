@@ -1,58 +1,11 @@
 export const translations = {
   en: {
-    nav: {
-      home: "Home",
-      services: "Services",
-      fleet: "Our Fleet",
-      contact: "Contact",
-      book: "Reserve"
-    },
-    hero: {
-      title: "Reliable Travel in Antalya",
-      subtitle: "Comfortable, modern and economical car rentals for your perfect holiday.",
-      cta: "Browse Fleet"
-    },
-    services: {
-      title: "Our Services",
-      subtitle: "Professional mobility for every journey.",
-      airport: "Airport Delivery",
-      airportDesc: "Your car waiting for you at Antalya Airport (AYT) the moment you arrive.",
-      rental: "Modern Fleet",
-      rentalDesc: "Well-maintained, latest model economy and middle-class vehicles.",
-      tours: "Local Insights",
-      toursDesc: "Discovery routes and tips for exploring Antalya like a local."
-    },
-    tours: {
-      title: "Popular Adventures",
-      subtitle: "Unforgettable tours to complete your holiday.",
-      viewTour: "Learn More",
-      list: [
-        { 
-          name: "Luxury Yacht Tour", 
-          duration: "6 Hours", 
-          price: "€65", 
-          image: "https://images.unsplash.com/photo-1544413647-ad54089a690d?q=80&w=1000",
-          desc: "Cruise along the turquoise coast with lunch on board and swimming stops in crystal clear bays."
-        },
-        { 
-          name: "Taurus Jeep Safari", 
-          duration: "Full Day", 
-          price: "€40", 
-          image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1000",
-          desc: "An adrenaline-filled day exploring off-road mountains, canyons and local village life."
-        },
-        { 
-          name: "Scuba Diving", 
-          duration: "5 Hours", 
-          price: "€55", 
-          image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000",
-          desc: "Discover the hidden underwater world of the Mediterranean with expert instructors."
-        }
-      ]
-    },
+    nav: { home: "Home", services: "Adventures", fleet: "Our Fleet", contact: "Contact" },
+    hero: { title: "Adventure Awaits in Antalya", subtitle: "Explore the turquoise coast with Boss Tour. Rent a car or join our unique tours." },
     fleet: {
-      title: "Available Cars",
-      subtitle: "Quality meeting economy. Find your match.",
+      title: "Our Premium Fleet",
+      subtitle: "Modern, safe, and comfortable vehicles for every journey.",
+      viewAll: "View All Fleet",
       viewDetails: "View Details",
       list: [
         { 
@@ -61,8 +14,8 @@ export const translations = {
           gear: "Manual", 
           passenger: 5, 
           price: "€45", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "The perfect balance of economy and space. Ideal for long drives through the scenic Taurus mountains with low fuel consumption."
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbN1_TwSefKLXcrdC4qy5_j_HDyfDj12pv0g&s",
+          longDesc: "The perfect balance of economy and space. Ideal for long drives through the scenic Taurus mountains."
         },
         { 
           name: "Renault Clio", 
@@ -70,118 +23,128 @@ export const translations = {
           gear: "Auto", 
           passenger: 5, 
           price: "€40", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Compact, stylish, and incredibly easy to park in Antalya's narrow Old Town streets. Modern infotainment included."
+          image: "https://otopoint.com.tr/wp-content/uploads/2022/10/clio2.jpg",
+          longDesc: "Compact, stylish, and incredibly easy to park in Antalya's narrow Old Town streets."
         },
         { 
-          name: "Volkswagen Polo", 
+          name: "Egea Cross", 
+          fuel: "Diesel", 
+          gear: "Auto", 
+          passenger: 5, 
+          price: "€55", 
+          image: "https://databank.fiatbayi.com.tr/images/modeller/egea-cross/egea-cross-paket.jpg",
+          longDesc: "Tough crossover spirit. High ground clearance makes it perfect for reaching hidden beaches."
+        },
+        { 
+          name: "Citroen C3", 
           fuel: "Petrol", 
           gear: "Auto", 
           passenger: 5, 
-          price: "€50", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Premium feel in a compact body. Perfect for couples or small families seeking German engineering and comfort."
+          price: "€45", 
+          image: "https://www.citroenorigins.fr/sites/default/files/styles/640/public/2023-07/b618_70_1620x1000_0.png",
+          longDesc: "Distinctive design and unmatched comfort. The perfect stress-free city car."
+        },
+        { 
+          name: "Classic Suzuki Jeep", 
+          fuel: "Petrol", 
+          gear: "Manual", 
+          passenger: 4, 
+          price: "€70", 
+          image: "https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg",
+          longDesc: "Authentic adventure spirit. Open-top classic jeep for off-road tracks."
+        },
+        { 
+          name: "Hyundai i20", 
+          fuel: "Petrol", 
+          gear: "Auto", 
+          passenger: 5, 
+          price: "€45", 
+          image: "https://stimg.cardekho.com/images/car-images/large/Hyundai/i20/11093/1758102282831/Atlas-White_d5d5d5.jpg?impolicy=resize&imwidth=420",
+          longDesc: "Modern, dynamic and remarkably spacious for its class. Ideal for urban exploring."
+        },
+        { 
+          name: "Ford Custom", 
+          fuel: "Diesel", 
+          gear: "Manual", 
+          passenger: 9, 
+          price: "€85", 
+          image: "https://www.otokoc.com.tr/getmedia/39d7ba95-f56e-4dd6-8585-2738afb27c7f/transit1-650x354.webp?ext=.webp",
+          longDesc: "The ultimate group mover. Spacious, powerful and comfortable for large families."
         }
       ]
     },
-    whyUs: {
-      title: "The Boos Difference",
-      items: [
-        { title: "24/7 Delivery", desc: "Airport or Hotel. Your car arrives exactly when you do." },
-        { title: "Zero Hidden Fees", desc: "No surprises at the counter. Full transparency in every contract." },
-        { title: "Young Fleet", desc: "All our vehicles are under 2 years old and regularly maintained." }
+    tours: {
+      title: "Popular Adventures",
+      subtitle: "Unforgettable tours to complete your holiday.",
+      viewTour: "Learn More",
+      list: [
+        { name: "Pamukkale", price: "€45", duration: "Full Day", image: "https://explorekusadasi.com/wp-content/uploads/2022/07/pamukkale-tour-kusadasi-1200x900.jpg", desc: "Witness the 'Cotton Castle' - stunning white travertine terraces and the ancient city of Hierapolis." },
+        { name: "Rafting Adventure", price: "€35", duration: "6 Hours", image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Fun_Rafting_Elo_River_Magelang.jpg", desc: "An adrenaline-filled journey down the wild Koprucay river. Fun for groups and families." },
+        { name: "Mix Adventure Tour", price: "€55", duration: "Full Day", image: "https://www.touralanya.com/TurResimleri/181925adventurepackagetourfromalanya.jpeg", desc: "The ultimate combo: Rafting, Zipline, and Canyon tour all in one exciting day." },
+        { name: "Kekova Demre Myra", price: "€50", duration: "Full Day", image: "https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", desc: "Discover the sunken city, ancient Lycian tombs, and the church of Saint Nicholas." },
+        { name: "Paragliding", price: "€75", duration: "3 Hours", image: "https://cloudbasetravel.com/wp-content/uploads/2021/05/G0026043-scaled.jpg", desc: "Fly like a bird over the turquoise coast. Experience breathtaking views from above." },
+        { name: "Alanya Jeep Safari", price: "€40", duration: "Full Day", image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/36/51/8b.jpg", desc: "Off-road adventure through the Taurus mountains with panoramic Alanya views." },
+        { name: "Cappadocia Trip", price: "€120", duration: "2 Days", image: "https://kapadokyaturlari.com.tr/uploads/2021/12/kapadokya-turu-1-gece-1.webp", desc: "A magical journey to the land of fairy chimneys and early morning hot air balloons." },
+        { name: "Zipline Experience", price: "€25", duration: "2 Hours", image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/df/cc/8f.jpg", desc: "Feel the speed as you slide through the green canyons on a high-flying cable." },
+        { name: "Luxury Boat Tour", price: "€40", duration: "6 Hours", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/88/5f/8d/yacht-tour.jpg?w=1200", desc: "Sun, sea, and relaxation. Enjoy a day on a yacht with swimming stops and lunch." },
+        { name: "Lavender Garden", price: "€35", duration: "6 Hours", image: "https://media-cdn.tripadvisor.com/media/photo-s/17/dc/5d/7c/kuyucak-lavanta-koyu.jpg", desc: "Visit the fragrant lavender fields and take stunning photos in nature's purple carpet." },
+        { name: "Quad Safari", price: "€40", duration: "3 Hours", image: "https://img.getyourguide.com/img/tour/5d5671bc97f74.jpeg/145.jpg", desc: "Get muddy and have fun! Drive your own ATV through dusty forest tracks." },
+        { name: "Sapadere Canyon Safari", price: "€45", duration: "Full Day", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/88/2c/61/sapadere-kanyonu.jpg?w=1200", desc: "Explore the hidden waterfalls and cold mountain waters of Sapadere Canyon." },
+        { name: "Side Aspendos Manavgat", price: "€45", duration: "Full Day", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/22/a3/9f/side-aspendos-manavgat.jpg?w=1200", desc: "A Perfect mix of archaeology and nature. Visit the antique theater and waterfalls." },
+        { name: "Fishing Tour", price: "€40", duration: "5 Hours", image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7a/6c/fb.jpg", desc: "Enjoy a peaceful day at sea. Try your luck at catching Mediterranean fish." },
+        { name: "Alanya City Tour", price: "€30", duration: "4 Hours", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/34/0d/17/alanya-castle.jpg?w=1200", desc: "Explore the historic Alanya castle, the Red Tower, and the Damlatas cave." }
       ]
     },
     contact: {
       title: "Get in Touch",
       name: "Full Name",
-      email: "Email Address",
+      email: "Email",
       phone: "Phone Number",
       message: "Your Message",
       send: "Send Message",
       whatsapp: "Chat on WhatsApp"
     },
+    whyUs: {
+      title: "The Boss Advantage",
+      items: [
+        { title: "24/7 Delivery", desc: "Airport or hotel. Your car arrives exactly when you do." },
+        { title: "No Hidden Fees", desc: "What you see is what you pay. Transparent contracts every time." },
+        { title: "Young Fleet", desc: "All our cars are under 2 years old and regularly maintained." }
+      ]
+    },
     testimonials: {
-      title: "Reviews",
-      subtitle: "Happy travelers from all around the world.",
+      title: "Happy Travelers",
+      subtitle: "Join thousands of satisfied explorers.",
       list: [
-        { name: "John D.", role: "Family Trip", text: "Fair pricing and a very clean car. Egea was perfect for our Antalya drive." },
-        { name: "Sarah L.", role: "Solo Explorer", text: "Quick airport pickup. The car was super efficient and clean." },
-        { name: "Hans M.", role: "Vacation", text: "No surprises, honest service. Highly recommended car rental." }
+        { name: "John D.", role: "Family Trip", text: "Fair prices and a very clean car. The Egea was perfect for us." },
+        { name: "Sarah L.", role: "Solo Explorer", text: "The boat tour was the highlight of my trip. Stunning bays!" },
+        { name: "Hans M.", role: "Repeat Guest", text: "Reliable service. I rent from Boss Tour every summer." }
       ]
     },
     faq: {
-      title: "Common Questions",
+      title: "FAQ",
       list: [
-        { q: "Is a deposit required?", a: "Yes, a minor deposit is held during the rental and released immediately upon return." },
-        { q: "Can I receive the car at the airport?", a: "Absolutely. We provide meet-and-greet service at Antalya Airport (AYT) 24/7." },
-        { q: "What insurance is included?", a: "All rentals include standard comprehensive insurance. Optional full damage waivers are available." }
+        { q: "Is a deposit required?", a: "Yes, a small security deposit is taken at rental and returned immediately upon return." },
+        { q: "Can I get the car at the airport?", a: "Absolutely. We provide meet-and-greet services at Antalya Airport (AYT) 24/7." }
       ]
     },
     guide: {
-      title: "Discover Antalya",
-      subtitle: "The best places to reach with your Boos Tour car.",
+      title: "Explore Antalya",
+      subtitle: "Top destinations reachable with Boss Tour.",
       list: [
-        { name: "Kas & Kaputas", dist: "190 km", tags: ["Beach", "Scenic"] },
-        { name: "Side Ancient City", dist: "75 km", tags: ["History", "Sunset"] },
-        { name: "The Land of Legends", dist: "30 km", tags: ["Fun", "Family"] }
+        { name: "Kas & Kaputas", dist: "190 km", tags: ["Beach", "Views"] },
+        { name: "Ancient Side", dist: "75 km", tags: ["History", "Sunset"] },
+        { name: "The Land of Legends", dist: "30 km", tags: ["Family", "Fun"] }
       ]
     }
   },
   tr: {
-    nav: {
-      home: "Ana Sayfa",
-      services: "Hizmetler",
-      fleet: "Filomuz",
-      contact: "İletişim",
-      book: "Hemen Kirala"
-    },
-    hero: {
-      title: "Antalya'da Güvenli Sürüş",
-      subtitle: "Sorunsuz bir tatil için konforlu, modern ve ekonomik araç kiralama.",
-      cta: "Filoyu İncele"
-    },
-    services: {
-      title: "Hizmetlerimiz",
-      subtitle: "Her yolculuk için profesyonel çözümler.",
-      airport: "Havalimanı Teslim",
-      airportDesc: "Uçağınız indiği an kiralık aracınız Antalya Havalimanı'nda (AYT) kapıda.",
-      rental: "Modern Filo",
-      rentalDesc: "Bakımlı, son model ekonomik ve orta sınıf araç seçenekleri.",
-      tours: "Yerel Rotalar",
-      toursDesc: "Antalya'yı yerlisi gibi keşfetmeniz için rota önerileri ve ipuçları."
-    },
-    tours: {
-      title: "Popüler Maceralar",
-      subtitle: "Tatilinizi unutulmaz kılacak benzersiz tur seçenekleri.",
-      viewTour: "Detayları Gör",
-      list: [
-        { 
-          name: "Lüks Yat Turu", 
-          duration: "6 Saat", 
-          price: "€65", 
-          image: "https://images.unsplash.com/photo-1544413647-ad54089a690d?q=80&w=1000",
-          desc: "Masmavi koylarda yüzme molaları ve özel öğle yemeği eşliğinde turkuaz kıyıların keyfini çıkarın."
-        },
-        { 
-          name: "Toros Jeep Safari", 
-          duration: "Tam Gün", 
-          price: "€40", 
-          image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1000",
-          desc: "Kanyonlar, dağ yolları ve köy hayatını keşfedeceğiniz adrenalin dolu bir gün."
-        },
-        { 
-          name: "Tüplü Dalış", 
-          duration: "5 Saat", 
-          price: "€55", 
-          image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000",
-          desc: "Akdeniz'in gizemli sularını uzman eğitmenler eşliğinde keşfedin."
-        }
-      ]
-    },
+    nav: { home: "Ana Sayfa", services: "Maceralar", fleet: "Filomuz", contact: "İletişim" },
+    hero: { title: "Antalya'da Macera Başlıyor", subtitle: "Boss Tour ile turkuaz kıyıları keşfedin. İster araç kiralayın, ister turlarımıza katılın." },
     fleet: {
-      title: "Araç Listesi",
-      subtitle: "Ekonomi ile kaliteyi buluşturan geniş araç seçeneklerimiz.",
+      title: "Premium Filomuz",
+      subtitle: "Her yolculuk için modern, güvenli ve konforlu araçlar.",
+      viewAll: "Tüm Filoyu Görüntüle",
       viewDetails: "Detayları Gör",
       list: [
         { 
@@ -190,8 +153,8 @@ export const translations = {
           gear: "Manuel", 
           passenger: 5, 
           price: "€45", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Ekonomi ve geniş iç hacmin mükemmel dengesi. Düşük yakıt tüketimi ile Toroslar'da uzun sürüşler için ideal."
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbN1_TwSefKLXcrdC4qy5_j_HDyfDj12pv0g&s",
+          longDesc: "Ekonomi ve geniş iç hacmin mükemmel dengesi. Toroslar'da uzun sürüşler için ideal."
         },
         { 
           name: "Renault Clio", 
@@ -199,33 +162,91 @@ export const translations = {
           gear: "Otomatik", 
           passenger: 5, 
           price: "€40", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Kompakt, şık ve Antalya'nın dar sokaklarında park etmesi inanılmaz kolay. Modern multimedya sistemi dahil."
+          image: "https://otopoint.com.tr/wp-content/uploads/2022/10/clio2.jpg",
+          longDesc: "Kompakt, şık ve Antalya'nın dar sokaklarında park etmesi inanılmaz kolay."
         },
         { 
-          name: "Volkswagen Polo", 
+          name: "Fiat Egea Cross", 
+          fuel: "Dizel", 
+          gear: "Otomatik", 
+          passenger: 5, 
+          price: "€55", 
+          image: "https://databank.fiatbayi.com.tr/images/modeller/egea-cross/egea-cross-paket.jpg",
+          longDesc: "Güçlü crossover ruhu. Gizli plajlara ve dağ yollarına ulaşmak için mükemmel."
+        },
+        { 
+          name: "Citroen C3", 
           fuel: "Benzin", 
           gear: "Otomatik", 
           passenger: 5, 
-          price: "€50", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Küçük sınıfta premium hissi. Alman mühendisliği ve konfor arayan çiftler veya küçük aileler için mükemmel."
+          price: "€45", 
+          image: "https://www.citroenorigins.fr/sites/default/files/styles/640/public/2023-07/b618_70_1620x1000_0.png",
+          longDesc: "Kendine has tasarımı ve eşsiz konforu. Şehir içinde stressiz sürüş için ideal."
+        },
+        { 
+          name: "Klasik Suzuki Jeep", 
+          fuel: "Benzin", 
+          gear: "Manuel", 
+          passenger: 4, 
+          price: "€70", 
+          image: "https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg",
+          longDesc: "Gerçek macera ruhu. Doğayı her an hissedebileceğiniz klasik üstü açık jeep."
+        },
+        { 
+          name: "Hyundai i20", 
+          fuel: "Benzin", 
+          gear: "Otomatik", 
+          passenger: 5, 
+          price: "€45", 
+          image: "https://stimg.cardekho.com/images/car-images/large/Hyundai/i20/11093/1758102282831/Atlas-White_d5d5d5.jpg?impolicy=resize&imwidth=420",
+          longDesc: "Modern, dinamik ve oldukça geniş. Şehir içi keşifler için mükemmel."
+        },
+        { 
+          name: "Ford Custom", 
+          fuel: "Dizel", 
+          gear: "Manuel", 
+          passenger: 9, 
+          price: "€85", 
+          image: "https://www.otokoc.com.tr/getmedia/39d7ba95-f56e-4dd6-8585-2738afb27c7f/transit1-650x354.webp?ext=.webp",
+          longDesc: "Geniş aileler için en iyi çözüm. Ferah, güçlü ve konforlu."
         }
       ]
     },
     whyUs: {
-      title: "Boos Farkı",
+      title: "Neden Boss?",
       items: [
-        { title: "7/24 Teslimat", desc: "Havalimanı veya Otel. Aracınız siz ne zaman isterseniz orada." },
-        { title: "Gizli Ücret Yok", desc: "Sözleşmede ne görüyorsanız o. Sürpriz ek ödemelerle karşılaşmazsınız." },
-        { title: "Genç Filo", desc: "Tüm araçlarımız 2 yaşın altında ve düzenli servis bakımlıdır." }
+        { title: "7/24 Teslimat", desc: "Havaalanı veya otel. Aracınız tam vaktinde kapınızda." },
+        { title: "Gizli Ücret Yok", desc: "Ne görüyorsanız onu ödersiniz. Şeffaf sözleşmeler." },
+        { title: "Yeni Araç Parkı", desc: "Tüm araçlarımız 2 yaşından küçük ve düzenli bakımlıdır." }
+      ]
+    },
+    tours: {
+      title: "Popüler Maceralar",
+      subtitle: "Tatilinizi unutulmaz kılacak benzersiz tur seçenekleri.",
+      viewTour: "Detayları Gör",
+      list: [
+        { name: "Pamukkale Turu", price: "€45", duration: "Tam Gün", image: "https://explorekusadasi.com/wp-content/uploads/2022/07/pamukkale-tour-kusadasi-1200x900.jpg", desc: "Pamuk kaleler - bembeyaz travertenler ve antik Hierapolis kentini keşfedin." },
+        { name: "Rafting Macerası", price: "€35", duration: "6 Saat", image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Fun_Rafting_Elo_River_Magelang.jpg", desc: "Köprüçay'ın azgın sularında adrenalin dolu bir yolculuk. Gruplar için harika eğlence." },
+        { name: "Mix Macera Turu", price: "€55", duration: "Tam Gün", image: "https://www.touralanya.com/TurResimleri/181925adventurepackagetourfromalanya.jpeg", desc: "Mükemmel kombinasyon: Rafting, Zipline ve Kanyon turu tek bir günde." },
+        { name: "Kekova Demre Myra", price: "€50", duration: "Tam Gün", image: "https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", desc: "Batık şehir, antik Likya mezarları ve Aziz Nikolaos kilisesini ziyaret edin." },
+        { name: "Yamaç Paraşütü", price: "€75", duration: "3 Saat", image: "https://cloudbasetravel.com/wp-content/uploads/2021/05/G0026043-scaled.jpg", desc: "Gökyüzünde özgürlüğü hissedin. Turkuaz kıyıların eşsiz manzarasını kuş bakışı izleyin." },
+        { name: "Alanya Jeep Safari", price: "€40", duration: "Tam Gün", image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/36/51/8b.jpg", desc: "Toros dağlarında arazi sürüşü ve panoramik Alanya manzarası eşliğinde macera." },
+        { name: "Kapadokya Gezisi", price: "€120", duration: "2 Gün", image: "https://kapadokyaturlari.com.tr/uploads/2021/12/kapadokya-turu-1-gece-1.webp", desc: "Peri bacaları diyarına sihirli bir yolculuk ve sabahın ilk ışıklarında balon keyfi." },
+        { name: "Zipline Eğlencesi", price: "€25", duration: "2 Saat", image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/df/cc/8f.jpg", desc: "Yüksekten hızla kayarken kanyonların yeşilliğini ve rüzgarı hissedin." },
+        { name: "Lüks Tekne Turu", price: "€40", duration: "6 Saat", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/88/5f/8d/yacht-tour.jpg?w=1200", desc: "Güneş, deniz ve rahatlama. Yat turunda yüzme molaları ve lezzetli yemekler." },
+        { name: "Lavanta Bahçesi", price: "€35", duration: "6 Saat", image: "https://media-cdn.tripadvisor.com/media/photo-s/17/dc/5d/7c/kuyucak-lavanta-koyu.jpg", desc: "Mis kokulu lavanta tarlalarını ziyaret edin ve doğanın mor örtüsünde harika fotoğraflar çekin." },
+        { name: "Atv Quad Safari", price: "€40", duration: "3 Saat", image: "https://img.getyourguide.com/img/tour/5d5671bc97f74.jpeg/145.jpg", desc: "Eğlenceye ve çamura hazır olun! Orman yollarında kendi ATV'nizi sürün." },
+        { name: "Sapadere Kanyon Safari", price: "€45", duration: "Tam Gün", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/88/2c/61/sapadere-kanyonu.jpg?w=1200", desc: "Sapadere Kanyonu'nun gizli şelalelerini ve buz gibi dağ sularını keşfedin." },
+        { name: "Side Aspendos Manavgat", price: "€45", duration: "Tam Gün", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/22/a3/9f/side-aspendos-manavgat.jpg?w=1200", desc: "Arkeoloji ve doğanın mükemmel uyumu. Antik tiyatro ve Manavgat şelalesi." },
+        { name: "Balık Turu", price: "€40", duration: "5 Saat", image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7a/6c/fb.jpg", desc: "Denizde huzurlu bir gün. Akdeniz balıklarını yakalamak için şansınızı deneyin." },
+        { name: "Alanya Şehir Turu", price: "€30", duration: "4 Saat", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/34/0d/17/alanya-castle.jpg?w=1200", desc: "Alanya kalesi, Kızıl Kule ve Damlataş mağarasını uzman rehberlerle keşfedin." }
       ]
     },
     contact: {
-      title: "Bize Ulaşın",
+      title: "İletişime Geçin",
       name: "Ad Soyad",
-      email: "E-posta",
-      phone: "Telefon Numarası",
+      email: "E-Posta",
+      phone: "Telefon",
       message: "Mesajınız",
       send: "Gönder",
       whatsapp: "WhatsApp'tan Yazın"
@@ -234,55 +255,35 @@ export const translations = {
       title: "Müşteri Yorumları",
       subtitle: "Dünyanın her yerinden mutlu gezginler.",
       list: [
-        { name: "Can Y.", role: "Aile Gezisi", text: "Uygun fiyat ve çok temiz bir araç. Egea Antalya gezimiz için mükemmeldi." },
-        { name: "Leyla S.", role: "Solo Seyyah", text: "Hızlı teslimat. Kiralamış olduğum araç oldukça ekonomikti." },
-        { name: "Hans M.", role: "Tatil", text: "Sürpriz yok, dürüst hizmet. Kesinlikle tavsiye ederim." }
+        { name: "John D.", role: "Aile Tatili", text: "Dürüst fiyatlar ve çok temiz araç. Egea bizim için mükemmeldi." },
+        { name: "Sarah L.", role: "Gezgin", text: "Havaalanında bekletmeden aracı teslim ettiler. Güvenilir servis." },
+        { name: "Mehmet K.", role: "İş Gezisi", text: "Turlar harikaydı, her şey planlandığı gibi gitti." }
       ]
     },
     faq: {
-      title: "Sıkça Sorulanlar",
+      title: "Sıkça Sorulan Sorular",
       list: [
-        { q: "Depozito gerekli mi?", a: "Evet, kiralama esnasında cüzi bir depozito alınır ve iade sonrası anında serbest bırakılır." },
-        { q: "Havalimanında teslimat yapıyor musunuz?", a: "Kesinlikle. Antalya Havalimanı'nda (AYT) 7/24 karşılama ve teslimat yapıyoruz." },
-        { q: "Ehliyet şartları nelerdir?", a: "En az 2 yıllık geçerli bir B sınıfı ehliyet araç kiralamak için yeterlidir." }
+        { q: "Depozito gerekli mi?", a: "Evet, araç tesliminde küçük bir depozito alınır ve teslimatta iade edilir." },
+        { q: "Havaalanında araç alabilir miyim?", a: "Kesinlikle. Antalya Havalimanı (AYT) için 7/24 hizmetimiz vardır." }
       ]
     },
     guide: {
       title: "Antalya Rehberi",
-      subtitle: "Boos Tour aracınızla keşfedebileceğiniz en iyi noktalar.",
+      subtitle: "Boss Tour aracıyla gidebileceğiniz en iyi rotalar.",
       list: [
         { name: "Kaş & Kaputaş", dist: "190 km", tags: ["Plaj", "Manzara"] },
-        { name: "Side Antik Kenti", dist: "75 km", tags: ["Tarih", "Günbatımı"] },
-        { name: "Land of Legends", dist: "30 km", tags: ["Eğlence", "Aile"] }
+        { name: "Antik Side", dist: "75 km", tags: ["Tarih", "Gün Batımı"] },
+        { name: "The Land of Legends", dist: "30 km", tags: ["Eğlence", "Aile"] }
       ]
     }
   },
   de: {
-    nav: {
-      home: "Startseite",
-      services: "Services",
-      fleet: "Flotte",
-      contact: "Kontakt",
-      book: "Mieten"
-    },
-    hero: {
-      title: "Sicher Fahren in Antalya",
-      subtitle: "Komfortable, moderne und preiswerte Mietwagen für Ihren perfekten Urlaub.",
-      cta: "Flotte ansehen"
-    },
-    services: {
-      title: "Unsere Dienstleistungen",
-      subtitle: "Professionelle Mobilität für jede Reise.",
-      airport: "Flughafenzustellung",
-      airportDesc: "Ihr Mietwagen wartet direkt am Flughafen Antalya (AYT) auf Sie.",
-      rental: "Moderne Flotte",
-      rentalDesc: "Gepflegte Mittelklassewagen und sparsame Modelle.",
-      tours: "Insider-Tipps",
-      toursDesc: "Vorschläge für Routen, um Antalya wie ein Einheimischer zu erleben."
-    },
+    nav: { home: "Startseite", services: "Abenteuer", fleet: "Unsere Flotte", contact: "Kontakt" },
+    hero: { title: "Abenteuer in Antalya", subtitle: "Entdecken Sie die Küste mit Boss Tour. Mieten Sie ein Auto oder erleben Sie unsere Touren." },
     fleet: {
-      title: "Fahrzeugliste",
-      subtitle: "Qualität trifft Wirtschaftlichkeit. Finden Sie das passende Auto.",
+      title: "Unsere Flotte",
+      subtitle: "Modern, sicher und komfortabel für jede Reise.",
+      viewAll: "Gesamte Flotte",
       viewDetails: "Details sehen",
       list: [
         { 
@@ -291,8 +292,8 @@ export const translations = {
           gear: "Manuell", 
           passenger: 5, 
           price: "€45", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Die perfekte Balance zwischen Wirtschaftlichkeit und Platz. Ideal für lange Fahrten durch das Taurusgebirge."
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbN1_TwSefKLXcrdC4qy5_j_HDyfDj12pv0g&s",
+          longDesc: "Die perfekte Balance zwischen Wirtschaftlichkeit und Platz. Ideal für lange Fahrten."
         },
         { 
           name: "Renault Clio", 
@@ -300,117 +301,94 @@ export const translations = {
           gear: "Automatik", 
           passenger: 5, 
           price: "€40", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Kompakt, stilvoll und einfach in den engen Gassen der Altstadt von Antalya zu parken."
+          image: "https://otopoint.com.tr/wp-content/uploads/2022/10/clio2.jpg",
+          longDesc: "Kompakt, stilvoll und einfach in den engen Gassen von Antalya zu parken."
         },
         { 
-          name: "Volkswagen Polo", 
+          name: "Fiat Egea Cross", 
+          fuel: "Diesel", 
+          gear: "Automatik", 
+          passenger: 5, 
+          price: "€55", 
+          image: "https://databank.fiatbayi.com.tr/images/modeller/egea-cross/egea-cross-paket.jpg",
+          longDesc: "Robuster Crossover-Geist. Perfekt für versteckte Strände und Bergpfade."
+        },
+        { 
+          name: "Citroen C3", 
           fuel: "Benzin", 
           gear: "Automatik", 
           passenger: 5, 
-          price: "€50", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Premium-Gefühl in kompakter Form. Perfekt für Paare oder kleine Familien."
+          price: "€45", 
+          image: "https://www.citroenorigins.fr/sites/default/files/styles/640/public/2023-07/b618_70_1620x1000_0.png",
+          longDesc: "Markantes Design und unübertroffener Komfort. Das perfekte Stadtauto."
+        },
+        { 
+          name: "Klassik Suzuki Jeep", 
+          fuel: "Benzin", 
+          gear: "Manuell", 
+          passenger: 4, 
+          price: "€70", 
+          image: "https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg",
+          longDesc: "Authentischer Abenteuergeist. Klassischer Open-Top-Jeep für Entdecker."
+        },
+        { 
+          name: "Hyundai i20", 
+          fuel: "Benzin", 
+          gear: "Automatik", 
+          passenger: 5, 
+          price: "€45", 
+          image: "https://stimg.cardekho.com/images/car-images/large/Hyundai/i20/11093/1758102282831/Atlas-White_d5d5d5.jpg?impolicy=resize&imwidth=420",
+          longDesc: "Modern, dynamic und überraschend geräumig. Ideal für Stadtbesichtigungen."
+        },
+        { 
+          name: "Ford Custom", 
+          fuel: "Diesel", 
+          gear: "Manuell", 
+          passenger: 9, 
+          price: "€85", 
+          image: "https://www.otokoc.com.tr/getmedia/39d7ba95-f56e-4dd6-8585-2738afb27c7f/transit1-650x354.webp?ext=.webp",
+          longDesc: "Der ultimative Gruppen transporter. Geräumig und komfortabel für große Familien."
         }
-      ]
-    },
-    whyUs: {
-      title: "Der Boos Unterschied",
-      items: [
-        { title: "24/7 Zustellung", desc: "Flughafen oder Hotel. Ihr Auto kommt genau dann an, wenn Sie es brauchen." },
-        { title: "Keine versteckten Gebühren", desc: "Volle Transparenz in jedem Vertrag. Keine Überraschungen bei der Rückgabe." },
-        { title: "Junge Flotte", desc: "Alle unsere Fahrzeuge sind unter 2 Jahre alt und regelmäßig gewartet." }
       ]
     },
     tours: {
       title: "Antalya Entdecken",
       viewTour: "Mehr Erfahren",
       list: [
-        { 
-          name: "Luxus-Yacht-Tour", 
-          duration: "6 Stunden", 
-          price: "€65", 
-          image: "https://images.unsplash.com/photo-1544413647-ad54089a690d?q=80&w=1000",
-          desc: "Cruise entlang der türkisfarbenen Küste mit Mittagessen an Bord und Badestopps."
-        },
-        { 
-          name: "Taurus Jeep Safari", 
-          duration: "Ganztägig", 
-          price: "€40", 
-          image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1000",
-          desc: "Ein actionreicher Tag zur Erkundung von Bergen, Canyons und lokalem Dorfleben."
-        },
-        { 
-          name: "Scuba Diving", 
-          duration: "5 Stunden", 
-          price: "€55", 
-          image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000",
-          desc: "Entdecken Sie die verborgene Unterwasserwelt des Mittelmeers mit Experten."
-        }
+        { name: "Pamukkale", price: "€45", duration: "Ganztägig", image: "https://explorekusadasi.com/wp-content/uploads/2022/07/pamukkale-tour-kusadasi-1200x900.jpg", desc: "Besuchen Sie das 'Baumwollschloss' - die berühmten Kalksteinterrassen und die Ruinen von Hierapolis." },
+        { name: "Rafting Abenteuer", price: "€35", duration: "6 Stunden", image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Fun_Rafting_Elo_River_Magelang.jpg", desc: "Eine actiongeladene Fahrt auf dem Fluss Koprucay. Großer Spaß für Gruppen und Familien." },
+        { name: "Mix Abenteuer Tour", price: "€55", duration: "Ganztägig", image: "https://www.touralanya.com/TurResimleri/181925adventurepackagetourfromalanya.jpeg", desc: "Die ultimate Kombination: Rafting, Zipline und Canyoning an einem aufregenden Tag." },
+        { name: "Kekova Demre Myra", price: "€50", duration: "Ganztägig", image: "https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", desc: "Entdecken Sie die versunkene Stadt, lykische Felsengräber und die St.-Nikolaus-Kirche." },
+        { name: "Paragliding", price: "€75", duration: "3 Stunden", image: "https://cloudbasetravel.com/wp-content/uploads/2021/05/G0026043-scaled.jpg", desc: "Fliegen Sie wie ein Vogel über die türkisfarbene Küste mit atemberaubenden Ausblicken." },
+        { name: "Alanya Jeep Safari", price: "€40", duration: "Ganztägig", image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/36/51/8b.jpg", desc: "Offroad-Abenteuer durch das Taurusgebirge mit Panoramablick auf Alanya." },
+        { name: "Kappadokien Reise", price: "€120", duration: "2 Tage", image: "https://kapadokyaturlari.com.tr/uploads/2021/12/kapadokya-turu-1-gece-1.webp", desc: "Eine magische Reise in das Land der Feenkamine und der Heißluftballons." },
+        { name: "Zipline Erlebnis", price: "€25", duration: "2 Stunden", image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/df/cc/8f.jpg", desc: "Spüren Sie die Geschwindigkeit beim Gleiten durch die grünen Schluchten am Seil." },
+        { name: "Luxus-Bootstour", price: "€40", duration: "6 Stunden", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/88/5f/8d/yacht-tour.jpg?w=1200", desc: "Sonne, Meer und Entspannung. Genießen Sie einen Tag auf einer Yacht mit Badestopps." },
+        { name: "Lavendelgarten", price: "€35", duration: "6 Stunden", image: "https://media-cdn.tripadvisor.com/media/photo-s/17/dc/5d/7c/kuyucak-lavanta-koyu.jpg", desc: "Besuchen Sie die duftenden Lavendelfelder und machen Sie tolle Fotos in der Natur." },
+        { name: "Quad Safari", price: "€40", duration: "3 Stunden", image: "https://img.getyourguide.com/img/tour/5d5671bc97f74.jpeg/145.jpg", desc: "Machen Sie sich schmutzig und haben Sie Spaß! Fahren Sie Ihr eigenes Quad durch den Wald." },
+        { name: "Sapadere Schlucht Safari", price: "€45", duration: "Ganztägig", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/88/2c/61/sapadere-kanyonu.jpg?w=1200", desc: "Erkunden Sie die versteckten Wasserfälle und das eiskalte Bergwasser der Sapadere-Schlucht." },
+        { name: "Side Aspendos Manavgat", price: "€45", duration: "Ganztägig", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/22/a3/9f/side-aspendos-manavgat.jpg?w=1200", desc: "Besuchen Sie das antike Theater von Aspendos und die Manavgat-Wasserfälle." },
+        { name: "Angeltour", price: "€40", duration: "5 Stunden", image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7a/6c/fb.jpg", desc: "Genießen Sie einen friedlichen Day auf See und versuchen Sie Ihr Glück beim Angeln." },
+        { name: "Alanya Stadttour", price: "€30", duration: "4 Stunden", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/34/0d/17/alanya-castle.jpg?w=1200", desc: "Erkunden Sie die Burg von Alanya, den Roten Turm und die Damlatas-Höhle." }
       ]
     },
     contact: {
-      title: "Kontaktieren Sie uns",
-      name: "Vollständiger Name",
+      title: "Kontakt",
+      name: "Name",
       email: "E-Mail",
-      phone: "Telefonnummer",
-      message: "Ihre Nachricht",
-      send: "Nachricht senden",
-      whatsapp: "Per WhatsApp chatten"
-    },
-    testimonials: {
-      title: "Bewertungen",
-      subtitle: "Zufriedene Reisende aus aller Welt.",
-      list: [
-        { name: "John D.", role: "Familienreise", text: "Faire Preise ve ein sauberes Auto. Egea war perfekt." },
-        { name: "Sarah L.", role: "Entdeckerin", text: "Schnelle Abholung. Der Corolla war super sparsam." },
-        { name: "Hans M.", role: "Urlaub", text: "Ehrlicher Service, keine Überraschungen." }
-      ]
-    },
-    faq: {
-      title: "Häufige Fragen",
-      list: [
-        { q: "Ist eine Kaution erforderlich?", a: "Ja, eine kleine Kaution wird während der Miete hinterlegt und bei Rückgabe freigegeben." },
-        { q: "Zustellung am Flughafen?", a: "Natürlich. Wir bieten einen 24/7 Meet-and-Greet-Service am Flughafen Antalya (AYT) an." },
-        { q: "Welche Versicherung?", a: "Alle Anmietungen beinhalten eine Standard-Vollkaskoversicherung." }
-      ]
-    },
-    guide: {
-      title: "Antalya Entdecken",
-      subtitle: "Die besten Orte, die Sie mit Boos Tour erreichen können.",
-      list: [
-        { name: "Kas & Kaputas", dist: "190 km", tags: ["Strand", "Aussicht"] },
-        { name: "Side Altstadt", dist: "75 km", tags: ["Geschichte", "Sonnenuntergang"] },
-        { name: "The Land of Legends", dist: "30 km", tags: ["Spaß", "Familie"] }
-      ]
+      phone: "Telefon",
+      message: "Nachricht",
+      send: "Senden",
+      whatsapp: "Über WhatsApp schreiben"
     }
   },
   ru: {
-    nav: {
-      home: "Главная",
-      services: "Услуги",
-      fleet: "Наш автопарк",
-      contact: "Контакты",
-      book: "Забронировать"
-    },
-    hero: {
-      title: "Надежные путешествия в Анталии",
-      subtitle: "Комфортный, современный и экономичный прокат автомобилей для вашего идеального отдыха.",
-      cta: "Посмотреть автопарк"
-    },
-    services: {
-      title: "Наши услуги",
-      subtitle: "Профессиональная мобильность для каждого путешествия.",
-      airport: "Доставка в аэропорт",
-      airportDesc: "Ваш автомобиль будет ждать вас в аэропорту Анталии (AYT) в момент вашего прилета.",
-      rental: "Современный автопарк",
-      rentalDesc: "Ухоженные автомобили эконом и среднего класса последних моделей.",
-      tours: "Местные советы",
-      toursDesc: "Маршруты открытий и советы по изучению Анталии как местный житель."
-    },
+    nav: { home: "Главная", services: "Приключения", fleet: "Наш автопарк", contact: "Контакт" },
+    hero: { title: "Приключения ждут в Анталии", subtitle: "Исследуйте побережье с Boss Tour. Арендуйте авто или присоединяйтесь к турам." },
     fleet: {
-      title: "Доступные автомобили",
-      subtitle: "Качество и экономия. Найдите свой вариант.",
+      title: "Наш Автопарк",
+      subtitle: "Современные и безопасные авто для любой поездки.",
+      viewAll: "Весь Автопарк",
       viewDetails: "Подробнее",
       list: [
         { 
@@ -419,7 +397,7 @@ export const translations = {
           gear: "Механика", 
           passenger: 5, 
           price: "€45", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbN1_TwSefKLXcrdC4qy5_j_HDyfDj12pv0g&s",
           longDesc: "Идеальный баланс экономии и пространства. Подходит для длительных поездок."
         },
         { 
@@ -428,22 +406,58 @@ export const translations = {
           gear: "Автомат", 
           passenger: 5, 
           price: "€40", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Компактный, стильный и невероятно удобный для парковки на узких улочках Анталии."
+          image: "https://otopoint.com.tr/wp-content/uploads/2022/10/clio2.jpg",
+          longDesc: "Компактный, стильный и очень удобный для парковки."
         },
         { 
-          name: "Volkswagen Polo", 
+          name: "Fiat Egea Cross", 
+          fuel: "Дизель", 
+          gear: "Автомат", 
+          passenger: 5, 
+          price: "€55", 
+          image: "https://databank.fiatbayi.com.tr/images/modeller/egea-cross/egea-cross-paket.jpg",
+          longDesc: "Дух кроссовера. Идеально для скрытых пляжей и горных троп."
+        },
+        { 
+          name: "Citroen C3", 
           fuel: "Бензин", 
           gear: "Автомат", 
           passenger: 5, 
-          price: "€50", 
-          image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=1000",
-          longDesc: "Ощущение премиум-класса в компактном кузове. Идеально для пар или небольших семей."
+          price: "€45", 
+          image: "https://www.citroenorigins.fr/sites/default/files/styles/640/public/2023-07/b618_70_1620x1000_0.png",
+          longDesc: "Самобытный дизайн и непревзойденный комфорт. Идеальный городской автомобиль."
+        },
+        { 
+          name: "Классический Suzuki Jeep", 
+          fuel: "Бензин", 
+          gear: "Механика", 
+          passenger: 4, 
+          price: "€70", 
+          image: "https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg",
+          longDesc: "Подлинный дух приключений. Классический джип с открытым верхом."
+        },
+        { 
+          name: "Hyundai i20", 
+          fuel: "Бензин", 
+          gear: "Автомат", 
+          passenger: 5, 
+          price: "€45", 
+          image: "https://stimg.cardekho.com/images/car-images/large/Hyundai/i20/11093/1758102282831/Atlas-White_d5d5d5.jpg?impolicy=resize&imwidth=420",
+          longDesc: "Современный, динамичный и просторный. Идеально для изучения города."
+        },
+        { 
+          name: "Ford Custom", 
+          fuel: "Дизель", 
+          gear: "Механика", 
+          passenger: 9, 
+          price: "€85", 
+          image: "https://www.otokoc.com.tr/getmedia/39d7ba95-f56e-4dd6-8585-2738afb27c7f/transit1-650x354.webp?ext=.webp",
+          longDesc: "Лучший выбор для групп. Просторный и комфортный для больших семей."
         }
       ]
     },
     whyUs: {
-      title: "Преимущества Boos",
+      title: "Преимущества Boss",
       items: [
         { title: "Доставка 24/7", desc: "Аэропорт или отель. Ваша машина прибудет именно тогда, когда и вы." },
         { title: "Никаких скрытых комиссий", desc: "Никаких сюрпризов. Полная прозрачность в каждом контракте." },
@@ -455,27 +469,21 @@ export const translations = {
       subtitle: "Незабываемые туры для вашего отдыха.",
       viewTour: "Подробнее",
       list: [
-        { 
-          name: "Люкс Яхта", 
-          duration: "6 часов", 
-          price: "€65", 
-          image: "https://images.unsplash.com/photo-1544413647-ad54089a690d?q=80&w=1000",
-          desc: "Круиз вдоль бирюзового берега с обедом на борту и купанием."
-        },
-        { 
-          name: "Джип-Сафари", 
-          duration: "Весь день", 
-          price: "€40", 
-          image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1000",
-          desc: "Полный адреналина день в горах, каньонах и деревнях."
-        },
-        { 
-          name: "Дайвинг", 
-          duration: "5 часов", 
-          price: "€55", 
-          image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000",
-          desc: "Откройте скрытый подводный мир Средиземноморья с экспертами."
-        }
+        { name: "Памуккале", price: "€45", duration: "Весь день", image: "https://explorekusadasi.com/wp-content/uploads/2022/07/pamukkale-tour-kusadasi-1200x900.jpg", desc: "Посетите «Хлопковый замок» — белоснежные травертины и древний город Иераполис." },
+        { name: "Рафтинг", price: "€35", duration: "6 часов", image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Fun_Rafting_Elo_River_Magelang.jpg", desc: "Сплав по горной реке Кёпрючай. Активный отдых для всей семьи." },
+        { name: "Микс тур", price: "€55", duration: "Весь день", image: "https://www.touralanya.com/TurResimleri/181925adventurepackagetourfromalanya.jpeg", desc: "Лучшее комбо: Рафтинг, Зиплайн и Каньон в один насыщенный день." },
+        { name: "Демре Мира Кекова", price: "€50", duration: "Весь день", image: "https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", desc: "Затонувший город, ликийские гробницы и церковь Святого Николая." },
+        { name: "Параглайдинг", price: "€75", duration: "3 часа", image: "https://cloudbasetravel.com/wp-content/uploads/2021/05/G0026043-scaled.jpg", desc: "Полет над бирюзовым побережьем с невероятными видами с высоты птичьего полота." },
+        { name: "Аланья Джип-сафари", price: "€40", duration: "Весь день", image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/36/51/8b.jpg", desc: "Приключение по горам Тавр с панорамными видами на Аланью." },
+        { name: "Каппадокия", price: "€120", duration: "2 дня", image: "https://kapadokyaturlari.com.tr/uploads/2021/12/kapadokya-turu-1-gece-1.webp", desc: "Магическое путешествие в страну сказочных дымоходов и воздушных шаров." },
+        { name: "Зиплайн", price: "€25", duration: "2 часа", image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/df/cc/8f.jpg", desc: "Почувствуйте скорость и адреналин, пролетая над зелеными каньонами." },
+        { name: "Яхта-тур", price: "€40", duration: "6 часов", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/88/5f/8d/yacht-tour.jpg?w=1200", desc: "Солнце, море и релакс. Прогулка на яхте с купанием в бухтах и обедом." },
+        { name: "Лаванта Сад", price: "€35", duration: "6 часов", image: "https://media-cdn.tripadvisor.com/media/photo-s/17/dc/5d/7c/kuyucak-lavanta-koyu.jpg", desc: "Посетите ароматные лавандовые поля для незабываемых фотографий." },
+        { name: "Квадро-сафари", price: "€40", duration: "3 часа", image: "https://img.getyourguide.com/img/tour/5d5671bc97f74.jpeg/145.jpg", desc: "Драйв по бездорожью! Сафари на квадроциклах по лесным тропам." },
+        { name: "Сападере Джип-сафари", price: "€45", duration: "Весь день", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/88/2c/61/sapadere-kanyonu.jpg?w=1200", desc: "Изучите каньон Сападере с его водопадами и ледяной горной водой." },
+        { name: "Сиде Аспендос Манавгат", price: "€45", duration: "Весь день", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/22/a3/9f/side-aspendos-manavgat.jpg?w=1200", desc: "Идеальный микс истории и природы. Античный театр и водопады." },
+        { name: "Рыбалка", price: "€40", duration: "5 часов", image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/7a/6c/fb.jpg", desc: "Спокойный день в море. Попробуйте поймать средиземноморскую рыбу." },
+        { name: "Экскурсия по Алании", price: "€30", duration: "4 часа", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/34/0d/17/alanya-castle.jpg?w=1200", desc: "Крепость Аланьи, Красная башня и пещера Дамлаташ с гидом." }
       ]
     },
     contact: {
@@ -486,32 +494,6 @@ export const translations = {
       message: "Ваше сообщение",
       send: "Отправить",
       whatsapp: "Написать в WhatsApp"
-    },
-    testimonials: {
-      title: "Отзывы",
-      subtitle: "Счастливые путешественники со всего мира.",
-      list: [
-        { name: "John D.", role: "Семья", text: "Честные цены и очень чистая машина. Egea была идеальной." },
-        { name: "Sarah L.", role: "Исследователь", text: "Быстрая подача в аэропорт. Машина была очень экономной." },
-        { name: "Hans M.", role: "Отпуск", text: "Никаких сюрпризов, честный сервис." }
-      ]
-    },
-    faq: {
-      title: "Частые вопросы",
-      list: [
-        { q: "Нужен ли залог?", a: "Да, во время аренды вносится небольшой залог, который возвращается сразу после возврата." },
-        { q: "Можно ли получить машину в аэропорту?", a: "Конечно. Мы предоставляем услуги встречи в аэропорту Анталии (AYT) 24/7." },
-        { q: "Какая страховка включена?", a: "Все аренды включают стандартную полную страховку." }
-      ]
-    },
-    guide: {
-      title: "Откройте Анталию",
-      subtitle: "Лучшие места, куда можно добраться на машине Boos Tour.",
-      list: [
-        { name: "Каш и Капуташ", dist: "190 км", tags: ["Пляж", "Вид"] },
-        { name: "Античный Сиде", dist: "75 km", tags: ["История", "Закат"] },
-        { name: "The Land of Legends", dist: "30 km", tags: ["Веселье", "Семья"] }
-      ]
     }
   }
 };

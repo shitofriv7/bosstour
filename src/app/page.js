@@ -17,7 +17,7 @@ const FAQItem = ({ item }) => {
     <div className="glass" style={{ marginBottom: '15px', borderRadius: '20px', overflow: 'hidden' }}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        style={{ width: '100%', padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', cursor: 'pointer', color: '#fff' }}
+        style={{ width: '100%', padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-main)' }}
       >
         <span style={{ fontSize: '1.1rem', fontWeight: '600', textAlign: 'left' }}>{item.q}</span>
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ type: 'spring', damping: 20 }}>
@@ -143,30 +143,58 @@ export default function Home() {
   };
 
   return (
-    <main style={{ position: 'relative', background: 'var(--bg-dark)', color: '#fff' }}>
-      <motion.div className="progress-bar" style={{ scaleX }} />
+    <main style={{ 
+      background: 'linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #fff7ed 100%)', 
+      color: 'var(--text-main)', 
+      minHeight: '100vh', 
+      position: 'relative' 
+    }}>
       <div className="noise-overlay" />
       <div className="bg-glow" />
-      
+      <div className="floating-blob blob-1" />
+      <div className="floating-blob blob-2" />
+      <div className="floating-blob blob-3" />
+
+      {/* Modern Intro Animation */}
       <AnimatePresence>
         {showIntro && (
           <motion.div 
             exit={{ opacity: 0, scale: 1.1 }}
-            style={{ position: 'fixed', inset: 0, zIndex: 10000, background: '#020408', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            style={{
+              position: 'fixed', inset: 0, zIndex: 9999,
+              background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center'
+            }}
           >
-            <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration: 1 }} style={{ textAlign: 'center' }}>
-              <h1 className="serif" style={{ fontSize: '10vw', color: 'var(--primary)', letterSpacing: '0.2em' }}>BOOS TOUR</h1>
+            <div style={{ position: 'relative' }}>
               <motion.div 
-                initial={{ scaleX: 0 }} 
-                animate={{ scaleX: 1 }} 
-                transition={{ delay: 0.5, duration: 1.5, ease: "circOut" }} 
-                style={{ height: '2px', background: 'var(--primary)', maxWidth: '400px', margin: '20px auto', originX: 0.5 }} 
+                initial={{ width: 0 }} animate={{ width: '100%' }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                style={{ 
+                  height: '2px', background: 'var(--primary)', position: 'absolute', bottom: -10, left: 0 
+                }}
               />
-            </motion.div>
+              <motion.h1 
+                initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
+                style={{ 
+                  fontSize: 'clamp(2.5rem, 10vw, 6rem)', fontWeight: '900', letterSpacing: '2px', 
+                  fontFamily: "var(--font-sans)", color: 'var(--primary)' 
+                }}
+              >
+                BOSS<span style={{ 
+                  background: 'linear-gradient(to right, #ff7811, #00d2ff)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  fontWeight: '950'
+                }}>TOUR</span>
+              </motion.h1>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
+      <motion.div className="progress-bar" style={{ scaleX }} />
+      
       <Navbar lang={lang} setLang={setLang} t={t} />
 
       <motion.a 
@@ -185,18 +213,22 @@ export default function Home() {
       <section style={{ padding: '80px 0', overflow: 'hidden' }}>
         <div className="main-grid">
           {[
-            { n: "500+", label: "Happy Clients" },
-            { n: "50+", label: "Modern Cars" },
-            { n: "24/7", label: "VIP Support" },
-            { n: "10+", label: "Antalya Tours" }
+            { n: "500+", label: "Happy Clients", color: "var(--primary)" },
+            { n: "50+", label: "Modern Cars", color: "var(--accent)" },
+            { n: "24/7", label: "VIP Support", color: "var(--secondary)" },
+            { n: "10+", label: "Antalya Tours", color: "var(--success)" }
           ].map((s, i) => (
             <motion.div 
               key={i} 
               initial={{ opacity:0, y: 20 }} whileInView={{ opacity:1, y: 0 }} viewport={{ once: true }} transition={{ delay: i*0.1 }}
-              style={{ gridColumn: 'span 3', textAlign: 'center' }}
+              style={{ gridColumn: 'span 3', textAlign: 'center', position: 'relative' }}
             >
-              <div className="stat-number serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>{s.n}</div>
-              <div style={{ opacity: 0.5, fontSize: '11px', letterSpacing: '2px', marginTop: '10px' }}>{s.label.toUpperCase()}</div>
+              <div style={{ 
+                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+                width: '100px', height: '100px', background: s.color, filter: 'blur(50px)', opacity: 0.1, zIndex: -1
+              }} />
+              <div className="stat-number serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: s.color }}>{s.n}</div>
+              <div style={{ fontWeight: '800', fontSize: '12px', letterSpacing: '2px', marginTop: '10px', color: 'var(--text-muted)' }}>{s.label.toUpperCase()}</div>
             </motion.div>
           ))}
         </div>
@@ -206,11 +238,11 @@ export default function Home() {
       <section id="tours" style={{ padding: '120px 0' }}>
         <div className="main-grid">
           <div style={{ gridColumn: '1 / -1', textAlign: 'center', marginBottom: '80px' }}>
-            <span className="section-label">{t.tours.title}</span>
-            <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}>{t.tours.subtitle}</h2>
+            <span className="section-label" style={{ color: 'var(--secondary)', letterSpacing: '0.8em' }}>{t.tours.title}</span>
+            <h2 className="serif" style={{ fontSize: 'clamp(3rem, 7vw, 5rem)', background: 'linear-gradient(to right, var(--primary), var(--secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{t.tours.subtitle}</h2>
           </div>
           <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '32px' }}>
-            {t.tours.list.map((tour, i) => (
+            {t.tours.list.slice(0, 3).map((tour, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i*0.1 }}
@@ -218,7 +250,13 @@ export default function Home() {
               >
                 <div style={{ height: '320px', position: 'relative' }}>
                   <Image src={tour.image} alt={tour.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
-                  <div style={{ position: 'absolute', top: '20px', left: '20px', background: 'var(--primary)', color: '#000', padding: '8px 20px', borderRadius: '50px', fontWeight: '900', fontSize: '13px' }}>{formatDisplayPrice(tour.price)}</div>
+                  <div style={{ 
+                    position: 'absolute', top: '20px', left: '20px', 
+                    background: 'var(--vibrant-gradient)', color: '#fff', 
+                    padding: '10px 25px', borderRadius: '50px', 
+                    fontWeight: '900', fontSize: '14px',
+                    boxShadow: '0 10px 20px rgba(var(--primary-rgb), 0.3)'
+                  }}>{tour.price}</div>
                 </div>
                 <div style={{ padding: '40px' }}>
                   <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{tour.name}</h3>
@@ -231,6 +269,18 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+
+          <div style={{ gridColumn: '1 / -1', textAlign: 'center', marginTop: '60px' }}>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.location.href = '/tours'}
+              className="btn-gold"
+              style={{ padding: '20px 60px', borderRadius: '50px', fontSize: '1.2rem', fontWeight: '900', boxShadow: '0 20px 40px rgba(var(--secondary-rgb), 0.2)', background: 'var(--vibrant-gradient)' }}
+            >
+              {lang === 'tr' ? 'TÜM MACERALARI GÖRÜNTÜLE' : 'VIEW ALL ADVENTURES'}
+            </motion.button>
+          </div>
         </div>
       </section>
 
@@ -242,7 +292,7 @@ export default function Home() {
             <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}>{t.fleet.subtitle}</h2>
           </div>
           <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '40px' }}>
-            {t.fleet.list.map((car, i) => (
+            {t.fleet.list.slice(0, 3).map((car, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i*0.1 }}
@@ -250,8 +300,8 @@ export default function Home() {
               >
                 <div style={{ height: '260px', position: 'relative' }}>
                   <Image src={car.image} alt={car.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'contain', padding: '30px' }} />
-                  <div style={{ position: 'absolute', bottom: '20px', right: '30px', background: 'var(--glass)', padding: '10px 20px', borderRadius: '15px', backdropFilter: 'blur(10px)' }}>
-                    <span style={{ color: 'var(--primary)', fontWeight: '900', fontSize: '1.1rem' }}>{formatDisplayPrice(car.price)}</span>
+                  <div style={{ position: 'absolute', bottom: '20px', right: '30px', background: 'var(--glass)', padding: '12px 25px', borderRadius: '20px', backdropFilter: 'blur(10px)', border: '1px solid rgba(var(--primary-rgb), 0.1)' }}>
+                    <span style={{ color: 'var(--primary)', fontWeight: '900', fontSize: '1.2rem' }}>{formatDisplayPrice(car.price)}</span>
                   </div>
                 </div>
                 <div style={{ padding: '35px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
@@ -263,6 +313,18 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div style={{ gridColumn: '1 / -1', textAlign: 'center', marginTop: '60px' }}>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.location.href = '/fleet'}
+              className="btn-gold"
+              style={{ padding: '20px 60px', borderRadius: '50px', fontSize: '1.2rem', fontWeight: '900', boxShadow: '0 20px 40px rgba(var(--primary-rgb), 0.2)' }}
+            >
+              {lang === 'tr' ? 'TÜM FİLOYU GÖRÜNTÜLE' : 'VIEW FULL FLEET'}
+            </motion.button>
           </div>
         </div>
       </section>
@@ -285,9 +347,24 @@ export default function Home() {
             <span className="section-label">Traveler's Insights</span>
             <div style={{ display: 'grid', gap: '15px', marginTop: '40px' }}>
               {t.guide.list.map((place, i) => (
-                <motion.div key={i} whileHover={{ x: 10, backgroundColor: 'rgba(255,255,255,0.03)' }} className="glass" style={{ padding: '25px', borderRadius: '20px', display:'flex', justifyContent: 'space-between', alignItems:'center', transition: '0.3s' }}>
-                  <div><h4 className="serif" style={{ fontSize: '1.4rem' }}>{place.name}</h4><p style={{ fontSize: '10px', opacity: 0.4, marginTop: '4px' }}>{place.tags.join(' • ')}</p></div>
-                  <div style={{ textAlign: 'right' }}><div style={{ color: 'var(--primary)', fontWeight: '800' }}>{place.dist}</div><ArrowRight size={16} style={{ opacity: 0.2 }}/></div>
+                <motion.div 
+                  key={i} 
+                  whileHover={{ x: 15, backgroundColor: 'rgba(var(--primary-rgb), 0.05)', borderColor: 'var(--primary)' }} 
+                  className="glass" 
+                  style={{ padding: '30px', borderRadius: '25px', display:'flex', justifyContent: 'space-between', alignItems:'center', transition: '0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)', cursor: 'pointer', border: '1px solid transparent' }}
+                >
+                  <div>
+                    <h4 className="serif" style={{ fontSize: '1.6rem', color: 'var(--text-main)' }}>{place.name}</h4>
+                    <div style={{ display: 'flex', gap: '10px', marginTop: '8px' }}>
+                      {place.tags.map((tag, ti) => (
+                        <span key={ti} style={{ fontSize: '9px', fontWeight: '900', color: ti % 2 === 0 ? 'var(--primary)' : 'var(--secondary)', background: 'rgba(255,255,255,0.5)', padding: '4px 10px', borderRadius: '50px', textTransform: 'uppercase' }}>{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div style={{ textAlign: 'right' }}>
+                    <div style={{ color: 'var(--primary)', fontWeight: '900', fontSize: '1.2rem' }}>{place.dist}</div>
+                    <ArrowRight size={20} style={{ color: 'var(--primary)', opacity: 0.5, marginTop: '5px' }}/>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -296,7 +373,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" style={{ padding: '120px 0', background: 'rgba(0,0,0,0.2)' }}>
+      <section id="faq" style={{ padding: '120px 0', background: 'rgba(0,102,255,0.03)' }}>
         <div className="main-grid">
           <div style={{ gridColumn: '2 / span 10' }}>
             <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -363,13 +440,13 @@ export default function Home() {
         {selectedItem && (
           <motion.div 
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            style={{ position: 'fixed', inset: 0, zIndex: 3000, background: 'rgba(2, 4, 8, 0.98)', backdropFilter: 'blur(20px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}
+            style={{ position: 'fixed', inset: 0, zIndex: 3000, background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(20px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}
             onClick={() => { if(!loading) setSelectedItem(null); setSuccess(false); }}
           >
             <motion.div 
               initial={{ scale: 0.95, y: 10 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.95, y: 10 }}
               className="luxury-card"
-              style={{ width: '100%', maxWidth: '1050px', padding: '0', background: '#0f172a', border: '1px solid rgba(212,175,55,0.2)', maxHeight: '95vh', overflowY: 'auto' }}
+              style={{ width: '100%', maxWidth: '1050px', padding: '0', background: '#ffffff', border: '1px solid rgba(0,102,255,0.1)', maxHeight: '95vh', overflowY: 'auto' }}
               onClick={(e) => e.stopPropagation()}
             >
               {success ? (
@@ -380,13 +457,13 @@ export default function Home() {
                 </div>
               ) : (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
-                  <div style={{ position: 'relative', minHeight: '300px', background: '#020617' }}>
+                  <div style={{ position: 'relative', minHeight: '300px', background: '#f8fafc' }}>
                     <Image src={selectedItem.image} alt={selectedItem.name} fill sizes="(max-width: 1100px) 100vw, 50vw" style={{ objectFit: 'contain', padding: '30px' }} />
                   </div>
                   <div className="modal-content" style={{ padding: '50px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <h2 className="serif" style={{ fontSize: '2.5rem' }}>{selectedItem.name}</h2>
-                      <button onClick={() => setSelectedItem(null)} className="glass" style={{ width:'45px', height:'45px', borderRadius:'50%', border:'none', color:'#fff', cursor:'pointer' }}><X size={20}/></button>
+                      <button onClick={() => setSelectedItem(null)} className="glass" style={{ width:'45px', height:'45px', borderRadius:'50%', border:'none', color:'var(--text-main)', cursor:'pointer' }}><X size={20}/></button>
                     </div>
                     <form onSubmit={handleReserve} style={{ marginTop: '30px', display: 'grid', gap: '18px' }}>
                       {selectedItem.type !== 'tour' && (
@@ -398,7 +475,7 @@ export default function Home() {
                       <input className="luxury-input" required placeholder="Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
                       <input className="luxury-input" required placeholder="Phone" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
                       {errorMsg && <div style={{ color: '#ff4444', fontSize: '12px' }}>{errorMsg}</div>}
-                      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', background:'rgba(0,0,0,0.2)', padding:'20px', borderRadius:'15px', marginTop: '10px' }}>
+                      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', background:'#f1f5f9', padding:'20px', borderRadius:'15px', marginTop: '10px' }}>
                         <div><p style={{fontSize:'10px',opacity:0.4}}>ESTIMATED TOTAL</p><p style={{fontSize:'2.2rem',fontWeight:'900',color:'var(--primary)'}}>{calculateTotal(selectedItem.price)}</p></div>
                         <button disabled={loading} className="btn-gold" style={{ height:'60px' }}>{loading ? <Loader2 className="animate-spin" /> : 'BOOK'}</button>
                       </div>
@@ -411,7 +488,7 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      <footer style={{ padding: '60px 0', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', background: '#020408' }}>
+      <footer style={{ padding: '60px 0', textAlign: 'center', borderTop: '1px solid rgba(0,0,0,0.05)', background: '#ffffff' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', fontSize: '11px', opacity: 0.6 }}>
           <span>DEVELOPED FOR</span>
           <a href="https://github.com/shitofriv7" target="_blank" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--primary) !important' }} className="interactive">
@@ -425,20 +502,39 @@ export default function Home() {
 }
 
 const Hero = ({ t }) => (
-  <section id="home" style={{ height: '90vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
-    <div style={{ position: 'absolute', inset: 0, zIndex: -1 }}>
-      <Image src="https://images.unsplash.com/photo-1612192723783-094191316538?q=80&w=2070" fill priority sizes="100vw" style={{ objectFit: 'cover', opacity: 0.4 }} alt="Background" />
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #020408 40%, transparent 100%)' }} />
+  <section id="home" style={{ minHeight: '85vh', position: 'relative', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+    <div style={{ 
+      position: 'absolute', 
+      inset: 0, 
+      zIndex: 0
+    }}>
+      <img 
+        src="https://i.imgur.com/GyAspcV.jpg" 
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+        alt="Boss Tour Hero" 
+      />
+      <div style={{ 
+        position: 'absolute', 
+        inset: 0, 
+        background: 'rgba(255, 255, 255, 0.4)' 
+      }} />
     </div>
-    <div className="main-grid">
-      <div className="hero-content">
-        <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.2 }}>
-          <span className="section-label">Est. 2012</span>
-          <h1 className="luxury-title serif">{t.hero.title}</h1>
-          <p className="luxury-para" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', maxWidth: '550px', margin: '40px 0' }}>{t.hero.subtitle}</p>
+    <div className="main-grid" style={{ position: 'relative', zIndex: 10 }}>
+      <div className="hero-content" style={{ gridColumn: 'span 12', position: 'relative', zIndex: 1 }}>
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+          <span className="section-label" style={{ color: 'var(--primary)', fontWeight: '900' }}>Est. 2012 • Adventure Awaits</span>
+          <h1 className="luxury-title serif" style={{ 
+            fontSize: 'clamp(3.5rem, 10vw, 7rem)', 
+            lineHeight: 0.9,
+            background: 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            marginBottom: '20px'
+          }}>{t.hero.title}</h1>
+          <p className="luxury-para" style={{ fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', maxWidth: '650px', margin: '40px 0', color: 'var(--text-main)', fontWeight: '500' }}>{t.hero.subtitle}</p>
           <div className="hero-btns" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <button className="btn-gold" onClick={() => document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' })}>{t.hero.cta}</button>
-            <button className="btn-outline" onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>View Adventures</button>
+            <button className="btn-gold" style={{ padding: '22px 55px' }} onClick={() => document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' })}>{t.hero.cta}</button>
+            <button className="btn-outline" style={{ padding: '22px 55px', background: 'rgba(255,255,255,0.5)', border: '1px solid var(--primary)' }} onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>View Adventures</button>
           </div>
         </motion.div>
       </div>
@@ -447,7 +543,7 @@ const Hero = ({ t }) => (
 );
 
 const Testimonials = ({ t }) => (
-  <section style={{ padding: '120px 0', background: 'rgba(0,0,0,0.1)' }}>
+  <section style={{ padding: '120px 0', background: 'rgba(0,102,255,0.02)' }}>
     <div className="main-grid">
       {t.testimonials.list.map((item, i) => (
         <div key={i} className="luxury-card" style={{ gridColumn: 'span 4', padding: '40px' }}>

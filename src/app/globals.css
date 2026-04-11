@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 :root {
-  --bg-dark: #020408;
-  --bg-accent: #0f172a;
-  --primary: #d4af37;
-  --primary-light: #f5df99;
-  --text-main: #ffffff;
-  --text-muted: rgba(255, 255, 255, 0.6);
-  --glass: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --primary: #ff7811;
+  --primary-rgb: 255, 120, 17;
+  --accent: #ffbb00;
+  --accent-rgb: 255, 187, 0;
+  --secondary: #00d2ff;
+  --secondary-rgb: 0, 210, 255;
+  --success: #00f269;
+  --bg-dark: #f0fbff;
+  --bg-soft: #ffffff;
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 210, 255, 0.1);
+  --text-main: #1f2d3d;
+  --text-muted: #6b7a8c;
+  --vibrant-gradient: linear-gradient(135deg, #ff7811 0%, #00d2ff 100%);
 }
 
 * {
@@ -50,44 +56,51 @@ html, body {
   display: block;
 }
 
-.luxury-card {
+.glass {
   background: var(--glass);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  border-radius: 32px;
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(var(--primary-rgb), 0.05);
+  box-shadow: 0 10px 40px rgba(var(--primary-rgb), 0.05);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  border-radius: 30px;
 }
 
 .luxury-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: rgba(212, 175, 55, 0.4);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(var(--primary-rgb), 0.15);
+  border-color: var(--primary);
 }
 
 .btn-gold {
-  background: linear-gradient(135deg, var(--primary) 0%, #b8860b 100%);
-  color: #000;
-  padding: 18px 45px;
+  background: var(--vibrant-gradient);
+  color: #fff;
+  padding: 20px 50px;
   border-radius: 100px;
   font-weight: 800;
   border: none;
-  font-size: 13px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 30px rgba(255, 62, 131, 0.3);
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .btn-gold:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(255, 62, 131, 0.4);
 }
 
 .btn-outline {
   background: transparent;
-  color: #fff;
-  border: 1px solid var(--glass-border);
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.1);
   padding: 18px 45px;
   border-radius: 100px;
   font-weight: 600;
@@ -105,22 +118,49 @@ html, body {
 .noise-overlay {
   position: fixed;
   inset: 0;
-  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
-  opacity: 0.05;
+  background: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  opacity: 0.03;
   pointer-events: none;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .bg-glow {
   position: fixed;
-  width: 70vw;
-  height: 70vw;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
-  top: -30vw;
-  right: -30vw;
-  pointer-events: none;
-  z-index: -1;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(255, 62, 131, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(255, 187, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(112, 0, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(0, 242, 254, 0.1) 0%, transparent 50%);
+  filter: blur(80px);
+  z-index: -5;
+  animation: glowMove 20s infinite alternate ease-in-out;
+}
+
+@keyframes glowMove {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.1) translate(20px, -20px); }
+  100% { transform: scale(1) translate(-20px, 20px); }
+}
+
+.floating-blob {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
   filter: blur(100px);
+  z-index: -4;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.blob-1 { background: var(--primary); top: -10%; left: -10%; animation: float 15s infinite alternate; }
+.blob-2 { background: var(--secondary); bottom: -10%; right: -10%; animation: float 18s infinite alternate-reverse; }
+.blob-3 { background: var(--accent); top: 40%; right: -5%; animation: float 12s infinite alternate; }
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(100px, 50px) rotate(30deg); }
 }
 
 .whatsapp-float {
@@ -169,13 +209,17 @@ html, body {
 
 .luxury-input {
   width: 100%;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 18px;
-  color: #fff;
+  padding: 18px 25px;
+  background: #f1f5f9;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  color: var(--text-main);
+  font-family: inherit;
   transition: 0.3s;
-  outline: none;
+}
+
+.luxury-input::placeholder {
+  color: #94a3b8;
 }
 
 .luxury-input:focus {

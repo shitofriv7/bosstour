@@ -15,10 +15,10 @@ export default function Navbar({ lang, setLang, t }) {
   }, []);
 
   const navItems = [
-    { name: t.nav.home, href: "#home" },
-    { name: t.nav.services, href: "#services" },
-    { name: t.nav.fleet, href: "#fleet" },
-    { name: t.nav.contact, href: "#contact" }
+    { name: t.nav.home, href: "/#home" },
+    { name: t.nav.services, href: "/tours" },
+    { name: t.nav.fleet, href: "/fleet" },
+    { name: t.nav.contact, href: "/#contact" }
   ];
 
   return (
@@ -42,15 +42,15 @@ export default function Navbar({ lang, setLang, t }) {
           width: '100%',
           maxWidth: scrolled ? '1000px' : '1200px',
           height: '70px',
-          background: 'rgba(15, 23, 42, 0.7)',
+          background: 'rgba(255, 255, 255, 0.7)',
           backdropFilter: 'blur(30px)',
           WebkitBackdropFilter: 'blur(30px)',
-          border: '1px solid rgba(212, 175, 55, 0.2)',
+          border: '1px solid rgba(var(--primary-rgb), 0.2)',
           borderRadius: '100px',
           display: 'flex',
           alignItems: 'center',
           transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
-          boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+          boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
           overflow: 'visible'
         }}
       >
@@ -69,11 +69,21 @@ export default function Navbar({ lang, setLang, t }) {
             <div style={{
               width: '40px', height: '40px', background: 'var(--primary)',
               borderRadius: '12px', display: 'flex', alignItems: 'center',
-              justifyContent: 'center', color: '#000', fontWeight: '900',
-              fontSize: '18px', boxShadow: '0 0 20px rgba(212,175,55,0.3)', flexShrink: 0
+              justifyContent: 'center', color: '#fff', fontWeight: '900',
+              fontSize: '18px', boxShadow: '0 5px 15px rgba(0,102,255,0.3)', flexShrink: 0
             }}>B</div>
-            <motion.div className="logo-text" style={{ fontWeight: '900', fontFamily: "'Playfair Display', serif", color: '#fff' }}>
-              BOOS<span style={{ color: 'var(--primary)' }}>TOUR</span>
+            <motion.div className="logo-text" style={{ 
+              fontWeight: '900', 
+              fontFamily: "var(--font-sans)", /* Use modern sans for colorful look */
+              fontSize: '22px',
+              letterSpacing: '2px',
+              color: 'var(--text-main)' 
+            }}>
+              BOSS<span style={{ 
+                background: 'linear-gradient(to right, #ff7811, #00d2ff)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>TOUR</span>
             </motion.div>
           </div>
 
@@ -83,7 +93,7 @@ export default function Navbar({ lang, setLang, t }) {
               {navItems.map((item) => (
                 <a 
                   key={item.href} href={item.href} 
-                  style={{ fontSize: '11px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}
+                  style={{ fontSize: '11px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--text-main)', opacity: 0.7, textDecoration: 'none' }}
                 >
                   {item.name}
                 </a>
@@ -96,8 +106,8 @@ export default function Navbar({ lang, setLang, t }) {
                 <button
                   onClick={() => setIsLangOpen(!isLangOpen)}
                   style={{
-                    background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-                    color: '#fff', padding: '8px 12px', borderRadius: '100px',
+                    background: 'rgba(0,0,0,0.05)', border: '1px solid rgba(0,0,0,0.05)',
+                    color: 'var(--text-main)', padding: '8px 12px', borderRadius: '100px',
                     fontSize: '11px', fontWeight: '900', cursor: 'pointer',
                     display: 'flex', alignItems: 'center', gap: '6px', textTransform: 'uppercase'
                   }}
@@ -124,8 +134,8 @@ export default function Navbar({ lang, setLang, t }) {
                           key={l}
                           onClick={() => { setLang(l); setIsLangOpen(false); }}
                           style={{
-                            background: lang === l ? 'rgba(212,175,55,0.1)' : 'transparent',
-                            border: 'none', color: lang === l ? 'var(--primary)' : '#fff',
+                            background: lang === l ? 'var(--vibrant-gradient)' : 'transparent',
+                            border: 'none', color: '#fff',
                             padding: '10px 15px', borderRadius: '12px', fontSize: '12px',
                             fontWeight: '700', cursor: 'pointer', textAlign: 'left',
                             textTransform: 'uppercase'
@@ -163,7 +173,7 @@ export default function Navbar({ lang, setLang, t }) {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '4px' }}>BOOS<span style={{ color: 'var(--primary)' }}>TOUR</span></div>
+              <div style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '4px' }}>BOSS<span style={{ color: 'var(--primary)' }}>TOUR</span></div>
               <button 
                 onClick={() => setMobileMenu(false)}
                 style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: '#fff', width: '50px', height: '50px', borderRadius: '50%', display:'flex', alignItems:'center', justifyContent:'center' }}
