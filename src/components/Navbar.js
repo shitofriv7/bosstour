@@ -6,6 +6,7 @@ import { Globe, Menu, X, ChevronDown } from 'lucide-react';
 export default function Navbar({ lang, setLang, t }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -36,6 +37,7 @@ export default function Navbar({ lang, setLang, t }) {
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
+        className="nav-pill"
         style={{
           width: '100%',
           maxWidth: scrolled ? '1000px' : '1200px',
@@ -48,49 +50,49 @@ export default function Navbar({ lang, setLang, t }) {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: '0 30px',
           transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
           boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
         }}
       >
-        {/* Logo Section */}
-        <div 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          style={{ 
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            cursor: 'pointer'
-          }}
-        >
-          <div style={{
-            width: '40px',
-            height: '40px',
-            background: 'var(--primary)',
-            borderRadius: '12px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#000',
-            fontWeight: '900',
-            fontSize: '18px',
-            boxShadow: '0 0 20px rgba(212,175,55,0.3)'
-          }}>B</div>
-          <motion.div 
+        <div className="nav-inner" style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
+          {/* Logo Section */}
+          <div 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             style={{ 
-              fontSize: '20px', 
-              fontWeight: '900', 
-              letterSpacing: '5px',
-              fontFamily: "'Playfair Display', serif",
-              color: '#fff'
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              cursor: 'pointer'
             }}
           >
-            BOOS<span style={{ color: 'var(--primary)' }}>TOUR</span>
-          </motion.div>
-        </div>
+            <div style={{
+              width: '40px',
+              height: '40px',
+              background: 'var(--primary)',
+              borderRadius: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#000',
+              fontWeight: '900',
+              fontSize: '18px',
+              boxShadow: '0 0 20px rgba(212,175,55,0.3)'
+            }}>B</div>
+            <motion.div 
+              className="logo-text"
+              style={{ 
+                fontWeight: '900', 
+                letterSpacing: '5px',
+                fontFamily: "'Playfair Display', serif",
+                color: '#fff'
+              }}
+            >
+              BOOS<span style={{ color: 'var(--primary)' }}>TOUR</span>
+            </motion.div>
+          </div>
 
         {/* Links Section */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
           <div className="desktop-links" style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>
             {navItems.map((item) => (
               <motion.a 
@@ -113,27 +115,74 @@ export default function Navbar({ lang, setLang, t }) {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            {/* Lang Dropdown Concept */}
-            <div style={{ display: 'flex', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '100px', padding: '3px' }}>
-              {['en', 'tr', 'de', 'ru'].map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  style={{
-                    background: lang === l ? 'var(--primary)' : 'transparent',
-                    border: 'none',
-                    color: lang === l ? '#000' : '#fff',
-                    padding: '6px 12px',
-                    borderRadius: '100px',
-                    fontSize: '10px',
-                    fontWeight: '900',
-                    cursor: 'pointer',
-                    textTransform: 'uppercase'
-                  }}
-                >
-                  {l}
-                </button>
-              ))}
+            {/* Lang Dropdown */}
+            <div style={{ position: 'relative' }}>
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                style={{
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  color: '#fff',
+                  padding: '10px 15px',
+                  borderRadius: '100px',
+                  fontSize: '11px',
+                  fontWeight: '900',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  textTransform: 'uppercase'
+                }}
+              >
+                <Globe size={14} style={{ color: 'var(--primary)' }} />
+                {lang}
+                <ChevronDown size={12} style={{ opacity: 0.5, transform: isLangOpen ? 'rotate(180deg)' : 'none', transition: '0.3s' }} />
+              </button>
+              
+              <AnimatePresence>
+                {isLangOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    style={{
+                      position: 'absolute',
+                      top: '50px',
+                      right: 0,
+                      background: 'rgba(15, 23, 42, 0.95)',
+                      backdropFilter: 'blur(20px)',
+                      border: '1px solid rgba(212, 175, 55, 0.2)',
+                      borderRadius: '20px',
+                      padding: '10px',
+                      display: 'grid',
+                      minWidth: '120px',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+                    }}
+                  >
+                    {['en', 'tr', 'de', 'ru'].map((l) => (
+                      <button
+                        key={l}
+                        onClick={() => { setLang(l); setIsLangOpen(false); }}
+                        style={{
+                          background: lang === l ? 'rgba(212,175,55,0.1)' : 'transparent',
+                          border: 'none',
+                          color: lang === l ? 'var(--primary)' : '#fff',
+                          padding: '10px 15px',
+                          borderRadius: '12px',
+                          fontSize: '12px',
+                          fontWeight: '700',
+                          cursor: 'pointer',
+                          textAlign: 'left',
+                          textTransform: 'uppercase',
+                          transition: '0.2s'
+                        }}
+                      >
+                        {l === 'en' ? 'ENGLISH' : l === 'tr' ? 'TÜRKÇE' : l === 'de' ? 'DEUTSCH' : 'РУССКИЙ'}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
             
             <motion.button 
@@ -192,7 +241,7 @@ export default function Navbar({ lang, setLang, t }) {
                   href={item.href} 
                   onClick={() => setMobileMenu(false)}
                   className="serif"
-                  style={{ fontSize: '3.5rem', color: '#fff', textDecoration: 'none', lineHeight: '1' }}
+                  style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', color: '#fff', textDecoration: 'none', lineHeight: '1' }}
                 >
                   {item.name}
                   <motion.span style={{ color: 'var(--primary)', marginLeft: '10px' }}>.</motion.span>
@@ -200,19 +249,40 @@ export default function Navbar({ lang, setLang, t }) {
               ))}
             </nav>
 
-            <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '40px', display: 'grid', gap: '15px' }}>
-              <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>CONTACT US</p>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: '700' }}>+90 (555) 000 00 00</h3>
-              <p style={{ fontSize: '14px', opacity: 0.7 }}>Antalya / Turkey</p>
+            <div style={{ display: 'grid', gap: '30px' }}>
+              <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '40px', display: 'grid', gap: '15px' }}>
+                <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>CONTACT US</p>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: '700' }}>+90 (555) 000 00 00</h3>
+                <p style={{ fontSize: '14px', opacity: 0.7 }}>Antalya / Turkey</p>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
       <style jsx>{`
+        .nav-inner {
+          padding: 0 30px;
+        }
+        .logo-text {
+          font-size: 20px;
+        }
         @media (max-width: 900px) {
           .desktop-links {
             display: none !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .nav-inner {
+            padding: 0 15px !important;
+            gap: 10px !important;
+          }
+          .logo-text {
+            font-size: 16px !important;
+            letter-spacing: 2px !important;
+          }
+          .nav-pill {
+            height: 60px !important;
           }
         }
       `}</style>
