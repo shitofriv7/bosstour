@@ -1,12 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+// Vercel build aşamasında hata almamak için boş değer kontrolü veya yer tutucu (placeholder) kullanıyoruz.
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder';
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn("Supabase URL or Anon Key is missing. Build is continuing but database features will stay disabled until keys are added to Environment Variables.");
-}
-
-export const supabase = (supabaseUrl && supabaseAnonKey) 
-  ? createClient(supabaseUrl, supabaseAnonKey) 
-  : null;
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
