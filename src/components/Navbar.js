@@ -193,7 +193,7 @@ export default function Navbar({ lang, setLang, t }) {
             </nav>
 
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '40px' }}>
-              <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>CONTACT US</p>
+              <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>{t.nav.contact.toUpperCase()}</p>
               <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginTop: '10px' }}>+90 (555) 000 00 00</h3>
             </div>
           </motion.div>

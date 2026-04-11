@@ -4,6 +4,7 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import Image from 'next/image';
 import { translations } from './translations';
 import Navbar from '../components/Navbar';
+import { supabase } from '@/lib/supabase';
 import { 
   CheckCircle2, Loader2, X, MessageCircle, Star, Phone, Mail, 
   MapPin, Clock, Calendar, AlertTriangle, ChevronDown, 
@@ -52,9 +53,10 @@ export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
-  const [formData, setFormData] = useState({ 
+  const [formData, setFormData] = useState({
     name: '', phone: '', email: '', startDate: '', endDate: '', message: ''
   });
+  const [dbPrices, setDbPrices] = useState([]);
   
   const t = translations[lang];
 
@@ -69,14 +71,34 @@ export default function Home() {
     }
 
     const timer = setTimeout(() => setShowIntro(false), 2500);
-    // Kuru merkez bankasından çek
+
     fetch('/api/currency')
       .then(res => res.json())
       .then(data => setEurToTry(data.rate))
       .catch(err => console.error("Kur çekilemedi", err));
       
+    // 3. Fiyatları Supabase'den çek
+    const fetchDbPrices = async () => {
+      const { data } = await supabase.from('prices').select('*');
+      if (data) setDbPrices(data);
+    };
+    fetchDbPrices();
+
     return () => clearTimeout(timer);
   }, []);
+
+  // Fiyatları uygula
+  if (t && dbPrices.length > 0) {
+    t.tours.list = t.tours.list.map(tour => {
+      const override = dbPrices.find(p => p.id === tour.slug);
+      return override ? { ...tour, price: override.price } : tour;
+    });
+    t.fleet.list = t.fleet.list.map(car => {
+      const slug = car.name.toLowerCase().replace(/ /g, '-');
+      const override = dbPrices.find(p => p.id === slug);
+      return override ? { ...car, price: override.price } : car;
+    });
+  }
 
   if (!t) return null;
 
@@ -160,7 +182,7 @@ export default function Home() {
         {showIntro && (
           <motion.div 
             exit={{ opacity: 0, scale: 1.1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             style={{
               position: 'fixed', inset: 0, zIndex: 9999,
               background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center'
@@ -213,10 +235,10 @@ export default function Home() {
       <section style={{ padding: '80px 0', overflow: 'hidden' }}>
         <div className="main-grid">
           {[
-            { n: "500+", label: "Happy Clients", color: "var(--primary)" },
-            { n: "50+", label: "Modern Cars", color: "var(--accent)" },
-            { n: "24/7", label: "VIP Support", color: "var(--secondary)" },
-            { n: "10+", label: "Antalya Tours", color: "var(--success)" }
+            { n: "500+", label: t.stats.clients, color: "var(--primary)" },
+            { n: "50+", label: t.stats.cars, color: "var(--accent)" },
+            { n: "24/7", label: t.stats.support, color: "var(--secondary)" },
+            { n: "10+", label: t.stats.tours, color: "var(--success)" }
           ].map((s, i) => (
             <motion.div 
               key={i} 
@@ -263,7 +285,7 @@ export default function Home() {
                   <p className="luxury-para" style={{ marginBottom: '30px', fontSize: '0.95rem' }}>{tour.desc}</p>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{ fontSize: '13px', opacity: 0.5 }}><Clock size={14} style={{ display:'inline', marginRight: '5px' }}/>{tour.duration}</span>
-                    <button onClick={() => setSelectedItem({...tour, type: 'tour'})} className="btn-gold" style={{ padding: '12px 25px', fontSize: '11px' }}>{t.tours.viewTour}</button>
+                    <button onClick={() => window.location.href = `/tours/${tour.slug}`} className="btn-gold" style={{ padding: '12px 25px', fontSize: '11px' }}>{t.tours.viewTour}</button>
                   </div>
                 </div>
               </motion.div>
@@ -344,7 +366,7 @@ export default function Home() {
             </div>
           </div>
           <div style={{ gridColumn: '7 / -1' }}>
-            <span className="section-label">Traveler's Insights</span>
+            <span className="section-label">{t.stats.insights}</span>
             <div style={{ display: 'grid', gap: '15px', marginTop: '40px' }}>
               {t.guide.list.map((place, i) => (
                 <motion.div 
@@ -377,7 +399,7 @@ export default function Home() {
         <div className="main-grid">
           <div style={{ gridColumn: '2 / span 10' }}>
             <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-              <span className="section-label">Support</span>
+              <span className="section-label">{t.stats.supportTitle}</span>
               <h2 className="serif" style={{ fontSize: '3.5rem' }}>{t.faq.title}</h2>
             </div>
             {t.faq.list.map((item, i) => <FAQItem key={i} item={item} />)}
@@ -393,8 +415,8 @@ export default function Home() {
           <div style={{ gridColumn: '1 / -1' }}>
             <div className="luxury-card responsive-card" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
               <div>
-                <span className="section-label">Quick Connect</span>
-                <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.1' }}>Get in Touch.</h2>
+                <span className="section-label">{t.contact.connectTitle}</span>
+                <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.1' }}>{t.contact.contactDesc}</h2>
                 <div style={{ marginTop: '50px', display: 'grid', gap: '25px' }}>
                   <div style={{ display: 'flex', alignItems:'center', gap: '20px' }}>
                     <div className="glass" style={{ padding: '12px', borderRadius: '10px', color: 'var(--primary)' }}>
@@ -440,7 +462,7 @@ export default function Home() {
         {selectedItem && (
           <motion.div 
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            style={{ position: 'fixed', inset: 0, zIndex: 3000, background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(20px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}
+            style={{ position: 'fixed', inset: 0, zIndex: 3000, background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}
             onClick={() => { if(!loading) setSelectedItem(null); setSuccess(false); }}
           >
             <motion.div 
@@ -452,8 +474,8 @@ export default function Home() {
               {success ? (
                 <div style={{ padding: '100px', textAlign: 'center' }}>
                   <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type:'spring', bounce: 0.6 }}><CheckCircle2 size={100} style={{ color: 'var(--primary)', marginBottom: '30px' }} /></motion.div>
-                  <h2 className="serif" style={{ fontSize: '3rem' }}>CONFIRMED</h2>
-                  <p className="luxury-para">We will contact you shortly.</p>
+                  <h2 className="serif" style={{ fontSize: '3rem' }}>{t.modal.confirm}</h2>
+                  <p className="luxury-para">{t.modal.confirmDesc}</p>
                 </div>
               ) : (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
@@ -468,16 +490,16 @@ export default function Home() {
                     <form onSubmit={handleReserve} style={{ marginTop: '30px', display: 'grid', gap: '18px' }}>
                       {selectedItem.type !== 'tour' && (
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px' }}>
-                          <div><label style={{ fontSize: '10px', opacity: 0.4, marginBottom: '5px', display:'block' }}>PICKUP</label><input className="luxury-input" required type="date" value={formData.startDate} onChange={e => setFormData({...formData, startDate: e.target.value})} /></div>
-                          <div><label style={{ fontSize: '10px', opacity: 0.4, marginBottom: '5px', display:'block' }}>RETURN</label><input className="luxury-input" required type="date" value={formData.endDate} onChange={e => setFormData({...formData, endDate: e.target.value})} /></div>
+                          <div><label style={{ fontSize: '10px', opacity: 0.4, marginBottom: '5px', display:'block' }}>{t.modal.pickup}</label><input className="luxury-input" required type="date" value={formData.startDate} onChange={e => setFormData({...formData, startDate: e.target.value})} /></div>
+                          <div><label style={{ fontSize: '10px', opacity: 0.4, marginBottom: '5px', display:'block' }}>{t.modal.return}</label><input className="luxury-input" required type="date" value={formData.endDate} onChange={e => setFormData({...formData, endDate: e.target.value})} /></div>
                         </div>
                       )}
                       <input className="luxury-input" required placeholder="Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
                       <input className="luxury-input" required placeholder="Phone" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
                       {errorMsg && <div style={{ color: '#ff4444', fontSize: '12px' }}>{errorMsg}</div>}
                       <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', background:'#f1f5f9', padding:'20px', borderRadius:'15px', marginTop: '10px' }}>
-                        <div><p style={{fontSize:'10px',opacity:0.4}}>ESTIMATED TOTAL</p><p style={{fontSize:'2.2rem',fontWeight:'900',color:'var(--primary)'}}>{calculateTotal(selectedItem.price)}</p></div>
-                        <button disabled={loading} className="btn-gold" style={{ height:'60px' }}>{loading ? <Loader2 className="animate-spin" /> : 'BOOK'}</button>
+                        <div><p style={{fontSize:'10px',opacity:0.4}}>{t.modal.total}</p><p style={{fontSize:'2.2rem',fontWeight:'900',color:'var(--primary)'}}>{calculateTotal(selectedItem.price)}</p></div>
+                        <button disabled={loading} className="btn-gold" style={{ height:'60px' }}>{loading ? <Loader2 className="animate-spin" /> : t.modal.book}</button>
                       </div>
                     </form>
                   </div>
@@ -490,7 +512,7 @@ export default function Home() {
 
       <footer style={{ padding: '60px 0', textAlign: 'center', borderTop: '1px solid rgba(0,0,0,0.05)', background: '#ffffff' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', fontSize: '11px', opacity: 0.6 }}>
-          <span>DEVELOPED FOR</span>
+          <span>{lang === 'tr' ? 'İÇİN GELİŞTİRİLDİ' : lang === 'ru' ? 'РАЗРАБОТАНО ДЛЯ' : lang === 'de' ? 'ENTWICKELT FÜR' : 'DEVELOPED FOR'}</span>
           <a href="https://github.com/shitofriv7" target="_blank" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--primary) !important' }} className="interactive">
             <FaGithub size={18} />
             <span style={{ fontWeight: '700' }}>SHITOfRIV7</span>
@@ -508,9 +530,12 @@ const Hero = ({ t }) => (
       inset: 0, 
       zIndex: 0
     }}>
-      <img 
+      <Image 
         src="https://i.imgur.com/GyAspcV.jpg" 
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+        fill
+        priority
+        sizes="100vw"
+        style={{ objectFit: 'cover' }} 
         alt="Boss Tour Hero" 
       />
       <div style={{ 
@@ -534,7 +559,7 @@ const Hero = ({ t }) => (
           <p className="luxury-para" style={{ fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', maxWidth: '650px', margin: '40px 0', color: 'var(--text-main)', fontWeight: '500' }}>{t.hero.subtitle}</p>
           <div className="hero-btns" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
             <button className="btn-gold" style={{ padding: '22px 55px' }} onClick={() => document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' })}>{t.hero.cta}</button>
-            <button className="btn-outline" style={{ padding: '22px 55px', background: 'rgba(255,255,255,0.5)', border: '1px solid var(--primary)' }} onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>View Adventures</button>
+            <button className="btn-outline" style={{ padding: '22px 55px', background: 'rgba(255,255,255,0.5)', border: '1px solid var(--primary)' }} onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>{t.hero.cta2}</button>
           </div>
         </motion.div>
       </div>

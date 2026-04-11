@@ -6,14 +6,31 @@ import { Clock, MapPin, ArrowLeft, Loader2, Calendar, Users } from 'lucide-react
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
+import { supabase } from '@/lib/supabase';
 
 export default function ToursPage() {
   const [lang, setLang] = useState('tr');
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', date: '' });
+  const [dbPrices, setDbPrices] = useState([]);
   
   const t = translations[lang];
+
+  React.useEffect(() => {
+    const fetchDbPrices = async () => {
+      const { data } = await supabase.from('prices').select('*').eq('type', 'tour');
+      if (data) setDbPrices(data);
+    };
+    fetchDbPrices();
+  }, []);
+
+  if (t && dbPrices.length > 0) {
+    t.tours.list = t.tours.list.map(tour => {
+      const override = dbPrices.find(p => p.id === tour.slug);
+      return override ? { ...tour, price: override.price } : tour;
+    });
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -63,7 +80,7 @@ export default function ToursPage() {
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ delay: i * 0.1 }}
                 className="luxury-card tour-card" 
-                onClick={() => setSelectedItem(tour)}
+                onClick={() => window.location.href = `/tours/${tour.slug}`}
                 style={{ cursor: 'pointer', overflow: 'hidden', padding: '0' }}
               >
                 <div style={{ height: '300px', position: 'relative' }}>
