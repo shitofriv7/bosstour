@@ -156,7 +156,12 @@ export default function Home() {
           >
             <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration: 1 }} style={{ textAlign: 'center' }}>
               <h1 className="serif" style={{ fontSize: '10vw', color: 'var(--primary)', letterSpacing: '0.2em' }}>BOOS TOUR</h1>
-              <motion.div initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ delay: 0.5, duration: 1.2 }} style={{ height: '2px', background: 'var(--primary)', maxWidth: '400px', margin: '20px auto' }} />
+              <motion.div 
+                initial={{ scaleX: 0 }} 
+                animate={{ scaleX: 1 }} 
+                transition={{ delay: 0.5, duration: 1.5, ease: "circOut" }} 
+                style={{ height: '2px', background: 'var(--primary)', maxWidth: '400px', margin: '20px auto', originX: 0.5 }} 
+              />
             </motion.div>
           </motion.div>
         )}
