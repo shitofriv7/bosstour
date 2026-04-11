@@ -314,13 +314,23 @@ export default function Home() {
       <section id="contact" style={{ padding: '120px 0' }}>
         <div className="main-grid">
           <div style={{ gridColumn: '1 / -1' }}>
-            <div className="luxury-card" style={{ padding: '80px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: '80px' }}>
+            <div className="luxury-card responsive-card" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
               <div>
                 <span className="section-label">Quick Connect</span>
                 <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.1' }}>Get in Touch.</h2>
                 <div style={{ marginTop: '50px', display: 'grid', gap: '25px' }}>
-                  <div style={{ display: 'flex', alignItems:'center', gap: '20px' }}><div className="glass" style={{ padding: '12px', borderRadius: '10px', color: 'var(--primary)' }}><Phone size={20}/></div><span style={{ fontSize: '1.1rem', fontWeight: '700' }}>+90 (555) 000 00 00</span></div>
-                  <div style={{ display: 'flex', alignItems:'center', gap: '20px' }}><div className="glass" style={{ padding: '12px', borderRadius: '10px', color: 'var(--primary)' }}><Mail size={20}/></div><span style={{ fontSize: '1.1rem', fontWeight: '700' }}>hello@boostour.com</span></div>
+                  <div style={{ display: 'flex', alignItems:'center', gap: '20px' }}>
+                    <div className="glass" style={{ padding: '12px', borderRadius: '10px', color: 'var(--primary)' }}>
+                      <Phone size={20}/>
+                    </div>
+                    <span style={{ fontSize: '1.1rem', fontWeight: '700' }}>+90 (555) 000 00 00</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems:'center', gap: '20px' }}>
+                    <div className="glass" style={{ padding: '12px', borderRadius: '10px', color: 'var(--primary)' }}>
+                      <Mail size={20}/>
+                    </div>
+                    <span style={{ fontSize: '1.1rem', fontWeight: '700' }}>hello@boostour.com</span>
+                  </div>
                 </div>
               </div>
               <form style={{ display: 'grid', gap: '20px' }}>
@@ -369,11 +379,11 @@ export default function Home() {
                   <p className="luxury-para">We will contact you shortly.</p>
                 </div>
               ) : (
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))' }}>
-                  <div style={{ position: 'relative', minHeight: '450px', background: '#020617' }}>
-                    <Image src={selectedItem.image} alt={selectedItem.name} fill sizes="(max-width: 1100px) 100vw, 50vw" style={{ objectFit: 'contain', padding: '40px' }} />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+                  <div style={{ position: 'relative', minHeight: '300px', background: '#020617' }}>
+                    <Image src={selectedItem.image} alt={selectedItem.name} fill sizes="(max-width: 1100px) 100vw, 50vw" style={{ objectFit: 'contain', padding: '30px' }} />
                   </div>
-                  <div style={{ padding: '50px' }}>
+                  <div className="modal-content" style={{ padding: '50px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <h2 className="serif" style={{ fontSize: '2.5rem' }}>{selectedItem.name}</h2>
                       <button onClick={() => setSelectedItem(null)} className="glass" style={{ width:'45px', height:'45px', borderRadius:'50%', border:'none', color:'#fff', cursor:'pointer' }}><X size={20}/></button>
@@ -421,12 +431,12 @@ const Hero = ({ t }) => (
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #020408 40%, transparent 100%)' }} />
     </div>
     <div className="main-grid">
-      <div style={{ gridColumn: '1 / span 9' }}>
+      <div className="hero-content">
         <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.2 }}>
           <span className="section-label">Est. 2012</span>
           <h1 className="luxury-title serif">{t.hero.title}</h1>
           <p className="luxury-para" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', maxWidth: '550px', margin: '40px 0' }}>{t.hero.subtitle}</p>
-          <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+          <div className="hero-btns" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
             <button className="btn-gold" onClick={() => document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' })}>{t.hero.cta}</button>
             <button className="btn-outline" onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>View Adventures</button>
           </div>

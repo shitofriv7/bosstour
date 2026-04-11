@@ -183,6 +183,31 @@ html, body {
   background: rgba(212, 175, 55, 0.05);
 }
 
+.responsive-card {
+  padding: 80px;
+}
+
+.hero-content {
+  grid-column: 1 / span 9;
+}
+
+@media (max-width: 768px) {
+  .responsive-card {
+    padding: 30px !important;
+  }
+  .hero-content {
+    grid-column: 1 / -1 !important;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .modal-content {
+    padding: 25px !important;
+  }
+}
+
 /* Responsive Improvements */
 @media (max-width: 1024px) {
   .main-grid {
