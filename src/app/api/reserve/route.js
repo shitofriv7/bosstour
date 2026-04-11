@@ -1,8 +1,12 @@
-import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(req) {
   try {
+    if (!supabase) {
+      throw new Error("Supabase connection not initialized. Please check Environment Variables.");
+    }
     const data = await req.json();
     const { carName, startDate, endDate, customerName, customerPhone, customerEmail, lang } = data;
 
