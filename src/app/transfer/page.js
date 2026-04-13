@@ -3,17 +3,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plane, Users, Clock, Shield, ArrowLeft, Loader2, MessageCircle } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
 
 export default function TransferPage() {
-  const [lang, setLang] = useState('tr');
+  
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', flight: '', date: '' });
   
-  const t = translations[lang];
+  const { lang, setLang, t } = useLanguage();
 
   const handleSubmit = (e) => {
     e.preventDefault();

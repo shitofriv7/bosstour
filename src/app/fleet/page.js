@@ -3,18 +3,19 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Share2, Settings, Users, Fuel, ArrowLeft, Loader2, FaGithub } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
 
 export default function FleetPage() {
-  const [lang, setLang] = useState('tr');
+  
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '' });
   const [errorMsg, setErrorMsg] = useState('');
   
-  const t = translations[lang];
+  const { lang, setLang, t } = useLanguage();
 
   const formatDisplayPrice = (price) => {
     return price;

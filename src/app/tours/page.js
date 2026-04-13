@@ -2,142 +2,217 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, MapPin, ArrowLeft, Loader2, Calendar, Users } from 'lucide-react';
+import { Clock, MapPin, ArrowLeft, Loader2, Calendar, Users, X, CheckCircle2, Zap } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 
 export default function ToursPage() {
-  const [lang, setLang] = useState('tr');
+  
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '', date: '' });
-  const [dbPrices, setDbPrices] = useState([]);
+  const [success, setSuccess] = useState(false);
+  const [formData, setFormData] = useState({ turTipi: '', hotel: '', konNo: '', zmrNr: '', name: '', phone: '', email: '', date: '', adults: '1', children: '0', time: '', restBtr: '', informer: '' });
   
-  const t = translations[lang];
+  const { lang, setLang, t } = useLanguage();
 
-  React.useEffect(() => {
-    const fetchDbPrices = async () => {
-      const { data } = await supabase.from('prices').select('*').eq('type', 'tour');
-      if (data) setDbPrices(data);
-    };
-    fetchDbPrices();
-  }, []);
-
-  if (t && dbPrices.length > 0) {
-    t.tours.list = t.tours.list.map(tour => {
-      const override = dbPrices.find(p => p.id === tour.slug);
-      return override ? { ...tour, price: override.price } : tour;
-    });
-  }
-
-  const handleSubmit = (e) => {
+  const handleReserve = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      window.open(`https://wa.me/905324567890?text=Hello, I want to book the ${selectedItem.name} on ${formData.date}`, '_blank');
-      setLoading(false);
-      setSelectedItem(null);
-    }, 1500);
+    await new Promise(r => setTimeout(r, 2000));
+    setLoading(false);
+    setSuccess(true);
   };
 
   return (
-    <main style={{ 
-      background: 'linear-gradient(135deg, #f0fbff 0%, #ffffff 50%, #fff8f0 100%)', 
-      color: 'var(--text-main)', 
-      minHeight: '100vh', 
-      position: 'relative' 
-    }}>
-      <div className="noise-overlay" />
-      <div className="bg-glow" />
-      
+    <main style={{ background: '#fff', minHeight: '100vh' }}>
       <Navbar lang={lang} setLang={setLang} t={t} />
 
-      <section style={{ padding: '160px 0 100px 0' }}>
+      <section style={{ padding: '120px 0 60px 0', background: '#f8fafc' }}>
         <div className="main-grid">
-          <div style={{ gridColumn: '1 / -1', textAlign: 'center', marginBottom: '80px' }}>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-              <button 
-                onClick={() => window.location.href = '/'}
-                style={{ background: 'none', border: 'none', color: 'var(--primary)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', margin: '0 auto 20px auto', fontWeight: '800' }}
-              >
-                <ArrowLeft size={16} /> 
-                {lang === 'tr' ? 'ANA SAYFAYA DÖN' : 'BACK TO HOME'}
-              </button>
-              <h1 className="serif" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', lineHeight: 1, marginBottom: '20px' }}>
-                {t.tours.title}
-              </h1>
-              <p className="luxury-para" style={{ maxWidth: '700px', margin: '0 auto' }}>{t.tours.subtitle}</p>
-            </motion.div>
+          <div style={{ gridColumn: 'span 12', textAlign: 'center' }}>
+            <span className="section-label">{t.nav.tours}</span>
+            <h1 className="serif" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>{t.tours.title}</h1>
           </div>
+        </div>
+      </section>
 
-          <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))', gap: '40px' }}>
-            {t.tours.list.map((tour, i) => (
+      <section style={{ padding: '60px 0 120px 0' }}>
+        <div className="main-grid">
+          <div style={{ gridColumn: 'span 12', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '30px' }}>
+            {t.tours.list.map((tour, idx) => (
               <motion.div 
-                key={i} 
-                initial={{ opacity: 0, y: 30 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ delay: i * 0.1 }}
-                className="luxury-card tour-card" 
-                onClick={() => window.location.href = `/tours/${tour.slug}`}
-                style={{ cursor: 'pointer', overflow: 'hidden', padding: '0' }}
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                className="luxury-card interactive"
+                style={{ padding: '0', overflow: 'hidden' }}
               >
-                <div style={{ height: '300px', position: 'relative' }}>
-                  <Image src={tour.images[0]} alt={tour.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
-                  <div className="vibrant-badge" style={{ position: 'absolute', top: '25px', right: '25px' }}>{tour.price}</div>
-                </div>
-                <div style={{ padding: '40px' }}>
-                  <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{tour.name}</h3>
-                  <p className="luxury-para" style={{ fontSize: '0.9rem', marginBottom: '25px', display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{tour.desc}</p>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '12px', opacity: 0.5, display: 'flex', alignItems: 'center', gap: '5px' }}><Clock size={14}/>{tour.duration}</span>
-                    <button className="btn-gold" style={{ padding: '10px 20px', fontSize: '12px' }}>{t.tours.viewTour}</button>
+                <Link href={`/tours/${tour.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div style={{ height: '240px', position: 'relative' }}>
+                    <Image src={tour.images[0]} alt={tour.name} fill style={{ objectFit: 'cover' }} />
+                    <div style={{ position: 'absolute', top: '20px', right: '20px', background: 'var(--primary)', color: '#fff', padding: '8px 15px', borderRadius: '100px', fontWeight: '900', fontSize: '14px' }}>
+                      {tour.price}
+                    </div>
                   </div>
-                </div>
+                  <div style={{ padding: '30px' }}>
+                    <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{tour.name}</h3>
+                    <p style={{ opacity: 0.6, fontSize: '14px', marginBottom: '25px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{tour.desc}</p>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.5, fontSize: '12px' }}>
+                        <Clock size={16} />
+                        <span>{tour.duration}</span>
+                      </div>
+                      <span style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '14px' }}>{t.fleet.viewDetails} →</span>
+                    </div>
+                  </div>
+                </Link>
+                <button 
+                  onClick={(e) => { e.stopPropagation(); setSelectedItem(tour); }}
+                  style={{ width: '100%', padding: '15px', background: '#f8fafc', border: 'none', borderTop: '1px solid rgba(0,0,0,0.05)', color: 'var(--primary)', fontWeight: '900', fontSize: '12px', cursor: 'pointer', transition: '0.3s' }}
+                  onMouseEnter={e => e.target.style.background = '#f0f4f8'}
+                  onMouseLeave={e => e.target.style.background = '#f8fafc'}
+                >
+                  {t.modal.book || 'QUICK BOOK'}
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Booking Modal (Shared with home) */}
+      {/* Booking Modal Redesigned */}
       <AnimatePresence>
         {selectedItem && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="modal-overlay">
-            <motion.div initial={{ scale: 0.9, y: 50 }} animate={{ scale: 1, y: 0 }} className="luxury-card" style={{ maxWidth: '900px', width: '95%', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', padding: '0', overflow: 'hidden' }}>
-              <div style={{ height:'100%', minHeight: '400px', position:'relative' }}>
-                <Image src={selectedItem.images[0]} alt="Selected" fill style={{ objectFit: 'cover' }} />
-                <button onClick={() => setSelectedItem(null)} style={{ position:'absolute', top:'20px', left:'20px', background:'rgba(0,0,0,0.4)', color:'#fff', border:'none', width:'40px', height:'40px', borderRadius:'50%', cursor:'pointer' }}>✕</button>
-              </div>
-              <div style={{ padding: '50px', background: '#fff' }}>
-                <h2 className="serif" style={{ fontSize: '2.8rem', lineHeight: 1 }}>{selectedItem.name}</h2>
-                <p className="luxury-para" style={{ margin: '30px 0', fontSize: '0.95rem' }}>{selectedItem.desc}</p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '40px' }}>
-                   <div style={{ background: '#f8fafc', padding: '15px', borderRadius: '15px', textAlign:'center' }}><Clock size={20} style={{margin:'0 auto 8px auto', color:'var(--primary)'}}/><p style={{fontSize:'12px',fontWeight:'700'}}>{selectedItem.duration}</p></div>
-                   <div style={{ background: '#f8fafc', padding: '15px', borderRadius: '15px', textAlign:'center' }}><MapPin size={20} style={{margin:'0 auto 8px auto', color:'var(--primary)'}}/><p style={{fontSize:'12px',fontWeight:'700'}}>{lang === 'tr' ? 'Antalya Başlangıç' : 'Starts in Antalya'}</p></div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} 
+            style={{ position: 'fixed', inset: 0, zIndex: 9999, background: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}
+            onClick={() => { if(!loading) setSelectedItem(null); setSuccess(false); }}
+          >
+            <motion.div initial={{ scale: 0.9, y: 50 }} animate={{ scale: 1, y: 0 }} 
+              className="luxury-card" 
+              style={{ maxWidth: '800px', width: '95%', padding: '0', overflowY: 'auto', maxHeight: '95vh', background:'#fff', boxShadow:'0 50px 100px -20px rgba(0,0,0,0.2)' }}
+              onClick={e => e.stopPropagation()}
+            >
+              {success ? (
+                <div style={{ padding: '80px 40px', textAlign: 'center' }}>
+                  <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type:'spring', bounce: 0.6 }}><CheckCircle2 size={100} style={{ color: 'var(--primary)', marginBottom: '30px' }} /></motion.div>
+                  <h2 className="serif" style={{ fontSize: '2.5rem' }}>{t.modal.confirm}</h2>
+                  <p className="luxury-para">{t.modal.confirmDesc}</p>
+                  <button onClick={() => { setSelectedItem(null); setSuccess(false); }} className="btn-gold" style={{marginTop:'30px', padding:'15px 40px'}}>Ok</button>
                 </div>
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                  <input className="luxury-input" required placeholder={lang === 'tr' ? 'Ad Soyad' : 'Full Name'} value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
-                  <input className="luxury-input" required type="date" value={formData.date} onChange={e => setFormData({...formData, date: e.target.value})} />
-                  <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', background:'#f1f5f9', padding:'20px', borderRadius:'15px' }}>
-                    <div><p style={{fontSize:'10px',opacity:0.4}}>PRICE PP</p><p style={{fontSize:'2rem',fontWeight:'900',color:'var(--primary)'}}>{selectedItem.price}</p></div>
-                    <button disabled={loading} className="btn-gold" style={{ height:'60px' }}>{loading ? <Loader2 className="animate-spin" /> : (lang === 'tr' ? 'REZERVASYON' : 'BOOK NOW')}</button>
+              ) : (
+                <div style={{ padding: '40px' }}>
+                  <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
+                    <button onClick={() => setSelectedItem(null)} style={{ position:'absolute', top:'-10px', right:'-10px', background:'rgba(0,0,0,0.05)', color:'var(--text-main)', border:'none', width:'40px', height:'40px', borderRadius:'50%', cursor:'pointer' }}>✕</button>
+                    <h2 className="serif" style={{ fontSize: '2.5rem', color: 'var(--text-main)', marginBottom: '10px' }}>{selectedItem.name}</h2>
+                    <p style={{ opacity: 0.5, fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontWeight:'900' }}>Rezervasyon Bilgileri</p>
                   </div>
-                </form>
-              </div>
+
+                  <form onSubmit={handleReserve} style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+                    
+                    {/* SECTION 1 */}
+                    <div style={{ background: '#f8fafc', padding: '30px', borderRadius: '30px', border: '1px solid rgba(0,0,0,0.03)' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px', color: 'var(--primary)', fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><MapPin size={14}/> REZERVASYON BİLGİLERİ</div>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Tur Tipi</label>
+                          <input className="luxury-input" required placeholder="Tur Tipi" style={{ background: '#fff' }} value={formData.turTipi} onChange={e => setFormData({...formData, turTipi: e.target.value})} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Otel / Gidilen Yer</label>
+                          <input className="luxury-input" required placeholder="Otel" style={{ background: '#fff' }} value={formData.hotel} onChange={e => setFormData({...formData, hotel: e.target.value})} />
+                        </div>
+                      </div>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '15px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Rezervasyon No (No.kon.)</label>
+                          <input className="luxury-input" required placeholder="No.kon." style={{ background: '#fff' }} value={formData.konNo} onChange={e => setFormData({...formData, konNo: e.target.value})} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Zaman No (Zmr.Nr.)</label>
+                          <input className="luxury-input" required placeholder="Zmr.Nr." style={{ background: '#fff' }} value={formData.zmrNr} onChange={e => setFormData({...formData, zmrNr: e.target.value})} />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SECTION 2 */}
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px', opacity: 0.6, fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><Users size={14}/> MÜŞTERİ BİLGİLERİ</div>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Ad Soyad (Name)</label>
+                          <input className="luxury-input" required placeholder="Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Telefon No</label>
+                          <input className="luxury-input" required placeholder="Phone" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SECTION 3 */}
+                    <div style={{ background: '#f8fafc', padding: '30px', borderRadius: '30px', border: '1px solid rgba(0,0,0,0.03)' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px', color: 'var(--primary)', fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><Calendar size={14}/> TUR DETAYLARI</div>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Tarih (Datum)</label>
+                          <input className="luxury-input" required type="date" style={{ background: '#fff' }} value={formData.date} onChange={e => setFormData({...formData, date: e.target.value})} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Saat (Uhr)</label>
+                          <input className="luxury-input" required placeholder="Uhr" style={{ background: '#fff' }} value={formData.time} onChange={e => setFormData({...formData, time: e.target.value})} />
+                        </div>
+                      </div>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '15px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Kişi Sayısı (Abanc)</label>
+                          <input className="luxury-input" required type="number" min="1" style={{ background: '#fff' }} value={formData.adults} onChange={e => setFormData({...formData, adults: e.target.value})} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Çocuk Sayısı (Kinder)</label>
+                          <input className="luxury-input" required type="number" min="0" style={{ background: '#fff' }} value={formData.children} onChange={e => setFormData({...formData, children: e.target.value})} />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SECTION 4 */}
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px', opacity: 0.6, fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><Zap size={14}/> EK BİLGİLER</div>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Restoran / Yer (Rest Btr.)</label>
+                          <input className="luxury-input" placeholder="Rest Btr." value={formData.restBtr} onChange={e => setFormData({...formData, restBtr: e.target.value})} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Bilgilendiren (Informer)</label>
+                          <input className="luxury-input" placeholder="Informer" value={formData.informer} onChange={e => setFormData({...formData, informer: e.target.value})} />
+                        </div>
+                      </div>
+                    </div>
+
+                    <button disabled={loading} className="btn-gold" style={{ width: '100%', height: '80px', borderRadius: '40px', background: 'var(--vibrant-gradient)', color: '#fff', fontSize: '18px', fontWeight: '900', boxShadow: '0 20px 40px rgba(var(--primary-rgb), 0.3)', marginTop:'10px' }}>
+                      {loading ? <Loader2 className="animate-spin" /> : (
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
+                          <span>REZERVASYONU TAMAMLA</span>
+                          <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.3)' }} />
+                          <span style={{ fontSize: '20px' }}>{selectedItem.price}</span>
+                        </div>
+                      )}
+                    </button>
+                  </form>
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-
+      
       <footer style={{ padding: '60px 0', textAlign: 'center', borderTop: '1px solid rgba(0,0,0,0.05)', background: '#ffffff' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', fontSize: '11px', opacity: 0.6 }}>
-          <span>DEVELOPED FOR</span>
-          <a href="https://github.com/shitofriv7" target="_blank" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--primary) !important' }} className="interactive">
-            <span style={{ fontWeight: '700' }}>SHITOfRIV7</span>
-          </a>
-        </div>
+        <p style={{ opacity: 0.4, fontSize: '12px' }}>© 2026 Boss Tour • Luxury Destination Management</p>
       </footer>
     </main>
   );

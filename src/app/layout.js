@@ -6,6 +6,8 @@ export const metadata = {
   keywords: "luxury car rental, VIP transfer, Boss Tour, airport transfer Turkey, private chauffeur, luxury tours",
 };
 
+import { LanguageProvider } from "@/context/LanguageContext";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="tr">
@@ -13,7 +15,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

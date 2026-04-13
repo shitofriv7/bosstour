@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, MapPin, DollarSign, Layout, ArrowLeft, Loader2, Phone } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
@@ -10,13 +11,13 @@ import { supabase } from '@/lib/supabase';
 import { useEffect } from 'react';
 
 export default function RealEstatePage() {
-  const [lang, setLang] = useState('tr');
+  
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
   const [dynamicProperties, setDynamicProperties] = useState([]);
   
-  const t = translations[lang];
+  const { lang, setLang, t } = useLanguage();
   useEffect(() => {
     const fetchDynamic = async () => {
       const { data, error } = await supabase.from('real_estate').select('*').order('created_at', { ascending: false });

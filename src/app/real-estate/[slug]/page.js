@@ -8,6 +8,7 @@ import {
   Thermometer, Sofa, Calendar, ShieldCheck, Waves, Car, Dumbbell,
   Train, Anchor, Hospital, School, ExternalLink, Play
 } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../../translations';
 import Navbar from '../../../components/Navbar';
 import Image from 'next/image';
@@ -16,13 +17,13 @@ import { useParams } from 'next/navigation';
 
 export default function PropertyDetail() {
   const { slug } = useParams();
-  const [lang, setLang] = useState('tr');
+  
   const [activeImg, setActiveImg] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
   const [property, setProperty] = useState(null);
   const [dynamicLoading, setDynamicLoading] = useState(true);
 
-  const t = translations[lang];
+  const { lang, setLang, t } = useLanguage();
 
   
   useEffect(() => {
