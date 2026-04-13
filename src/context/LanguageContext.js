@@ -2,7 +2,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { translations } from '../app/translations';
 
-const LanguageContext = createContext();
+const LanguageContext = createContext({
+  lang: 'tr',
+  setLang: () => {},
+  t: translations['tr'],
+});
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState('tr');
