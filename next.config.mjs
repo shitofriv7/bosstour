@@ -202,6 +202,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'media.wired.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'cdn.bfldr.com',
         port: '',
         pathname: '/**',

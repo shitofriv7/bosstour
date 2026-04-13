@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, Menu, X, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Navbar({ lang, setLang, t }) {
   const [scrolled, setScrolled] = useState(false);
@@ -15,9 +16,11 @@ export default function Navbar({ lang, setLang, t }) {
   }, []);
 
   const navItems = [
-    { name: t.nav.home, href: "/#home" },
-    { name: t.nav.services, href: "/tours" },
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.tours, href: "/tours" },
     { name: t.nav.fleet, href: "/fleet" },
+    { name: t.nav.transfer, href: "/transfer" },
+    { name: t.nav.realEstate, href: "/real-estate" },
     { name: t.nav.contact, href: "/#contact" }
   ];
 
@@ -42,9 +45,9 @@ export default function Navbar({ lang, setLang, t }) {
           width: '100%',
           maxWidth: scrolled ? '1000px' : '1200px',
           height: '70px',
-          background: 'rgba(255, 255, 255, 0.7)',
-          backdropFilter: 'blur(30px)',
-          WebkitBackdropFilter: 'blur(30px)',
+          background: 'rgba(255, 255, 255, 0.85)',
+          backdropFilter: 'blur(60px)',
+          WebkitBackdropFilter: 'blur(60px)',
           border: '1px solid rgba(var(--primary-rgb), 0.2)',
           borderRadius: '100px',
           display: 'flex',
@@ -64,27 +67,17 @@ export default function Navbar({ lang, setLang, t }) {
           {/* Logo */}
           <div 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }}
+            style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', height: '100%' }}
           >
-            <div style={{
-              width: '40px', height: '40px', background: 'var(--primary)',
-              borderRadius: '12px', display: 'flex', alignItems: 'center',
-              justifyContent: 'center', color: '#fff', fontWeight: '900',
-              fontSize: '18px', boxShadow: '0 5px 15px rgba(0,102,255,0.3)', flexShrink: 0
-            }}>B</div>
-            <motion.div className="logo-text" style={{ 
-              fontWeight: '900', 
-              fontFamily: "var(--font-sans)", /* Use modern sans for colorful look */
-              fontSize: '22px',
-              letterSpacing: '2px',
-              color: 'var(--text-main)' 
-            }}>
-              BOSS<span style={{ 
-                background: 'linear-gradient(to right, #ff7811, #00d2ff)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>TOUR</span>
-            </motion.div>
+            <div style={{ position: 'relative', width: '180px', height: '60px' }}>
+              <Image 
+                src="https://i.imgur.com/IW7B7av.png" 
+                alt="Boss Tour Logo" 
+                fill 
+                priority
+                style={{ objectFit: 'contain', objectPosition: 'left', filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.1))' }} 
+              />
+            </div>
           </div>
 
           {/* Right Actions */}
@@ -173,7 +166,14 @@ export default function Navbar({ lang, setLang, t }) {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '4px' }}>BOSS<span style={{ color: 'var(--primary)' }}>TOUR</span></div>
+              <div style={{ position: 'relative', width: '150px', height: '40px' }}>
+                <Image 
+                  src="https://i.imgur.com/IW7B7av.png" 
+                  alt="Boss Tour Logo" 
+                  fill 
+                  style={{ objectFit: 'contain', objectPosition: 'left' }} 
+                />
+              </div>
               <button 
                 onClick={() => setMobileMenu(false)}
                 style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: '#fff', width: '50px', height: '50px', borderRadius: '50%', display:'flex', alignItems:'center', justifyContent:'center' }}

@@ -185,7 +185,8 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             style={{
               position: 'fixed', inset: 0, zIndex: 9999,
-              background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center'
+              background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', 
+              display: 'flex', alignItems: 'center', justifyContent: 'center'
             }}
           >
             <div style={{ position: 'relative' }}>
@@ -196,20 +197,20 @@ export default function Home() {
                   height: '2px', background: 'var(--primary)', position: 'absolute', bottom: -10, left: 0 
                 }}
               />
-              <motion.h1 
-                initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
-                style={{ 
-                  fontSize: 'clamp(2.5rem, 10vw, 6rem)', fontWeight: '900', letterSpacing: '2px', 
-                  fontFamily: "var(--font-sans)", color: 'var(--primary)' 
-                }}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }} 
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                style={{ position: 'relative', width: 'clamp(200px, 40vw, 500px)', height: 'clamp(80px, 15vw, 200px)' }}
               >
-                BOSS<span style={{ 
-                  background: 'linear-gradient(to right, #ff7811, #00d2ff)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  fontWeight: '950'
-                }}>TOUR</span>
-              </motion.h1>
+                <Image 
+                  src="https://i.imgur.com/IW7B7av.png" 
+                  alt="Boss Tour Logo" 
+                  fill 
+                  priority
+                  style={{ objectFit: 'contain' }} 
+                />
+              </motion.div>
             </div>
           </motion.div>
         )}

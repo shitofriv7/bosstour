@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    nav: { home: "Home", services: "Adventures", fleet: "Our Fleet", contact: "Contact" },
+    nav: { home: "Home", tours: "Tours", fleet: "Fleet", transfer: "Transfer", realEstate: "Real Estate", contact: "Contact" },
     hero: { 
       title: "Adventure Awaits in Antalya", 
       subtitle: "Explore the turquoise coast with Boss Tour. Rent a car or join our unique tours.",
@@ -300,10 +300,69 @@ export const translations = {
         { name: "Ancient Side", dist: "75 km", tags: ["History", "Sunset"] },
         { name: "The Land of Legends", dist: "30 km", tags: ["Family", "Fun"] }
       ]
+    },
+  
+    transfer: {
+      title: "VIP Airport Transfer",
+      subtitle: "Comfortable and safe transfers from Antalya Airport to your destination.",
+      viewDetails: "View Details",
+      list: [
+        { 
+          name: "Mercedes Vito VIP", 
+          capacity: "1-6 Persons", 
+          price: "€50", 
+          images: ["https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop"],
+          desc: "Ultra-luxury VIP transfer with professional drivers.",
+          longDesc: "Erleben Sie ultimativen Komfort mit unserem VIP-Transferservice. Unsere professionellen Fahrer empfangen Sie persönlich am Ankunftsgate mit einem Namensschild. Reisen Sie in unseren Premium Mercedes Vito VIP Fahrzeugen.",
+          highlights: ["Abholung am Gate", "Flugverfolgung", "24/7 Verfügbarkeit", "Kindersitze verfügbar"],
+          included: ["MwSt. & Gebühren", "Privatfahrzeug", "Mehrsprachiger Fahrer", "Mineralwasser"],
+          longDesc: "Experience the ultimate comfort with our VIP transfer service. Our professional drivers will meet you personally at the arrival gate with a name sign. Travel in our premium Mercedes Vito VIP vehicles, equipped with luxory seating, air conditioning, and complimentary refreshments.",
+          highlights: ["Meet & Greet at Gate", "Flight Tracking", "24/7 Availability", "Child Seats Available"],
+          included: ["VAT & Airport Taxes", "Private Vehicle", "English Speaking Driver", "Bottled Water"]
+        }
+      ]
+    },
+    realEstate: {
+      title: "Luxury Real Estate",
+      subtitle: "Discover the best properties and investment opportunities in Antalya.",
+      viewDetails: "View Details",
+      list: [
+        { 
+          slug: 'luxury-sea-view-villa-kas',
+          name: 'Luxury Sea View Villa', 
+          type: 'For Sale',
+          propertyType: 'Villa',
+          location: 'Kas, Antalya', 
+          price: '€850,000', 
+          area: '350m²',
+          rooms: '4+1',
+          age: '0 (New)',
+          floor: '3 Floors',
+          heating: 'Underfloor & AC',
+          furnished: 'Yes',
+          images: [
+            'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?q=80&w=2070&auto=format&fit=crop'
+          ],
+          desc: 'This stunning 4-bedroom villa offers the perfect blend of modern luxury and traditional Mediterranean charm. Located in the prestigious hills of Kas, it provides breathtaking panoramic views of the turquoise sea and the Greek island of Meis. The villa features a private infinity pool, a gourmet kitchen, and spacious terraces for outdoor living.',
+          features: {
+            interior: ['Balcony', 'Elevator', 'En-suite Bathroom', 'Air Conditioning', 'Built-in Kitchen', 'Fiber Internet'],
+            exterior: ['Private Parking', '24/7 Security', 'Private Pool', 'Fitness Center', 'Garden'],
+            location: ['Sea View', 'Near Hospital', 'Quiet Area', 'Close to Beach']
+          },
+          owner: {
+            name: 'Boss Real Estate',
+            phone: '+90 532 000 00 00',
+            type: 'Agency'
+          },
+          map: { lat: 36.199, lng: 29.638 }
+        }
+      ]
     }
   },
   tr: {
-    nav: { home: "Ana Sayfa", services: "Maceralar", fleet: "Filomuz", contact: "İletişim" },
+    nav: { home: "Ana Sayfa", tours: "Turlar", fleet: "Filo", transfer: "Transfer", realEstate: "Emlak", contact: "İletişim" },
     hero: { 
       title: "Antalya'da Macera Başlıyor", 
       subtitle: "Boss Tour ile turkuaz kıyıları keşfedin. İster araç kiralayın, ister turlarımıza katılın.",
@@ -603,10 +662,69 @@ export const translations = {
         { name: "Antik Side", dist: "75 km", tags: ["Tarih", "Gün Batımı"] },
         { name: "The Land of Legends", dist: "30 km", tags: ["Eğlence", "Aile"] }
       ]
+    },
+  
+    transfer: {
+      title: "VIP Havalimanı Transferi",
+      subtitle: "Antalya Havalimanı’ndan varış noktanıza konforlu ve güvenli ulaşım.",
+      viewDetails: "Detayları Gör",
+      list: [
+        { 
+          name: "Mercedes Vito VIP", 
+          capacity: "1-6 Kişi", 
+          price: "€50", 
+          images: ["https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop"],
+          desc: "Profesyonel şoförler ile ultra lüks VIP transfer hizmeti.",
+          longDesc: "Erleben Sie ultimativen Komfort mit unserem VIP-Transferservice. Unsere professionellen Fahrer empfangen Sie persönlich am Ankunftsgate mit einem Namensschild. Reisen Sie in unseren Premium Mercedes Vito VIP Fahrzeugen.",
+          highlights: ["Abholung am Gate", "Flugverfolgung", "24/7 Verfügbarkeit", "Kindersitze verfügbar"],
+          included: ["MwSt. & Gebühren", "Privatfahrzeug", "Mehrsprachiger Fahrer", "Mineralwasser"],
+          longDesc: "VIP transfer hizmetimizle konforun zirvesini yaşayın. Profesyonel şoförlerimiz sizi geliş kapısında isminizle karşılar. Lüks koltuklar, klima ve ikramlarla donatılmış premium Mercedes Vito VIP araçlarımızla varış noktanıza güvenle ulaşın.",
+          highlights: ["Kapıda İsimle Karşılama", "Uçuş Takibi", "7/24 Kesintisiz Hizmet", "Bebek Koltuğu Seçeneği"],
+          included: ["KDV ve Havalimanı Vergileri", "Size Özel Tahsisli Araç", "Profesyonel Şoför", "Ücretsiz Su"]
+        }
+      ]
+    },
+    realEstate: {
+      title: "Lüks Emlak & Yatırım",
+      subtitle: "Antalya’daki en iyi mülkleri ve yatırım fırsatlarını keşfedin.",
+      viewDetails: "Detayları Gör",
+      list: [
+        { 
+          slug: 'luxury-sea-view-villa-kas',
+          name: 'Lüks Deniz Manzaralı Villa', 
+          type: 'Satılık',
+          propertyType: 'Villa',
+          location: 'Kaş, Antalya', 
+          price: '€850.000', 
+          area: '350m²',
+          rooms: '4+1',
+          age: '0 (Yeni)',
+          floor: '3 Katlı',
+          heating: 'Yerden Isıtma & Klima',
+          furnished: 'Evet',
+          images: [
+            'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2070&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?q=80&w=2070&auto=format&fit=crop'
+          ],
+          desc: 'Kaşın en prestijli bölgesinde yer alan bu muhteşem 4 yatak odalı villa, modern lüks ile geleneksel Akdeniz cazibesinin mükemmel bir birleşimini sunuyor. Meis adası ve turkuaz denizin panoramik manzarasını sunan villa; özel sonsuzluk havuzu, gurme mutfak ve geniş teras alanlarıyla donatılmıştır.',
+          features: {
+            interior: ['Balkon', 'Asansör', 'Ebeveyn Banyosu', 'Klima', 'Ankastre Mutfak', 'Fiber İnternet'],
+            exterior: ['Otopark', '7/24 Güvenlik', 'Müstakil Havuz', 'Spor Salonu', 'Bahçe'],
+            location: ['Deniz Manzaralı', 'Hastaneye Yakın', 'Sakin Konum', 'Plaja Yakın']
+          },
+          owner: {
+            name: 'Boss Emlak',
+            phone: '+90 532 000 00 00',
+            type: 'Emlak Ofisi'
+          },
+          map: { lat: 36.199, lng: 29.638 }
+        }
+      ]
     }
   },
   de: {
-    nav: { home: "Startseite", services: "Abenteuer", fleet: "Unsere Flotte", contact: "Kontakt" },
+    nav: { home: "Startseite", tours: "Touren", fleet: "Flotte", transfer: "Transfer", realEstate: "Immobilien", contact: "Kontakt" },
     hero: { 
       title: "Abenteuer in Antalya", 
       subtitle: "Entdecken Sie die Küste mit Boss Tour. Mieten Sie ein Auto oder erleben Sie unsere Touren.",
@@ -906,10 +1024,42 @@ export const translations = {
         { name: "Antikes Side", dist: "75 km", tags: ["Geschichte", "Sonnenuntergang"] },
         { name: "The Land of Legends", dist: "30 km", tags: ["Familie", "Spaß"] }
       ]
+    },
+  
+    transfer: {
+      title: "VIP Flughafentransfer",
+      subtitle: "Komfortable und sichere Transfers vom Flughafen Antalya zu Ihrem Ziel.",
+      viewDetails: "Details sehen",
+      list: [
+        { 
+          name: "Mercedes Vito VIP", 
+          capacity: "1-6 Personen", 
+          price: "€50", 
+          images: ["https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop"],
+          desc: "Ultra-Luxus VIP Transfer mit professionellen Fahrern.",
+          longDesc: "Erleben Sie ultimativen Komfort mit unserem VIP-Transferservice. Unsere professionellen Fahrer empfangen Sie persönlich am Ankunftsgate mit einem Namensschild. Reisen Sie in unseren Premium Mercedes Vito VIP Fahrzeugen.",
+          highlights: ["Abholung am Gate", "Flugverfolgung", "24/7 Verfügbarkeit", "Kindersitze verfügbar"],
+          included: ["MwSt. & Gebühren", "Privatfahrzeug", "Mehrsprachiger Fahrer", "Mineralwasser"]
+        }
+      ]
+    },
+    realEstate: {
+      title: "Luxus-Immobilien",
+      subtitle: "Entdecken Sie die besten Immobilien und Investmentmöglichkeiten in Antalya.",
+      viewDetails: "Details sehen",
+      list: [
+        { 
+          name: "Luxusvilla mit Meerblick", 
+          location: "Kas, Antalya", 
+          price: "€850.000", 
+          images: ["https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop"],
+          desc: "Atemberaubende Villa mit 4 Schlafzimmern, privatem Pool und Meerblick."
+        }
+      ]
     }
   },
   ru: {
-    nav: { home: "Главная", services: "Приключения", fleet: "Наш автопарк", contact: "Контакт" },
+    nav: { home: "Главная", tours: "Туры", fleet: "Автопарк", transfer: "Трансфер", realEstate: "Недвижимость", contact: "Контакты" },
     hero: { 
       title: "Приключения ждут в Анталии", 
       subtitle: "Исследуйте побережье с Boss Tour. Арендуйте авто или присоединяйтесь к турам.",
@@ -1184,6 +1334,38 @@ export const translations = {
       tours: "Туров в Анталии",
       insights: "Советы туристам",
       supportTitle: "Поддержка"
+    },
+  
+    transfer: {
+      title: "VIP Трансфер из Аэропорта",
+      subtitle: "Комфортные и безопасные трансферы из аэропорта Анталии до вашего места назначения.",
+      viewDetails: "Подробнее",
+      list: [
+        { 
+          name: "Mercedes Vito VIP", 
+          capacity: "1-6 Человек", 
+          price: "€50", 
+          images: ["https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2000&auto=format&fit=crop"],
+          desc: "Ультра-люкс VIP трансфер с профессиональными водителями.",
+          longDesc: "Ощутите максимальный комфорт с нашим VIP-трансфером. Наши профессиональные водители встретят вас у выхода с табличкой с вашим именем. Путешествуйте на наших премиальных автомобилях Mercedes Vito VIP.",
+          highlights: ["Встреча у гейта", "Отслеживание рейса", "Круглосуточный сервис", "Детские кресла"],
+          included: ["Налоги и сборы", "Частный автомобиль", "Профессиональный водитель", "Вода в бутылках"]
+        }
+      ]
+    },
+    realEstate: {
+      title: "Элитная Недвижимость",
+      subtitle: "Откройте для себя лучшие объекты недвижимости и инвестиционные возможности в Анталии.",
+      viewDetails: "Подробнее",
+      list: [
+        { 
+          name: "Роскошная Вилла с Видом на Море", 
+          location: "Каш, Анталия", 
+          price: "€850.000", 
+          images: ["https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop"],
+          desc: "Великолепная вилла с 4 спальнями, частным бассейном и панорамным видом на море."
+        }
+      ]
     }
   }
 };
