@@ -66,7 +66,7 @@ export default function FleetPage() {
           </div>
 
           <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(380px, 1fr))', gap: '40px' }}>
-            {t.fleet.list.map((car, i) => (
+            {t.fleet.cars.map((car, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 30 }} 
@@ -82,9 +82,10 @@ export default function FleetPage() {
                 </div>
                 <div style={{ padding: '40px' }}>
                   <h3 className="serif" style={{ fontSize: '2.2rem', marginBottom: '20px' }}>{car.name}</h3>
-                  <div style={{ display: 'flex', gap: '20px', marginBottom: '25px' }}>
-                    <span style={{ display:'flex', alignItems:'center', gap: '8px', fontSize: '13px', background: 'rgba(0,0,0,0.03)', padding: '8px 15px', borderRadius: '12px' }}><Settings size={16}/>{car.gear}</span>
-                    <span style={{ display:'flex', alignItems:'center', gap: '8px', fontSize: '13px', background: 'rgba(0,0,0,0.03)', padding: '8px 15px', borderRadius: '12px' }}><Fuel size={16}/>{car.fuel}</span>
+                  <div style={{ display: 'flex', gap: '20px', marginBottom: '25px', flexWrap: 'wrap' }}>
+                    {car.features?.map((f, idx) => (
+                       <span key={idx} style={{ display:'flex', alignItems:'center', gap: '8px', fontSize: '13px', background: 'rgba(0,0,0,0.03)', padding: '8px 15px', borderRadius: '12px' }}>{f}</span>
+                    ))}
                   </div>
                   <button className="btn-gold" style={{ width: '100%', height: '60px', borderRadius: '18px', fontSize: '1rem' }}>{t.fleet.viewDetails}</button>
                 </div>
@@ -104,11 +105,13 @@ export default function FleetPage() {
                 <button onClick={() => setSelectedItem(null)} style={{ position:'absolute', top:'20px', left:'20px', background:'rgba(0,0,0,0.4)', color:'#fff', border:'none', width:'40px', height:'40px', borderRadius:'50%', cursor:'pointer' }}>✕</button>
               </div>
               <div style={{ padding: '50px', background: '#fff' }}>
-                <h2 className="serif" style={{ fontSize: '2.8rem', lineHeight: 1 }}>{selectedItem.name}</h2>
-                <p className="luxury-para" style={{ margin: '30px 0', fontSize: '0.95rem' }}>{selectedItem.longDesc}</p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '40px' }}>
-                   <div style={{ background: '#f8fafc', padding: '15px', borderRadius: '15px', textAlign:'center' }}><Settings size={20} style={{margin:'0 auto 8px auto', color:'var(--primary)'}}/><p style={{fontSize:'12px',fontWeight:'700'}}>{selectedItem.gear}</p></div>
-                   <div style={{ background: '#f8fafc', padding: '15px', borderRadius: '15px', textAlign:'center' }}><Fuel size={20} style={{margin:'0 auto 8px auto', color:'var(--primary)'}}/><p style={{fontSize:'12px',fontWeight:'700'}}>{selectedItem.fuel}</p></div>
+                <h2 className="serif" style={{ fontSize: '2.8rem', lineHeight: 1, marginBottom: '20px' }}>{selectedItem.name}</h2>
+                <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '40px' }}>
+                  {selectedItem.features?.map((f, idx) => (
+                     <div key={idx} style={{ background: '#f8fafc', padding: '15px', borderRadius: '15px', textAlign:'center', flex: 1, minWidth: '80px' }}>
+                       <p style={{fontSize:'12px',fontWeight:'700'}}>{f}</p>
+                     </div>
+                  ))}
                 </div>
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
                   <input className="luxury-input" required placeholder={lang === 'tr' ? 'Ad Soyad' : 'Full Name'} value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
