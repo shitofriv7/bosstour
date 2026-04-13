@@ -66,7 +66,7 @@ export default function FleetPage() {
           </div>
 
           <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(380px, 1fr))', gap: '40px' }}>
-            {t?.fleet?.cars?.map((car, i) => (
+            {(t?.fleet?.cars || []).map((car, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 30 }} 
@@ -83,7 +83,7 @@ export default function FleetPage() {
                 <div style={{ padding: '40px' }}>
                   <h3 className="serif" style={{ fontSize: '2.2rem', marginBottom: '20px' }}>{car.name}</h3>
                   <div style={{ display: 'flex', gap: '20px', marginBottom: '25px', flexWrap: 'wrap' }}>
-                    {car.features?.map((f, idx) => (
+                    {(car.features || []).map((f, idx) => (
                        <span key={idx} style={{ display:'flex', alignItems:'center', gap: '8px', fontSize: '13px', background: 'rgba(0,0,0,0.03)', padding: '8px 15px', borderRadius: '12px' }}>{f}</span>
                     ))}
                   </div>
@@ -107,7 +107,7 @@ export default function FleetPage() {
               <div style={{ padding: '50px', background: '#fff' }}>
                 <h2 className="serif" style={{ fontSize: '2.8rem', lineHeight: 1, marginBottom: '20px' }}>{selectedItem.name}</h2>
                 <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '40px' }}>
-                  {selectedItem.features?.map((f, idx) => (
+                  {(selectedItem.features || []).map((f, idx) => (
                      <div key={idx} style={{ background: '#f8fafc', padding: '15px', borderRadius: '15px', textAlign:'center', flex: 1, minWidth: '80px' }}>
                        <p style={{fontSize:'12px',fontWeight:'700'}}>{f}</p>
                      </div>
