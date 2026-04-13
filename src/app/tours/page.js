@@ -84,7 +84,7 @@ export default function ToursPage() {
                 style={{ cursor: 'pointer', overflow: 'hidden', padding: '0' }}
               >
                 <div style={{ height: '300px', position: 'relative' }}>
-                  <Image src={tour.image} alt={tour.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                  <Image src={tour.images[0]} alt={tour.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
                   <div className="vibrant-badge" style={{ position: 'absolute', top: '25px', right: '25px' }}>{tour.price}</div>
                 </div>
                 <div style={{ padding: '40px' }}>
@@ -107,7 +107,7 @@ export default function ToursPage() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="modal-overlay">
             <motion.div initial={{ scale: 0.9, y: 50 }} animate={{ scale: 1, y: 0 }} className="luxury-card" style={{ maxWidth: '900px', width: '95%', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', padding: '0', overflow: 'hidden' }}>
               <div style={{ height:'100%', minHeight: '400px', position:'relative' }}>
-                <Image src={selectedItem.image} alt="Selected" fill style={{ objectFit: 'cover' }} />
+                <Image src={selectedItem.images[0]} alt="Selected" fill style={{ objectFit: 'cover' }} />
                 <button onClick={() => setSelectedItem(null)} style={{ position:'absolute', top:'20px', left:'20px', background:'rgba(0,0,0,0.4)', color:'#fff', border:'none', width:'40px', height:'40px', borderRadius:'50%', cursor:'pointer' }}>✕</button>
               </div>
               <div style={{ padding: '50px', background: '#fff' }}>

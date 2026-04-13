@@ -271,7 +271,7 @@ export default function Home() {
                 className="luxury-card" style={{ padding: '0' }}
               >
                 <div style={{ height: '320px', position: 'relative' }}>
-                  <Image src={tour.image} alt={tour.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                  <Image src={tour.images[0]} alt={tour.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
                   <div style={{ 
                     position: 'absolute', top: '20px', left: '20px', 
                     background: 'var(--vibrant-gradient)', color: '#fff', 
@@ -321,7 +321,7 @@ export default function Home() {
                 className="luxury-card interactive" onClick={() => setSelectedItem(car)}
               >
                 <div style={{ height: '260px', position: 'relative' }}>
-                  <Image src={car.image} alt={car.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'contain', padding: '30px' }} />
+                  <Image src={car.images[0]} alt={car.name} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'contain', padding: '30px' }} />
                   <div style={{ position: 'absolute', bottom: '20px', right: '30px', background: 'var(--glass)', padding: '12px 25px', borderRadius: '20px', backdropFilter: 'blur(10px)', border: '1px solid rgba(var(--primary-rgb), 0.1)' }}>
                     <span style={{ color: 'var(--primary)', fontWeight: '900', fontSize: '1.2rem' }}>{formatDisplayPrice(car.price)}</span>
                   </div>
@@ -480,7 +480,7 @@ export default function Home() {
               ) : (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
                   <div style={{ position: 'relative', minHeight: '300px', background: '#f8fafc' }}>
-                    <Image src={selectedItem.image} alt={selectedItem.name} fill sizes="(max-width: 1100px) 100vw, 50vw" style={{ objectFit: 'contain', padding: '30px' }} />
+                    <Image src={selectedItem.images[0]} alt={selectedItem.name} fill sizes="(max-width: 1100px) 100vw, 50vw" style={{ objectFit: 'contain', padding: '30px' }} />
                   </div>
                   <div className="modal-content" style={{ padding: '50px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
