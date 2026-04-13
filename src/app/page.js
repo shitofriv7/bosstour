@@ -36,7 +36,7 @@ export default function Home() {
             <span className="section-label">{t.nav.fleet}</span>
             <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>{t.fleet.title}</h2>
           </div>
-          {t.fleet.cars.map((car, idx) => (
+          {t?.fleet?.cars?.map((car, idx) => (
             <motion.div 
               key={idx}
               initial={{ opacity: 0, y: 30 }}
@@ -55,7 +55,7 @@ export default function Home() {
               <div style={{ padding: '30px' }}>
                 <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{car.name}</h3>
                 <div style={{ display: 'flex', gap: '15px' }}>
-                  {car.features.map((f, i) => (
+                  {car.features?.map((f, i) => (
                     <span key={i} style={{ fontSize: '11px', opacity: 0.5, textTransform: 'uppercase', fontWeight: '800' }}>{f}</span>
                   ))}
                 </div>
@@ -82,7 +82,7 @@ export default function Home() {
             <span className="section-label" style={{ border: '1px solid rgba(255,255,255,0.2)' }}>{t.nav.tours}</span>
             <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>{t.tours.title}</h2>
           </div>
-          {t.tours.list.slice(0, 3).map((tour, idx) => (
+          {t?.tours?.list?.slice(0, 3).map((tour, idx) => (
             <motion.div 
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -132,7 +132,7 @@ export default function Home() {
             <span className="section-label">Elite Standards</span>
             <h2 className="serif" style={{ fontSize: '3rem' }}>{t.whyUs.title}</h2>
           </div>
-          {t.whyUs.items.map((item, i) => (
+          {t?.whyUs?.items?.map((item, i) => (
             <div key={i} className="luxury-card" style={{ gridColumn: 'span 4', textAlign: 'center', padding: '50px' }}>
               <div style={{ color: 'var(--primary)', marginBottom: '30px' }}>
                 {i === 0 ? <Zap size={40} /> : i === 1 ? <Shield size={40} /> : <Star size={40} />}

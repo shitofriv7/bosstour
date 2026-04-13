@@ -66,7 +66,7 @@ export default function FleetPage() {
           </div>
 
           <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(380px, 1fr))', gap: '40px' }}>
-            {t.fleet.cars.map((car, i) => (
+            {t?.fleet?.cars?.map((car, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 30 }} 
