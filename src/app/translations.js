@@ -749,6 +749,15 @@ export const translations = {
   ru: {
     nav: { home: "Главная", tours: "Туры", fleet: "Автопарк", contact: "Контакты", services: "Опыт" },
     hero: { title: "Анталья ждет вас", subtitle: "Исследуйте побережье с Boss Tour.", cta: "Аренда авто", cta2: "Все туры" },
+    fleet: { title: "Наш премиум автопарк", subtitle: "Современные автомобили для каждой поездки.", viewAll: "Весь автопарк", viewDetails: "Подробнее", bookNow: "Забронировать", cars: [
+      { name: "Fiat Egea", price: "€45", images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbN1_TwSefKLXcrdC4qy5_j_HDyfDj12pv0g&s"], features: ["Дизель", "Механика", "5 Мест"] },
+      { name: "Renault Clio", price: "€40", images: ["https://otopoint.com.tr/wp-content/uploads/2022/10/clio2.jpg"], features: ["Бензин", "Автомат", "5 Мест"] },
+      { name: "Suzuki Jeep", price: "€70", images: ["https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg"], features: ["Бензин", "Механика", "4 Места"] },
+      { name: "Dacia Sandero", price: "€43", images: ["https://www.otokocikinciyell.com/Uploads/blogAracModelResimleri/8e2501e5-ec28-40b9-8aa8-ac6cdfd310ca.jpg"], features: ["Дизель", "Механика", "5 Мест"] },
+      { name: "Megane 4", price: "€50", images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjIUBY_V4V42Fp1S-tV1C09o14fJt6f9Pxtg&s"], features: ["Дизель", "Автомат", "5 Мест"] },
+      { name: "Peugeot 2008", price: "€60", images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq4r88kL2K-Qv5lB3Z2P3x7I874l-6h47F46w&s"], features: ["Дизель", "Автомат", "5 Мест"] },
+      { name: "Vito", price: "€100", images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_n2t0g2J2zB8B5B1b4O9N7-8e6R1Z3O9O2A&s"], features: ["Дизель", "Автомат", "9 Мест"] }
+    ]},
     tours: {
       title: "Эксклюзивные Туры и Активности",
       subtitle: "Самые яркие впечатления в Анталье и за ее пределами.",
@@ -977,6 +986,17 @@ export const translations = {
         }
       ]
     },
-    modal: { book: "Заказать", confirm: "Подтверждено", confirmDesc: "Ваша заявка принята." }
+    contact: { title: "Свяжитесь с нами", connectTitle: "Контакты", contactDesc: "Напишите нам.", name: "Имя Фамилия", email: "Эл. почта", phone: "Телефон", message: "Сообщение", send: "Отправить", whatsapp: "WhatsApp" },
+    testimonials: { title: "Отзывы клиентов", list: [
+      { name: "Иван Иванов", text: "Отличный тур в Памуккале!", role: "Путешественник" },
+      { name: "Анна Смирнова", text: "Роскошные автомобили и профессиональный сервис.", role: "CEO" },
+      { name: "Дмитрий Волков", text: "Лучшая аренда авто в Анталии.", role: "Бизнесмен" }
+    ]},
+    whyUs: { title: "Почему Boss Tour?", items: [
+      { title: "Премиум Автопарк", desc: "Лучшие автомобили для вашего комфорта." },
+      { title: "Опытные Гиды", desc: "Местные знания для лучших туров." },
+      { title: "Поддержка 24/7", desc: "Мы всегда на связи." }
+    ]},
+    modal: { book: "Заказать", confirm: "Подтверждено", confirmDesc: "Ваша заявка принята.", name: "Имя", hotel: "Отель" }
   }
 };
