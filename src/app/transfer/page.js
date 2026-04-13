@@ -58,7 +58,7 @@ export default function TransferPage() {
           </div>
 
           <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '40px' }}>
-            {t.transfer.list.map((item, i) => (
+            {(t?.transfer?.list || []).map((item, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 30 }} 

@@ -26,7 +26,7 @@ export default function RealEstatePage() {
     fetchDynamic();
   }, []);
 
-  const allProperties = [...t.realEstate.list, ...dynamicProperties.map(p => ({
+  const allProperties = [...(t?.realEstate?.list || []), ...(dynamicProperties || []).map(p => ({
     ...p,
     propertyType: p.property_type,
     desc: p.description

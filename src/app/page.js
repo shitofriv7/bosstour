@@ -348,13 +348,13 @@ const Hero = ({ t }) => (
 const Testimonials = ({ t }) => (
   <section style={{ padding: '120px 0', background: 'rgba(0,102,255,0.02)' }}>
     <div className="main-grid">
-      {t.testimonials.list.map((item, i) => (
-        <div key={i} className="luxury-card" style={{ gridColumn: 'span 4', padding: '40px' }}>
-          <div style={{ color: 'var(--primary)', marginBottom: '25px' }}>{[...Array(5)].map((_, idx) => <Star key={idx} size={14} fill="currentColor" style={{display:'inline'}}/>)}</div>
-          <p className="luxury-para" style={{ fontStyle: 'italic', marginBottom: '35px' }}>"{item.text}"</p>
-          <div><div style={{ fontWeight: '800' }}>{item.name}</div><div style={{ fontSize: '10px', color: 'var(--primary)', textTransform:'uppercase' }}>{item.role}</div></div>
-        </div>
-      ))}
+        {(t?.testimonials?.list || []).map((item, i) => (
+          <div key={i} className="luxury-card" style={{ gridColumn: 'span 4', padding: '40px' }}>
+            <div style={{ color: 'var(--primary)', marginBottom: '25px' }}>{[...Array(5)].map((_, idx) => <Star key={idx} size={14} fill="currentColor" style={{display:'inline'}}/>)}</div>
+            <p className="luxury-para" style={{ fontStyle: 'italic', marginBottom: '35px' }}>"{item.text}"</p>
+            <div><div style={{ fontWeight: '800' }}>{item.name}</div><div style={{ fontSize: '10px', color: 'var(--primary)', textTransform:'uppercase' }}>{item.role}</div></div>
+          </div>
+        ))}
     </div>
   </section>
 );

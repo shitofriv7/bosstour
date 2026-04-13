@@ -7,6 +7,8 @@ export const translations = {
       { name: "Renault Clio", price: "€40", images: ["https://otopoint.com.tr/wp-content/uploads/2022/10/clio2.jpg"], features: ["Petrol", "Auto", "5 Seats"] },
       { name: "Suzuki Jeep", price: "€70", images: ["https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg"], features: ["Petrol", "Manual", "4 Seats"] }
     ]},
+    realEstate: { title: "Exclusive Properties", subtitle: "Find your dream home with Boss Tour.", list: [] },
+    transfer: { title: "VIP Transfers", subtitle: "Comfortable journeys to your destination.", list: [] },
     tours: {
       title: "Popular Tours & Activities",
       subtitle: "The best of Antalya and beyond.",
@@ -256,6 +258,8 @@ export const translations = {
       { name: "Renault Clio", price: "€40", images: ["https://otopoint.com.tr/wp-content/uploads/2022/10/clio2.jpg"], features: ["Benzin", "Otomatik", "5 Koltuk"] },
       { name: "Suzuki Jeep", price: "€70", images: ["https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg"], features: ["Benzin", "Manuel", "4 Koltuk"] }
     ]},
+    realEstate: { title: "Özel Emlaklar", subtitle: "Boss Tour ile hayalinizdeki evi bulun.", list: [] },
+    transfer: { title: "VIP Transfer", subtitle: "Hedefinize konforlu yolculuklar.", list: [] },
     tours: {
       title: "Popüler Turlar & Aktiviteler",
       subtitle: "Antalya'nın en seçkin deneyimleri.",
@@ -505,6 +509,8 @@ export const translations = {
       { name: "Renault Clio", price: "€40", images: ["https://otopoint.com.tr/wp-content/uploads/2022/10/clio2.jpg"], features: ["Benzin", "Automatik", "5 Sitze"] },
       { name: "Suzuki Jeep", price: "€70", images: ["https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg"], features: ["Benzin", "Manuell", "4 Sitze"] }
     ]},
+    realEstate: { title: "Exklusive Immobilien", subtitle: "Finden Sie Ihr Traumhaus mit Boss Tour.", list: [] },
+    transfer: { title: "VIP-Transfers", subtitle: "Komfortable Reisen zu Ihrem Ziel.", list: [] },
     tours: {
       title: "Exklusive Touren & Aktivitäten",
       subtitle: "Die besten Erlebnisse in Antalya & Umgebung.",
@@ -758,6 +764,8 @@ export const translations = {
       { name: "Peugeot 2008", price: "€60", images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq4r88kL2K-Qv5lB3Z2P3x7I874l-6h47F46w&s"], features: ["Дизель", "Автомат", "5 Мест"] },
       { name: "Vito", price: "€100", images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_n2t0g2J2zB8B5B1b4O9N7-8e6R1Z3O9O2A&s"], features: ["Дизель", "Автомат", "9 Мест"] }
     ]},
+    realEstate: { title: "Эксклюзивная недвижимость", subtitle: "Найдите дом своей мечты с Boss Tour.", list: [] },
+    transfer: { title: "VIP Трансферы", subtitle: "Комфортные поездки до места назначения.", list: [] },
     tours: {
       title: "Эксклюзивные Туры и Активности",
       subtitle: "Самые яркие впечатления в Анталье и за ее пределами.",

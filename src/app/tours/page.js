@@ -43,7 +43,7 @@ export default function ToursPage() {
       <section style={{ padding: '60px 0 120px 0' }}>
         <div className="main-grid">
           <div style={{ gridColumn: 'span 12', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '30px' }}>
-            {t.tours.list.map((tour, idx) => (
+            {(t?.tours?.list || []).map((tour, idx) => (
               <motion.div 
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
