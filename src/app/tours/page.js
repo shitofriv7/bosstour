@@ -15,16 +15,47 @@ export default function ToursPage() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [formData, setFormData] = useState({ turTipi: '', hotel: '', konNo: '', zmrNr: '', name: '', phone: '', email: '', date: '', adults: '1', children: '0', time: '', restBtr: '', informer: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '' });
   
   const { lang, setLang, t } = useLanguage();
 
   const handleReserve = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise(r => setTimeout(r, 2000));
-    setLoading(false);
-    setSuccess(true);
+
+    try {
+      // 1. Send to API for Database & Telegram
+      await fetch('/api/reserve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          carName: selectedItem?.name, // Using 'carName' field for tour name to match API
+          startDate: formData.date,
+          endDate: formData.date,
+          customerName: formData.name,
+          customerPhone: formData.phone,
+          customerEmail: 'tour-customer@bosstour.com',
+          lang: lang
+        })
+      });
+
+      // 2. WhatsApp message
+      const text = `*YENİ TUR REZERVASYONU*\n\n` +
+                   `🌟 *Tur:* ${selectedItem?.name}\n` +
+                   `👤 *Müşteri:* ${formData.name}\n` +
+                   `📱 *Telefon:* ${formData.phone}\n` +
+                   `📅 *Tarih:* ${formData.date}\n` +
+                   `⏰ *Saat:* ${formData.time}\n` +
+                   `👥 *Kişi:* ${formData.adults} Yetişkin, ${formData.children} Çocuk\n\n` +
+                   `💰 *Fiyat:* ${selectedItem?.price}`;
+      
+      window.open(`https://wa.me/905424142586?text=${encodeURIComponent(text)}`, '_blank');
+      setSuccess(true);
+    } catch (err) {
+      console.error("Tour booking failed:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -34,8 +65,8 @@ export default function ToursPage() {
       <section style={{ padding: '120px 0 60px 0', background: '#f8fafc' }}>
         <div className="main-grid">
           <div style={{ gridColumn: 'span 12', textAlign: 'center' }}>
-            <span className="section-label">{t.nav.tours}</span>
-            <h1 className="serif" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>{t.tours.title}</h1>
+            <span className="section-label">{t?.nav?.tours}</span>
+            <h1 className="serif" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>{t?.tours?.title}</h1>
           </div>
         </div>
       </section>
@@ -52,22 +83,22 @@ export default function ToursPage() {
                 className="luxury-card interactive"
                 style={{ padding: '0', overflow: 'hidden' }}
               >
-                <Link href={`/tours/${tour.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link href={`/tours/${tour?.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div style={{ height: '240px', position: 'relative' }}>
-                    <Image src={tour.images[0]} alt={tour.name} fill style={{ objectFit: 'cover' }} />
+                    <Image src={tour?.images?.[0]} alt={tour?.name} fill style={{ objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', top: '20px', right: '20px', background: 'var(--primary)', color: '#fff', padding: '8px 15px', borderRadius: '100px', fontWeight: '900', fontSize: '14px' }}>
-                      {tour.price}
+                      {tour?.price}
                     </div>
                   </div>
                   <div style={{ padding: '30px' }}>
-                    <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{tour.name}</h3>
-                    <p style={{ opacity: 0.6, fontSize: '14px', marginBottom: '25px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{tour.desc}</p>
+                    <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{tour?.name}</h3>
+                    <p style={{ opacity: 0.6, fontSize: '14px', marginBottom: '25px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{tour?.desc}</p>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.5, fontSize: '12px' }}>
                         <Clock size={16} />
-                        <span>{tour.duration}</span>
+                        <span>{tour?.duration}</span>
                       </div>
-                      <span style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '14px' }}>{t.fleet.viewDetails} →</span>
+                      <span style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '14px' }}>{t?.fleet?.viewDetails} →</span>
                     </div>
                   </div>
                 </Link>
@@ -77,7 +108,7 @@ export default function ToursPage() {
                   onMouseEnter={e => e.target.style.background = '#f0f4f8'}
                   onMouseLeave={e => e.target.style.background = '#f8fafc'}
                 >
-                  {t.modal.book || 'QUICK BOOK'}
+                  {t?.modal?.book || 'QUICK BOOK'}
                 </button>
               </motion.div>
             ))}
@@ -100,44 +131,20 @@ export default function ToursPage() {
               {success ? (
                 <div style={{ padding: '80px 40px', textAlign: 'center' }}>
                   <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type:'spring', bounce: 0.6 }}><CheckCircle2 size={100} style={{ color: 'var(--primary)', marginBottom: '30px' }} /></motion.div>
-                  <h2 className="serif" style={{ fontSize: '2.5rem' }}>{t.modal.confirm}</h2>
-                  <p className="luxury-para">{t.modal.confirmDesc}</p>
+                  <h2 className="serif" style={{ fontSize: '2.5rem' }}>{t?.modal?.confirm}</h2>
+                  <p className="luxury-para">{t?.modal?.confirmDesc}</p>
                   <button onClick={() => { setSelectedItem(null); setSuccess(false); }} className="btn-gold" style={{marginTop:'30px', padding:'15px 40px'}}>Ok</button>
                 </div>
               ) : (
                 <div style={{ padding: '40px' }}>
                   <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
                     <button onClick={() => setSelectedItem(null)} style={{ position:'absolute', top:'-10px', right:'-10px', background:'rgba(0,0,0,0.05)', color:'var(--text-main)', border:'none', width:'40px', height:'40px', borderRadius:'50%', cursor:'pointer' }}>✕</button>
-                    <h2 className="serif" style={{ fontSize: '2.5rem', color: 'var(--text-main)', marginBottom: '10px' }}>{selectedItem.name}</h2>
+                    <h2 className="serif" style={{ fontSize: '2.5rem', color: 'var(--text-main)', marginBottom: '10px' }}>{selectedItem?.name}</h2>
                     <p style={{ opacity: 0.5, fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontWeight:'900' }}>Rezervasyon Bilgileri</p>
                   </div>
 
                   <form onSubmit={handleReserve} style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
                     
-                    {/* SECTION 1 */}
-                    <div style={{ background: '#f8fafc', padding: '30px', borderRadius: '30px', border: '1px solid rgba(0,0,0,0.03)' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px', color: 'var(--primary)', fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><MapPin size={14}/> REZERVASYON BİLGİLERİ</div>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Tur Tipi</label>
-                          <input className="luxury-input" required placeholder="Tur Tipi" style={{ background: '#fff' }} value={formData.turTipi} onChange={e => setFormData({...formData, turTipi: e.target.value})} />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Otel / Gidilen Yer</label>
-                          <input className="luxury-input" required placeholder="Otel" style={{ background: '#fff' }} value={formData.hotel} onChange={e => setFormData({...formData, hotel: e.target.value})} />
-                        </div>
-                      </div>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '15px' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Rezervasyon No (No.kon.)</label>
-                          <input className="luxury-input" required placeholder="No.kon." style={{ background: '#fff' }} value={formData.konNo} onChange={e => setFormData({...formData, konNo: e.target.value})} />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Zaman No (Zmr.Nr.)</label>
-                          <input className="luxury-input" required placeholder="Zmr.Nr." style={{ background: '#fff' }} value={formData.zmrNr} onChange={e => setFormData({...formData, zmrNr: e.target.value})} />
-                        </div>
-                      </div>
-                    </div>
 
                     {/* SECTION 2 */}
                     <div>
@@ -148,7 +155,7 @@ export default function ToursPage() {
                           <input className="luxury-input" required placeholder="Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Telefon No</label>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Telefon No (Phone)</label>
                           <input className="luxury-input" required placeholder="Phone" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
                         </div>
                       </div>
@@ -164,32 +171,17 @@ export default function ToursPage() {
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
                           <label style={{ fontSize: '10px', opacity: 0.5 }}>Saat (Uhr)</label>
-                          <input className="luxury-input" required placeholder="Uhr" style={{ background: '#fff' }} value={formData.time} onChange={e => setFormData({...formData, time: e.target.value})} />
+                          <input className="luxury-input" required placeholder="10:30" style={{ background: '#fff' }} value={formData.time} onChange={e => setFormData({...formData, time: e.target.value})} />
                         </div>
                       </div>
                       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '15px' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Kişi Sayısı (Abanc)</label>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Yetişkin (Adults)</label>
                           <input className="luxury-input" required type="number" min="1" style={{ background: '#fff' }} value={formData.adults} onChange={e => setFormData({...formData, adults: e.target.value})} />
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Çocuk Sayısı (Kinder)</label>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Çocuk (Children)</label>
                           <input className="luxury-input" required type="number" min="0" style={{ background: '#fff' }} value={formData.children} onChange={e => setFormData({...formData, children: e.target.value})} />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* SECTION 4 */}
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px', opacity: 0.6, fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><Zap size={14}/> EK BİLGİLER</div>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Restoran / Yer (Rest Btr.)</label>
-                          <input className="luxury-input" placeholder="Rest Btr." value={formData.restBtr} onChange={e => setFormData({...formData, restBtr: e.target.value})} />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Bilgilendiren (Informer)</label>
-                          <input className="luxury-input" placeholder="Informer" value={formData.informer} onChange={e => setFormData({...formData, informer: e.target.value})} />
                         </div>
                       </div>
                     </div>

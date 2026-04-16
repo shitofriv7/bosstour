@@ -23,13 +23,13 @@ export default function TourDetail({ params: paramsPromise }) {
     fetchPrice();
   }, [slug]);
 
-  let tour = t.tours.list.find(item => item.slug === slug);
+  let tour = t?.tours?.list?.find(item => item.slug === slug);
   if (tour && dbPrice) {
     tour = { ...tour, price: dbPrice };
   }
 
   const [bookingModal, setBookingModal] = useState(false);
-  const [formData, setFormData] = useState({ turTipi: '', hotel: '', konNo: '', zmrNr: '', name: '', phone: '', email: '', date: '', adults: '1', children: '0', time: '', restBtr: '', informer: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '' });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [activeImg, setActiveImg] = useState(0);
@@ -67,9 +67,40 @@ export default function TourDetail({ params: paramsPromise }) {
   const handleReserve = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise(r => setTimeout(r, 2000));
-    setLoading(false);
-    setSuccess(true);
+
+    try {
+      // 1. Send to API for Telegram & DB
+      await fetch('/api/reserve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          carName: tour?.name,
+          startDate: formData.date,
+          endDate: formData.date,
+          customerName: formData.name,
+          customerPhone: formData.phone,
+          customerEmail: 'tour-detail@bosstour.com',
+          lang: lang
+        })
+      });
+
+      // 2. WhatsApp
+      const text = `*YENİ TUR REZERVASYONU*\n\n` +
+                   `🌟 *Tur:* ${tour?.name}\n` +
+                   `👤 *Müşteri:* ${formData.name}\n` +
+                   `📱 *Telefon:* ${formData.phone}\n` +
+                   `📅 *Tarih:* ${formData.date}\n` +
+                   `⏰ *Saat:* ${formData.time}\n` +
+                   `👥 *Kişi:* ${formData.adults} Yetişkin, ${formData.children} Çocuk\n\n` +
+                   `💰 *Fiyat:* ${tour?.price}`;
+      
+      window.open(`https://wa.me/905424142586?text=${encodeURIComponent(text)}`, '_blank');
+      setSuccess(true);
+    } catch (err) {
+      console.error("Booking error:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -80,7 +111,9 @@ export default function TourDetail({ params: paramsPromise }) {
       <section style={{ position: 'relative', height: '80vh', overflow: 'hidden' }}>
         <AnimatePresence mode="wait">
           <motion.div key={counter} initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1.5 }} style={{ position: 'absolute', inset: 0 }}>
-            <Image src={tour.images[activeImg]} alt={tour.name} fill priority sizes="100vw" style={{ objectFit: 'cover' }} />
+            {tour?.images?.[activeImg] && (
+              <Image src={tour.images[activeImg]} alt={tour?.name || ''} fill priority sizes="100vw" style={{ objectFit: 'cover' }} />
+            )}
           </motion.div>
         </AnimatePresence>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%), rgba(0,0,0,0.2)' }} />
@@ -99,14 +132,14 @@ export default function TourDetail({ params: paramsPromise }) {
         <div className="main-grid" style={{ position: 'absolute', bottom: '60px', left: 0, right: 0, zIndex: 10 }}>
           <div style={{ gridColumn: 'span 12' }}>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-              <span className="section-label" style={{ color: '#fff', border: '1px solid rgba(255,255,255,0.3)' }}>{t.nav.services}</span>
-              <h1 className="serif" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', color: '#fff', margin: '20px 0' }}>{tour.name}</h1>
+              <span className="section-label" style={{ color: '#fff', border: '1px solid rgba(255,255,255,0.3)' }}>{t?.nav?.services}</span>
+              <h1 className="serif" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', color: '#fff', margin: '20px 0' }}>{tour?.name}</h1>
               <div style={{ display: 'flex', gap: '30px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#fff' }}>
-                  <Clock size={18} /> <span style={{ fontWeight: '700' }}>{tour.duration}</span>
+                  <Clock size={18} /> <span style={{ fontWeight: '700' }}>{tour?.duration}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#fff' }}>
-                  <Euro size={18} /> <span style={{ fontWeight: '700' }}>{tour.price}</span>
+                  <Euro size={18} /> <span style={{ fontWeight: '700' }}>{tour?.price}</span>
                 </div>
               </div>
             </motion.div>
@@ -119,13 +152,13 @@ export default function TourDetail({ params: paramsPromise }) {
         <div className="main-grid">
           <div style={{ gridColumn: 'span 7' }}>
             <div className="luxury-card" style={{ padding: '50px' }}>
-              <h2 className="serif" style={{ fontSize: '2.5rem', marginBottom: '30px' }}>{t.fleet.viewDetails}</h2>
-              <p className="luxury-para" style={{ fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '40px' }}>{tour.longDesc || tour.desc}</p>
-              {tour.highlights && (
+              <h2 className="serif" style={{ fontSize: '2.5rem', marginBottom: '30px' }}>{t?.fleet?.viewDetails}</h2>
+              <p className="luxury-para" style={{ fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '40px' }}>{tour?.longDesc || tour?.desc}</p>
+              {tour?.highlights && (
                 <div style={{ marginBottom: '40px' }}>
-                  <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '20px' }}>{t.tours.highlightsLabel}</h3>
+                  <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '20px' }}>{t?.tours?.highlightsLabel}</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                    {tour.highlights.map((h, i) => (
+                    {(tour?.highlights || []).map((h, i) => (
                       <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                         <CheckCircle2 size={16} style={{ color: 'var(--primary)' }} /> <span>{h}</span>
                       </div>
@@ -133,11 +166,11 @@ export default function TourDetail({ params: paramsPromise }) {
                   </div>
                 </div>
               )}
-              {tour.included && (
+              {tour?.included && (
                 <div style={{ marginBottom: '40px' }}>
-                  <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '20px' }}>{t.tours.includedLabel}</h3>
+                  <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '20px' }}>{t?.tours?.includedLabel}</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                    {tour.included.map((item, i) => (
+                    {(tour?.included || []).map((item, i) => (
                       <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                         <CheckCircle2 size={16} style={{ color: '#10b981' }} /> <span>{item}</span>
                       </div>
@@ -149,13 +182,13 @@ export default function TourDetail({ params: paramsPromise }) {
           </div>
           <div style={{ gridColumn: 'span 5' }}>
             <div className="luxury-card glass" style={{ padding: '40px', position: 'sticky', top: '120px', border: '1px solid var(--primary)' }}>
-              <h3 className="serif" style={{ fontSize: '2rem', marginBottom: '10px' }}>{t.modal.book}</h3>
+              <h3 className="serif" style={{ fontSize: '2rem', marginBottom: '10px' }}>{t?.modal?.book}</h3>
               <div style={{ background: '#f8fafc', padding: '25px', borderRadius: '20px', marginBottom: '30px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}><span style={{ opacity: 0.5 }}>{tour.name}</span><span style={{ fontWeight: '800' }}>{tour.price}</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}><span style={{ opacity: 0.5 }}>{tour?.name}</span><span style={{ fontWeight: '800' }}>{tour?.price}</span></div>
                 <div style={{ height: '1px', background: 'rgba(0,0,0,0.05)', margin: '15px 0' }} />
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}><span style={{ fontWeight: '800' }}>TOTAL</span><span style={{ fontWeight: '900', color: 'var(--primary)', fontSize: '1.5rem' }}>{tour.price}</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}><span style={{ fontWeight: '800' }}>TOTAL</span><span style={{ fontWeight: '900', color: 'var(--primary)', fontSize: '1.5rem' }}>{tour?.price}</span></div>
               </div>
-              <button onClick={() => setBookingModal(true)} className="btn-gold" style={{ width: '100%', height: '70px', fontSize: '18px' }}>{t.modal.book}</button>
+              <button onClick={() => setBookingModal(true)} className="btn-gold" style={{ width: '100%', height: '70px', fontSize: '18px' }}>{t?.modal?.book}</button>
             </div>
           </div>
         </div>
@@ -169,44 +202,20 @@ export default function TourDetail({ params: paramsPromise }) {
               {success ? (
                 <div style={{ padding: '80px 40px', textAlign: 'center' }}>
                   <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type:'spring', bounce: 0.6 }}><CheckCircle2 size={100} style={{ color: 'var(--primary)', marginBottom: '30px' }} /></motion.div>
-                  <h2 className="serif" style={{ fontSize: '2.5rem' }}>{t.modal.confirm}</h2>
-                  <p className="luxury-para">{t.modal.confirmDesc}</p>
+                  <h2 className="serif" style={{ fontSize: '2.5rem' }}>{t?.modal?.confirm}</h2>
+                  <p className="luxury-para">{t?.modal?.confirmDesc}</p>
                   <button onClick={() => { setBookingModal(false); setSuccess(false); }} className="btn-gold" style={{marginTop:'30px', padding:'15px 40px'}}>Ok</button>
                 </div>
               ) : (
                 <div style={{ padding: '40px' }}>
                   <div style={{ textAlign: 'center', marginBottom: '40px', position: 'relative' }}>
                     <button onClick={() => setBookingModal(false)} style={{ position:'absolute', top:'-10px', right:'-10px', background:'rgba(0,0,0,0.05)', color:'var(--text-main)', border:'none', width:'40px', height:'40px', borderRadius:'50%', cursor:'pointer' }}>✕</button>
-                    <h2 className="serif" style={{ fontSize: '2.5rem', color: 'var(--text-main)', marginBottom: '10px' }}>{tour.name}</h2>
+                    <h2 className="serif" style={{ fontSize: '2.5rem', color: 'var(--text-main)', marginBottom: '10px' }}>{tour?.name}</h2>
                     <p style={{ opacity: 0.5, fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontWeight:'900' }}>Rezervasyon Bilgileri</p>
                   </div>
 
                   <form onSubmit={handleReserve} style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
                     
-                    {/* SECTION 1 */}
-                    <div style={{ background: '#f8fafc', padding: '30px', borderRadius: '30px', border: '1px solid rgba(0,0,0,0.03)' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px', color: 'var(--primary)', fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><MapPin size={14}/> REZERVASYON BİLGİLERİ</div>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Tur Tipi</label>
-                          <input className="luxury-input" required placeholder="Tur Tipi" style={{ background: '#fff' }} value={formData.turTipi} onChange={e => setFormData({...formData, turTipi: e.target.value})} />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Otel / Gidilen Yer</label>
-                          <input className="luxury-input" required placeholder="Otel" style={{ background: '#fff' }} value={formData.hotel} onChange={e => setFormData({...formData, hotel: e.target.value})} />
-                        </div>
-                      </div>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '15px' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Rezervasyon No (No.kon.)</label>
-                          <input className="luxury-input" required placeholder="No.kon." style={{ background: '#fff' }} value={formData.konNo} onChange={e => setFormData({...formData, konNo: e.target.value})} />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Zaman No (Zmr.Nr.)</label>
-                          <input className="luxury-input" required placeholder="Zmr.Nr." style={{ background: '#fff' }} value={formData.zmrNr} onChange={e => setFormData({...formData, zmrNr: e.target.value})} />
-                        </div>
-                      </div>
-                    </div>
 
                     {/* SECTION 2 */}
                     <div>
@@ -217,7 +226,7 @@ export default function TourDetail({ params: paramsPromise }) {
                           <input className="luxury-input" required placeholder="Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Telefon No</label>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Telefon No (Phone)</label>
                           <input className="luxury-input" required placeholder="Phone" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
                         </div>
                       </div>
@@ -233,32 +242,17 @@ export default function TourDetail({ params: paramsPromise }) {
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
                           <label style={{ fontSize: '10px', opacity: 0.5 }}>Saat (Uhr)</label>
-                          <input className="luxury-input" required placeholder="Uhr" style={{ background: '#fff' }} value={formData.time} onChange={e => setFormData({...formData, time: e.target.value})} />
+                          <input className="luxury-input" required placeholder="10:30" style={{ background: '#fff' }} value={formData.time} onChange={e => setFormData({...formData, time: e.target.value})} />
                         </div>
                       </div>
                       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '15px' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Kişi Sayısı (Abanc)</label>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Yetişkin (Adults)</label>
                           <input className="luxury-input" required type="number" min="1" style={{ background: '#fff' }} value={formData.adults} onChange={e => setFormData({...formData, adults: e.target.value})} />
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Çocuk Sayısı (Kinder)</label>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Çocuk (Children)</label>
                           <input className="luxury-input" required type="number" min="0" style={{ background: '#fff' }} value={formData.children} onChange={e => setFormData({...formData, children: e.target.value})} />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* SECTION 4 */}
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px', opacity: 0.6, fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><Zap size={14}/> EK BİLGİLER</div>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Restoran / Yer (Rest Btr.)</label>
-                          <input className="luxury-input" placeholder="Rest Btr." value={formData.restBtr} onChange={e => setFormData({...formData, restBtr: e.target.value})} />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Bilgilendiren (Informer)</label>
-                          <input className="luxury-input" placeholder="Informer" value={formData.informer} onChange={e => setFormData({...formData, informer: e.target.value})} />
                         </div>
                       </div>
                     </div>
@@ -268,7 +262,7 @@ export default function TourDetail({ params: paramsPromise }) {
                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
                           <span>REZERVASYONU TAMAMLA</span>
                           <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.3)' }} />
-                          <span style={{ fontSize: '20px' }}>{tour.price}</span>
+                          <span style={{ fontSize: '20px' }}>{tour?.price}</span>
                         </div>
                       )}
                     </button>

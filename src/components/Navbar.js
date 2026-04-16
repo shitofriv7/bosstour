@@ -20,8 +20,7 @@ export default function Navbar({ lang, setLang, t }) {
     { name: t.nav.tours, href: "/tours" },
     { name: t.nav.fleet, href: "/fleet" },
     { name: t.nav.transfer, href: "/transfer" },
-    { name: t.nav.realEstate, href: "/real-estate" },
-    { name: t.nav.contact, href: "/#contact" }
+    { name: t.nav.about, href: "/about" }
   ] : [];
 
   return (
@@ -193,8 +192,8 @@ export default function Navbar({ lang, setLang, t }) {
             </nav>
 
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '40px' }}>
-              <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>{t?.nav?.contact?.toUpperCase()}</p>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginTop: '10px' }}>+90 (555) 000 00 00</h3>
+              <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>{t?.nav?.about?.toUpperCase()}</p>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginTop: '10px' }}>+90 542 414 25 86</h3>
             </div>
           </motion.div>
         )}

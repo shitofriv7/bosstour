@@ -6,25 +6,53 @@ import { Plane, Users, Clock, Shield, ArrowLeft, Loader2, MessageCircle } from '
 import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
+import Footer from '../../../components/Footer';
 import Image from 'next/image';
 
 export default function TransferPage() {
   
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '', flight: '', date: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', date: '', time: '' });
   
   const { lang, setLang, t } = useLanguage();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      const text = `Hello, I want to book ${selectedItem.name} transfer. \nFlight: ${formData.flight}\nDate: ${formData.date}\nName: ${formData.name}`;
-      window.open(`https://wa.me/905324567890?text=${encodeURIComponent(text)}`, '_blank');
-      setLoading(false);
+
+    try {
+      // 1. Send to API for Telegram & DB
+      await fetch('/api/reserve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          carName: selectedItem?.name,
+          startDate: formData.date,
+          endDate: formData.date, 
+          customerName: formData.name,
+          customerPhone: formData.phone,
+          customerEmail: 'transfer-customer@bosstour.com',
+          lang: lang
+        })
+      });
+
+      // 2. Prepare WhatsApp
+      const text = `*YENİ TRANSFER REZERVASYONU*\n\n` +
+                   `🚐 *Araç:* ${selectedItem?.name}\n` +
+                   `👤 *Müşteri:* ${formData.name}\n` +
+                   `📱 *Telefon:* ${formData.phone}\n` +
+                   `📅 *Tarih:* ${formData.date}\n` +
+                   `⏰ *Saat:* ${formData.time}\n\n` +
+                   `💰 *Fiyat:* ${selectedItem?.price || 'Belli Değil'}`;
+      
+      window.open(`https://wa.me/905424142586?text=${encodeURIComponent(text)}`, '_blank');
       setSelectedItem(null);
-    }, 1500);
+    } catch (err) {
+      console.error("Transfer booking error:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -51,9 +79,9 @@ export default function TransferPage() {
                 {lang === 'tr' ? 'ANA SAYFAYA DÖN' : 'BACK TO HOME'}
               </button>
               <h1 className="serif" style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', lineHeight: 1, marginBottom: '20px' }}>
-                {t.transfer.title}
+                {t?.transfer?.title}
               </h1>
-              <p className="luxury-para" style={{ maxWidth: '700px', margin: '0 auto' }}>{t.transfer.subtitle}</p>
+              <p className="luxury-para" style={{ maxWidth: '700px', margin: '0 auto' }}>{t?.transfer?.subtitle}</p>
             </motion.div>
           </div>
 
@@ -69,17 +97,19 @@ export default function TransferPage() {
                 style={{ cursor: 'pointer', padding: '0', overflow: 'hidden' }}
               >
                 <div style={{ height: '300px', position: 'relative' }}>
-                  <Image src={item.images[0]} alt={item.name} fill style={{ objectFit: 'cover' }} />
-                  <div className="vibrant-badge" style={{ position: 'absolute', top: '25px', right: '25px' }}>{item.price}</div>
+                  {item?.images?.[0] && (
+                    <Image src={item.images[0]} alt={item?.name || ''} fill style={{ objectFit: 'cover' }} />
+                  )}
+                  <div className="vibrant-badge" style={{ position: 'absolute', top: '25px', right: '25px' }}>{item?.price}</div>
                 </div>
                 <div style={{ padding: '40px' }}>
-                  <h3 className="serif" style={{ fontSize: '2.2rem', marginBottom: '15px' }}>{item.name}</h3>
-                  <p className="luxury-para" style={{ fontSize: '1rem', marginBottom: '25px' }}>{item.desc}</p>
+                  <h3 className="serif" style={{ fontSize: '2.2rem', marginBottom: '15px' }}>{item?.name}</h3>
+                  <p className="luxury-para" style={{ fontSize: '1rem', marginBottom: '25px' }}>{item?.desc}</p>
                   <div style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
-                    <span style={{ display:'flex', alignItems:'center', gap: '8px', fontSize: '13px', opacity: 0.6 }}><Users size={16}/>{item.capacity}</span>
+                    <span style={{ display:'flex', alignItems:'center', gap: '8px', fontSize: '13px', opacity: 0.6 }}><Users size={16}/>{item?.capacity}</span>
                     <span style={{ display:'flex', alignItems:'center', gap: '8px', fontSize: '13px', opacity: 0.6 }}><Shield size={16}/>VIP Service</span>
                   </div>
-                  <button className="btn-gold" style={{ width: '100%', height: '60px', borderRadius: '18px' }}>{t.transfer.viewDetails}</button>
+                  <button className="btn-gold" style={{ width: '100%', height: '60px', borderRadius: '18px' }}>{t?.transfer?.viewDetails}</button>
                 </div>
               </motion.div>
             ))}
@@ -87,51 +117,78 @@ export default function TransferPage() {
         </div>
       </section>
 
-      {/* Booking Modal */}
+      {/* Redesigned Booking Modal */}
       <AnimatePresence>
         {selectedItem && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="modal-overlay">
-            <motion.div initial={{ scale: 0.9, y: 50 }} animate={{ scale: 1, y: 0 }} className="luxury-card" style={{ maxWidth: '900px', width: '95%', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', padding: '0', overflow: 'hidden' }}>
-              <div style={{ height:'100%', minHeight: '400px', position:'relative' }}>
-                <Image src={selectedItem.images[0]} alt="Selected" fill style={{ objectFit: 'cover' }} />
-                <button onClick={() => setSelectedItem(null)} style={{ position:'absolute', top:'20px', left:'20px', background:'rgba(0,0,0,0.4)', color:'#fff', border:'none', width:'40px', height:'40px', borderRadius:'50%', cursor:'pointer' }}>✕</button>
+          <motion.div 
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} 
+            className="modal-overlay"
+            style={{ 
+              background: 'rgba(255, 255, 255, 0.98)', 
+              backdropFilter: 'blur(15px)',
+              position: 'fixed', inset: 0, zIndex: 9999,
+              display: 'flex', alignItems: 'center', justifyContent: 'center'
+            }}
+            onClick={() => setSelectedItem(null)}
+          >
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0, y: 30 }} animate={{ scale: 1, opacity: 1, y: 0 }} exit={{ scale: 0.95, opacity: 0, y: 30 }}
+              className="luxury-card" 
+              style={{ 
+                maxWidth: '1200px', width: '95%', maxHeight: '90vh',
+                display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
+                padding: '0', overflow: 'hidden',
+                boxShadow: '0 50px 100px rgba(0,0,0,0.1)',
+                border: '1px solid rgba(0,0,0,0.05)'
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Left Side: Visual Summary */}
+              <div style={{ minHeight: '400px', position:'relative', background: '#000' }}>
+                <Image src={selectedItem?.images?.[0]} alt="Selected" fill style={{ objectFit: 'cover', opacity: 0.7 }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)', padding: '60px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+                  <span className="section-label" style={{ color: 'var(--primary)', border: '1px solid var(--primary)' }}>{lang === 'tr' ? 'TRANSFER ARACI' : 'TRANSFER VEHICLE'}</span>
+                  <h2 className="serif" style={{ fontSize: '3.5rem', lineHeight: 1, color: '#fff' }}>{selectedItem?.name}</h2>
+                  <p style={{ marginTop: '20px', fontSize: '1.1rem', opacity: 0.8, color: '#fff', maxWidth: '400px' }}>{selectedItem?.desc}</p>
+                  <div style={{ marginTop: '30px', fontSize: '2.5rem', fontWeight: '900', color: 'var(--primary)' }}>{selectedItem?.price}</div>
+                </div>
+                <button onClick={() => setSelectedItem(null)} style={{ position:'absolute', top:'40px', left:'40px', background:'rgba(255,255,255,0.1)', color:'#fff', border:'none', width:'50px', height:'50px', borderRadius:'50%', cursor:'pointer', backdropFilter: 'blur(10px)', zIndex: 10 }}>✕</button>
               </div>
-              <div style={{ padding: '50px', background: '#fff' }}>
-                <h2 className="serif" style={{ fontSize: '2.8rem', lineHeight: 1 }}>{selectedItem.name}</h2>
-                <p className="luxury-para" style={{ marginTop: '15px', fontSize: '0.95rem' }}>{selectedItem.longDesc}</p>
-                
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', marginTop: '30px' }}>
-                  <div>
-                    <h4 style={{ fontSize: '13px', fontWeight: '900', letterSpacing: '1px', marginBottom: '15px', color: 'var(--primary)' }}>HIGHLIGHTS</h4>
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                      {selectedItem.highlights.map((h, i) => (
-                        <li key={i} style={{ fontSize: '12px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                          <span style={{ width: '4px', height: '4px', background: 'var(--primary)', borderRadius: '50%' }} /> {h}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 style={{ fontSize: '13px', fontWeight: '900', letterSpacing: '1px', marginBottom: '15px', color: 'var(--secondary)' }}>INCLUDED</h4>
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                      {selectedItem.included.map((inc, i) => (
-                        <li key={i} style={{ fontSize: '12px', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.7 }}>
-                          <span style={{ width: '4px', height: '4px', background: 'var(--secondary)', borderRadius: '50%' }} /> {inc}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+
+              {/* Right Side: Form */}
+              <div style={{ padding: '60px', background: '#fff', overflowY: 'auto' }}>
+                <div style={{ marginBottom: '40px' }}>
+                  <h3 className="serif" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>{lang === 'tr' ? 'Transfer Rezervasyonu' : 'Transfer Booking'}</h3>
+                  <p style={{ opacity: 0.5 }}>{lang === 'tr' ? 'Lütfen transfer detaylarını giriniz.' : 'Please enter your transfer details below.'}</p>
                 </div>
 
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '40px' }}>
-                  <input className="luxury-input" required placeholder={lang === 'tr' ? 'Ad Soyad' : 'Full Name'} value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
-                  <input className="luxury-input" required placeholder={lang === 'tr' ? 'Telefon' : 'Phone'} value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
-                  <input className="luxury-input" required placeholder={lang === 'tr' ? 'Uçuş Numarası' : 'Flight Number'} value={formData.flight} onChange={e => setFormData({...formData, flight: e.target.value})} />
-                  <input className="luxury-input" required type="date" value={formData.date} onChange={e => setFormData({...formData, date: e.target.value})} />
-                  <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', background:'#f1f5f9', padding:'20px', borderRadius:'15px', marginTop: '10px' }}>
-                    <div><p style={{fontSize:'10px',opacity:0.4}}>PRICE</p><p style={{fontSize:'2rem',fontWeight:'900',color:'var(--primary)'}}>{selectedItem.price}</p></div>
-                    <button disabled={loading} className="btn-gold" style={{ height:'60px' }}>{loading ? <Loader2 className="animate-spin" /> : (lang === 'tr' ? 'REZERVASYON' : 'BOOK NOW')}</button>
+                <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '25px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'AD SOYAD' : 'FULL NAME'}</label>
+                      <input className="luxury-input" required placeholder="John Doe" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'TELEFON' : 'PHONE'}</label>
+                      <input className="luxury-input" required placeholder="+90 ..." value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
+                    </div>
                   </div>
+
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'TARİH' : 'DATE'}</label>
+                      <input className="luxury-input" required type="date" value={formData.date} onChange={e => setFormData({...formData, date: e.target.value})} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                       <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'SAAT' : 'TIME'}</label>
+                       <input className="luxury-input" required placeholder="14:30" value={formData.time} onChange={e => setFormData({...formData, time: e.target.value})} />
+                    </div>
+                  </div>
+
+                  <button disabled={loading} className="btn-gold" style={{ width: '100%', height: '80px', borderRadius: '20px', fontSize: '1.2rem', marginTop: '20px' }}>
+                    {loading ? <Loader2 className="animate-spin mx-auto" /> : (lang === 'tr' ? 'REZERVASYONU TAMAMLA' : 'COMPLETE RESERVATION')}
+                  </button>
                 </form>
               </div>
             </motion.div>
@@ -139,9 +196,7 @@ export default function TransferPage() {
         )}
       </AnimatePresence>
 
-      <footer style={{ padding: '60px 0', textAlign: 'center', borderTop: '1px solid rgba(0,0,0,0.05)', background: '#ffffff' }}>
-        <p style={{ fontSize: '11px', opacity: 0.6 }}>BOSS TOUR & TRANSFER © 2026</p>
-      </footer>
+      <Footer lang={lang} />
     </main>
   );
 }
