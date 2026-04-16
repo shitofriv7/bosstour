@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, Euro, MapPin, Users, CheckCircle2, X, Loader2, Star, Shield, Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { supabase } from '@/lib/supabase';
+import Footer from '@/components/Footer';
 
 export default function TourDetail({ params: paramsPromise }) {
   const params = use(paramsPromise);
@@ -278,6 +279,7 @@ export default function TourDetail({ params: paramsPromise }) {
         .section-label { display: inline-block; padding: 8px 15px; border-radius: 100px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
         .slider-btn:hover { background: rgba(255,255,255,0.4) !important; transform: translateY(-50%) scale(1.1) !important; }
       `}</style>
+      <Footer lang={lang} />
     </main>
   );
 }

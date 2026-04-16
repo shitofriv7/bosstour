@@ -6,7 +6,7 @@ import { Plane, Users, Clock, Shield, ArrowLeft, Loader2, MessageCircle } from '
 import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
-import Footer from '../../../components/Footer';
+import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export default function TransferPage() {

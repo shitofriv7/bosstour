@@ -6,7 +6,7 @@ import { ArrowLeft, Loader2, Car, Users, Fuel, Settings } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
-import Footer from '../../../components/Footer';
+import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export default function FleetPage() {

@@ -9,6 +9,7 @@ import Navbar from '../../components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
+import Footer from '@/components/Footer';
 
 export default function ToursPage() {
   
@@ -203,9 +204,7 @@ export default function ToursPage() {
         )}
       </AnimatePresence>
       
-      <footer style={{ padding: '60px 0', textAlign: 'center', borderTop: '1px solid rgba(0,0,0,0.05)', background: '#ffffff' }}>
-        <p style={{ opacity: 0.4, fontSize: '12px' }}>© 2026 Boss Tour • Luxury Destination Management</p>
-      </footer>
+      <Footer lang={lang} />
     </main>
   );
 }
