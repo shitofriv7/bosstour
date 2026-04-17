@@ -7,7 +7,8 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.org' },
       { protocol: 'https', hostname: '**.tr' },
       { protocol: 'https', hostname: '**.fr' },
-      { protocol: 'https', hostname: '**.it' }
+      { protocol: 'https', hostname: '**.it' },
+      { protocol: 'https', hostname: '**.me' }
     ].map(pattern => ({ ...pattern, port: '', pathname: '/**' }))
   },
 };
