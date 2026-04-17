@@ -8,6 +8,7 @@ export const metadata = {
 
 import { LanguageProvider } from "@/context/LanguageContext";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import DynamicTitle from "@/components/DynamicTitle";
 
 export default function RootLayout({ children }) {
   return (
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <LanguageProvider>
+          <DynamicTitle />
           {children}
           <WhatsAppButton />
         </LanguageProvider>
