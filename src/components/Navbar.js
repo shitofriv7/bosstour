@@ -54,7 +54,6 @@ export default function Navbar({ lang, setLang, t }) {
           alignItems: 'center',
           transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4)',
-          overflow: 'hidden',
           position: 'relative'
         }}
       >
@@ -134,7 +133,7 @@ export default function Navbar({ lang, setLang, t }) {
               padding: '0 20px'
             }}
           >
-            <div style={{ position: 'relative', width: 'clamp(180px, 50vw, 280px)', height: 'clamp(60px, 12vw, 90px)' }}>
+            <div style={{ position: 'relative', width: 'clamp(140px, 45vw, 280px)', height: 'clamp(50px, 10vw, 90px)' }}>
               <Image 
                 src="https://i.imgur.com/IW7B7av.png" 
                 alt="Boss Tour Logo" 
@@ -150,7 +149,7 @@ export default function Navbar({ lang, setLang, t }) {
           </div>
 
           {/* Right Actions */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', paddingRight: '10px' }}>
             <div className="desktop-links" style={{ display: 'flex', gap: '25px', alignItems: 'center' }}>
               {navItems.map((item) => (
                 <a 
