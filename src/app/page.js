@@ -203,6 +203,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRANSFER SECTION */}
+      <section id="transfer" style={{ padding: '120px 0', background: '#fff' }}>
+        <div className="main-grid">
+          <div style={{ gridColumn: 'span 12', textAlign: 'center', marginBottom: '80px' }}>
+            <span className="section-label">{t?.nav?.transfer}</span>
+            <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>{t?.transfer?.title}</h2>
+            <p className="luxury-para" style={{ marginTop: '20px' }}>{t?.transfer?.subtitle}</p>
+          </div>
+          {(t?.transfer?.list || []).map((transfer, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="luxury-card"
+              style={{ gridColumn: 'span 6', padding: '0', overflow: 'hidden', minHeight: '500px' }}
+            >
+              <div style={{ height: '350px', position: 'relative' }}>
+                <Image 
+                  src={transfer.images[0].startsWith('http') ? transfer.images[0] : (transfer.name.includes('Maybach') ? 'https://i.imgur.com/8Q0b3S6.jpeg' : 'https://i.imgur.com/qL5M1gZ.jpeg')} 
+                  alt={transfer.name} fill style={{ objectFit: 'cover' }} 
+                />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)' }} />
+                <div style={{ position: 'absolute', bottom: '30px', left: '30px', color: '#fff' }}>
+                  <div style={{ fontSize: '12px', opacity: 0.8, textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--primary)' }}>{transfer.capacity}</div>
+                  <h3 className="serif" style={{ fontSize: '2.5rem', marginTop: '10px' }}>{transfer.name}</h3>
+                </div>
+              </div>
+              <div style={{ padding: '40px' }}>
+                <p className="luxury-para" style={{ marginBottom: '30px' }}>{transfer.desc}</p>
+                <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '40px' }}>
+                  {(transfer.highlights || []).slice(0, 3).map((h, i) => (
+                    <div key={i} style={{ fontSize: '12px', background: '#f8fafc', padding: '8px 15px', borderRadius: '100px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <CheckCircle2 size={12} color="var(--primary)" /> {h}
+                    </div>
+                  ))}
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                   <div style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--primary)' }}>{transfer.price}</div>
+                   <button onClick={() => setSelectedItem(transfer)} className="btn-gold" style={{ padding: '15px 40px' }}>{t?.modal?.book || 'Book Now'}</button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       <Testimonials t={t} />
       
 
