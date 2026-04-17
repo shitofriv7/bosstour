@@ -130,10 +130,10 @@ export default function Navbar({ lang, setLang, t }) {
               alignItems: 'center', 
               cursor: 'pointer', 
               height: '100%',
-              padding: '0 20px'
+              padding: '0 10px'
             }}
           >
-            <div style={{ position: 'relative', width: 'clamp(140px, 45vw, 280px)', height: 'clamp(50px, 10vw, 90px)' }}>
+            <div style={{ position: 'relative', width: 'clamp(210px, 55vw, 290px)', height: 'clamp(70px, 14vw, 95px)' }}>
               <Image 
                 src="https://i.imgur.com/IW7B7av.png" 
                 alt="Boss Tour Logo" 
@@ -149,7 +149,7 @@ export default function Navbar({ lang, setLang, t }) {
           </div>
 
           {/* Right Actions */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', paddingRight: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', paddingRight: '12px' }}>
             <div className="desktop-links" style={{ display: 'flex', gap: '25px', alignItems: 'center' }}>
               {navItems.map((item) => (
                 <a 
@@ -170,11 +170,11 @@ export default function Navbar({ lang, setLang, t }) {
                     background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.1)',
                     color: '#fff', padding: '8px 12px', borderRadius: '100px',
                     fontSize: '11px', fontWeight: '900', cursor: 'pointer',
-                    display: 'flex', alignItems: 'center', gap: '6px', textTransform: 'uppercase'
+                    display: 'flex', alignItems: 'center', gap: '4px', textTransform: 'uppercase'
                   }}
                 >
                   <Globe size={14} style={{ color: 'var(--primary)' }} />
-                  <span className="lang-code" style={{ display: 'inline-block', minWidth: '18px' }}>{lang}</span>
+                  <span className="lang-code-text" style={{ minWidth: '18px' }}>{lang}</span>
                   <ChevronDown size={12} style={{ opacity: 0.5, transform: isLangOpen ? 'rotate(180deg)' : 'none', transition: '0.3s' }} />
                 </button>
                 

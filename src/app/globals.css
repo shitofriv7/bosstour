@@ -310,6 +310,10 @@ html, body {
     grid-column: 1 / -1 !important;
   }
 
+  .lang-code-text {
+    display: none !important;
+  }
+
   .whatsapp-float {
     bottom: 20px;
     right: 20px;
