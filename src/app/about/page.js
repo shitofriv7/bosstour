@@ -44,11 +44,11 @@ export default function AboutPage() {
               </motion.div>
            </div>
 
-           {/* Stats / Info Block */}
+           {/* Stats / Info Block & New Shop Image */}
            <div style={{ gridColumn: 'span 4', display: 'flex', flexDirection: 'column', gap: '30px' }}>
               <motion.div 
                 initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                style={{ background: '#f8fafc', padding: '50px', borderRadius: '40px', height: '100%', border: '1px solid #eee' }}
+                style={{ background: '#f8fafc', padding: '50px', borderRadius: '40px', flex: 1, border: '1px solid #eee', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
               >
                  <Star color="var(--primary)" size={32} style={{ marginBottom: '30px' }} />
                  <h3 className="serif" style={{ fontSize: '2.2rem', marginBottom: '20px' }}>{lang === 'tr' ? 'Neden Biz?' : 'Why Us?'}</h3>
@@ -57,7 +57,7 @@ export default function AboutPage() {
                      '12 yılı aşkın süredir Antalya’nın en seçkin noktalarında, en lüks araçlarla misafirlerimize hizmet veriyoruz.' : 
                      'For over 12 years, we have been serving our guests with the most luxurious vehicles in the most exclusive spots of Antalya.'}
                  </p>
-                 <div style={{ display: 'grid', gap: '20px' }}>
+                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>
                        <p style={{ fontSize: '2.5rem', fontWeight: '900', color: 'var(--primary)', margin: 0 }}>15k+</p>
                        <p style={{ fontSize: '10px', letterSpacing: '2px', opacity: 0.5 }}>HAPPY GUESTS</p>
@@ -67,6 +67,14 @@ export default function AboutPage() {
                        <p style={{ fontSize: '10px', letterSpacing: '2px', opacity: 0.5 }}>LUXURY FLEET</p>
                     </div>
                  </div>
+              </motion.div>
+
+              {/* Second Shop Image */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
+                style={{ position: 'relative', width: '100%', height: '270px', borderRadius: '40px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}
+              >
+                <Image src="https://i.imgur.com/Yl8LUQM.jpeg" fill style={{ objectFit: 'cover' }} alt="Boss Tour Office Interior" />
               </motion.div>
            </div>
         </div>
@@ -167,15 +175,15 @@ export default function AboutPage() {
       {/* 6. TRUST & LEGAL STRIP */}
       <section style={{ padding: '60px 0', background: '#f8fafc', borderTop: '1px solid #eee' }}>
         <div className="main-grid" style={{ alignItems: 'center' }}>
-           <div style={{ gridColumn: 'span 12', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '60px', opacity: 0.4, filter: 'grayscale(1)' }}>
+           <div style={{ gridColumn: 'span 12', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '80px', opacity: 0.6, filter: 'grayscale(1)' }}>
               {/* TÜRSAB Placeholder */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Shield size={30} />
-                <span style={{ fontWeight: '900', fontSize: '14px', letterSpacing: '2px' }}>TÜRSAB VERIFIED</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                <Shield size={45} />
+                <span style={{ fontWeight: '900', fontSize: '18px', letterSpacing: '2px' }}>TÜRSAB VERIFIED</span>
               </div>
-              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" width={60} height={20} alt="Visa" style={{ objectFit: 'contain' }} />
-              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" width={50} height={30} alt="Mastercard" style={{ objectFit: 'contain' }} />
-              <div style={{ fontWeight: '900', fontSize: '12px' }}>TRIPADVISOR CHOICE</div>
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" width={100} height={35} alt="Visa" style={{ objectFit: 'contain' }} />
+              <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" width={80} height={50} alt="Mastercard" style={{ objectFit: 'contain' }} />
+              <div style={{ fontWeight: '900', fontSize: '16px' }}>TRIPADVISOR CHOICE</div>
            </div>
         </div>
       </section>

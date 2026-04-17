@@ -7,6 +7,7 @@ export const metadata = {
 };
 
 import { LanguageProvider } from "@/context/LanguageContext";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function RootLayout({ children }) {
   return (
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body>
         <LanguageProvider>
           {children}
+          <WhatsAppButton />
         </LanguageProvider>
       </body>
     </html>

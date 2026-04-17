@@ -12,7 +12,7 @@ import Image from 'next/image';
 export default function FleetPage() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '', date: '', time: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', date: '', time: '', hotel: '', room: '' });
 
   const { lang, setLang, t: ctxT } = useLanguage() || {};
   const activeLang = lang || 'tr';
@@ -36,14 +36,16 @@ export default function FleetPage() {
           customerName: formData.name,
           customerPhone: formData.phone,
           customerEmail: 'fleet-customer@bosstour.com',
+          hotel: formData.hotel,
+          room: formData.room,
           lang: activeLang
         })
       });
 
       // 2. Prepare WhatsApp
       const message = activeLang === 'tr' 
-        ? `*YENİ ARAÇ KİRALAMA TALEBİ*\n\n🚗 *Araç:* ${selectedItem?.name}\n👤 *Müşteri:* ${formData.name}\n📱 *Telefon:* ${formData.phone}\n📅 *Tarih:* ${formData.date}\n⏰ *Saat:* ${formData.time}\n💰 *Fiyat:* ${selectedItem?.price}`
-        : `*NEW CAR RENTAL REQUEST*\n\n🚗 *Vehicle:* ${selectedItem?.name}\n👤 *Customer:* ${formData.name}\n📱 *Phone:* ${formData.phone}\n📅 *Date:* ${formData.date}\n⏰ *Time:* ${formData.time}\n💰 *Price:* ${selectedItem?.price}`;
+        ? `*YENİ ARAÇ KİRALAMA TALEBİ*\n\n🚗 *Araç:* ${selectedItem?.name}\n👤 *Müşteri:* ${formData.name}\n📱 *Telefon:* ${formData.phone}\n🏨 *Otel:* ${formData.hotel} - *Oda:* ${formData.room}\n📅 *Tarih:* ${formData.date}\n⏰ *Saat:* ${formData.time}\n💰 *Fiyat:* ${selectedItem?.price}`
+        : `*NEW CAR RENTAL REQUEST*\n\n🚗 *Vehicle:* ${selectedItem?.name}\n👤 *Customer:* ${formData.name}\n📱 *Phone:* ${formData.phone}\n🏨 *Hotel:* ${formData.hotel} - *Room:* ${formData.room}\n📅 *Date:* ${formData.date}\n⏰ *Time:* ${formData.time}\n💰 *Price:* ${selectedItem?.price}`;
       
       window.open(`https://wa.me/905424142586?text=${encodeURIComponent(message)}`, '_blank');
       setSelectedItem(null);
@@ -241,6 +243,17 @@ export default function FleetPage() {
                     </div>
                   </div>
 
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{t?.modal?.hotel}</label>
+                      <input className="luxury-input" placeholder="Titanic..." value={formData.hotel} onChange={e => setFormData({ ...formData, hotel: e.target.value })} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{t?.modal?.roomNo}</label>
+                      <input className="luxury-input" placeholder="102" value={formData.room} onChange={e => setFormData({ ...formData, room: e.target.value })} />
+                    </div>
+                  </div>
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

@@ -13,7 +13,7 @@ export default function TransferPage() {
   
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '', date: '', time: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', date: '', time: '', hotel: '', room: '' });
   
   const { lang, setLang, t } = useLanguage();
 
@@ -33,6 +33,8 @@ export default function TransferPage() {
           customerName: formData.name,
           customerPhone: formData.phone,
           customerEmail: 'transfer-customer@bosstour.com',
+          hotel: formData.hotel,
+          room: formData.room,
           lang: lang
         })
       });
@@ -42,6 +44,7 @@ export default function TransferPage() {
                    `🚐 *Araç:* ${selectedItem?.name}\n` +
                    `👤 *Müşteri:* ${formData.name}\n` +
                    `📱 *Telefon:* ${formData.phone}\n` +
+                   `🏨 *Otel:* ${formData.hotel} - *Oda:* ${formData.room}\n` +
                    `📅 *Tarih:* ${formData.date}\n` +
                    `⏰ *Saat:* ${formData.time}\n\n` +
                    `💰 *Fiyat:* ${selectedItem?.price || 'Belli Değil'}`;
@@ -174,6 +177,17 @@ export default function TransferPage() {
                     </div>
                   </div>
 
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{t?.modal?.hotel}</label>
+                      <input className="luxury-input" placeholder="Titanic..." value={formData.hotel} onChange={e => setFormData({...formData, hotel: e.target.value})} />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{t?.modal?.roomNo}</label>
+                      <input className="luxury-input" placeholder="102" value={formData.room} onChange={e => setFormData({...formData, room: e.target.value})} />
+                    </div>
+                  </div>
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

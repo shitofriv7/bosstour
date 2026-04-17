@@ -5,14 +5,15 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Calendar, Users, Star, CheckCircle2, Shield, Zap, X, Loader2 } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
+import { Phone, Mail, MapPin, Clock, Calendar, Users, Star, CheckCircle2, Shield, Zap, X, Loader2, MessageCircle } from 'lucide-react';
+import { FaGithub, FaWhatsapp } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   const { lang, setLang, t } = useLanguage();
   const [selectedItem, setSelectedItem] = useState(null);
-  const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '', hotel: '', room: '' });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -32,6 +33,8 @@ export default function Home() {
           customerName: formData.name,
           customerPhone: formData.phone,
           customerEmail: formData.email || 'no-email@bosstour.com',
+          hotel: formData.hotel,
+          room: formData.room,
           lang: lang
         })
       });
@@ -41,6 +44,7 @@ export default function Home() {
         `🚗 *Hizmet:* ${selectedItem?.name}\n` +
         `👤 *Müşteri:* ${formData.name}\n` +
         `📱 *Telefon:* ${formData.phone}\n` +
+        `🏨 *Otel:* ${formData.hotel} - *Oda:* ${formData.room}\n` +
         `📅 *Tarih:* ${formData.date}\n` +
         `⏰ *Saat:* ${formData.time}\n` +
         `👥 *Kişi:* ${formData.adults} Yetişkin, ${formData.children} Çocuk\n\n` +
@@ -95,9 +99,9 @@ export default function Home() {
               className="luxury-card"
               style={{ gridColumn: 'span 4', padding: '0', overflow: 'hidden' }}
             >
-              <div style={{ height: '280px', position: 'relative' }}>
+              <div style={{ height: '320px', position: 'relative', background: 'linear-gradient(to bottom, #f8fafc, #fff)', borderBottom: '1px solid rgba(0,0,0,0.03)' }}>
                 {car?.images?.[0] && (
-                  <Image src={car?.images?.[0]} alt={car?.name || ''} fill style={{ objectFit: 'cover' }} />
+                  <Image src={car?.images?.[0]} alt={car?.name || ''} fill style={{ objectFit: 'contain', padding: '30px' }} />
                 )}
                 <div style={{ position: 'absolute', top: '20px', right: '20px', background: 'var(--primary)', color: '#fff', padding: '8px 15px', borderRadius: '100px', fontWeight: '900', fontSize: '14px' }}>
                   {car?.price}
@@ -121,7 +125,9 @@ export default function Home() {
             </motion.div>
           ))}
           <div style={{ gridColumn: 'span 12', textAlign: 'center', marginTop: '50px' }}>
-            <button className="btn-gold glass" style={{ padding: '15px 40px' }}>{t?.fleet?.viewAll} →</button>
+            <Link href="/fleet" className="btn-gold glass" style={{ padding: '15px 40px', textDecoration: 'none', display: 'inline-block' }}>
+              {t?.fleet?.viewAll} →
+            </Link>
           </div>
         </div>
       </section>
@@ -160,20 +166,20 @@ export default function Home() {
               </div>
               <div style={{ padding: '25px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <button onClick={() => setSelectedItem(tour)} className="btn-gold" style={{ padding: '12px 25px', fontSize: '12px' }}>{t?.modal?.book}</button>
-                <a href={`/tours/${tour?.slug}`} style={{ color: 'var(--primary)', fontSize: '12px', fontWeight: '700', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                <Link href={`/tours/${tour?.slug}`} style={{ color: 'var(--primary)', fontSize: '12px', fontWeight: '700', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '5px' }}>
                    {t?.fleet?.viewDetails} <CheckCircle2 size={14} style={{ color: 'var(--primary)' }} />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}
           <div style={{ gridColumn: 'span 12', textAlign: 'center', marginTop: '60px' }}>
-            <button 
-              onClick={() => window.location.href = '/tours'}
+            <Link 
+              href="/tours"
               className="btn-gold" 
-              style={{ padding: '20px 50px', background: 'transparent', border: '2px solid var(--primary)', color: 'var(--primary)' }}
+              style={{ padding: '20px 50px', background: 'transparent', border: '2px solid var(--primary)', color: 'var(--primary)', textDecoration: 'none', display: 'inline-block' }}
             >
               {t?.tours?.title} →
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -285,6 +291,17 @@ export default function Home() {
 
                       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                          <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{t?.modal?.hotel}</label>
+                          <input className="luxury-input" placeholder="Titanic..." value={formData.hotel} onChange={e => setFormData({...formData, hotel: e.target.value})} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                          <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{t?.modal?.roomNo}</label>
+                          <input className="luxury-input" placeholder="102" value={formData.room} onChange={e => setFormData({...formData, room: e.target.value})} />
+                        </div>
+                      </div>
+
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                           <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'YETİŞKİN' : 'ADULTS'}</label>
                           <input className="luxury-input" type="number" min="1" value={formData.adults} onChange={e => setFormData({...formData, adults: e.target.value})} />
                         </div>
@@ -306,6 +323,7 @@ export default function Home() {
         )}
       </AnimatePresence>
 
+      <FloatingContact />
       <Footer lang={lang} />
     </main>
   );
@@ -346,6 +364,54 @@ const Hero = ({ t }) => (
     </div>
   </section>
 );
+
+const FloatingContact = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div style={{ position: 'fixed', bottom: '30px', right: '30px', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '15px' }}>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            style={{ 
+              background: '#fff', padding: '15px', borderRadius: '25px', 
+              boxShadow: '0 20px 40px rgba(0,0,0,0.15)', border: '1px solid rgba(0,0,0,0.05)',
+              display: 'flex', flexDirection: 'column', gap: '10px'
+            }}
+          >
+            <a 
+              href="https://wa.me/905424142586" target="_blank" rel="noopener noreferrer"
+              style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 20px', background: '#25D366', color: '#fff', borderRadius: '15px', textDecoration: 'none', fontWeight: '700', fontSize: '14px' }}
+            >
+              <FaWhatsapp size={20} /> +90 542 414 25 86
+            </a>
+            <a 
+              href="https://wa.me/905434499552" target="_blank" rel="noopener noreferrer"
+              style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 20px', background: '#25D366', color: '#fff', borderRadius: '15px', textDecoration: 'none', fontWeight: '700', fontSize: '14px' }}
+            >
+              <FaWhatsapp size={20} /> +90 543 449 95 52
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
+      <motion.button
+        whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+        onClick={() => setIsOpen(!isOpen)}
+        style={{ 
+          width: '70px', height: '70px', borderRadius: '50%', background: '#25D366', color: '#fff', 
+          border: 'none', boxShadow: '0 10px 30px rgba(37, 211, 102, 0.4)', cursor: 'pointer',
+          display: 'flex', alignItems: 'center', justifyContent: 'center'
+        }}
+      >
+        {isOpen ? <X size={30} /> : <FaWhatsapp size={35} />}
+      </motion.button>
+    </div>
+  );
+};
 
 const Testimonials = ({ t }) => (
   <section style={{ padding: '120px 0', background: 'rgba(0,102,255,0.02)' }}>
