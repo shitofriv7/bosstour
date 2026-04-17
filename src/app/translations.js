@@ -5,7 +5,7 @@ export const translations = {
     fleet: { title: "Our Premium Fleet", subtitle: "Modern cars for every journey.", viewAll: "View All Fleet", viewDetails: "Explore Details", bookNow: "Reserve Now", cars: [
       { name: "Fiat Egea", price: "€45", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Gasoline", "Manual", "5 Seats"] },
       { name: "Renault Clio", price: "€40", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/renault-clio-hatchback-5-kapi.png"], features: ["Petrol", "Auto", "5 Seats"] },
-      { name: "Fiat Egea Cross", price: "€50", images: ["https://databank.fiatbayi.com.tr/images/modeller/egea-cross/egea-cross-paket.jpg"], features: ["Diesel", "Manual", "5 Seats"] },
+      { name: "Fiat Egea Cross", price: "€50", images: ["https://cdn2.enuygun.com/media/lib/500x300/uploads/image/egea-cross-54386.webp"], features: ["Diesel", "Manual", "5 Seats"] },
       { name: "Citroen C3", price: "€43", images: ["https://www.citroenorigins.fr/sites/default/files/styles/640/public/2023-07/b618_70_1620x1000_0.png"], features: ["Petrol", "Auto", "5 Seats"] },
       { name: "Suzuki Jeep (Retro)", price: "€70", images: ["https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg"], features: ["Gasoline", "Manual", "4 Seats"] },
       { name: "Hyundai i20", price: "€45", images: ["https://stimg.cardekho.com/images/car-images/large/Hyundai/i20/11093/1758102282831/Atlas-White_d5d5d5.jpg?impolicy=resize&imwidth=420"], features: ["Gasoline", "Auto", "5 Seats"] },
@@ -319,7 +319,7 @@ export const translations = {
     fleet: { title: "Premium Filomuz", subtitle: "Her yolculuk için modern araçlar.", viewAll: "Tüm Filoyu Gör", viewDetails: "Detayları İncele", bookNow: "Hemen Rezerve Et", cars: [
       { name: "Fiat Egea", price: "45€", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Benzin", "Manuel", "5 Koltuk"] },
       { name: "Renault Clio", price: "40€", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/renault-clio-hatchback-5-kapi.png"], features: ["Benzin", "Otomatik", "5 Koltuk"] },
-      { name: "Fiat Egea Cross", price: "50€", images: ["https://databank.fiatbayi.com.tr/images/modeller/egea-cross/egea-cross-paket.jpg"], features: ["Dizel", "Manuel", "5 Koltuk"] },
+      { name: "Fiat Egea Cross", price: "50€", images: ["https://cdn2.enuygun.com/media/lib/500x300/uploads/image/egea-cross-54386.webp"], features: ["Dizel", "Manuel", "5 Koltuk"] },
       { name: "Citroen C3", price: "43€", images: ["https://www.citroenorigins.fr/sites/default/files/styles/640/public/2023-07/b618_70_1620x1000_0.png"], features: ["Benzin", "Otomatik", "5 Koltuk"] },
       { name: "Suzuki Jeep (Retro)", price: "70€", images: ["https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg"], features: ["Benzin", "Manuel", "4 Koltuk"] },
       { name: "Hyundai i20", price: "45€", images: ["https://stimg.cardekho.com/images/car-images/large/Hyundai/i20/11093/1758102282831/Atlas-White_d5d5d5.jpg?impolicy=resize&imwidth=420"], features: ["Benzin", "Otomatik", "5 Koltuk"] },
@@ -633,7 +633,7 @@ export const translations = {
     fleet: { title: "Unsere Premium-Flotte", subtitle: "Moderne Fahrzeuge für jede Reise.", viewAll: "Gesamte Flotte", viewDetails: "Details ansehen", bookNow: "Jetzt buchen", cars: [
       { name: "Fiat Egea", price: "€45", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Benzin", "Manuell", "5 Sitze"] },
       { name: "Renault Clio", price: "€40", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/renault-clio-hatchback-5-kapi.png"], features: ["Benzin", "Auto", "5 Sitze"] },
-      { name: "Fiat Egea Cross", price: "€50", images: ["https://databank.fiatbayi.com.tr/images/modeller/egea-cross/egea-cross-paket.jpg"], features: ["Diesel", "Manuell", "5 Sitze"] },
+      { name: "Fiat Egea Cross", price: "€50", images: ["https://cdn2.enuygun.com/media/lib/500x300/uploads/image/egea-cross-54386.webp"], features: ["Diesel", "Manuell", "5 Sitze"] },
       { name: "Citroen C3", price: "€43", images: ["https://www.citroenorigins.fr/sites/default/files/styles/640/public/2023-07/b618_70_1620x1000_0.png"], features: ["Benzin", "Auto", "5 Sitze"] },
       { name: "Suzuki Jeep (Retro)", price: "€70", images: ["https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg"], features: ["Benzin", "Manuell", "4 Sitze"] },
       { name: "Hyundai i20", price: "€45", images: ["https://stimg.cardekho.com/images/car-images/large/Hyundai/i20/11093/1758102282831/Atlas-White_d5d5d5.jpg?impolicy=resize&imwidth=420"], features: ["Benzin", "Auto", "5 Sitze"] },
@@ -947,7 +947,7 @@ export const translations = {
     fleet: { title: "Наш премиум автопарк", subtitle: "Современные автомобили для каждой поездки.", viewAll: "Весь автопарк", viewDetails: "Подробнее", bookNow: "Забронировать", cars: [
       { name: "Fiat Egea", price: "€45", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Бензин", "Механика", "5 мест"] },
       { name: "Renault Clio", price: "€40", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/renault-clio-hatchback-5-kapi.png"], features: ["Бензин", "Авто", "5 мест"] },
-      { name: "Fiat Egea Cross", price: "€50", images: ["https://databank.fiatbayi.com.tr/images/modeller/egea-cross/egea-cross-paket.jpg"], features: ["Дизель", "Механика", "5 мест"] },
+      { name: "Fiat Egea Cross", price: "€50", images: ["https://cdn2.enuygun.com/media/lib/500x300/uploads/image/egea-cross-54386.webp"], features: ["Дизель", "Механика", "5 мест"] },
       { name: "Citroen C3", price: "€43", images: ["https://www.citroenorigins.fr/sites/default/files/styles/640/public/2023-07/b618_70_1620x1000_0.png"], features: ["Бензин", "Авто", "5 мест"] },
       { name: "Suzuki Jeep (Retro)", price: "€70", images: ["https://cdn.alanyatekmar.com/c093d813-761f-4921-8bd3-09ad5d8dba12.jpeg"], features: ["Бензин", "Механика", "4 места"] },
       { name: "Hyundai i20", price: "€45", images: ["https://stimg.cardekho.com/images/car-images/large/Hyundai/i20/11093/1758102282831/Atlas-White_d5d5d5.jpg?impolicy=resize&imwidth=420"], features: ["Бензин", "Авто", "5 мест"] },
