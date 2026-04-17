@@ -80,7 +80,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. INTERACTIVE MAP SECTION - CLEAN WHITE */}
+      {/* 3. BRAND GALLERY - NEW ASSETS */}
+      <section style={{ padding: '40px 0' }}>
+        <div className="main-grid">
+           <div style={{ gridColumn: 'span 4' }}>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
+                style={{ position: 'relative', width: '100%', height: '450px', borderRadius: '40px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}
+              >
+                <Image src="https://i.imgur.com/W6Nizou.jpeg" fill style={{ objectFit: 'cover' }} alt="Boss Tour Image 1" />
+              </motion.div>
+           </div>
+           <div style={{ gridColumn: 'span 4' }}>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+                style={{ position: 'relative', width: '100%', height: '450px', borderRadius: '40px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}
+              >
+                <Image src="https://i.imgur.com/rtPNBcC.jpeg" fill style={{ objectFit: 'cover' }} alt="Boss Tour Image 2" />
+              </motion.div>
+           </div>
+           <div style={{ gridColumn: 'span 4' }}>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+                style={{ position: 'relative', width: '100%', height: '450px', borderRadius: '40px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}
+              >
+                <Image src="https://i.imgur.com/01mVJW0.jpeg" fill style={{ objectFit: 'cover' }} alt="Boss Tour Image 3" />
+              </motion.div>
+           </div>
+        </div>
+      </section>
+
+      {/* 4. INTERACTIVE MAP SECTION - CLEAN WHITE */}
       <section style={{ padding: '100px 0' }}>
          <div className="main-grid">
             {/* Map Frame */}

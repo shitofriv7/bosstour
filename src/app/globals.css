@@ -244,6 +244,19 @@ html, body {
   .hero-btns {
     justify-content: center;
   }
+  .modal-container {
+    padding: 0 !important;
+  }
+  .modal-container > div {
+    padding: 30px !important;
+    grid-column: 1 / -1 !important;
+  }
+  .modal-container h2 {
+    font-size: 2.2rem !important;
+  }
+  .modal-container h3 {
+    font-size: 1.8rem !important;
+  }
   .modal-content {
     padding: 25px !important;
   }

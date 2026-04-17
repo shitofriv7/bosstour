@@ -134,7 +134,7 @@ export default function Navbar({ lang, setLang, t }) {
               padding: '0 20px'
             }}
           >
-            <div style={{ position: 'relative', width: '280px', height: '90px' }}>
+            <div style={{ position: 'relative', width: 'clamp(180px, 50vw, 280px)', height: 'clamp(60px, 12vw, 90px)' }}>
               <Image 
                 src="https://i.imgur.com/IW7B7av.png" 
                 alt="Boss Tour Logo" 
@@ -175,7 +175,7 @@ export default function Navbar({ lang, setLang, t }) {
                   }}
                 >
                   <Globe size={14} style={{ color: 'var(--primary)' }} />
-                  <span className="lang-code">{lang}</span>
+                  <span className="lang-code" style={{ display: 'inline-block', minWidth: '18px' }}>{lang}</span>
                   <ChevronDown size={12} style={{ opacity: 0.5, transform: isLangOpen ? 'rotate(180deg)' : 'none', transition: '0.3s' }} />
                 </button>
                 
@@ -235,7 +235,7 @@ export default function Navbar({ lang, setLang, t }) {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ position: 'relative', width: '200px', height: '60px' }}>
+              <div style={{ position: 'relative', width: 'clamp(220px, 70vw, 320px)', height: 'clamp(80px, 18vw, 110px)' }}>
                 <Image 
                   src="https://i.imgur.com/IW7B7av.png" 
                   alt="Boss Tour Logo" 

@@ -225,10 +225,13 @@ export default function Home() {
                 width: '100%', maxWidth: '1200px', height: 'auto', maxHeight: '90vh',
                 background: '#fff', borderRadius: '40px', 
                 boxShadow: '0 50px 100px rgba(0,0,0,0.1)', 
-                overflow: 'hidden', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                overflowY: 'auto', 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                 border: '1px solid rgba(0,0,0,0.05)',
                 margin: '20px'
               }}
+              className="modal-container"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Left Side: Visual Summary */}
@@ -345,19 +348,28 @@ const Hero = ({ t }) => (
     <div className="main-grid" style={{ position: 'relative', zIndex: 10 }}>
       <div style={{ gridColumn: 'span 7', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }} className="hero-label-container">
             <div style={{ width: '40px', height: '1px', background: 'var(--primary)' }} />
-            <span className="section-label" style={{ color: 'var(--primary)', fontWeight: '900', margin: 0 }}>EST. 2012 • ELITE TRAVEL</span>
+            <span className="section-label" style={{ color: 'var(--primary)', fontWeight: '900', margin: 0 }}>EST. 2012 • LUXURY EXPERIENCE</span>
           </div>
-          <h1 className="serif" style={{ fontSize: 'clamp(3rem, 8vw, 6.5rem)', lineHeight: 0.9, color: '#000', marginBottom: '40px' }}>
+          <h1 className="serif" style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)', lineHeight: 0.9, color: '#000', marginBottom: '30px' }}>
             {t?.hero?.title}
           </h1>
-          <p className="luxury-para" style={{ fontSize: '1.2rem', borderLeft: '4px solid var(--primary)', paddingLeft: '30px', maxWidth: '500px', marginBottom: '50px', color: 'rgba(0,0,0,0.6)' }}>
+          <p className="luxury-para" style={{ 
+            fontSize: '1.2rem', 
+            borderLeft: '4px solid var(--primary)', 
+            paddingLeft: '30px', 
+            maxWidth: '600px', 
+            marginBottom: '40px', 
+            color: 'rgba(0,0,0,0.7)',
+            lineHeight: 1.6
+          }}>
             {t?.hero?.subtitle}
           </p>
-          <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            <button className="btn-gold" style={{ padding: '20px 50px' }} onClick={() => document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' })}>{t?.hero?.cta}</button>
-            <button className="btn-outline" style={{ padding: '20px 50px' }} onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>{t?.hero?.explore || 'EXPLORE'}</button>
+          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }} className="hero-btns">
+            <button className="btn-gold" style={{ padding: '20px 40px', fontSize: '14px', minWidth: '180px' }} onClick={() => document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' })}>{t?.hero?.cta}</button>
+            <button className="btn-outline" style={{ padding: '20px 40px', fontSize: '14px', minWidth: '180px' }} onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>{t?.hero?.explore || 'EXPLORE'}</button>
+            <button className="btn-outline" style={{ padding: '20px 40px', fontSize: '14px', minWidth: '180px' }} onClick={() => document.getElementById('transfer').scrollIntoView({ behavior: 'smooth' })}>{t?.hero?.cta3 || 'TRANSFER'}</button>
           </div>
         </motion.div>
       </div>
