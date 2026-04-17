@@ -357,7 +357,7 @@ const Hero = ({ t }) => (
           </p>
           <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
             <button className="btn-gold" style={{ padding: '20px 50px' }} onClick={() => document.getElementById('fleet').scrollIntoView({ behavior: 'smooth' })}>{t?.hero?.cta}</button>
-            <button className="btn-outline" style={{ padding: '20px 50px' }} onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>EXPLORE</button>
+            <button className="btn-outline" style={{ padding: '20px 50px' }} onClick={() => document.getElementById('tours').scrollIntoView({ behavior: 'smooth' })}>{t?.hero?.explore || 'EXPLORE'}</button>
           </div>
         </motion.div>
       </div>

@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     nav: { home: "Home", tours: "Tours", fleet: "Fleet", transfer: "Transfer", realEstate: "Real Estate", about: "About Us", services: "Experience" },
-    hero: { title: "Adventure Awaits in Antalya", subtitle: "Explore the turquoise coast with Boss Tour. Premium tours and luxury cars.", cta: "Rent a Car", cta2: "View Adventures" },
+    hero: { title: "Adventure Awaits in Antalya", subtitle: "Explore the turquoise coast with Boss Tour. Premium tours and luxury cars.", cta: "Rent a Car", cta2: "View Adventures", explore: "Explore" },
     fleet: { title: "Our Premium Fleet", subtitle: "Modern cars for every journey.", viewAll: "View All Fleet", viewDetails: "Explore Details", bookNow: "Reserve Now", cars: [
       { name: "Fiat Egea", price: "€45", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Gasoline", "Manual", "5 Seats"] },
       { name: "Renault Clio", price: "€40", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/renault-clio-hatchback-5-kapi.png"], features: ["Petrol", "Auto", "5 Seats"] },
@@ -315,7 +315,7 @@ export const translations = {
   },
   tr: {
     nav: { home: "Anasayfa", tours: "Turlar", fleet: "Araç Filosu", transfer: "Transfer", realEstate: "Emlak", about: "Hakkımızda", services: "Deneyim" },
-    hero: { title: "Antalya'da Macera Sizi Bekliyor", subtitle: "Boss Tour ile turkuaz kıyıları keşfedin. Premium turlar ve lüks araçlar.", cta: "Araç Kirala", cta2: "Maceraları Gör" },
+    hero: { title: "Antalya'da Macera Sizi Bekliyor", subtitle: "Boss Tour ile turkuaz kıyıları keşfedin. Premium turlar ve lüks araçlar.", cta: "Araç Kirala", cta2: "Maceraları Gör", explore: "KEŞFET" },
     fleet: { title: "Premium Filomuz", subtitle: "Her yolculuk için modern araçlar.", viewAll: "Tüm Filoyu Gör", viewDetails: "Detayları İncele", bookNow: "Hemen Rezerve Et", cars: [
       { name: "Fiat Egea", price: "45€", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Benzin", "Manuel", "5 Koltuk"] },
       { name: "Renault Clio", price: "40€", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/renault-clio-hatchback-5-kapi.png"], features: ["Benzin", "Otomatik", "5 Koltuk"] },
@@ -629,7 +629,7 @@ export const translations = {
   },
   de: {
     nav: { home: "Startseite", tours: "Touren", fleet: "Fuhrpark", transfer: "Transfer", realEstate: "Immobilien", about: "Über Uns", services: "Erlebnis" },
-    hero: { title: "Abenteuer in Antalya erwartet Sie", subtitle: "Entdecken Sie die türkisfarbene Küste mit Boss Tour. Premium Touren und Luxusfahrzeuge.", cta: "Auto mieten", cta2: "Touren ansehen" },
+    hero: { title: "Abenteuer in Antalya erwartet Sie", subtitle: "Entdecken Sie die türkisfarbene Küste mit Boss Tour. Premium Touren und Luxusfahrzeuge.", cta: "Auto mieten", cta2: "Touren ansehen", explore: "ENTDECKEN" },
     fleet: { title: "Unsere Premium-Flotte", subtitle: "Moderne Fahrzeuge für jede Reise.", viewAll: "Gesamte Flotte", viewDetails: "Details ansehen", bookNow: "Jetzt buchen", cars: [
       { name: "Fiat Egea", price: "€45", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Benzin", "Manuell", "5 Sitze"] },
       { name: "Renault Clio", price: "€40", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/renault-clio-hatchback-5-kapi.png"], features: ["Benzin", "Auto", "5 Sitze"] },
@@ -943,7 +943,7 @@ export const translations = {
   },
   ru: {
     nav: { home: "Главная", tours: "Туры", fleet: "Автопарк", transfer: "Трансфер", about: "О нас", services: "Опыт" },
-    hero: { title: "Анталья ждет вас", subtitle: "Исследуйте побережье с Boss Tour.", cta: "Аренда авто", cta2: "Все туры" },
+    hero: { title: "Анталья ждет вас", subtitle: "Исследуйте побережье с Boss Tour.", cta: "Аренда авто", cta2: "Все туры", explore: "ИССЛЕДОВАТЬ" },
     fleet: { title: "Наш премиум автопарк", subtitle: "Современные автомобили для каждой поездки.", viewAll: "Весь автопарк", viewDetails: "Подробнее", bookNow: "Забронировать", cars: [
       { name: "Fiat Egea", price: "€45", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Бензин", "Механика", "5 мест"] },
       { name: "Renault Clio", price: "€40", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/renault-clio-hatchback-5-kapi.png"], features: ["Бензин", "Авто", "5 мест"] },

@@ -134,7 +134,7 @@ export default function Navbar({ lang, setLang, t }) {
               padding: '0 20px'
             }}
           >
-            <div style={{ position: 'relative', width: '180px', height: '65px' }}>
+            <div style={{ position: 'relative', width: '220px', height: '75px' }}>
               <Image 
                 src="https://i.imgur.com/IW7B7av.png" 
                 alt="Boss Tour Logo" 
