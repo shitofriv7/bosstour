@@ -43,8 +43,8 @@ export default function Navbar({ lang, setLang, t }) {
         className="nav-pill"
         style={{
           width: '100%',
-          maxWidth: scrolled ? '1000px' : '1200px',
-          height: '90px',
+          maxWidth: scrolled ? '1100px' : '1300px',
+          height: '110px',
           background: 'rgba(15, 23, 42, 0.25)',
           backdropFilter: 'blur(35px)',
           WebkitBackdropFilter: 'blur(35px)',
@@ -134,7 +134,7 @@ export default function Navbar({ lang, setLang, t }) {
               padding: '0 20px'
             }}
           >
-            <div style={{ position: 'relative', width: '220px', height: '75px' }}>
+            <div style={{ position: 'relative', width: '280px', height: '90px' }}>
               <Image 
                 src="https://i.imgur.com/IW7B7av.png" 
                 alt="Boss Tour Logo" 
