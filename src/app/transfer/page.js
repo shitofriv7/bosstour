@@ -14,6 +14,7 @@ export default function TransferPage() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', date: '', time: '', hotel: '', room: '' });
+  const [showSuccess, setShowSuccess] = useState(false);
   
   const { lang, setLang, t } = useLanguage();
 
@@ -35,6 +36,7 @@ export default function TransferPage() {
           customerEmail: 'transfer-customer@bosstour.com',
           hotel: formData.hotel,
           room: formData.room,
+          time: formData.time,
           lang: lang
         })
       });
@@ -50,7 +52,11 @@ export default function TransferPage() {
                    `💰 *Fiyat:* ${selectedItem?.price || 'Belli Değil'}`;
       
       window.open(`https://wa.me/905424142586?text=${encodeURIComponent(text)}`, '_blank');
-      setSelectedItem(null);
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+        setSelectedItem(null);
+      }, 3000);
     } catch (err) {
       console.error("Transfer booking error:", err);
     } finally {
@@ -200,9 +206,14 @@ export default function TransferPage() {
                     </div>
                   </div>
 
-                  <button disabled={loading} className="btn-gold" style={{ width: '100%', height: '80px', borderRadius: '20px', fontSize: '1.2rem', marginTop: '20px' }}>
-                    {loading ? <Loader2 className="animate-spin mx-auto" /> : (lang === 'tr' ? 'REZERVASYONU TAMAMLA' : 'COMPLETE RESERVATION')}
+                  <button disabled={loading || showSuccess} className="btn-gold" style={{ width: '100%', height: '80px', borderRadius: '20px', fontSize: '1.2rem', marginTop: '20px' }}>
+                    {loading ? <Loader2 className="animate-spin mx-auto" /> : (showSuccess ? (lang === 'tr' ? 'TALEP ALINDI ✅' : 'REQUEST RECEIVED ✅') : (lang === 'tr' ? 'REZERVASYONU TAMAMLA' : 'COMPLETE RESERVATION'))}
                   </button>
+                  {showSuccess && (
+                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: 'center', color: '#059669', fontWeight: '700' }}>
+                      {t?.modal?.confirmDesc}
+                    </motion.p>
+                  )}
                 </form>
               </div>
             </motion.div>

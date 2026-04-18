@@ -38,6 +38,7 @@ export default function FleetPage() {
           customerEmail: 'fleet-customer@bosstour.com',
           hotel: formData.hotel,
           room: formData.room,
+          time: formData.time,
           lang: activeLang
         })
       });

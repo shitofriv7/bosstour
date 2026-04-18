@@ -16,7 +16,7 @@ export default function ToursPage() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '', hotel: '', room: '' });
   
   const { lang, setLang, t } = useLanguage();
 
@@ -36,6 +36,11 @@ export default function ToursPage() {
           customerName: formData.name,
           customerPhone: formData.phone,
           customerEmail: 'tour-customer@bosstour.com',
+          hotel: formData.hotel,
+          room: formData.room,
+          time: formData.time,
+          adults: formData.adults,
+          children: formData.children,
           lang: lang
         })
       });
@@ -45,6 +50,7 @@ export default function ToursPage() {
                    `🌟 *Tur:* ${selectedItem?.name}\n` +
                    `👤 *Müşteri:* ${formData.name}\n` +
                    `📱 *Telefon:* ${formData.phone}\n` +
+                   `🏨 *Otel:* ${formData.hotel} - *Oda:* ${formData.room}\n` +
                    `📅 *Tarih:* ${formData.date}\n` +
                    `⏰ *Saat:* ${formData.time}\n` +
                    `👥 *Kişi:* ${formData.adults} Yetişkin, ${formData.children} Çocuk\n\n` +
@@ -152,12 +158,22 @@ export default function ToursPage() {
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px', opacity: 0.6, fontWeight: '900', fontSize: '11px', letterSpacing: '1.5px' }}><Users size={14}/> MÜŞTERİ BİLGİLERİ</div>
                       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Ad Soyad (Name)</label>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>{t?.modal?.name || 'Ad Soyad (Name)'}</label>
                           <input className="luxury-input" required placeholder="Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                          <label style={{ fontSize: '10px', opacity: 0.5 }}>Telefon No (Phone)</label>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>{lang === 'tr' ? 'Telefon No' : 'Phone No'}</label>
                           <input className="luxury-input" required placeholder="Phone" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
+                        </div>
+                      </div>
+                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginTop: '15px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>{t?.modal?.hotel}</label>
+                          <input className="luxury-input" placeholder="Titanic..." value={formData.hotel} onChange={e => setFormData({...formData, hotel: e.target.value})} />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                          <label style={{ fontSize: '10px', opacity: 0.5 }}>{t?.modal?.roomNo}</label>
+                          <input className="luxury-input" placeholder="102" value={formData.room} onChange={e => setFormData({...formData, room: e.target.value})} />
                         </div>
                       </div>
                     </div>
