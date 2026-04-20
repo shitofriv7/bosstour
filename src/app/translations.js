@@ -179,7 +179,7 @@ export const translations = {
           desc: "Rafting, Zipline, Tazi Canyon, Quad, Buggy, and Jeep Safari - all in one incredible day.", 
           longDesc: "Why choose one when you can do them all? This is our most complete adventure package for true adrenaline junkies. Your day begins with a 4x4 Jeep Safari through the rugged Taurus Mountains to the magnificent Tazi Canyon. After a photo break at the 'Eagle's Nest' viewpoint, we head to the river for a 14km White Water Rafting journey. But the excitement doesn't stop there—you'll fly over the canyon on a Zipline and then take control of a Quad or Buggy for an off-road forest safari. This 10-hour mega-tour is the ultimate way to experience the wild side of Antalya in a single day.",
           highlights: ["Tazi Canyon Exploration", "14km White Water Rafting", "Giant Canyon Zipline", "Off-road Quad/Buggy Safari", "4x4 Jeep Mountain Safari"], 
-          included: ["All Adventure Equipment", "Professional Guides", "Open Buffet Lunch at Partner Hotel", "Unlimited Beer & Wine", "Hotel Pickup & Drop-off"] 
+          included: ["All Adventure Equipment", "Professional Guides", "Delicious Lunch", "Hotel Pickup & Drop-off"] 
         },
         { 
           slug: "paragliding", 
@@ -301,17 +301,6 @@ export const translations = {
           longDesc: "Discover the hidden treasures of the Mediterranean Sea. Whether you are a beginner or an experienced diver, Alanya offers crystal clear waters and diverse marine life. Our tour starts with a detailed briefing on equipment and diving techniques by PADI/CMAS certified instructors. We head out by boat to two different diving spots, including underwater caves and reefs. You'll swim alongside colorful fish, octopuses, and maybe even sea turtles. For beginners, the first dive is a shallow discovery dive to get comfortable with the gear. Lunch is served on the boat between dives. It's an unforgettable experience in the silence of the deep blue.",
           highlights: ["Two Distinct Dive Spots", "Underwater Cave System", "Professional PADI/CMAS Guides", "Complete Modern Equipment", "Boat Cruise & Lunch"], 
           included: ["All Professional Gear", "Two Guided Dives", "Lunch on Boat", "Insurance", "Hotel Transfer"] 
-        },
-        { 
-          slug: "adrenaline-combo", 
-          name: "5-in-1 Adrenaline Combo: The Ultimate Thrill", 
-          price: "€75", 
-          duration: "10 Hours", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
-          desc: "Rafting, Zipline, Tazi Canyon, Quad-Buggy, and Jeep Safari all in one day!", 
-          longDesc: "Why choose one when you can do them all? This is our most complete adventure package for true adrenaline junkies. Your day begins with a 4x4 Jeep Safari through the rugged Taurus Mountains to the magnificent Tazi Canyon. After a photo break at the 'Eagle's Nest' viewpoint, we head to the river for a 14km White Water Rafting journey. But the excitement doesn't stop there—you'll fly over the canyon on a Zipline and then take control of a Quad or Buggy for an off-road forest safari. This 10-hour mega-tour is the ultimate way to experience the wild side of Antalya in a single day.",
-          highlights: ["Tazi Canyon Exploration", "14km White Water Rafting", "Giant Canyon Zipline", "Off-road Quad/Buggy Safari", "4x4 Jeep Mountain Safari"], 
-          included: ["All Adventure Equipment", "Professional Guides", "Open Buffet Lunch", "Hotel Pickup & Drop-off", "Insurance"] 
         },
         { 
           slug: "antalya-aquarium", 
@@ -541,7 +530,7 @@ export const translations = {
           desc: "Rafting, Zipline, Tazı Kanyonu, Quad, Buggy ve Jeep Safari - hepsi tek bir muhteşem günde.", 
           longDesc: "Neden birini seçesiniz ki? Gerçek macera tutkunları için hazırladığımız bu en kapsamlı pakette adrenalin hiç bitmiyor. Gününüz 4x4 Jeep Safari ile Toroslar'ın kalbindeki efsanevi Tazı Kanyonu'na tırmanarak başlıyor. 'Kartal Yuvası'nda fotoğraf molasının ardından nehre iniyor ve 14 km'lik rafting macerasına atılıyoruz. Heyecan bununla sınırlı değil; kanyon üzerinde zipline ile uçacak ve ardından ATV veya Buggy motorlarla orman safariye çıkacaksınız. 10 saatlik bu mega tur, Antalya'nın vahşi doğasını tek bir günde yaşamanın en efsane yolu.",
           highlights: ["Tazı Kanyonu Keşfi", "14km Coşkulu Rafting", "Dev Kanyon Zipline Hattı", "Off-road Atv/Buggy Safari", "4x4 Jip Dağ Safarisi"], 
-          included: ["Tüm Macera Ekipmanları", "Profesyonel Rehberler", "Otelde Açık Büfe Öğle Yemeği", "Sınırsız Bira & Şarap Dahil", "Otelden Alma ve Bırakma"] 
+          included: ["Tüm Macera Ekipmanları", "Profesyonel Rehberler", "Lezzetli Öğle Yemeği", "Otelden Alma ve Bırakma"] 
         },
         { 
           slug: "paragliding", 
@@ -663,17 +652,6 @@ export const translations = {
           longDesc: "Akdeniz'in gizli hazinelerini keşfedin. İster yeni başlayan ister deneyimli bir dalgıç olun, Alanya kristal berraklığında sular ve diverse deniz yaşamı sunar. Turumuz, PADI/CMAS sertifikalı eğitmenler tarafından ekipman ve dalış teknikleri üzerine detaylı bir bilgilendirme ile başlar. Tekneyle su altı mağaraları ve resifleri içeren iki farklı dalış noktasına gidiyoruz. Renkli balıklar, ahtapotlar ve hatta deniz kaplumbağalarıyla birlikte yüzeceksiniz. Yeni başlayanlar için ilk dalış, ekipmana alışmak için sığ bir keşif dalışıdır. Öğle yemeği dalışlar arasında teknede servis edilir. Derin maviliğin sessizliğinde unutulmaz bir deneyimdir.",
           highlights: ["İki Farklı Dalış Noktası", "Su Altı Mağara Sistemi", "Profesyonel PADI/CMAS Rehberler", "Tam Modern Ekipman", "Tekne Turu ve Yemek"], 
           included: ["Tüm Profesyonel Ekipmanlar", "İki Rehberli Dalış", "Teknede Öğle Yemeği", "Sigorta", "Otel Transferi"] 
-        },
-        { 
-          slug: "adrenaline-combo", 
-          name: "5'i 1 Arada Adrenalin Kombo: Dev Paket", 
-          price: "€75", 
-          duration: "10 Saat", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
-          desc: "Rafting, Zipline, Tazı Kanyonu, Atv/Buggy ve Jeep Safari tek bir günde!", 
-          longDesc: "Neden birini seçesiniz ki? Gerçek macera tutkunları için hazırladığımız bu en kapsamlı pakette adrenalin hiç bitmiyor. Gününüz 4x4 Jeep Safari ile Toroslar'ın kalbindeki efsanevi Tazı Kanyonu'na tırmanarak başlıyor. 'Kartal Yuvası'nda fotoğraf molasının ardından nehre iniyor ve 14 km'lik rafting macerasına atılıyoruz. Heyecan bununla sınırlı değil; kanyon üzerinde zipline ile uçacak ve ardından ATV veya Buggy motorlarla orman safariye çıkacaksınız. 10 saatlik bu mega tur, Antalya'nın vahşi doğasını tek bir günde yaşamanın en efsane yolu.",
-          highlights: ["Tazı Kanyonu Keşfi", "14km Coşkulu Rafting", "Dev Kanyon Zipline Hattı", "Off-road Atv/Buggy Safari", "4x4 Jip Dağ Safarisi"], 
-          included: ["Tüm Macera Ekipmanları", "Profesyonel Rehberler", "Açık Büfe Öğle Yemeği", "Adresten Alış-Bırakış", "Sigorta"] 
         },
         { 
           slug: "antalya-aquarium", 
@@ -903,7 +881,7 @@ export const translations = {
           desc: "Rafting, Zipline, Tazi Canyon, Quad, Buggy und Jeep-Safari - alles an einem unglaublichen Tag.", 
           longDesc: "Warum wählen, wenn man alles haben kann? Dies ist unser umfassendstes Abenteuerpaket für echte Adrenalinjunkies. Ihr Tag beginnt mit einer 4x4-Jeep-Safari durch das Taurusgebirge zum prächtigen Tazi Canyon. Nach einem Fotostopp am Aussichtspunkt 'Adlernest' geht es zum Fluss für eine 14 km lange Rafting-Tour. Doch der Spaß hört hier nicht auf – du fliegst mit der Zipline über den Canyon und übernimmst dann die Kontrolle über ein Quad oder einen Buggy für eine Offroad-Waldsafari. Dieser 10-stündige Mega-Tour ist der ultimative Weg, um die wilde Seite von Antalya an einem einzigen Tag zu erleben.",
           highlights: ["Tazi Canyon Erkundung", "14km Wildwasser-Rafting", "Riesen-Canyon-Zipline", "Off-road Quad/Buggy Safari", "4x4 Jeep-Bergsafari"], 
-          included: ["Alle Abenteuer-Ausrüstungen", "Professionelle Guides", "Offenes Buffet-Mittagessen im Hotel", "Unbegrenzt Bier & Wein", "Hotelabholung & Rücktransfer"] 
+          included: ["Alle Abenteuer-Ausrüstungen", "Professionelle Guides", "Leckeres Mittagessen", "Hotelabholung & Rücktransfer"] 
         },
         { 
           slug: "paragliding", 
@@ -1025,17 +1003,6 @@ export const translations = {
           longDesc: "Entdecken Sie die verborgenen Schätze des Mittelmeers. Egal, ob Sie Anfänger oder erfahrener Taucher sind, Alanya bietet kristallklares Wasser und eine vielfältige Meereswelt. Unsere Tour beginnt mit einer ausführlichen Einweisung in Ausrüstung und Tauchtechniken durch PADI/CMAS-zertifizierte Tauchlehrer. Wir fahren mit dem Boot zu zwei verschiedenen Tauchplätzen, darunter Unterwasserhöhlen und Riffe. Sie schwimmen an farbenfrohen Fischen, Kraken und vielleicht sogar Meeresschildkröten vorbei. Für Anfänger ist der erste Tauchgang ein flacher Einführungstauchgang, um sich mit der Ausrüstung vertraut zu machen. Das Mittagessen wird zwischen den Tauchgängen auf dem Boot serviert. Ein unvergessliches Erlebnis in der Stille des tiefen Blaus.",
           highlights: ["Zwei verschiedene Tauchplätze", "Unterwasser-Höhlensystem", "Professionelle PADI/CMAS-Guides", "Komplette moderne Ausrüstung", "Bootsfahrt & Mittagessen"], 
           included: ["Komplette Profi-Ausrüstung", "Zwei geführte Tauchgänge", "Mittagessen an Bord", "Versicherung", "Hoteltransfer"] 
-        },
-        { 
-          slug: "adrenaline-combo", 
-          name: "5-in-1 Adrenalin-Kombi: Der ultimative Kick", 
-          price: "€75", 
-          duration: "10 Stunden", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
-          desc: "Rafting, Zipline, Tazi Canyon, Quad-Buggy und Jeep-Safari an einem Tag!", 
-          longDesc: "Warum wählen, wenn man alles haben kann? Dies ist unser umfassendstes Abenteuerpaket für echte Adrenalinjunkies. Ihr Tag beginnt mit einer 4x4-Jeep-Safari durch das Taurusgebirge zum prächtigen Tazi Canyon. Nach einem Fotostopp am Aussichtspunkt 'Adlernest' geht es zum Fluss für eine 14 km lange Rafting-Tour. Doch der Spaß hört hier nicht auf – du fliegst mit der Zipline über den Canyon und übernimmst dann die Kontrolle über ein Quad oder einen Buggy für eine Offroad-Waldsafari. Dieser 10-stündige Mega-Tour ist der ultimative Weg, um die wilde Seite von Antalya an einem einzigen Tag zu erleben.",
-          highlights: ["Tazi Canyon Erkundung", "14km Wildwasser-Rafting", "Riesen-Canyon-Zipline", "Off-road Quad/Buggy Safari", "4x4 Jeep-Bergsafari"], 
-          included: ["Alle Abenteuer-Ausrüstungen", "Professionelle Guides", "Offenes Mittagsbuffet", "Hotelabholung & Rücktransfer", "Versicherung"] 
         },
         { 
           slug: "antalya-aquarium", 
@@ -1266,7 +1233,7 @@ export const translations = {
           desc: "Рафтинг, Зиплайн, Каньон Тазы, Квадроциклы, Багги и Джип-сафари — всё за один невероятный день!", 
           longDesc: "Зачем выбирать что-то одно, если можно получить всё? Это наш самый полный приключенческий пакет для настоящих любителей адреналина. Ваш день начнется с джип-сафари 4x4 через горы Торос к величественному каньону Тазы. После фотосессии на смотровой площадке \"Орлиное гнездо\" мы отправимся на 14-километровый рафтинг по горной реке. Но на этом приключения не заканчиваются — вы пролетите над каньоном на зиплайне, а затем сядете за руль квадроцикла или багги для лесного сафари. Этот 10-часовой мега-тур — лучший способ испытать дикую природу Антальи за один день.",
           highlights: ["Исследование каньона Тазы", "14 км рафтинга по горной реке", "Гигантский зиплайн над каньоном", "Офф-роуд сафари на квадроциклах/багги", "Джип-сафари 4x4 в горах"], 
-          included: ["Все снаряжение для приключений", "Профессиональные гиды", "Обед (шведский стол) в отеле", "Безлимитное пиво и вино", "Трансфер из отеля и обратно"] 
+          included: ["Все снаряжение для приключений", "Профессиональные гиды", "Вкусный обед", "Трансфер из отеля и обратно"] 
         },
         { 
           slug: "paragliding", 
@@ -1388,17 +1355,6 @@ export const translations = {
           longDesc: "Исследуйте скрытые сокровища Средиземного моря. Независимо от того, новичок вы или опытный дайвер, Аланья предлагает кристально чистую воду и разнообразную морскую жизнь. Наш тур начинается с подробного инструктажа по снаряжению и технике погружения от сертифицированных инструкторов PADI/CMAS. Мы отправимся на лодке к двум разным местам погружения, включая подводные пещеры и рифы. Вы поплаваете среди разноцветных рыб, осьминогов и, возможно, даже встретите морских черепах. Для новичков первое погружение — ознакомительное на небольшую глубину. Обед подается на лодке между погружениями. Это незабываемый опыт в тишине глубокого синего моря.",
           highlights: ["Два разных места погружения", "Подводные системы пещер", "Профессиональные гиды PADI/CMAS", "Современное полное снаряжение", "Прогулка на катере и обед"], 
           included: ["Профессиональное снаряжение", "Два погружения с гидом", "Обед на лодке", "Страховка", "Трансфер из отеля"] 
-        },
-        { 
-          slug: "adrenaline-combo", 
-          name: "Адреналин Комбо 5-в-1: Мега Пакет", 
-          price: "€75", 
-          duration: "10 Часов", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
-          desc: "Рафтинг, Зиплайн, Каньон Тазы, Квадро-Багги и Джип Сафари — всё за один день!", 
-          longDesc: "Зачем выбирать что-то одно, если можно получить всё? Это наш самый полный приключенческий пакет для настоящих любителей адреналина. Ваш день начнется с джип-сафари 4x4 через горы Торос к величественному каньону Тазы. После фотосессии на смотровой площадке \"Орлиное гнездо\" мы отправимся на 14-километровый рафтинг по горной реке. Но на этом приключения не заканчиваются — вы пролетите над каньоном на зиплайне, а затем сядете за руль квадроцикла или багги для лесного сафари. Этот 10-часовой мега-тур — лучший способ испытать дикую природу Антальи за один день.",
-          highlights: ["Исследование каньона Тазы", "14 км рафтинга по горной реке", "Гигантский зиплайн над каньоном", "Офф-роуд сафари на квадроциклах/багги", "Джип-сафари 4x4 в горах"], 
-          included: ["Все снаряжение для приключений", "Профессиональные гиды", "Обед (шведский стол)", "Трансфер из отеля и обратно", "Страховка"] 
         },
         { 
           slug: "antalya-aquarium", 
