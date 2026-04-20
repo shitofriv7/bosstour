@@ -145,10 +145,11 @@ export default function TransferPage() {
               className="luxury-card" 
               style={{ 
                 maxWidth: '1200px', width: '95%', maxHeight: '90vh',
-                display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
-                padding: '0', overflow: 'hidden',
+                display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+                padding: '0', overflowY: 'auto',
                 boxShadow: '0 50px 100px rgba(0,0,0,0.1)',
-                border: '1px solid rgba(0,0,0,0.05)'
+                border: '1px solid rgba(0,0,0,0.05)',
+                position: 'relative'
               }}
               onClick={(e) => e.stopPropagation()}
             >
@@ -167,7 +168,7 @@ export default function TransferPage() {
               {/* Right Side: Form */}
               <div style={{ padding: '60px', background: '#fff', overflowY: 'auto' }}>
                 <div style={{ marginBottom: '40px' }}>
-                  <h3 className="serif" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>{lang === 'tr' ? 'Transfer Rezervasyonu' : 'Transfer Booking'}</h3>
+                  <h3 className="serif" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>{t?.transfer?.bookingTitle}</h3>
                   <p style={{ opacity: 0.5 }}>{lang === 'tr' ? 'Lütfen transfer detaylarını giriniz.' : 'Please enter your transfer details below.'}</p>
                 </div>
 
@@ -197,17 +198,17 @@ export default function TransferPage() {
 
                   <div className="modal-grid">
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'TARİH' : 'DATE'}</label>
+                      <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'TARİH' : (lang === 'de' ? 'DATUM' : (lang === 'ru' ? 'ДАТА' : 'DATE'))}</label>
                       <input className="luxury-input" required type="date" value={formData.date} onChange={e => setFormData({...formData, date: e.target.value})} />
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                       <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'SAAT' : 'TIME'}</label>
+                       <label style={{ fontSize: '11px', fontWeight: '800', opacity: 0.6, letterSpacing: '1px' }}>{lang === 'tr' ? 'SAAT' : (lang === 'de' ? 'UHRZEIT' : (lang === 'ru' ? 'ВРЕМЯ' : 'TIME'))}</label>
                        <input className="luxury-input" required placeholder="14:30" value={formData.time} onChange={e => setFormData({...formData, time: e.target.value})} />
                     </div>
                   </div>
 
                   <button disabled={loading || showSuccess} className="btn-gold" style={{ width: '100%', height: '80px', borderRadius: '20px', fontSize: '1.2rem', marginTop: '20px' }}>
-                    {loading ? <Loader2 className="animate-spin mx-auto" /> : (showSuccess ? (lang === 'tr' ? 'TALEP ALINDI ✅' : 'REQUEST RECEIVED ✅') : (lang === 'tr' ? 'REZERVASYONU TAMAMLA' : 'COMPLETE RESERVATION'))}
+                    {loading ? <Loader2 className="animate-spin mx-auto" /> : (showSuccess ? (lang === 'tr' ? 'TALEP ALINDI ✅' : (lang === 'de' ? 'ANFRAGE ERHALTEN ✅' : (lang === 'ru' ? 'ЗАПРОС ПРИНЯТ ✅' : 'REQUEST RECEIVED ✅'))) : t?.transfer?.completeBooking)}
                   </button>
                   {showSuccess && (
                     <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: 'center', color: '#059669', fontWeight: '700' }}>

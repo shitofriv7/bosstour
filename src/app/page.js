@@ -7,6 +7,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Calendar, Users, Star, CheckCircle2, Shield, Zap, X, Loader2, MessageCircle } from 'lucide-react';
 import { FaGithub, FaWhatsapp } from 'react-icons/fa';
+import { supabase } from '@/lib/supabase';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -16,6 +17,43 @@ export default function Home() {
   const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '', hotel: '', room: '' });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [dbPrices, setDbPrices] = useState({});
+
+  useEffect(() => {
+    const fetchPrices = async () => {
+      const { data } = await supabase.from('prices').select('*');
+      if (data) {
+        const priceMap = {};
+        data.forEach(item => {
+          priceMap[item.id] = item.price;
+        });
+        setDbPrices(priceMap);
+      }
+    };
+    fetchPrices();
+  }, []);
+
+  const getCarSlug = (name) => {
+    if (!name) return '';
+    return name.toLowerCase()
+      .replace('suzuki jeep (retro)', 'klassik-suzuki-jeep')
+      .replace(/[\s\W-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  };
+
+  const syncPrices = (list, type) => {
+    if (!list) return [];
+    return list.map(item => {
+      const id = type === 'car' ? getCarSlug(item.name) : item.slug;
+      return {
+        ...item,
+        price: dbPrices[id] || item.price
+      };
+    });
+  };
+
+  const tourList = syncPrices(t?.tours?.list, 'tour');
+  const carList = syncPrices(t?.fleet?.cars, 'car');
 
   const handleReserve = async (e) => {
     e.preventDefault();
@@ -83,7 +121,7 @@ export default function Home() {
             <span className="section-label">{t?.nav?.fleet}</span>
             <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>{t?.fleet?.title}</h2>
           </div>
-          {(t?.fleet?.cars || []).filter(car => 
+          {carList.filter(car => 
             (car.name.includes('Egea') || 
              car.name.includes('Clio') || 
              car.name.includes('Elek') || 
@@ -139,7 +177,7 @@ export default function Home() {
             <span className="section-label">{t?.nav?.tours}</span>
             <h2 className="serif" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>{t?.tours?.title}</h2>
           </div>
-          {(t?.tours?.list || []).slice(0, 3).map((tour, idx) => (
+          {tourList.slice(0, 3).map((tour, idx) => (
             <motion.div 
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -326,7 +364,6 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      <FloatingContact />
       <Footer lang={lang} />
     </main>
   );
@@ -377,53 +414,6 @@ const Hero = ({ t }) => (
   </section>
 );
 
-const FloatingContact = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div style={{ position: 'fixed', bottom: '30px', right: '30px', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '15px' }}>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            style={{ 
-              background: '#fff', padding: '15px', borderRadius: '25px', 
-              boxShadow: '0 20px 40px rgba(0,0,0,0.15)', border: '1px solid rgba(0,0,0,0.05)',
-              display: 'flex', flexDirection: 'column', gap: '10px'
-            }}
-          >
-            <a 
-              href="https://wa.me/905424142586" target="_blank" rel="noopener noreferrer"
-              style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 20px', background: '#25D366', color: '#fff', borderRadius: '15px', textDecoration: 'none', fontWeight: '700', fontSize: '14px' }}
-            >
-              <FaWhatsapp size={20} /> +90 542 414 25 86
-            </a>
-            <a 
-              href="https://wa.me/905434499552" target="_blank" rel="noopener noreferrer"
-              style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 20px', background: '#25D366', color: '#fff', borderRadius: '15px', textDecoration: 'none', fontWeight: '700', fontSize: '14px' }}
-            >
-              <FaWhatsapp size={20} /> +90 543 449 95 52
-            </a>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      
-      <motion.button
-        whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-        style={{ 
-          width: '70px', height: '70px', borderRadius: '50%', background: '#25D366', color: '#fff', 
-          border: 'none', boxShadow: '0 10px 30px rgba(37, 211, 102, 0.4)', cursor: 'pointer',
-          display: 'flex', alignItems: 'center', justifyContent: 'center'
-        }}
-      >
-        {isOpen ? <X size={30} /> : <FaWhatsapp size={35} />}
-      </motion.button>
-    </div>
-  );
-};
 
 const Testimonials = ({ t }) => (
   <section style={{ padding: '120px 0', background: 'rgba(0,102,255,0.02)' }}>

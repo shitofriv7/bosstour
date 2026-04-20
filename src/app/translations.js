@@ -17,6 +17,9 @@ export const translations = {
     transfer: { 
       title: "Transfers", 
       subtitle: "Comfortable journeys to your destination.", 
+      viewDetails: "Book Now",
+      bookingTitle: "Transfer Booking",
+      completeBooking: "COMPLETE RESERVATION",
       list: [
         { 
           name: "Mercedes Vito VIP", 
@@ -376,6 +379,9 @@ export const translations = {
     transfer: { 
       title: "Transfer", 
       subtitle: "Hedefinize konforlu yolculuklar.", 
+      viewDetails: "Rezervasyon Yap",
+      bookingTitle: "Transfer Rezervasyonu",
+      completeBooking: "REZERVASYONU TAMAMLA",
       list: [
         { 
           name: "Mercedes Vito VIP", 
@@ -735,6 +741,9 @@ export const translations = {
     transfer: { 
       title: "Transfers", 
       subtitle: "Komfortable Reisen zu Ihrem Ziel.", 
+      viewDetails: "Jetzt Buchen",
+      bookingTitle: "Transfer-Buchung",
+      completeBooking: "RESERVIERUNG ABSCHLIESSEN",
       list: [
         { 
           name: "Mercedes Vito VIP", 
@@ -1095,6 +1104,9 @@ export const translations = {
     transfer: { 
       title: "Трансфер", 
       subtitle: "Комфортные поездки до места назначения.", 
+      viewDetails: "Забронировать",
+      bookingTitle: "Бронирование Трансфера",
+      completeBooking: "ЗАВЕРШИТЬ БРОНИРОВАНИЕ",
       list: [
         { 
           name: "Mercedes Vito VIP", 

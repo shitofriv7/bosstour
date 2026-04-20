@@ -7,6 +7,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
 import Footer from '@/components/Footer';
+import { supabase } from '@/lib/supabase';
 import Image from 'next/image';
 
 export default function FleetPage() {
@@ -18,7 +19,40 @@ export default function FleetPage() {
   const activeLang = lang || 'tr';
   const t = ctxT || translations[activeLang] || translations['tr'];
 
-  const cars = (t && t.fleet && t.fleet.cars) ? t.fleet.cars : [];
+  const [dbPrices, setDbPrices] = useState({});
+  const [pricesLoading, setPricesLoading] = useState(true);
+
+  React.useEffect(() => {
+    const fetchPrices = async () => {
+      setPricesLoading(true);
+      const { data } = await supabase.from('prices').select('*').eq('type', 'car');
+      if (data) {
+        const priceMap = {};
+        data.forEach(item => {
+          priceMap[item.id] = item.price;
+        });
+        setDbPrices(priceMap);
+      }
+      setPricesLoading(false);
+    };
+    fetchPrices();
+  }, []);
+
+  const getCarSlug = (name) => {
+    if (!name) return '';
+    return name.toLowerCase()
+      .replace('suzuki jeep (retro)', 'klassik-suzuki-jeep')
+      .replace(/[\s\W-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  };
+
+  const cars = (t && t.fleet && t.fleet.cars) ? t.fleet.cars.map(car => {
+    const slug = getCarSlug(car.name);
+    return {
+      ...car,
+      price: dbPrices[slug] || car.price
+    };
+  }) : [];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -132,9 +166,15 @@ export default function FleetPage() {
                     borderRadius: '15px',
                     fontWeight: '900',
                     fontSize: '1.2rem',
-                    boxShadow: '0 10px 20px rgba(var(--primary-rgb), 0.2)'
+                    boxShadow: '0 10px 20px rgba(var(--primary-rgb), 0.2)',
+                    minWidth: '80px',
+                    textAlign: 'center'
                   }}>
-                    {car?.price}<span style={{fontSize: '0.8rem', opacity: 0.8, marginLeft: '4px'}}>{activeLang === 'tr' ? '/gün' : '/day'}</span>
+                    {pricesLoading ? (
+                      <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }}>•••</motion.div>
+                    ) : (
+                      <>{car?.price}<span style={{fontSize: '0.8rem', opacity: 0.8, marginLeft: '4px'}}>{activeLang === 'tr' ? '/gün' : '/day'}</span></>
+                    )}
                   </div>
                 </div>
                 <div style={{ padding: '40px' }}>

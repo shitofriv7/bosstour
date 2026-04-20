@@ -9,15 +9,40 @@ export const metadata = {
 import { LanguageProvider } from "@/context/LanguageContext";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import DynamicTitle from "@/components/DynamicTitle";
+import ScrollProgressBar from "@/components/ScrollProgressBar";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Boss Tour",
+              "url": "https://boostour.com",
+              "logo": "https://boostour.com/logo.png",
+              "sameAs": [
+                "https://www.instagram.com/boss_tour_rentacar/",
+                "https://wa.me/905424142586"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+90-542-414-25-86",
+                "contactType": "customer service",
+                "areaServed": "TR",
+                "availableLanguage": ["Turkish", "English", "German", "Russian"]
+              }
+            })
+          }}
+        />
       </head>
       <body>
         <LanguageProvider>
+          <ScrollProgressBar />
           <DynamicTitle />
           {children}
           <WhatsAppButton />

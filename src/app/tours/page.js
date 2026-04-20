@@ -19,6 +19,29 @@ export default function ToursPage() {
   const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '', hotel: '', room: '' });
   
   const { lang, setLang, t } = useLanguage();
+  const [dbPrices, setDbPrices] = useState({});
+  const [pricesLoading, setPricesLoading] = useState(true);
+
+  React.useEffect(() => {
+    const fetchPrices = async () => {
+      setPricesLoading(true);
+      const { data } = await supabase.from('prices').select('*').eq('type', 'tour');
+      if (data) {
+        const priceMap = {};
+        data.forEach(item => {
+          priceMap[item.id] = item.price;
+        });
+        setDbPrices(priceMap);
+      }
+      setPricesLoading(false);
+    };
+    fetchPrices();
+  }, []);
+
+  const tourList = (t?.tours?.list || []).map(tour => ({
+    ...tour,
+    price: dbPrices[tour.slug] || tour.price
+  }));
 
   const handleReserve = async (e) => {
     e.preventDefault();
@@ -81,7 +104,7 @@ export default function ToursPage() {
       <section style={{ padding: '60px 0 120px 0' }}>
         <div className="main-grid">
           <div style={{ gridColumn: 'span 12', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '30px' }}>
-            {(t?.tours?.list || []).map((tour, idx) => (
+            {tourList.map((tour, idx) => (
               <motion.div 
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -93,8 +116,12 @@ export default function ToursPage() {
                 <Link href={`/tours/${tour?.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div style={{ height: '240px', position: 'relative' }}>
                     <Image src={tour?.images?.[0]} alt={tour?.name} fill style={{ objectFit: 'cover' }} />
-                    <div style={{ position: 'absolute', top: '20px', right: '20px', background: 'var(--primary)', color: '#fff', padding: '8px 15px', borderRadius: '100px', fontWeight: '900', fontSize: '14px' }}>
-                      {tour?.price}
+                    <div style={{ position: 'absolute', top: '20px', right: '20px', background: 'var(--primary)', color: '#fff', padding: '8px 15px', borderRadius: '100px', fontWeight: '900', fontSize: '14px', minWidth: '60px', textAlign: 'center' }}>
+                      {pricesLoading ? (
+                        <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }}>•••</motion.div>
+                      ) : (
+                        tour?.price
+                      )}
                     </div>
                   </div>
                   <div style={{ padding: '30px' }}>

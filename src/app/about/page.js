@@ -206,11 +206,13 @@ export default function AboutPage() {
       <section style={{ padding: '60px 0', background: '#f8fafc', borderTop: '1px solid #eee' }}>
         <div className="main-grid" style={{ alignItems: 'center' }}>
            <div style={{ gridColumn: 'span 12', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '80px', opacity: 0.6, filter: 'grayscale(1)' }}>
-              {/* TÜRSAB Placeholder */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                <Shield size={45} />
-                <span style={{ fontWeight: '900', fontSize: '18px', letterSpacing: '2px' }}>TÜRSAB VERIFIED</span>
-              </div>
+               <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                 <Shield size={45} color="var(--primary)" />
+                 <div style={{ display: 'flex', flexDirection: 'column' }}>
+                   <span style={{ fontWeight: '900', fontSize: '18px', letterSpacing: '2px', color: '#000' }}>TÜRSAB VERIFIED</span>
+                   <span style={{ fontSize: '12px', fontWeight: '700', opacity: 0.8 }}>Belge No: 17331</span>
+                 </div>
+               </div>
               <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" width={100} height={35} alt="Visa" style={{ objectFit: 'contain' }} />
               <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" width={80} height={50} alt="Mastercard" style={{ objectFit: 'contain' }} />
               <div style={{ fontWeight: '900', fontSize: '16px' }}>TRIPADVISOR CHOICE</div>

@@ -29,6 +29,20 @@ export default function TourDetail({ params: paramsPromise }) {
     tour = { ...tour, price: dbPrice };
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": tour?.name,
+    "description": tour?.desc,
+    "image": tour?.images,
+    "offers": {
+      "@type": "Offer",
+      "price": tour?.price?.toString()?.replace(/[^0-9.]/g, ''),
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   const [bookingModal, setBookingModal] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', date: '', adults: '1', children: '0', time: '', hotel: '', room: '' });
   const [loading, setLoading] = useState(false);
@@ -109,6 +123,10 @@ export default function TourDetail({ params: paramsPromise }) {
 
   return (
     <main style={{ background: '#fff', minHeight: '100vh', color: 'var(--text-main)' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar lang={lang} setLang={setLang} t={t} />
 
       {/* Hero Slider */}
