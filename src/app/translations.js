@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    nav: { home: "Home", tours: "Tours", fleet: "Fleet", transfer: "Transfer", realEstate: "Real Estate", about: "About Us", services: "Experience" },
+    nav: { home: "Home", tours: "Tours", fleet: "Fleet", transfer: "Transfer", realEstate: "Real Estate", about: "Contact", services: "Experience" },
     hero: { title: "Adventure Awaits in Antalya", subtitle: "Explore the turquoise coast with Boss Tour. Premium tours and luxury cars.", cta: "Rent a Car", cta2: "View Adventures", explore: "Explore", cta3: "Transfer" },
     fleet: { title: "Our Premium Fleet", subtitle: "Modern cars for every journey.", viewAll: "View All Fleet", viewDetails: "Explore Details", bookNow: "Reserve Now", cars: [
       { name: "Fiat Egea", price: "€45", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Gasoline", "Manual", "5 Seats"] },
@@ -362,7 +362,7 @@ export const translations = {
     modal: { book: "Book Now", confirm: "Confirmed", confirmDesc: "Your request has been received.", name: "Name", hotel: "Hotel", roomNo: "Room No" }
   },
   tr: {
-    nav: { home: "Anasayfa", tours: "Turlar", fleet: "Araç Filosu", transfer: "Transfer", realEstate: "Emlak", about: "Hakkımızda", services: "Deneyim" },
+    nav: { home: "Anasayfa", tours: "Turlar", fleet: "Araç Filosu", transfer: "Transfer", realEstate: "Emlak", about: "İletişim", services: "Deneyim" },
     hero: { title: "Antalya'da Macera Sizi Bekliyor", subtitle: "Boss Tour ile turkuaz kıyıları keşfedin. Premium turlar ve lüks araçlar.", cta: "Araç Kirala", cta2: "Maceraları Gör", explore: "KEŞFET", cta3: "Transfer" },
     fleet: { title: "Premium Filomuz", subtitle: "Her yolculuk için modern araçlar.", viewAll: "Tüm Filoyu Gör", viewDetails: "Detayları İncele", bookNow: "Hemen Rezerve Et", cars: [
       { name: "Fiat Egea", price: "45€", images: ["https://s3.eu-central-1.amazonaws.com/static.obilet.com/RentACar/Vehicle/Images/fiat-egea-sedan.png"], features: ["Benzin", "Manuel", "5 Koltuk"] },

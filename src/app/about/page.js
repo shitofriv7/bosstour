@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Globe, Award, MapPin, Phone, MessageSquare, Star } from 'lucide-react';
+import { Shield, Globe, Award, MapPin, Phone, MessageSquare, Star, Mail } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -132,18 +132,24 @@ export default function AboutPage() {
                   <span style={{ color: 'var(--primary)', fontWeight: '900', fontSize: '10px', letterSpacing: '4px' }}>DIRECT LINE</span>
                   <h3 className="serif" style={{ fontSize: '3rem', margin: '20px 0' }}>{lang === 'tr' ? 'İletişime Geçin' : 'Get in Touch'}</h3>
                   <div style={{ marginBottom: '40px' }}>
-                     <p style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '1rem', opacity: 0.6, marginBottom: '15px' }}>
-                        <MapPin size={20} color="var(--primary)" />
-                        SAAT KULESİ KARŞISI, Avsallar, Alanya
+                     <p style={{ display: 'flex', alignItems: 'flex-start', gap: '15px', fontSize: '1rem', opacity: 0.6, marginBottom: '20px' }}>
+                        <MapPin size={20} color="var(--primary)" style={{ marginTop: '5px', flexShrink: 0 }} />
+                        <span>AVSALLAR MAH. SÖGÜT CAD. ÜNAL APTARTMANI SİTESİ ÜNAL APARTMAN NO: 17A ALANYA / ANTALYA</span>
                      </p>
-                     <a href="tel:+905424142586" style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '2.2rem', fontWeight: '900', color: '#000', textDecoration: 'none' }}>
-                        <Phone size={28} color="var(--primary)" />
-                        +90 542 414 25 86
-                     </a>
+                     <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                        <a href="tel:+905434499552" style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '1.8rem', fontWeight: '900', color: '#000', textDecoration: 'none' }}>
+                           <Phone size={24} color="var(--primary)" />
+                           +90 543 449 95 52
+                        </a>
+                        <a href="mailto:bosstourrentacar@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '1.4rem', fontWeight: '800', color: '#000', textDecoration: 'none' }}>
+                           <Mail size={24} color="var(--primary)" />
+                           bosstourrentacar@gmail.com
+                        </a>
+                     </div>
                   </div>
                   <div style={{ display: 'flex', gap: '20px' }}>
-                     <a href="https://wa.me/905424142586" target="_blank" className="btn-gold" style={{ padding: '18px 40px', fontSize: '11px' }}>WHATSAPP CHAT</a>
-                     <a href="https://www.google.com/maps/search/?api=1&query=SAAT+KULESİ+KARŞISI+Avsallar+Alanya" target="_blank" className="btn-outline" style={{ padding: '18px 40px', fontSize: '11px' }}>DIRECTIONS</a>
+                     <a href="https://wa.me/905434499552" target="_blank" className="btn-gold" style={{ padding: '18px 40px', fontSize: '11px' }}>WHATSAPP CHAT</a>
+                     <a href="https://www.google.com/maps/search/?api=1&query=AVSALLAR+MAH+SÖGÜT+CAD+ÜNAL+APTARTMANI+SİTESİ+ALANYA" target="_blank" className="btn-outline" style={{ padding: '18px 40px', fontSize: '11px' }}>DIRECTIONS</a>
                   </div>
                </motion.div>
             </div>
@@ -209,8 +215,8 @@ export default function AboutPage() {
                <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                  <Shield size={45} color="var(--primary)" />
                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                   <span style={{ fontWeight: '900', fontSize: '18px', letterSpacing: '2px', color: '#000' }}>TÜRSAB VERIFIED</span>
-                   <span style={{ fontSize: '12px', fontWeight: '700', opacity: 0.8 }}>Belge No: 17331</span>
+                   <span style={{ fontWeight: '900', fontSize: '18px', letterSpacing: '2px', color: '#000' }}>KING BOSS TOUR</span>
+                   <span style={{ fontSize: '12px', fontWeight: '700', opacity: 0.8 }}>TÜRSAB Belge No: 17331</span>
                  </div>
                </div>
               <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" width={100} height={35} alt="Visa" style={{ objectFit: 'contain' }} />

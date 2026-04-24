@@ -27,11 +27,11 @@ export default function RootLayout({ children }) {
               "logo": "https://boostour.com/logo.png",
               "sameAs": [
                 "https://www.instagram.com/boss_tour_rentacar/",
-                "https://wa.me/905424142586"
+                "https://wa.me/905434499552"
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+90-542-414-25-86",
+                "telephone": "+90-543-449-95-52",
                 "contactType": "customer service",
                 "areaServed": "TR",
                 "availableLanguage": ["Turkish", "English", "German", "Russian"]

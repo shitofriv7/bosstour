@@ -8,11 +8,11 @@ export default function Footer({ lang }) {
     <footer style={{ padding: '40px 0', textAlign: 'center', borderTop: '1px solid rgba(0,0,0,0.05)', background: '#ffffff' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '30px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div style={{ width: '35px', height: '35px', background: 'var(--primary)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: '900', fontSize: '10px' }}>T</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <div style={{ width: '40px', height: '40px', background: 'var(--primary)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: '900', fontSize: '12px' }}>T</div>
             <div style={{ textAlign: 'left' }}>
-              <p style={{ margin: 0, fontSize: '10px', fontWeight: '900', letterSpacing: '1px' }}>TÜRSAB VERIFIED</p>
-              <p style={{ margin: 0, fontSize: '9px', opacity: 0.6 }}>Belge No: 17331</p>
+              <p style={{ margin: 0, fontSize: '11px', fontWeight: '900', letterSpacing: '1px' }}>KING BOSS TOUR SEYAHAT ACENTASI</p>
+              <p style={{ margin: 0, fontSize: '10px', opacity: 0.6 }}>TÜRSAB Belge No: 17331</p>
             </div>
           </div>
           <div style={{ fontSize: '12px', opacity: 0.5, fontWeight: '700' }}>

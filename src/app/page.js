@@ -385,10 +385,6 @@ const Hero = ({ t }) => (
     <div className="main-grid" style={{ position: 'relative', zIndex: 10 }}>
       <div style={{ gridColumn: 'span 7', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }} className="hero-label-container">
-            <div style={{ width: '40px', height: '1px', background: 'var(--primary)' }} />
-            <span className="section-label" style={{ color: 'var(--primary)', fontWeight: '900', margin: 0 }}>EST. 2012 • LUXURY EXPERIENCE</span>
-          </div>
           <h1 className="serif" style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)', lineHeight: 0.9, color: '#000', marginBottom: '30px' }}>
             {t?.hero?.title}
           </h1>

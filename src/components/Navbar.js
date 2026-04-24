@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Globe, Menu, X, ChevronDown } from 'lucide-react';
+import { Globe, Menu, X, ChevronDown, Mail } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import Image from 'next/image';
 
@@ -25,18 +25,49 @@ export default function Navbar({ lang, setLang, t }) {
   ] : [];
 
   return (
-    <nav 
-      style={{
+    <>
+      {/* Top Bar for TÜRSAB Verification */}
+      <div style={{
         position: 'fixed',
-        top: '20px',
+        top: 0,
         left: 0,
         right: 0,
-        zIndex: 2000,
-        padding: '0 20px',
+        height: '30px',
+        background: 'rgba(15, 23, 42, 0.9)',
+        backdropFilter: 'blur(10px)',
+        zIndex: 2001,
         display: 'flex',
-        justifyContent: 'center'
-      }}
-    >
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+      }}>
+        <div style={{
+          fontSize: '10px',
+          fontWeight: '700',
+          color: 'rgba(255, 255, 255, 0.8)',
+          letterSpacing: '1px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px'
+        }}>
+          <span>KING BOSS TOUR</span>
+          <span style={{ opacity: 0.3 }}>|</span>
+          <span>BELGE NO: 17331</span>
+        </div>
+      </div>
+
+      <nav 
+        style={{
+          position: 'fixed',
+          top: '40px',
+          left: 0,
+          right: 0,
+          zIndex: 2000,
+          padding: '0 20px',
+          display: 'flex',
+          justifyContent: 'center'
+        }}
+      >
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -264,19 +295,6 @@ export default function Navbar({ lang, setLang, t }) {
               <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>{t?.nav?.about?.toUpperCase()}</p>
               
               <a 
-                href="https://wa.me/905424142586" target="_blank" rel="noopener noreferrer"
-                style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}
-              >
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#25D366', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
-                  <FaWhatsapp size={22} />
-                </div>
-                <div>
-                  <div style={{ fontSize: '10px', opacity: 0.5, fontWeight: '800', color: '#fff' }}>WhatsApp 1</div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#fff', margin: 0 }}>+90 542 414 25 86</h3>
-                </div>
-              </a>
-
-              <a 
                 href="https://wa.me/905434499552" target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}
               >
@@ -284,8 +302,21 @@ export default function Navbar({ lang, setLang, t }) {
                   <FaWhatsapp size={22} />
                 </div>
                 <div>
-                  <div style={{ fontSize: '10px', opacity: 0.5, fontWeight: '800', color: '#fff' }}>WhatsApp 2</div>
+                  <div style={{ fontSize: '10px', opacity: 0.5, fontWeight: '800', color: '#fff' }}>WhatsApp</div>
                   <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#fff', margin: 0 }}>+90 543 449 95 52</h3>
+                </div>
+              </a>
+
+              <a 
+                href="mailto:bosstourrentacar@gmail.com"
+                style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}
+              >
+                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
+                  <Globe size={20} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '10px', opacity: 0.5, fontWeight: '800', color: '#fff' }}>EMAIL</div>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: 0 }}>bosstourrentacar@gmail.com</h3>
                 </div>
               </a>
             </div>
@@ -309,5 +340,6 @@ export default function Navbar({ lang, setLang, t }) {
         }
       `}</style>
     </nav>
+    </>
   );
 }
