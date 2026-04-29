@@ -50,147 +50,15 @@ export const translations = {
       includedLabel: "Included",
       list: [
         { 
-          slug: "pamukkale", 
-          name: "Pamukkale & Salda Lake (The White Paradise)", 
-          price: "€45", 
-          duration: "13 Hours", 
-          images: ["https://cdn.getyourguide.com/img/location/49d723a60f36e112.jpeg/99.jpg", "https://www.barcelo.com/guia-turismo/wp-content/uploads/pamukkale.jpg"], 
-          desc: "White travertines, Hierapolis Ancient City and the 'Turkish Maldives' Salda Lake.", 
-          longDesc: "Embark on an extraordinary journey to Pamukkale, often called the '8th Wonder of the World'. This UNESCO World Heritage site is famous for its breathtaking white travertine terraces, formed by thermal waters rich in calcium. You can walk barefoot on these natural wonders and feel the warm, healing waters. Our tour continues with the Exploration of Hierapolis, an ancient Roman spa city. You will witness the grand entrance gate, the massive ancient theater, and the largest Necropolis in Anatolia. For a truly unique experience, you can swim in the Cleopatra Antique Pool, where you'll glide over authentic Roman columns submerged in warm thermal water. The second half of our day is dedicated to Salda Lake. Known as the 'Turkish Maldives', it boasts crystal-clear turquoise waters and white magnesium sands. It's the perfect spot for unforgettable photography and a refreshing swim in one of the cleanest lakes in the world.",
-          highlights: ["White Travertine Terraces", "Hierapolis Ancient City", "Salda Lake (Turkish Maldives)", "Cleopatra Antique Pool", "Ancient Roman Theater"], 
-          included: ["VIP Hotel Transfer", "Professional Tour Guide", "Air-conditioned Transport", "Salda Lake Entry Fee"] 
-        },
-        { 
-          slug: "kekova", 
-          name: "Kekova – Demre – Myra (Ancient Civilizations Expedition)", 
-          price: "€50", 
-          duration: "11 Hours", 
-          images: ["https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_PE7wwOiCWscwlqcEpg2A_pvpGnfmQROdLw&s", "https://gunluktur.net/wp-content/uploads/2021/12/tourbooking-turkey.jpeg"], 
-          desc: "A journey through time to the ancient ruins and the legacy of St. Nicholas.", 
-          longDesc: "Discover the hidden history of the Lycian coast on this comprehensive historical and coastal tour. We start our day in Demre, where we visit the Church of Saint Nicholas (the original Santa Claus), a sacred site featuring beautiful Byzantine frescoes and a holy atmosphere. Next, we head to the ancient city of Myra to marvel at the incredible Lycian rock tombs carved directly into the cliffs and the well-preserved Roman theater. The highlight of the day is our boat trip to the Sunken City of Kekova. You will see the underwater ruins of houses, stairs, and even a shipyard from a city destroyed by an earthquake 2,000 years ago. We will also have several swimming breaks in the secluded 'Aquarium Bay' and 'Esmeralda Bay', where the turquoise waters are perfect for snorkeling.",
-          highlights: ["Exclusive Boat Trip", "Sunken City of Kekova", "Lycian Rock Tombs at Myra", "St. Nicholas Church", "Azure Swimming Bays"], 
-          included: ["Hotel Transfer", "Boat Trip to Sunken City", "All Entrance Tickets", "Insurance"] 
-        },
-        { 
-          slug: "cappadocia", 
-          name: "Cappadocia: The Fairytale Journey (2-Day Tour)", 
-          price: "€120", 
-          duration: "2 Days", 
-          images: ["https://blog.obilet.com/wp-content/uploads/2018/10/kapadokya.jpg"], 
-          desc: "Experience the magic of fairy chimneys, cave dwellings, and sunrise balloons.", 
-          longDesc: "Step into a land that feels like it's from another planet. Our 2-day Cappadocia tour is designed for those who want to experience the true essence of this mystical region. On Day 1, we explore the Goreme Open Air Museum, a complex of medieval cave churches decorated with stunning frescoes. We'll visit Pasabag (Monks Valley) to see the most iconic three-headed fairy chimneys. In the afternoon, we dive deep into one of the massive underground cities, where early Christians hid from invaders. On Day 2, the day starts before dawn for the world-famous Hot Air Balloon flight (optional but highly recommended). Watching the sun rise over the unique landscape while hundreds of colorful balloons fill the sky is a soul-stirring experience. We'll also visit Uchisar Castle, the highest point in the region, providing panoramic views across the whole of Cappadocia. You'll stay in an authentic stone or cave hotel, ensuring the magic continues even while you sleep.",
-          highlights: ["Goreme Open Air Museum", "Pasabag Fairy Chimneys", "Deep Underground City", "Uchisar Panoramic Castle", "Devrent Valley (Imagination Valley)"], 
-          included: ["Luxury Boutique Hotel Stay", "Professional Regional Guide", "VIP Mini-van Transport", "Village Visits"] 
-        },
-        { 
-          slug: "lavanta-garden", 
-          name: "Lavender Dreams & Salda Magic", 
+          slug: "alanya-all-in-one", 
+          name: "Alanya City Tour – All in 1 Experience", 
           price: "€40", 
-          duration: "12 Hours", 
-          images: ["https://burdur.com.tr/wp-content/uploads/2022/03/MKXT0132.jpg"], 
-          desc: "Infinite purple fields of Kuyucak and the white sands of Salda Lake.", 
-          longDesc: "Escape to a world of color and fragrance. During the summer months, the village of Kuyucak transforms into a sea of purple as the lavender fields come into full bloom. Our tour invites you to wander through these aromatic fields, learn about lavender oil production, and take some of the most beautiful photos of your lifetime. The local villagers provide a warm welcome with traditional lavender tea and handmade crafts. In the second half of the tour, we visit Salda Lake, widely considered one of the most beautiful natural spots in Turkey. Its high magnesium content creates white, clay-like sands and incredibly vibrant turquoise water. You can relax on the beach, swim in the therapeutic waters, and enjoy the serenity of this protected natural park. This tour is a perfect blend of sensory delight and natural relaxation.",
-          highlights: ["Lavender Harvest Photo Op", "Kuyucak Village Experience", "Salda Lake Swimming", "Lavender Products Tasting", "Nature Walk"], 
-          included: ["Full Transport", "English Speaking Guide", "All Park Fees"] 
-        },
-        { 
-          slug: "side-manavgat", 
-          name: "The Classical Trio: Side – Aspendos – Manavgat", 
-          price: "€45", 
-          duration: "9 Hours", 
-          images: ["https://calista.com.tr/media/3jhj2jz0/aspendos006-1170x650.jpg?format=webp&quality=85", "https://www.gezire.com/wp-content/uploads/2025/10/Manavgat-Selalesi-764x500.jpg", "https://www.kulturportali.gov.tr/contents/images/SELEUK%20(4).JPG"], 
-          desc: "The glory of Roman architecture and the freshness of the waterfall.", 
-          longDesc: "Journey through the golden age of the Roman Empire on this day trip focused on art and history. Our first stop is Aspendos, home to the best-preserved Roman Theater in the world. Built in the 2nd century AD, its acoustics are still perfect today, often hosting international opera festivals. Next, we visit the ancient port city of Side. You'll walk through the colonnaded streets, see the ancient hospital, and stand where Marc Antony and Cleopatra allegedly met—at the Temple of Apollo, right by the sea. Finally, we provide a refreshing break at the Manavgat Waterfall. While not exceptionally high, its immense width and force create a stunning visual and a cool microclimate. You can enjoy a coffee by the rushing water and watch the river merge with the spirit of the Mediterranean. It's a day that balances historical awe with natural serenity.",
-          highlights: ["Aspendos Roman Theater", "Apollo Temple in Side", "Manavgat Waterfall", "Side Ancient Harbor", "Historical Museum Entry"], 
-          included: ["Round-trip Transfer", "Professional Historian Guide", "Entrance to Aspendos & Side"] 
-        },
-        { 
-          slug: "city-tour", 
-          name: "Alanya Panoramic City & Castle Tour", 
-          price: "30", 
-          duration: "4 Hours", 
-          images: ["https://upload.wikimedia.org/wikipedia/commons/8/85/Alanyafromcastle.JPG", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/Alanya-Buyuk-Hotel-Genel-269043.jpg"], 
-          desc: "The best of Alanya: Castle, Cable Car, Caves and Sunset views.", 
-          longDesc: "Discover why Alanya is the pearl of the Turkish Riviera in this condensed but comprehensive city tour. We begin with a ride on the Alanya Teleferik (Cable Car), climbing from the world-famous Cleopatra Beach to the heights of the Alanya Castle. From the castle's battlements, you will have a 360-degree view of the harbor, the lighthouse, and the Taurus Mountains. We'll explore the historic Inner Castle, the 13th-century shipyard, and the iconic Red Tower (Kızıl Kule). The tour also includes a visit to the Damlatas Cave, discovered by chance in 1948 and famous for its 'weeping stones' and air that is beneficial for respiratory health. We conclude the tour at the Alanya Terrace, the perfect spot for 'I Love Alanya' photos and a panoramic farewell to the city as the sun begins to set.",
-          highlights: ["Teleferik Cable Car Ride", "Alanya Castle Exploration", "Cleopatra Beach Panorama", "I Love Alanya Terrace"], 
-          included: ["Door-to-door Transport", "Cable Car Tickets", "Professional Guide"] 
-        },
-        { 
-          slug: "mix-adventure", 
-          name: "Ultimate Adventure Mix (3-in-1 Adrenaline)", 
-          price: "€55", 
           duration: "8 Hours", 
-          images: ["https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=1210,dpr=1/tour_img/640b4d905f5e4.png", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,height=755,dpr=1/tour_img/5b8b721278a099cfddd9975af2c8dd627c2259fd05374f4f7efa7ef96e0b5775.png"], 
-          desc: "Rafting, Zipline, and Buggy/Quad Safari through the wild canyon.", 
-          longDesc: "For the restless souls and adrenaline seekers, this tour is the ultimate package. We take you to the Koprulu Canyon National Park, the heart of outdoor sports in Turkey. Your day starts with a 14km White Water Rafting journey. We hit the rapids with experienced instructors, ensuring safety and extreme fun. Midway through the river, we stop for the Zipline—you'll soar high above the rushing waters, feeling like an eagle. After recharging your energy, we switch gears for the Safari. You can choose between a Quad bike or a Buggy safari to navigate the muddy, dusty, and technical tracks of the pine forests surrounding the canyon. This is 8 hours of pure, unadulterated excitement in one of the most beautiful natural settings in the world.",
-          highlights: ["14km Level 2 Rafting", "Canyon Zipline Flight", "Off-road Safari (Buggy/Quad)", "Riverside Cliff Jumping", "Tazi Canyon Photo Stop"], 
-          included: ["Complete Safety Gear", "Professional Instructors", "All Transports", "Insurance"] 
-        },
-        { 
-          slug: "rafting", 
-          name: "Koprucay White Water Rafting", 
-          price: "€35", 
-          duration: "6 Hours", 
-          images: ["https://cmsal.argeya.com/Content/CompanyFiles/YazilarYeniImg/alanya-rafting.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
-          desc: "Challenge the turquoise rapids of the ancient Koprulu Canyon.", 
-          longDesc: "Grab your paddle and get ready for a splash! Rafting on the Koprucay River is one of the most popular activities for a reason. The river flows through a stunning national park, under ancient Roman bridges that give the canyon its name. Our tour starts with a detailed safety briefing and equipment fitting. Then, we board our 8-10 person boats (guided) or 2-person canoes for those feeling extra brave. The route is 14km long and features various rapids that will get your heart racing, interspersed with calm sections where you can jump into the ice-cold turquoise water for a swim. We also include 'body rafting' and fun animations by our guides. After conquering the river, you can relax at our riverside base camp.",
-          highlights: ["14km Rafting Adventure", "Roman Bridge Sightseeing", "Body Rafting Sessions", "Ice Cold River Swimming", "Fun Guided Animations"], 
-          included: ["Helmet & Life Jacket", "Rafting Boat & Paddle", "Expert Guide", "Hotel Transfer"] 
-        },
-        { 
-          slug: "jeep-safari", 
-          name: "Taurus Mountains Jeep Safari & Dim River", 
-          price: "€40", 
-          duration: "7 Hours", 
-          images: ["https://www.alanya-tours.com/public/content/images/Tours/1/big/alanya-jeep-safari-tour_16993214536549926d83636.webp", "https://cdn.vigotours.com/23898/conversions/187-1770148388-698252242f4a3-gallery.jpg", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/5dc9d110c84b5.jpeg"], 
-          desc: "Water fights, off-road peaks, and relaxing in the Dim River.", 
-          longDesc: "This isn't just a tour; it's an all-day party on wheels! We hop into open-top 4x4 Land Rovers and climb into the majestic Taurus Mountains. The journey is filled with fun water fights between the jeeps, so prepare to get wet! We stop at panoramic viewpoints to see Alanya from above, visit a traditional village mosque to learn about local faith, and walk through fruit orchards where you can taste seasonal produce. The highlight of the day is our long stop at the Dim River. We have a private dock where you can jump from our diving boards into the river, relax on the water-beds, or even try your luck at the local fishing pond. It's a day of laughter, nature, and cultural discovery.",
-          highlights: ["Multi-jeep Water Fights", "Taurus Mountain Off-roading", "Dim River Water Tables", "Village Mosque Visit", "Fruit Orchard Tasting"], 
-          included: ["4x4 Jeep Transport", "Enthusiastic Safari Guide", "Village Entry Fees"] 
-        },
-        { 
-          slug: "sapadere-canyon", 
-          name: "Sapadere Canyon: The Hidden Paradise", 
-          price: "€45", 
-          duration: "8 Hours", 
-          images: ["https://www.kulturportali.gov.tr/contents/images/sapanderekanyonulogolu_20180914111051287.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Sapadere-Canyon-Tour-Tursay-Travel-13.webp"], 
-          desc: "Wooden walkway through the gorge and freezing waterfalls.", 
-          longDesc: "Escape the summer heat and step into the refreshing embrace of Sapadere Canyon. Located about 40km from Alanya, this narrow gorge was only opened to tourism in 2008 and remains a pristine natural gem. We walk along a 750-meter-long wooden suspension bridge that winds through the canyon, with high cliffs rising on both sides. Along the way, you'll encounter numerous waterfalls of all sizes. The bravest can take a dip in the natural pools—even in the peak of summer, the water temperature rarely exceeds 12 degrees Celsius! After the canyon, we visit the Sapadere Village, where you can see traditional village life and visit a silk weaving workshop. We also explore the 'Cüceler Cave' (Dwarf Cave), filled with stunning stalactites and stalagmites.",
-          highlights: ["Suspension Bridge Walk", "Freezing Waterfall Swims", "Dwarf Cave Exploration", "Silk Weaving Demonstration", "Village Life Tour"], 
-          included: ["Transport", "All Entry Fees", "Guided Tour"] 
-        },
-        { 
-          slug: "quad-safari", 
-          name: "Quad Safari Adventure", 
-          price: "€40", 
-          duration: "3 Hours", 
-          images: ["https://cloudbasetravel.com/wp-content/uploads/2021/06/ATV-Safari-1.jpeg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Quad-Atv-Safari-Tour-Tursay-Travel-1.webp"], 
-          desc: "Dust, mud, and excitement in the Taurus pine forests.", 
-          longDesc: "Get ready for a dirty, dusty, and absolutely thrilling ride! Our Quad Safari takes you away from the city and deep into the rugged terrain of the Taurus Mountains. After a quick briefing and test drive, you'll take control of your own powerful ATV. We navigate through technical forest tracks, splash through muddy puddles, and race across rocky plains. The route is designed to challenge your driving skills while providing extreme fun. We stop at a scenic river for a quick break where you can wash off the dust. No driving license is required, and our experienced guides ensure a safe environment for both beginners and pro riders. It's the most exciting way to explore the wild side of Alanya.",
-          highlights: ["Self-drive Quad Experience", "Off-road Forest Tracks", "Muddy Puddle Splashes", "River Refreshment Break", "High-speed Straights"], 
-          included: ["Quad Bike & Fuel", "Safety Helmet", "Instructional Briefing", "Professional Guide", "Transfer"] 
-        },
-        { 
-          slug: "zipline", 
-          name: "5-in-1 Mega Adrenaline Combo: The Ultimate Antalya Adventure", 
-          price: "€75", 
-          duration: "10 Hours", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp", "https://www.schweitzer.com/-/media/schweitzer/summer-activities/schweitzer-zipline-1920x1080.jpg"], 
-          desc: "Rafting, Zipline, Tazi Canyon, Quad, and Buggy - all in one incredible day.", 
-          longDesc: "Why choose one when you can do them all? This is our most complete adventure package for true adrenaline junkies. Your day begins with a journey through the rugged Taurus Mountains to the magnificent Tazi Canyon. After a photo break at the 'Eagle's Nest' viewpoint, we head to the river for a 14km White Water Rafting journey. But the excitement doesn't stop there—you'll fly over the canyon on a Zipline and then take control of a Quad or Buggy for an off-road forest safari. This 10-hour mega-tour is the ultimate way to experience the wild side of Antalya in a single day.",
-          highlights: ["Tazi Canyon Exploration", "14km White Water Rafting", "Giant Canyon Zipline", "Off-road Quad/Buggy Safari", "Nature Adventure"], 
-          included: ["All Adventure Equipment", "Professional Guides", "Hotel Pickup & Drop-off"] 
-        },
-        { 
-          slug: "paragliding", 
-          name: "Tandem Paragliding: Fly Over Alanya", 
-          price: "€75", 
-          duration: "2 Hours", 
-          images: ["https://www.talyatur.com/images/tour/105418_b.jpg", "https://cdn.getyourguide.com/img/tour/e810d4a42de4ba2a359f6f25116205e419dba160cf49862c412bff4a32843011.jpg/99.jpg"], 
-          desc: "Soar from a 700m peak and land on Cleopatra Beach.", 
-          longDesc: "This is the most peaceful and spectacular way to see Alanya. We drive you to the 700-meter peak of the 'Yassı Tepe' mountain. Here, you'll meet your professional pilot who will handle all the technical parts of the flight. After a few running steps, you'll catch the thermal currents and lift into the sky. For about 20 to 30 minutes, you'll glide silently over the turquoise Mediterranean, the Alanya Castle, and the white sands of Cleopatra Beach. If the weather permits, your pilot can even perform some acrobatic maneuvers for an extra thrill. Your flight ends with a smooth landing directly on the sandy shores of Cleopatra Beach. It's a surreal and deeply moving experience that you will remember for the rest of your life.",
-          highlights: ["700m High Altitude Start", "Cleopatra Beach Landing", "Castle Panoramic View", "Tandem Professional Pilot", "In-flight Photo/Video Ops"], 
-          included: ["Hotel Transfer", "Flight Gear", "Experienced Pilot", "Flight Insurance", "Briefing"] 
+          images: ["https://www.besttimetravel.com.tr/public/uploads/0000/1/2026/04/04/copilot-20260404-113528.png"], 
+          desc: "Experience an unforgettable day with the All in 1 Alanya City Tour featuring Dim River, Dim Cave, orange gardens, waterfall, aquapark, and a boat trip with a foam party!", 
+          longDesc: "Get ready to discover the unique beauties of Alanya in a single day! This tour is an unforgettable experience blending nature, history, culture, and fun. Accompanied by our professional and friendly drivers, we pick you up from your hotel in the morning and take you to Alanya's most special spots with a full-day program. We journey to the heart of nature at the cool paradise of Dim River. While taking a swimming break in the icy waters, the lush green nature surrounding you brings peace. We enter Dim Cave, one of Alanya's most famous natural beauties. Our tour also offers cultural exploration. By visiting a historical village house, you witness Alanya's past, and then you get to know the local culture and architecture closely with our mosque visit. You walk among orange gardens amidst fragrant citrus scents and then listen to the melody of nature in the cool waters of the small waterfall. Fun moments await you on the slides at the aquapark located by the Dim River. We embark on a 1-hour private boat tour in the blues of the Mediterranean. We take a swimming break in the open sea and then reach the peak of fun with a foam party! 🎉",
+          highlights: ["Panoramic Terrace View", "Dim River Swimming & Aquapark", "Water Fight Fun", "Dim Cave Exploration", "Historical Village House Visit", "Mosque & Local Culture", "Orange Garden Walk", "Small Waterfall Visit", "Delicious Lunch", "1-Hour Boat Trip", "Open Sea Swimming", "Foam Party Celebration"], 
+          included: ["Comfortable Transport", "Professional Guidance", "Delicious Lunch", "Boat Tour Experience"]
         },
         { 
           slug: "luxury-boat", 
@@ -201,73 +69,73 @@ export const translations = {
           desc: "Caves, swimming, and the best party on the sea.", 
           longDesc: "Join us for a classic Mediterranean day! Our pirate-themed boat sets sail from Alanya's historic harbor, passing by the Red Tower and the Old Shipyard. We cruise around the Alanya Castle peninsula, visiting the Pirates' Cave, the Lovers' Cave, and the Phosphorus Cave (famous for its glowing waters). Throughout the trip, we have several swimming breaks in crystal clear turquoise bays where you can snorkel or jump from the boat. Onboard, our animation team keeps the energy high with music, games, and a massive foam party on the return journey. It's the perfect mix of relaxation, sightseeing, and excitement for families and groups alike.",
           highlights: ["Historic Harbor Cruise", "Sea Cave Exploration", "Foam Party Animation", "Multiple Swimming Stops", "BBQ Lunch Onboard"], 
-          included: ["Boat Cruise", "Animation Show", "Hotel Transfer"] 
+          included: ["Boat Cruise", "Animation Show", "Hotel Transfer"]
         },
         { 
-          slug: "fishing", 
-          name: "Morning Deep Sea Fishing", 
-          price: "€40", 
-          duration: "6 Hours", 
-          images: ["https://www.albashop.com.tr/Data/EditorFiles/En_Dog__ru_Bal__k_Av___Zaman___Nas__l_Belirlenir__3.jpg"], 
-          desc: "A peaceful morning at sea with professional fishing gear.", 
-          longDesc: "Escape the midday sun and the bustling crowds for a peaceful morning on the open sea. Our fishing boat is equipped with the latest electronic fish-finders and high-quality rods and reels. Whether you're a seasoned angler or a complete beginner, our experienced captain will guide you to the best fishing spots where you can catch sea bream, sea bass, and other Mediterranean species. As you wait for a bite, enjoy the silence of the sea and the stunning views of the coastline as the sun rises. We provide all the bait and equipment. It's a peaceful and grounding experience on the Mediterranean.",
-          highlights: ["Sunrise Coastal Views", "Professional Fish-finder Tech", "High-quality Fishing Gear", "Experienced Sea Captain", "Bait & Snacks Included"], 
-          included: ["Fishing Equipment", "Bait", "Captain's Guidance", "Transport"] 
-        },
-        { 
-          slug: "turkish-night", 
-          name: "The Orient Express: Turkish Night Show", 
-          price: "€45", 
+          slug: "vip-luxury-yacht", 
+          name: "VIP Luxury Yacht Tour", 
+          price: "€250", 
           duration: "4 Hours", 
-          images: ["https://www.touralanya.com/TurResimleri/003837alanyaturkishnight.jpeg", "https://www.goreme.com/image/cache/catalog/Urunler/activities/turkish-night/turkish-night-show-134-900x600.jpg"], 
-          desc: "A spectacular feast of Turkish culture, dance, and cuisine.", 
-          longDesc: "Immerse yourself in the rich traditions of the Ottoman Empire and modern Turkey. Our Turkish Night is a high-energy stage production featuring professional dancers in authentic costumes. You'll witness dizzying Whirling Dervishes, energetic folk dances from various regions of Turkey, and spectacular belly dance performances that will leave you breathless. The show is interactive, often inviting guests to join the fun on stage. It's an evening of music, fire, drums, and hospitality that perfectly captures the soul of Turkey.",
-          highlights: ["Whirling Dervish Show", "Regional Folk Dances", "Professional Belly Dancing", "Interactive Stage Fun", "Traditional Feast Dinner"], 
-          included: ["All Shows & Animations", "Return Transfer"] 
+          images: ["https://www.dailytoursinalanya.com/Content/images/tours/64/-8-hd.webp"], 
+          desc: "A private luxury yacht experience with your family and friends in the clear waters of Alanya.", 
+          longDesc: "Experience the ultimate luxury on the Mediterranean. Charter our VIP yacht for a private tour around the Alanya peninsula. You decide the route and the swimming spots. Our professional crew will serve you freshly prepared meals, snacks, and unlimited soft drinks. Whether you want to celebrate a special occasion, have a romantic sunset cruise, or just escape the crowds with your loved ones, our VIP Yacht Tour offers unparalleled privacy and comfort.",
+          highlights: ["Private Yacht Charter", "Customizable Route", "Freshly Prepared Meals", "Sunset or Daytime Options", "VIP Service"], 
+          included: ["Hotel Transfer", "Lunch/Dinner on Board", "Unlimited Soft Drinks", "Snorkeling Gear", "Captain and Crew"] 
         },
         { 
-          slug: "turkish-bath", 
-          name: "Ultimate Wellness: Traditional Hamam Package", 
-          price: "€30", 
-          duration: "3 Hours", 
-          images: ["https://cdn.alanyatekmar.com/e6a4a96a-9fc4-442b-87df-a2fff0b99841.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Turkish-Bath-Hamam-Tour-Tursay-Travel-1.webp"], 
-          desc: "Total rejuvenation with salt rooms, peeling and foam massage.", 
-          longDesc: "Treat yourself to a thousand-year-old tradition of health and relaxation. Our Hamam experience begins in the 'Sıcaklık' (hot room) on a warm marble slab to open your pores. Next, a professional 'Tellak' (masseur) performs a full-body peeling using a 'Kese' (silk mitt) to remove all dead skin and toxins. This is followed by a heavenly Soap Foam Massage, where you'll be covered in huge cushions of organic soap bubbles. The package also includes access to the salt room, sauna, and steam room. Finally, after a short period of relaxation in the lounge with traditional tea, we conclude with a 20-minute full-body oil massage to lock in moisture and deeply relax your muscles. You'll leave feeling like a new person with glowing, soft skin—the perfect base for a long-lasting tan.",
-          highlights: ["Authentic Marble Hamam", "Full Body Silk Peeling", "Cloud-like Foam Massage", "Therapeutic Oil Massage", "Sauna & Steam Access"], 
-          included: ["Peeling (Kese)", "Soap Massage", "20-min Oil Massage", "Sauna & Salt Room", "Herbal Teas", "Transfer"] 
+          slug: "city-tour", 
+          name: "Alanya Panoramic City & Castle Tour", 
+          price: "30", 
+          duration: "4 Hours", 
+          images: ["https://upload.wikimedia.org/wikipedia/commons/8/85/Alanyafromcastle.JPG", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/Alanya-Buyuk-Hotel-Genel-269043.jpg"], 
+          desc: "The best of Alanya: Castle, Cable Car, Caves and Sunset views.", 
+          longDesc: "Discover why Alanya is the pearl of the Turkish Riviera in this condensed but comprehensive city tour. We begin with a ride on the Alanya Teleferik (Cable Car), climbing from the world-famous Cleopatra Beach to the heights of the Alanya Castle. From the castle's battlements, you will have a 360-degree view of the harbor, the lighthouse, and the Taurus Mountains. We'll explore the historic Inner Castle, the 13th-century shipyard, and the iconic Red Tower (Kızıl Kule). The tour also includes a visit to the Damlatas Cave, discovered by chance in 1948 and famous for its 'weeping stones' and air that is beneficial for respiratory health. We conclude the tour at the Alanya Terrace, the perfect spot for 'I Love Alanya' photos and a panoramic farewell to the city as the sun begins to set.",
+          highlights: ["Teleferik Cable Car Ride", "Alanya Castle Exploration", "Cleopatra Beach Panorama", "I Love Alanya Terrace"], 
+          included: ["Door-to-door Transport", "Cable Car Tickets", "Professional Guide"]
         },
         { 
-          slug: "aquapark", 
-          name: "Water Park Adventure & Hotel Luxury", 
-          price: "€45", 
-          duration: "Full Day", 
-          images: ["https://www.aquafuncity.com/images/galeri/aqua1.jpg", "https://cdn.alanyatekmar.com/f48067f0-fc19-4515-8b5c-17b64703c6bf.jpg"], 
-          desc: "Full day of water slides with Open Buffet lunch at hotel and Beer/Wine included.", 
-          longDesc: "Get ready for the ultimate summer day! Our Aquapark package offers more than just slides. Enjoy a full day of excitement at the region's top water park, featuring over 20 adrenaline-pumping slides, wave pools, and lazy rivers. But the luxury doesn't stop at the water—your package includes a high-quality Open Buffet lunch at our partner hotel, along with unlimited Beer and Wine to keep you refreshed. It's the perfect combination of family fun and all-inclusive comfort. Dedicated kids' zones and professional lifeguards ensure a safe environment for everyone.",
-          highlights: ["20+ High-speed Slides", "Open Buffet Lunch at Hotel Included", "Beer & Wine Included", "Giant Wave Pool", "Full Day Hotel Access"], 
-          included: ["Entrance Ticket", "Open Buffet Lunch at Partner Hotel", "Unlimited Beer & Wine", "Sunbeds & Umbrellas", "Hotel Transfer"] 
+          slug: "jeep-safari", 
+          name: "Taurus Mountains Jeep Safari & Dim River", 
+          price: "€40", 
+          duration: "7 Hours", 
+          images: ["https://www.alanya-tours.com/public/content/images/Tours/1/big/alanya-jeep-safari-tour_16993214536549926d83636.webp", "https://cdn.vigotours.com/23898/conversions/187-1770148388-698252242f4a3-gallery.jpg", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/5dc9d110c84b5.jpeg"], 
+          desc: "Water fights, off-road peaks, and relaxing in the Dim River.", 
+          longDesc: "This isn't just a tour; it's an all-day party on wheels! We hop into open-top 4x4 Land Rovers and climb into the majestic Taurus Mountains. The journey is filled with fun water fights between the jeeps, so prepare to get wet! We stop at panoramic viewpoints to see Alanya from above, visit a traditional village mosque to learn about local faith, and walk through fruit orchards where you can taste seasonal produce. The highlight of the day is our long stop at the Dim River. We have a private dock where you can jump from our diving boards into the river, relax on the water-beds, or even try your luck at the local fishing pond. It's a day of laughter, nature, and cultural discovery.",
+          highlights: ["Multi-jeep Water Fights", "Taurus Mountain Off-roading", "Dim River Water Tables", "Village Mosque Visit", "Fruit Orchard Tasting"], 
+          included: ["4x4 Jeep Transport", "Enthusiastic Safari Guide", "Village Entry Fees"]
         },
         { 
-          slug: "dolphin-show", 
-          name: "Dolphin & Sea Lion Spectacular", 
-          price: "€30", 
-          duration: "3 Hours", 
-          images: ["https://travelagencyapp-storage.s3.eu-central-1.amazonaws.com/sunnytour/407fa665-6440-402c-bc91-0668a2ad1a1e_f2fd438e-2a26-48c0-ba4a-a6fb6c3652b1_.webp", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/57b10374eb10bb1a58dd1a71.jpg"], 
-          desc: "The ocean's most intelligent creatures in an amazing live show.", 
-          longDesc: "Get ready to be amazed by the incredible intelligence and agility of dolphins and sea lions. Our park hosts one of the best-produced shows in the country. You'll watch dolphins perform synchronized dances, high jumps, and even 'paint' pictures on canvas. The sea lions will make you laugh with their funny antics and impressive balance. This educational and entertaining show is designed to highlight the importance of marine conservation while providing a fun experience for guests of all ages. After the show, there's a chance to meet the animals up close and take professional photos. It's a heartwarming and educational experience that highlights the special bond between humans and marine life.",
-          highlights: ["Acrobatic Dolphin Show", "Funny Sea Lion Skits", "Marine Education Tips", "Photo Ops with Animals", "Family Friendly Timing"], 
-          included: ["Entrance Ticket", "Seating in the Arena", "Hotel Transfer", "Guide Services"] 
+          slug: "paragliding", 
+          name: "Tandem Paragliding: Fly Over Alanya", 
+          price: "€75", 
+          duration: "2 Hours", 
+          images: ["https://www.talyatur.com/images/tour/105418_b.jpg", "https://cdn.getyourguide.com/img/tour/e810d4a42de4ba2a359f6f25116205e419dba160cf49862c412bff4a32843011.jpg/99.jpg"], 
+          desc: "Soar from a 700m peak and land on Cleopatra Beach.", 
+          longDesc: "This is the most peaceful and spectacular way to see Alanya. We drive you to the 700-meter peak of the 'Yassı Tepe' mountain. Here, you'll meet your professional pilot who will handle all the technical parts of the flight. After a few running steps, you'll catch the thermal currents and lift into the sky. For about 20 to 30 minutes, you'll glide silently over the turquoise Mediterranean, the Alanya Castle, and the white sands of Cleopatra Beach. If the weather permits, your pilot can even perform some acrobatic maneuvers for an extra thrill. Your flight ends with a smooth landing directly on the sandy shores of Cleopatra Beach. It's a surreal and deeply moving experience that you will remember for the rest of your life.",
+          highlights: ["700m High Altitude Start", "Cleopatra Beach Landing", "Castle Panoramic View", "Tandem Professional Pilot", "In-flight Photo/Video Ops"], 
+          included: ["Hotel Transfer", "Flight Gear", "Experienced Pilot", "Flight Insurance", "Briefing"]
         },
         { 
-          slug: "horse-tour", 
-          name: "River & Forest Horse Safari", 
+          slug: "quad-safari", 
+          name: "Quad Safari Adventure", 
           price: "€40", 
           duration: "3 Hours", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Horse-Riding-Tour-Tursay-Travel-13.webp", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Horse-Riding-Tour-Tursay-Travel-1.webp", "https://sencaptour.com/wp-content/uploads/2023/06/Alanya-At-binme-turu-4.webp"], 
-          desc: "Connect with nature on horseback through river trails and pine forests.", 
-          longDesc: "Leave the noise of the city behind and find peace in the saddle. Our horse safari takes you through scenic forest trails and along mountain ridges with views of the river. Our horses are extremely well-trained, gentle, and suitable for all ages and experience levels—even if you've never ridden before! Our instructors will give you a full briefing and stay with the group throughout the journey. You'll ride through pine-scented forests, cross small streams, and have a short break at a scenic viewpoint for photos. It's a therapeutic and grounding experience that allows you to connect with nature at a slower pace. The bond you form with your horse and the beauty of the surrounding mountains makes this a truly special tour.",
-          highlights: ["Gentle & Trained Horses", "Scenic River Trails", "Pine Forest Ride", "Professional Riding Guide", "Photo Opportunities"], 
-          included: ["Assigned Horse", "Riding Equipment", "Qualified Guide", "Short Training", "Transfer"] 
+          images: ["https://cloudbasetravel.com/wp-content/uploads/2021/06/ATV-Safari-1.jpeg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Quad-Atv-Safari-Tour-Tursay-Travel-1.webp"], 
+          desc: "Dust, mud, and excitement in the Taurus pine forests.", 
+          longDesc: "Get ready for a dirty, dusty, and absolutely thrilling ride! Our Quad Safari takes you away from the city and deep into the rugged terrain of the Taurus Mountains. After a quick briefing and test drive, you'll take control of your own powerful ATV. We navigate through technical forest tracks, splash through muddy puddles, and race across rocky plains. The route is designed to challenge your driving skills while providing extreme fun. We stop at a scenic river for a quick break where you can wash off the dust. No driving license is required, and our experienced guides ensure a safe environment for both beginners and pro riders. It's the most exciting way to explore the wild side of Alanya.",
+          highlights: ["Self-drive Quad Experience", "Off-road Forest Tracks", "Muddy Puddle Splashes", "River Refreshment Break", "High-speed Straights"], 
+          included: ["Quad Bike & Fuel", "Safety Helmet", "Instructional Briefing", "Professional Guide", "Transfer"]
+        },
+        { 
+          slug: "sapadere-canyon", 
+          name: "Sapadere Canyon: The Hidden Paradise", 
+          price: "€45", 
+          duration: "8 Hours", 
+          images: ["https://www.kulturportali.gov.tr/contents/images/sapanderekanyonulogolu_20180914111051287.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Sapadere-Canyon-Tour-Tursay-Travel-13.webp"], 
+          desc: "Wooden walkway through the gorge and freezing waterfalls.", 
+          longDesc: "Escape the summer heat and step into the refreshing embrace of Sapadere Canyon. Located about 40km from Alanya, this narrow gorge was only opened to tourism in 2008 and remains a pristine natural gem. We walk along a 750-meter-long wooden suspension bridge that winds through the canyon, with high cliffs rising on both sides. Along the way, you'll encounter numerous waterfalls of all sizes. The bravest can take a dip in the natural pools—even in the peak of summer, the water temperature rarely exceeds 12 degrees Celsius! After the canyon, we visit the Sapadere Village, where you can see traditional village life and visit a silk weaving workshop. We also explore the 'Cüceler Cave' (Dwarf Cave), filled with stunning stalactites and stalagmites.",
+          highlights: ["Suspension Bridge Walk", "Freezing Waterfall Swims", "Dwarf Cave Exploration", "Silk Weaving Demonstration", "Village Life Tour"], 
+          included: ["Transport", "All Entry Fees", "Guided Tour"]
         },
         { 
           slug: "night-jeep-safari", 
@@ -278,18 +146,7 @@ export const translations = {
           desc: "Experience the Taurus mountains under the stars with music and off-road fun.", 
           longDesc: "As the sun begins to set, the real adventure begins. Our Night Jeep Safari takes you into the Taurus Mountains for a different kind of thrill. We drive open-top 4x4 jeeps to panoramic viewpoints to watch the sunset over Alanya city and the Mediterranean Sea. The cool mountain air and the twinkling lights of the city below create a magical atmosphere. After the drive, enjoy an entertainment show with music and fire dancing. It's the perfect way to beat the daytime heat and experience the wild side of Alanya by night.",
           highlights: ["Taurus Mountains Sunset View", "Off-road Night Driving", "Mountain Restaurant Dinner", "Live Entertainment & Fire Show", "Starlit Panoramic Views"], 
-          included: ["Hotel Pickup & Drop-off", "4x4 Jeep Transport", "Guide Services", "Entertainment Show"] 
-        },
-        { 
-          slug: "land-of-legends", 
-          name: "The Land of Legends Theme Park", 
-          price: "€80", 
-          duration: "Full Day", 
-          images: ["https://www.alanya-tours.com/public/content/images/Tours/49/big/The-Land-of-Legends-Theme-Park-from-Alanya_175671848968b56599334b0.webp", "https://thelandoflegendsthemepark.com/wp-content/uploads/2021/04/the_land_of_legends_theme_park_waterworld_2.jpg"], 
-          desc: "Turkey's largest theme park with 40+ slides and amazing roller coasters.", 
-          longDesc: "Step into a world of fantasy and adventure. The Land of Legends is not just a theme park; it's a massive entertainment complex featuring a huge water park (Kingdom of Sea) and a theme park (Adventure Park). Brave the 62-meter high Hyper Coaster, experience the 525-meter long Typhoon Coaster, or relax in the wave pool. The park also hosts incredible dolphin and white whale shows. In the evening, the 'Château' area transforms with a spectacular boat parade and musical light show. It's a world-class experience that combines adrenaline, water fun, and magical storytelling for the whole family.",
-          highlights: ["Hyper Coaster (62m High)", "Huge Water Park Area", "Dolphin & Sea Lion Shows", "5th Dimension Cinema", "Legendary Boat Parade"], 
-          included: ["All-day Entrance Ticket", "Access to Water Park", "Adrenaline Rides", "Dolphin/Show Access", "Return Transfer"] 
+          included: ["Hotel Pickup & Drop-off", "4x4 Jeep Transport", "Guide Services", "Entertainment Show"]
         },
         { 
           slug: "diving", 
@@ -300,18 +157,84 @@ export const translations = {
           desc: "Explore the underwater world of Alanya with professional instructors.", 
           longDesc: "Discover the hidden treasures of the Mediterranean Sea. Whether you are a beginner or an experienced diver, Alanya offers crystal clear waters and diverse marine life. Our tour starts with a detailed briefing on equipment and diving techniques by PADI/CMAS certified instructors. We head out by boat to two different diving spots, including underwater caves and reefs. You'll swim alongside colorful fish, octopuses, and maybe even sea turtles. For beginners, the first dive is a shallow discovery dive to get comfortable with the gear. It's an unforgettable experience in the silence of the deep blue.",
           highlights: ["Two Distinct Dive Spots", "Underwater Cave System", "Professional PADI/CMAS Guides", "Complete Modern Equipment", "Boat Cruise & Lunch"], 
-          included: ["All Professional Gear", "Two Guided Dives", "Insurance", "Hotel Transfer"] 
+          included: ["All Professional Gear", "Two Guided Dives", "Insurance", "Hotel Transfer"]
         },
         { 
-          slug: "antalya-aquarium", 
-          name: "Antalya Cable Car & Aquarium Tour", 
+          slug: "fishing", 
+          name: "Morning Deep Sea Fishing", 
+          price: "€40", 
+          duration: "6 Hours", 
+          images: ["https://www.albashop.com.tr/Data/EditorFiles/En_Dog__ru_Bal__k_Av___Zaman___Nas__l_Belirlenir__3.jpg"], 
+          desc: "A peaceful morning at sea with professional fishing gear.", 
+          longDesc: "Escape the midday sun and the bustling crowds for a peaceful morning on the open sea. Our fishing boat is equipped with the latest electronic fish-finders and high-quality rods and reels. Whether you're a seasoned angler or a complete beginner, our experienced captain will guide you to the best fishing spots where you can catch sea bream, sea bass, and other Mediterranean species. As you wait for a bite, enjoy the silence of the sea and the stunning views of the coastline as the sun rises. We provide all the bait and equipment. It's a peaceful and grounding experience on the Mediterranean.",
+          highlights: ["Sunrise Coastal Views", "Professional Fish-finder Tech", "High-quality Fishing Gear", "Experienced Sea Captain", "Bait & Snacks Included"], 
+          included: ["Fishing Equipment", "Bait", "Captain's Guidance", "Transport"]
+        },
+        { 
+          slug: "turkish-bath", 
+          name: "Ultimate Wellness: Traditional Hamam Package", 
+          price: "€30", 
+          duration: "3 Hours", 
+          images: ["https://cdn.alanyatekmar.com/e6a4a96a-9fc4-442b-87df-a2fff0b99841.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Turkish-Bath-Hamam-Tour-Tursay-Travel-1.webp"], 
+          desc: "Total rejuvenation with salt rooms, peeling and foam massage.", 
+          longDesc: "Treat yourself to a thousand-year-old tradition of health and relaxation. Our Hamam experience begins in the 'Sıcaklık' (hot room) on a warm marble slab to open your pores. Next, a professional 'Tellak' (masseur) performs a full-body peeling using a 'Kese' (silk mitt) to remove all dead skin and toxins. This is followed by a heavenly Soap Foam Massage, where you'll be covered in huge cushions of organic soap bubbles. The package also includes access to the salt room, sauna, and steam room. Finally, after a short period of relaxation in the lounge with traditional tea, we conclude with a 20-minute full-body oil massage to lock in moisture and deeply relax your muscles. You'll leave feeling like a new person with glowing, soft skin—the perfect base for a long-lasting tan.",
+          highlights: ["Authentic Marble Hamam", "Full Body Silk Peeling", "Cloud-like Foam Massage", "Therapeutic Oil Massage", "Sauna & Steam Access"], 
+          included: ["Peeling (Kese)", "Soap Massage", "20-min Oil Massage", "Sauna & Salt Room", "Herbal Teas", "Transfer"]
+        },
+        { 
+          slug: "turkish-night", 
+          name: "The Orient Express: Turkish Night Show", 
           price: "€45", 
-          duration: "8 Hours", 
-          images: ["https://www.talyatur.com/images/tour/104912_b.jpg", "https://royalfuntour.com/media-uploads/Oceanarium-Antalya.jpg"], 
-          desc: "Experience panoramic views from the cable car and visit one of the world's largest tunnel aquariums.", 
-          longDesc: "Experience underwater magic at the Antalya Aquarium, featuring the world’s biggest tunnel aquarium. The tour also includes a visit to the historic Kaleiçi (Old Town), the magnificent Düden Waterfalls, and a scenic cable car ride to Tünektepe for panoramic city views.",
-          highlights: ["131m World's Largest Tunnel Aquarium", "Old Town (Kaleiçi) Guided Walk", "Düden Waterfalls Visit", "Panoramic Cable Car Ride", "Thousands of Marine Species"], 
-          included: ["Hotel Pickup & Drop-off", "Aquarium Entrance Ticket", "Cable Car Ticket", "Professional Tour Guide"] 
+          duration: "4 Hours", 
+          images: ["https://www.touralanya.com/TurResimleri/003837alanyaturkishnight.jpeg", "https://www.goreme.com/image/cache/catalog/Urunler/activities/turkish-night/turkish-night-show-134-900x600.jpg"], 
+          desc: "A spectacular feast of Turkish culture, dance, and cuisine.", 
+          longDesc: "Immerse yourself in the rich traditions of the Ottoman Empire and modern Turkey. Our Turkish Night is a high-energy stage production featuring professional dancers in authentic costumes. You'll witness dizzying Whirling Dervishes, energetic folk dances from various regions of Turkey, and spectacular belly dance performances that will leave you breathless. The show is interactive, often inviting guests to join the fun on stage. It's an evening of music, fire, drums, and hospitality that perfectly captures the soul of Turkey.",
+          highlights: ["Whirling Dervish Show", "Regional Folk Dances", "Professional Belly Dancing", "Interactive Stage Fun", "Traditional Feast Dinner"], 
+          included: ["All Shows & Animations", "Return Transfer"]
+        },
+        { 
+          slug: "horse-tour", 
+          name: "River & Forest Horse Safari", 
+          price: "€40", 
+          duration: "3 Hours", 
+          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Horse-Riding-Tour-Tursay-Travel-13.webp", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Horse-Riding-Tour-Tursay-Travel-1.webp", "https://sencaptour.com/wp-content/uploads/2023/06/Alanya-At-binme-turu-4.webp"], 
+          desc: "Connect with nature on horseback through river trails and pine forests.", 
+          longDesc: "Leave the noise of the city behind and find peace in the saddle. Our horse safari takes you through scenic forest trails and along mountain ridges with views of the river. Our horses are extremely well-trained, gentle, and suitable for all ages and experience levels—even if you've never ridden before! Our instructors will give you a full briefing and stay with the group throughout the journey. You'll ride through pine-scented forests, cross small streams, and have a short break at a scenic viewpoint for photos. It's a therapeutic and grounding experience that allows you to connect with nature at a slower pace. The bond you form with your horse and the beauty of the surrounding mountains makes this a truly special tour.",
+          highlights: ["Gentle & Trained Horses", "Scenic River Trails", "Pine Forest Ride", "Professional Riding Guide", "Photo Opportunities"], 
+          included: ["Assigned Horse", "Riding Equipment", "Qualified Guide", "Short Training", "Transfer"]
+        },
+        { 
+          slug: "aquapark", 
+          name: "Water Park Adventure & Hotel Luxury", 
+          price: "€45", 
+          duration: "Full Day", 
+          images: ["https://www.aquafuncity.com/images/galeri/aqua1.jpg", "https://cdn.alanyatekmar.com/f48067f0-fc19-4515-8b5c-17b64703c6bf.jpg"], 
+          desc: "Full day of water slides with Open Buffet lunch at hotel and Beer/Wine included.", 
+          longDesc: "Get ready for the ultimate summer day! Our Aquapark package offers more than just slides. Enjoy a full day of excitement at the region's top water park, featuring over 20 adrenaline-pumping slides, wave pools, and lazy rivers. But the luxury doesn't stop at the water—your package includes a high-quality Open Buffet lunch at our partner hotel, along with unlimited Beer and Wine to keep you refreshed. It's the perfect combination of family fun and all-inclusive comfort. Dedicated kids' zones and professional lifeguards ensure a safe environment for everyone.",
+          highlights: ["20+ High-speed Slides", "Open Buffet Lunch at Hotel Included", "Beer & Wine Included", "Giant Wave Pool", "Full Day Hotel Access"], 
+          included: ["Entrance Ticket", "Open Buffet Lunch at Partner Hotel", "Unlimited Beer & Wine", "Sunbeds & Umbrellas", "Hotel Transfer"]
+        },
+        { 
+          slug: "dolphin-show", 
+          name: "Dolphin & Sea Lion Spectacular", 
+          price: "€30", 
+          duration: "3 Hours", 
+          images: ["https://travelagencyapp-storage.s3.eu-central-1.amazonaws.com/sunnytour/407fa665-6440-402c-bc91-0668a2ad1a1e_f2fd438e-2a26-48c0-ba4a-a6fb6c3652b1_.webp", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/57b10374eb10bb1a58dd1a71.jpg"], 
+          desc: "The ocean's most intelligent creatures in an amazing live show.", 
+          longDesc: "Get ready to be amazed by the incredible intelligence and agility of dolphins and sea lions. Our park hosts one of the best-produced shows in the country. You'll watch dolphins perform synchronized dances, high jumps, and even 'paint' pictures on canvas. The sea lions will make you laugh with their funny antics and impressive balance. This educational and entertaining show is designed to highlight the importance of marine conservation while providing a fun experience for guests of all ages. After the show, there's a chance to meet the animals up close and take professional photos. It's a heartwarming and educational experience that highlights the special bond between humans and marine life.",
+          highlights: ["Acrobatic Dolphin Show", "Funny Sea Lion Skits", "Marine Education Tips", "Photo Ops with Animals", "Family Friendly Timing"], 
+          included: ["Entrance Ticket", "Seating in the Arena", "Hotel Transfer", "Guide Services"]
+        },
+        { 
+          slug: "side-manavgat", 
+          name: "The Classical Trio: Side – Aspendos – Manavgat", 
+          price: "€45", 
+          duration: "9 Hours", 
+          images: ["https://calista.com.tr/media/3jhj2jz0/aspendos006-1170x650.jpg?format=webp&quality=85", "https://www.gezire.com/wp-content/uploads/2025/10/Manavgat-Selalesi-764x500.jpg", "https://www.kulturportali.gov.tr/contents/images/SELEUK%20(4).JPG"], 
+          desc: "The glory of Roman architecture and the freshness of the waterfall.", 
+          longDesc: "Journey through the golden age of the Roman Empire on this day trip focused on art and history. Our first stop is Aspendos, home to the best-preserved Roman Theater in the world. Built in the 2nd century AD, its acoustics are still perfect today, often hosting international opera festivals. Next, we visit the ancient port city of Side. You'll walk through the colonnaded streets, see the ancient hospital, and stand where Marc Antony and Cleopatra allegedly met—at the Temple of Apollo, right by the sea. Finally, we provide a refreshing break at the Manavgat Waterfall. While not exceptionally high, its immense width and force create a stunning visual and a cool microclimate. You can enjoy a coffee by the rushing water and watch the river merge with the spirit of the Mediterranean. It's a day that balances historical awe with natural serenity.",
+          highlights: ["Aspendos Roman Theater", "Apollo Temple in Side", "Manavgat Waterfall", "Side Ancient Harbor", "Historical Museum Entry"], 
+          included: ["Round-trip Transfer", "Professional Historian Guide", "Entrance to Aspendos & Side"]
         },
         { 
           slug: "green-canyon", 
@@ -322,7 +245,106 @@ export const translations = {
           desc: "Relax on the emerald green waters of the Oymapınar Dam reservoir.", 
           longDesc: "Escape into the heart of nature with our Green Canyon boat tour. Sail through the breathtaking emerald-green waters surrounded by the Taurus Mountains. Explore both the Grand and Little Canyons, with ample opportunities for swimming in the cool lake.",
           highlights: ["Emerald Green Water Cruise", "Swimming in the Oymapınar Dam", "Grand & Little Canyon Exploration", "Stunning Taurus Mountain Views", "Untouched Nature & Wildlife"], 
-          included: ["Hotel Transfer", "Boat Trip", "Insurance"] 
+          included: ["Hotel Transfer", "Boat Trip", "Insurance"]
+        },
+        { 
+          slug: "rafting", 
+          name: "Koprucay White Water Rafting", 
+          price: "€35", 
+          duration: "6 Hours", 
+          images: ["https://cmsal.argeya.com/Content/CompanyFiles/YazilarYeniImg/alanya-rafting.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
+          desc: "Challenge the turquoise rapids of the ancient Koprulu Canyon.", 
+          longDesc: "Grab your paddle and get ready for a splash! Rafting on the Koprucay River is one of the most popular activities for a reason. The river flows through a stunning national park, under ancient Roman bridges that give the canyon its name. Our tour starts with a detailed safety briefing and equipment fitting. Then, we board our 8-10 person boats (guided) or 2-person canoes for those feeling extra brave. The route is 14km long and features various rapids that will get your heart racing, interspersed with calm sections where you can jump into the ice-cold turquoise water for a swim. We also include 'body rafting' and fun animations by our guides. After conquering the river, you can relax at our riverside base camp.",
+          highlights: ["14km Rafting Adventure", "Roman Bridge Sightseeing", "Body Rafting Sessions", "Ice Cold River Swimming", "Fun Guided Animations"], 
+          included: ["Helmet & Life Jacket", "Rafting Boat & Paddle", "Expert Guide", "Hotel Transfer"]
+        },
+        { 
+          slug: "mix-adventure", 
+          name: "Ultimate Adventure Mix (3-in-1 Adrenaline)", 
+          price: "€55", 
+          duration: "8 Hours", 
+          images: ["https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=1210,dpr=1/tour_img/640b4d905f5e4.png", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,height=755,dpr=1/tour_img/5b8b721278a099cfddd9975af2c8dd627c2259fd05374f4f7efa7ef96e0b5775.png"], 
+          desc: "Rafting, Zipline, and Buggy/Quad Safari through the wild canyon.", 
+          longDesc: "For the restless souls and adrenaline seekers, this tour is the ultimate package. We take you to the Koprulu Canyon National Park, the heart of outdoor sports in Turkey. Your day starts with a 14km White Water Rafting journey. We hit the rapids with experienced instructors, ensuring safety and extreme fun. Midway through the river, we stop for the Zipline—you'll soar high above the rushing waters, feeling like an eagle. After recharging your energy, we switch gears for the Safari. You can choose between a Quad bike or a Buggy safari to navigate the muddy, dusty, and technical tracks of the pine forests surrounding the canyon. This is 8 hours of pure, unadulterated excitement in one of the most beautiful natural settings in the world.",
+          highlights: ["14km Level 2 Rafting", "Canyon Zipline Flight", "Off-road Safari (Buggy/Quad)", "Riverside Cliff Jumping", "Tazi Canyon Photo Stop"], 
+          included: ["Complete Safety Gear", "Professional Instructors", "All Transports", "Insurance"]
+        },
+        { 
+          slug: "zipline", 
+          name: "5-in-1 Mega Adrenaline Combo: The Ultimate Antalya Adventure", 
+          price: "€75", 
+          duration: "10 Hours", 
+          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp", "https://www.schweitzer.com/-/media/schweitzer/summer-activities/schweitzer-zipline-1920x1080.jpg"], 
+          desc: "Rafting, Zipline, Tazi Canyon, Quad, and Buggy - all in one incredible day.", 
+          longDesc: "Why choose one when you can do them all? This is our most complete adventure package for true adrenaline junkies. Your day begins with a journey through the rugged Taurus Mountains to the magnificent Tazi Canyon. After a photo break at the 'Eagle's Nest' viewpoint, we head to the river for a 14km White Water Rafting journey. But the excitement doesn't stop there—you'll fly over the canyon on a Zipline and then take control of a Quad or Buggy for an off-road forest safari. This 10-hour mega-tour is the ultimate way to experience the wild side of Antalya in a single day.",
+          highlights: ["Tazi Canyon Exploration", "14km White Water Rafting", "Giant Canyon Zipline", "Off-road Quad/Buggy Safari", "Nature Adventure"], 
+          included: ["All Adventure Equipment", "Professional Guides", "Hotel Pickup & Drop-off"]
+        },
+        { 
+          slug: "land-of-legends", 
+          name: "The Land of Legends Theme Park", 
+          price: "€80", 
+          duration: "Full Day", 
+          images: ["https://www.alanya-tours.com/public/content/images/Tours/49/big/The-Land-of-Legends-Theme-Park-from-Alanya_175671848968b56599334b0.webp", "https://thelandoflegendsthemepark.com/wp-content/uploads/2021/04/the_land_of_legends_theme_park_waterworld_2.jpg"], 
+          desc: "Turkey's largest theme park with 40+ slides and amazing roller coasters.", 
+          longDesc: "Step into a world of fantasy and adventure. The Land of Legends is not just a theme park; it's a massive entertainment complex featuring a huge water park (Kingdom of Sea) and a theme park (Adventure Park). Brave the 62-meter high Hyper Coaster, experience the 525-meter long Typhoon Coaster, or relax in the wave pool. The park also hosts incredible dolphin and white whale shows. In the evening, the 'Château' area transforms with a spectacular boat parade and musical light show. It's a world-class experience that combines adrenaline, water fun, and magical storytelling for the whole family.",
+          highlights: ["Hyper Coaster (62m High)", "Huge Water Park Area", "Dolphin & Sea Lion Shows", "5th Dimension Cinema", "Legendary Boat Parade"], 
+          included: ["All-day Entrance Ticket", "Access to Water Park", "Adrenaline Rides", "Dolphin/Show Access", "Return Transfer"]
+        },
+        { 
+          slug: "antalya-aquarium", 
+          name: "Antalya Cable Car & Aquarium Tour", 
+          price: "€45", 
+          duration: "8 Hours", 
+          images: ["https://www.talyatur.com/images/tour/104912_b.jpg", "https://royalfuntour.com/media-uploads/Oceanarium-Antalya.jpg"], 
+          desc: "Experience panoramic views from the cable car and visit one of the world's largest tunnel aquariums.", 
+          longDesc: "Experience underwater magic at the Antalya Aquarium, featuring the world’s biggest tunnel aquarium. The tour also includes a visit to the historic Kaleiçi (Old Town), the magnificent Düden Waterfalls, and a scenic cable car ride to Tünektepe for panoramic city views.",
+          highlights: ["131m World's Largest Tunnel Aquarium", "Old Town (Kaleiçi) Guided Walk", "Düden Waterfalls Visit", "Panoramic Cable Car Ride", "Thousands of Marine Species"], 
+          included: ["Hotel Pickup & Drop-off", "Aquarium Entrance Ticket", "Cable Car Ticket", "Professional Tour Guide"]
+        },
+        { 
+          slug: "kekova", 
+          name: "Kekova – Demre – Myra (Ancient Civilizations Expedition)", 
+          price: "€50", 
+          duration: "11 Hours", 
+          images: ["https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_PE7wwOiCWscwlqcEpg2A_pvpGnfmQROdLw&s", "https://gunluktur.net/wp-content/uploads/2021/12/tourbooking-turkey.jpeg"], 
+          desc: "A journey through time to the ancient ruins and the legacy of St. Nicholas.", 
+          longDesc: "Discover the hidden history of the Lycian coast on this comprehensive historical and coastal tour. We start our day in Demre, where we visit the Church of Saint Nicholas (the original Santa Claus), a sacred site featuring beautiful Byzantine frescoes and a holy atmosphere. Next, we head to the ancient city of Myra to marvel at the incredible Lycian rock tombs carved directly into the cliffs and the well-preserved Roman theater. The highlight of the day is our boat trip to the Sunken City of Kekova. You will see the underwater ruins of houses, stairs, and even a shipyard from a city destroyed by an earthquake 2,000 years ago. We will also have several swimming breaks in the secluded 'Aquarium Bay' and 'Esmeralda Bay', where the turquoise waters are perfect for snorkeling.",
+          highlights: ["Exclusive Boat Trip", "Sunken City of Kekova", "Lycian Rock Tombs at Myra", "St. Nicholas Church", "Azure Swimming Bays"], 
+          included: ["Hotel Transfer", "Boat Trip to Sunken City", "All Entrance Tickets", "Insurance"]
+        },
+        { 
+          slug: "pamukkale", 
+          name: "Pamukkale & Salda Lake (The White Paradise)", 
+          price: "€45", 
+          duration: "13 Hours", 
+          images: ["https://cdn.getyourguide.com/img/location/49d723a60f36e112.jpeg/99.jpg", "https://www.barcelo.com/guia-turismo/wp-content/uploads/pamukkale.jpg"], 
+          desc: "White travertines, Hierapolis Ancient City and the 'Turkish Maldives' Salda Lake.", 
+          longDesc: "Embark on an extraordinary journey to Pamukkale, often called the '8th Wonder of the World'. This UNESCO World Heritage site is famous for its breathtaking white travertine terraces, formed by thermal waters rich in calcium. You can walk barefoot on these natural wonders and feel the warm, healing waters. Our tour continues with the Exploration of Hierapolis, an ancient Roman spa city. You will witness the grand entrance gate, the massive ancient theater, and the largest Necropolis in Anatolia. For a truly unique experience, you can swim in the Cleopatra Antique Pool, where you'll glide over authentic Roman columns submerged in warm thermal water. The second half of our day is dedicated to Salda Lake. Known as the 'Turkish Maldives', it boasts crystal-clear turquoise waters and white magnesium sands. It's the perfect spot for unforgettable photography and a refreshing swim in one of the cleanest lakes in the world.",
+          highlights: ["White Travertine Terraces", "Hierapolis Ancient City", "Salda Lake (Turkish Maldives)", "Cleopatra Antique Pool", "Ancient Roman Theater"], 
+          included: ["VIP Hotel Transfer", "Professional Tour Guide", "Air-conditioned Transport", "Salda Lake Entry Fee"]
+        },
+        { 
+          slug: "lavanta-garden", 
+          name: "Lavender Dreams & Salda Magic", 
+          price: "€40", 
+          duration: "12 Hours", 
+          images: ["https://burdur.com.tr/wp-content/uploads/2022/03/MKXT0132.jpg"], 
+          desc: "Infinite purple fields of Kuyucak and the white sands of Salda Lake.", 
+          longDesc: "Escape to a world of color and fragrance. During the summer months, the village of Kuyucak transforms into a sea of purple as the lavender fields come into full bloom. Our tour invites you to wander through these aromatic fields, learn about lavender oil production, and take some of the most beautiful photos of your lifetime. The local villagers provide a warm welcome with traditional lavender tea and handmade crafts. In the second half of the tour, we visit Salda Lake, widely considered one of the most beautiful natural spots in Turkey. Its high magnesium content creates white, clay-like sands and incredibly vibrant turquoise water. You can relax on the beach, swim in the therapeutic waters, and enjoy the serenity of this protected natural park. This tour is a perfect blend of sensory delight and natural relaxation.",
+          highlights: ["Lavender Harvest Photo Op", "Kuyucak Village Experience", "Salda Lake Swimming", "Lavender Products Tasting", "Nature Walk"], 
+          included: ["Full Transport", "English Speaking Guide", "All Park Fees"]
+        },
+        { 
+          slug: "cappadocia", 
+          name: "Cappadocia: The Fairytale Journey (2-Day Tour)", 
+          price: "€120", 
+          duration: "2 Days", 
+          images: ["https://blog.obilet.com/wp-content/uploads/2018/10/kapadokya.jpg"], 
+          desc: "Experience the magic of fairy chimneys, cave dwellings, and sunrise balloons.", 
+          longDesc: "Step into a land that feels like it's from another planet. Our 2-day Cappadocia tour is designed for those who want to experience the true essence of this mystical region. On Day 1, we explore the Goreme Open Air Museum, a complex of medieval cave churches decorated with stunning frescoes. We'll visit Pasabag (Monks Valley) to see the most iconic three-headed fairy chimneys. In the afternoon, we dive deep into one of the massive underground cities, where early Christians hid from invaders. On Day 2, the day starts before dawn for the world-famous Hot Air Balloon flight (optional but highly recommended). Watching the sun rise over the unique landscape while hundreds of colorful balloons fill the sky is a soul-stirring experience. We'll also visit Uchisar Castle, the highest point in the region, providing panoramic views across the whole of Cappadocia. You'll stay in an authentic stone or cave hotel, ensuring the magic continues even while you sleep.",
+          highlights: ["Goreme Open Air Museum", "Pasabag Fairy Chimneys", "Deep Underground City", "Uchisar Panoramic Castle", "Devrent Valley (Imagination Valley)"], 
+          included: ["Luxury Boutique Hotel Stay", "Professional Regional Guide", "VIP Mini-van Transport", "Village Visits"]
         },
         { 
           slug: "istanbul-tour", 
@@ -333,18 +355,7 @@ export const translations = {
           desc: "Fly to the city of two continents and visit the icons of world history.", 
           longDesc: "Join us for a whirlwind day trip to the magnificent city of Istanbul. Visit the Blue Mosque, Hagia Sophia, and Topkapi Palace. Experience the vibrant Egyptian Bazaar and enjoy a Bosphorus Cruise sailing between Europe and Asia. Return to Antalya by evening flight after a day of historical wonder.",
           highlights: ["Blue Mosque & Hagia Sophia", "Topkapi Palace Guided Tour", "Bosphorus Cruise (Europe vs Asia)", "Hippodrome & Egyptian Bazaar", "Full VIP Day Management"], 
-          included: ["Round-trip Flight Tickets", "All VIP Transfers", "Professional Guide", "All Museum Entry Fees"] 
-        },
-        { 
-          slug: "alanya-all-in-one", 
-          name: "Alanya City Tour – All in 1 Experience", 
-          price: "€40", 
-          duration: "8 Hours", 
-          images: ["https://www.besttimetravel.com.tr/public/uploads/0000/1/2026/04/04/copilot-20260404-113528.png"], 
-          desc: "Experience an unforgettable day with the All in 1 Alanya City Tour featuring Dim River, Dim Cave, orange gardens, waterfall, aquapark, and a boat trip with a foam party!", 
-          longDesc: "Get ready to discover the unique beauties of Alanya in a single day! This tour is an unforgettable experience blending nature, history, culture, and fun. Accompanied by our professional and friendly drivers, we pick you up from your hotel in the morning and take you to Alanya's most special spots with a full-day program. We journey to the heart of nature at the cool paradise of Dim River. While taking a swimming break in the icy waters, the lush green nature surrounding you brings peace. We enter Dim Cave, one of Alanya's most famous natural beauties. Our tour also offers cultural exploration. By visiting a historical village house, you witness Alanya's past, and then you get to know the local culture and architecture closely with our mosque visit. You walk among orange gardens amidst fragrant citrus scents and then listen to the melody of nature in the cool waters of the small waterfall. Fun moments await you on the slides at the aquapark located by the Dim River. We embark on a 1-hour private boat tour in the blues of the Mediterranean. We take a swimming break in the open sea and then reach the peak of fun with a foam party! 🎉",
-          highlights: ["Panoramic Terrace View", "Dim River Swimming & Aquapark", "Water Fight Fun", "Dim Cave Exploration", "Historical Village House Visit", "Mosque & Local Culture", "Orange Garden Walk", "Small Waterfall Visit", "Delicious Lunch", "1-Hour Boat Trip", "Open Sea Swimming", "Foam Party Celebration"], 
-          included: ["Comfortable Transport", "Professional Guidance", "Delicious Lunch", "Boat Tour Experience"] 
+          included: ["Round-trip Flight Tickets", "All VIP Transfers", "Professional Guide", "All Museum Entry Fees"]
         }
       ]
     },
@@ -412,145 +423,15 @@ export const translations = {
       includedLabel: "Dahil Olanlar",
       list: [
         { 
-          slug: "pamukkale", 
-          name: "Pamukkale & Salda Gölü (Beyaz Cennet)", 
-          images: ["https://cdn.getyourguide.com/img/location/49d723a60f36e112.jpeg/99.jpg", "https://www.barcelo.com/guia-turismo/wp-content/uploads/pamukkale.jpg"], 
-          desc: "Bembeyaz travertenler, Hierapolis Antik Kenti ve Türkiye'nin Maldivleri Salda Gölü.", 
-          longDesc: "Dünyanın 8. harikası olarak kabul edilen Pamukkale'ye unutulmaz bir yolculuğa çıkın. UNESCO Dünya Mirası listesinde yer alan bu bölge, kalsiyum zengini termal suların oluşturduğu bembeyaz traverten teraslarıyla ünlüdür. Bu doğa harikası üzerinde çıplak ayakla yürüyebilir ve şifalı suların sıcaklığını hissedebilirsiniz. Turumuz, antik Roma döneminin en önemli termal merkezi olan Hierapolis Antik Kenti ile devam ediyor. Burada devasa antik tiyatroyu, Anadolu'nun en büyük Nekropolü'nü ve tarihi kapıları göreceksiniz. Gerçekten eşsiz bir deneyim için, içinde binlerce yıllık Roma sütunlarının bulunduğu Kleopatra Antik Havuzu'nda yüzebilirsiniz. Günün ikinci yarısında ise kristal berraklığında turkuaz suyu ve beyaz magnezyum kumlarıyla 'Türkiye'nin Maldivleri' olarak bilinen Salda Gölü'nü ziyaret ediyoruz. Burası, dünyanın en temiz göllerinden birinde yüzmek ve hayatınızın en güzel fotoğraflarını çekmek için kusursuz bir noktadır.",
-          highlights: ["Beyaz Traverten Teraslar", "Hierapolis Antik Kenti", "Salda Gölü (Türkiye'nin Maldivleri)", "Kleopatra Antik Havuzu", "Antik Roma Tiyatrosu"], 
-          included: ["VIP Otel Transferi", "Profesyonel Rehberlik", "Klimalı Ulaşım", "Salda Gölü Giriş Ücreti"] 
-        },
-        { 
-          slug: "kekova", 
-          name: "Kekova – Demre – Myra (Antik Medeniyetler Yolculuğu)", 
-          price: "€50", 
-          duration: "11 Saat", 
-          images: ["https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_PE7wwOiCWscwlqcEpg2A_pvpGnfmQROdLw&s", "https://gunluktur.net/wp-content/uploads/2021/12/tourbooking-turkey.jpeg"], 
-          desc: "Antik kalıntılar ve Noel Baba'nın mirasına tarihsel bir yolculuk.", 
-          longDesc: "Likya kıyılarının gizli tarihini keşfedeceğimiz bu tur, hem deniz hem de kültür meraklıları için hazırlanmıştır. Güne Demre'de, Noel Baba'nın (Aziz Nikolaos) yaşadığı ve mucizelerini gerçekleştirdiği kiliseyi ziyaret ederek başlıyoruz. Kilisedeki Bizans dönemi freskleri sizi büyüleyecek. Ardından, devasa kaya mezarlarıyla ünlü Myra Antik Kenti'ne geçiyoruz. Dağlara oyulmuş bu yapılar, antik mühendisliğin zirvesini temsil ediyor. Günün zirve noktası ise Kekova Batık Şehir tekne turumuzdur. Turkuaz suların altındaki antik ev kalıntılarını ve merdivenleri göreceksiniz. Tur boyunca Akvaryum Koyu ve Esmeralda Koyu gibi bakir noktalarda yüzme molaları verecek, turkuaz suların tadını çıkaracaksınız.",
-          highlights: ["Özel Tekne Turu", "Kekova Batık Şehir", "Myra Kaya Mezarları", "Noel Baba Kilisesi", "Mavi Bayraklı Yüzme Koyları"], 
-          included: ["Otel Transferi", "Batık Şehir Tekne Turu", "Tüm Giriş Biletleri", "Sigorta"] 
-        },
-        { 
-          slug: "cappadocia", 
-          name: "Kapadokya: Bir Masal Yolculuğu (2 Günlük)", 
-          price: "€120", 
-          duration: "2 Gün", 
-          images: ["https://blog.obilet.com/wp-content/uploads/2018/10/kapadokya.jpg"], 
-          desc: "Peri bacaları, yeraltı şehirleri ve gün doğumu balonlarının büyüsünü yaşayın.", 
-          longDesc: "Kendinizi başka bir gezegendeymiş gibi hissettiren topraklara adım atın. 2 günlük Kapadokya turumuz, bu mistik bölgenin ruhunu tam anlamıyla yaşamanız için tasarlandı. 1. Gün, büyüleyici fresklerle süslenmiş orta çağ kaya kiliselerinin bulunduğu Göreme Açık Hava Müzesi'ni keşfediyoruz. Paşabağ (Keşişler Vadisi) bölgesinde en ikonik üç başlı peri bacalarını görecek, öğleden sonra ise ilk Hristiyanların saklanmak için inşa ettiği devasa yer altı şehirlerinden birine ineceğiz. 2. Günümüz, güneş doğmadan önce dünyaca ünlü Sıcak Hava Balonu uçuşuyla (opsiyonel) başlıyor. Yüzlerce renkli balonun arasından güneşin doğuşunu izlemek, ruhunuzu dinlendiren bir deneyim olacak. Ayrıca bölgenin en yüksek noktası olan Uçhisar Kalesi'ni ziyaret ederek Kapadokya'yı panoramik olarak göreceğiz. Geceyi otantik bir kaya veya taş otelde geçirerek masalsı atmosferi sonuna kadar hissedeceksiniz.",
-          highlights: ["Göreme Açık Hava Müzesi", "Paşabağ Peri Bacaları", "Derin Yer Altı Şehri", "Uçhisar Panoramik Kalesi", "Devrent (Hayal) Vadisi"], 
-          included: ["Lüks Butik Otel Konaklaması", "Alanında Uzman Rehber", "VIP Ulaşım", "Köy Ziyaretleri"] 
-        },
-        { 
-          slug: "lavanta-garden", 
-          name: "Lavanta Rüyaları & Salda Büyüsü", 
+          slug: "alanya-all-in-one", 
+          name: "Alanya City Tour – All in 1 Experience", 
           price: "€40", 
-          duration: "12 Saat", 
-          images: ["https://burdur.com.tr/wp-content/uploads/2022/03/MKXT0132.jpg"], 
-          desc: "Kuyucak'ın sonsuz mor tarlaları ve Salda Gölü'nün beyaz kumları.", 
-          longDesc: "Renk ve koku dolu bir dünyaya kaçmaya ne dersiniz? Yaz aylarında Kuyucak köyü, lavantaların tam açmasıyla birlikte mor bir denize dönüşür. Turumuzda bu aromatik tarlalarda yürüyebilir, lavanta yağı üretimini öğrenebilir ve hayatınızın en güzel fotoğraflarını çekebilirsiniz. Köylülerin kendi elleriyle hazırladığı hediyelik eşyalar sizi bekliyor. Turun ikinci yarısında ise Türkiye'nin en güzel doğal alanlarından biri olan Salda Gölü'nü ziyaret ediyoruz. Yüksek magnezyum içeriği sayesinde oluşan beyaz kumları ve canlı turkuaz suyuyla bu göl, görsel bir şölen sunuyor. Sahilde dinlenebilir, şifalı sularda yüzebilir ve bu koruma altındaki doğa parkında huzur bulabilirsiniz. Bu tur, duyularınıza hitap eden ve ruhunuzu dinlendiren mükemmel bir doğa kaçamağıdır.",
-          highlights: ["Lavanta Hasatı Fotoğraf Çekimi", "Kuyucak Köy Deneyimi", "Salda Gölü Yüzme Keyfi", "Lavanta Ürünleri Tadımı", "Doğa Yürüyüşü"], 
-          included: ["Tam Transfer Hizmeti", "Profesyonel Rehberlik", "Park Giriş Ücretleri"] 
-        },
-        { 
-          slug: "side-manavgat", 
-          name: "Antik Üçleme: Side – Aspendos – Manavgat", 
-          price: "€45", 
-          duration: "9 Saat", 
-          images: ["https://calista.com.tr/media/3jhj2jz0/aspendos006-1170x650.jpg?format=webp&quality=85", "https://www.gezire.com/wp-content/uploads/2025/10/Manavgat-Selalesi-764x500.jpg", "https://www.kulturportali.gov.tr/contents/images/SELEUK%20(4).JPG"], 
-          desc: "Roma mimarisinin görkemi ve şelalenin ferahlığı bir arada.", 
-          longDesc: "Roma İmparatorluğu'nun altın çağına doğru sanat ve tarih odaklı bir yolculuk. İlk durağımız, dünyanın en iyi korunmuş Roma Tiyatrosu olan Aspendos. MS 2. yüzyılda inşa edilen bu tiyatronun akustiği bugün hala kusursuzdur ve hala uluslararası festivallere ev sahipliği yapmaktadır. Ardından, antik liman kenti Side'ye geçiyoruz. Sütunlu caddelerde yürüyecek, antik hastaneyi görecek ve Antonius ile Kleopatra'nın buluştuğu iddia edilen deniz kenarındaki Apollon Tapınağı'nda tarihe tanıklık edeceksiniz. Son olarak, Manavgat Şelalesi'nde ferahlatıcı bir mola veriyoruz. Şelale çok yüksek olmasa da genişliği ve debisiyle muazzam bir görsel sunar. Suyun kenarında kahvenizi yudumlayabilir ve Akdeniz rüzgarının tadını çıkarabilirsiniz. Bu tur, tarihi hayranlık ile doğal huzuru mükemmel dengeler.",
-          highlights: ["Aspendos Roma Tiyatrosu", "Side Apollon Tapınağı", "Manavgat Şelalesi", "Side Antik Limanı", "Antik Tiyatro Girişi"], 
-          included: ["Gidiş-Dönüş Transfer", "Tarihçi Uzman Rehber", "Aspendos & Side Giriş Ücretleri"] 
-        },
-        { 
-          slug: "city-tour", 
-          name: "Alanya Panoramik Şehir & Kale Turu", 
-          price: "30", 
-          duration: "4 Saat", 
-          images: ["https://upload.wikimedia.org/wikipedia/commons/8/85/Alanyafromcastle.JPG", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/Alanya-Buyuk-Hotel-Genel-269043.jpg"], 
-          desc: "Alanya'nın En İyileri: Kale, Teleferik ve Gün Batımı.", 
-          longDesc: "Alanya'nın neden Türk Rivierası'nın incisi olduğunu bu kapsamlı şehir turuyla keşfedin. Turumuza dünyaca ünlü Kleopatra Plajı'ndan Alanya Kalesi'nin zirvesine çıkan Teleferik yolculuğuyla başlıyoruz. Kalenin burçlarından limanı, feneri ve Toros Dağları'nı 360 derecelik bir açıyla göreceksiniz. 13. yüzyıldan kalma tarihi tersaneyi, İç Kale'yi ve şehrin simgesi Kızıl Kule'yi profesyonel anlatımlarla gezeceğiz. Turumuzu, şehrin en popüler noktalarından biri olan 'I Love Alanya' terasında sonlandırıyoruz. Burası, güneş batarken tüm şehri ayaklarınızın altında hissedeceğiniz en güzel panoramik noktadır.",
-          highlights: ["Teleferik ile Kale Keyfi", "Alanya Kalesi Keşfi", "Kleopatra Plajı Panoraması", "Seyir Terası Fotoğraf Molası"], 
-          included: ["Adresten Alış-Bırakış", "Teleferik Biletleri", "Profesyonel Rehber"] 
-        },
-        { 
-          slug: "mix-adventure", 
-          name: "Efsane Mix Macera (3'ü 1 Arada Adrenalin)", 
-          price: "€55", 
           duration: "8 Saat", 
-          images: ["https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=1210,dpr=1/tour_img/640b4d905f5e4.png", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,height=755,dpr=1/tour_img/5b8b721278a099cfddd9975af2c8dd627c2259fd05374f4f7efa7ef96e0b5775.png"], 
-          desc: "Vahşi kanyonda Rafting, Zipline ve Atv/Buggy Safari.", 
-          longDesc: "Yerinde duramayanlar ve macera tutkunları için bu tur en üst noktadır! Sizi Türkiye'nin doğa sporları kalbi olan Köprülü Kanyon Milli Parkı'na götürüyoruz. Gününüz 14 kilometrelik heyecan dolu bir Rafting yolculuğuyla başlıyor. Profesyonel eğitmenlerimizle dalgalara karşı koyacak, eğlencenin doruğuna çıkacaksınız. Nehrin ortasında dev bir heyecan molası veriyoruz: Zipline! Nehrin üzerinden kuş gibi süzülürken adrenalin tavan yapacak. Safariye geçiyoruz: Çam ormanları arasındaki çamurlu ve engebeli parkurlarda ister ATV ister Buggy ile tozu dumana katacaksınız. Bu tur, bir güne sığdırılabilecek en yüksek dozda eğlence ve adrenalini vaat ediyor.",
-          highlights: ["14km Rafting Parkuru", "Kanyon Üzerinde Zipline", "Off-road Safari (Buggy/ATV)", "Nehre Atlama Molaları", "Tazı Kanyonu Fotoğraf Durağı"], 
-          included: ["Tam Güvenlik Ekipmanları", "Profesyonel Eğitmenler", "Tüm Transferler", "Ferdi Kaza Sigortası"] 
-        },
-        { 
-          slug: "rafting", 
-          name: "Köprüçay Rafting Macerası", 
-          price: "€35", 
-          duration: "6 Saat", 
-          images: ["https://cmsal.argeya.com/Content/CompanyFiles/YazilarYeniImg/alanya-rafting.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
-          desc: "Antik Köprülü Kanyon'un turkuaz sularında maceraya atılın.", 
-          longDesc: "Kürekleri elinize alın ve ıslanmaya hazır olun! Köprüçay Nehri üzerinde rafting yapmak, Antalya'nın en popüler aktivitesidir ve bunun iyi bir sebebi var. Nehir, kanyona ismini veren antik Roma köprülerinin altından, muhteşem bir milli parkın kalbinden geçer. Turumuz, detaylı bir güvenlik eğitimi ve ekipman teslimiyle başlar. Ardından 8-10 kişilik botlarımıza veya ekstra macera isteyenler için 2 kişilik kanolarımıza biniyoruz. Parkurumuz 14 km uzunluğundadır ve kalbinizi hızlandıracak akıntılarla doludur. Akıntılar arasında nehrin buz gibi ama tertemiz sularına atlayıp yüzme şansınız olacak. Ayrıca rehberlerimizin yapacağı 'body rafting' ve eğlenceli animasyonlarla gününüz unutulmaz bir şölene dönüşecek. Tur sonunda nehir kenarındaki tesisimizde dinlenebilirsiniz.",
-          highlights: ["14km Profesyonel Rafting", "Antik Roma Köprüsü Turu", "Body Rafting Seansları", "Buz Gibi Nehirde Yüzme", "Eğlenceli Grup Oyunları"], 
-          included: ["Kask & Can Yeleği", "Bot & Kürek", "Uzman Bot Kaptanı", "Otel Transferi"] 
-        },
-        { 
-          slug: "jeep-safari", 
-          name: "Toros Dağları Jeep Safari & Dim Çayı", 
-          price: "€40", 
-          duration: "7 Saat", 
-          images: ["https://travelagencyapp-storage.s3.eu-central-1.amazonaws.com/sunnytour/31c5b512-0b91-4762-8b51-4d8ef2c7e645_c35d5ee1-4e4d-4d53-92a0-57f22e041aec_.webp", "https://cdn.vigotours.com/23898/conversions/187-1770148388-698252242f4a3-gallery.jpg", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/5dc9d110c84b5.jpeg"], 
-          desc: "Su savaşları, dağ zirveleri ve Dim Çayı'nda dinlenme.", 
-          longDesc: "Bu sadece bir tur değil; tekerlekler üzerindeki koca bir parti! Üstü açık 4x4 Land Rover ciplerimize atlayıp görkemli Toros Dağları'na tırmanıyoruz. Yolculuk boyunca cipler arasında bitmek bilmeyen su savaşları olduğu için ıslanmaya hazırlıklı olun! Alanya'yı en tepeden göreceğimiz panoramik noktalarda mola veriyoruz. Geleneksel bir köy camisini ziyaret edip yerel kültürü öğreniyor, meyve bahçelerinde meyve tadımı yapıyoruz. Günün en keyifli kısmı ise Dim Çayı durağımızdır. Nehrin içine kurulmuş masalarda dinlenebilir, buz gibi suya ayaklarınızı sokabilirsiniz. Atlama platformlarımızdan nehre atlayabilir, su yataklarında dinlenebilir veya tesisimizdeki balık tutma havuzunda şansınızı deneyebilirsiniz. Kahkaha, doğa ve kültürel keşiflerin iç içe olduğu bir gün sizi bekliyor.",
-          highlights: ["Cipler Arası Su Savaşları", "Toroslar Off-road Parkuru", "Çay İçindeki Yemek Masaları", "Geleneksel Köy Ziyareti", "Meyve Bahçesi Tadımı"], 
-          included: ["4x4 Jip Konforu", "Eğlenceli Safari Rehberi", "Köy Evi Girişleri"] 
-        },
-        { 
-          slug: "sapadere-canyon", 
-          name: "Sapadere Kanyonu: Saklı Cennet", 
-          price: "€45", 
-          duration: "8 Saat", 
-          images: ["https://www.kulturportali.gov.tr/contents/images/sapanderekanyonulogolu_20180914111051287.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Sapadere-Canyon-Tour-Tursay-Travel-13.webp"], 
-          desc: "Kanyon içindeki ahşap yol ve dondurucu şelaleler.", 
-          longDesc: "Yaz sıcağından kaçıp Sapadere Kanyonu'nun ferahlatıcı kollarına kendinizi bırakın. Alanya'dan 40km uzaklıkta bulunan bu dev yarık, ancak 2008 yılında turizme açılmış ve bakir kalmayı başarmış doğal bir cevherdir. Kanyon boyunca uzanan 750 metrelik ahşap asma yol üzerinde yürüyecek, her iki yanınızda yükselen devasa kayalıkların görkemine tanık olacaksınız. Yol boyunca irili ufaklı onlarca şelale size eşlik edecek. En cesurlar, doğal havuzlara girip yüzebilir; yazın en sıcak gününde bile su sıcaklığı nadiren 12 dereceyi aşar! Kanyondan sonra, geleneksel yaşamın devam ettiği Sapadere Köyü'nü ve ipek dokuma atölyesini ziyaret edeceğiz. Ayrıca muhteşem sarkıt ve dikitlerle dolu olan 'Cüceler Mağarası'nı da keşfedeceğiz.",
-          highlights: ["Asma Yol Yürüyüşü", "Dondurucu Şelale Yüzmesi", "Cüceler Mağarası Keşfi", "İpek Dokuma Gösterisi", "Geleneksel Köy Turu"], 
-          included: ["Transfer Hizmeti", "Tüm Giriş Ücretleri", "Rehberlik Hizmeti"] 
-        },
-        { 
-          slug: "quad-safari", 
-          name: "ATV Safari Macerası", 
-          price: "€40", 
-          duration: "3 Saat", 
-          images: ["https://cloudbasetravel.com/wp-content/uploads/2021/06/ATV-Safari-1.jpeg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Quad-Atv-Safari-Tour-Tursay-Travel-1.webp"], 
-          desc: "Toros ormanlarında toz, çamur ve heyecan dolu bir sürüş.", 
-          longDesc: "Şehrin gürültüsünden uzaklaşın ve Toros Dağları'nın engebeli arazisinde kendi motorunuzun kontrolünü elinize alın! ATV Safari turumuz, size adrenalini ve doğayı aynı anda sunuyor. Profesyonel rehberlerimiz eşliğinde çam ormanları içindeki teknik parkurlardan geçecek, tozlu yolları ve çamurlu su birikintilerini aşacaksınız. Sürüş ehliyeti gerektirmeyen bu turda, kısa bir eğitimden sonra herkes kendi aracını kullanabilir. Yol boyunca nehir kenarında vereceğimiz molada tozunuzu atabilir ve buz gibi suda serinleyebilirsiniz. Bu tur, Alanya'nın vahşi doğasını keşfetmenin en heyecan verici yoludur.",
-          highlights: ["Kendi Aracını Kullanma Deneyimi", "Orman İçi Teknik Parkurlar", "Çamurlu Su Geçişleri", "Nehir Kenarı Dinlenme Molası", "Yüksek Hızlı Düzlükler"], 
-          included: ["ATV Motor & Yakıt", "Güvenlik Kaskı", "Kullanım Eğitimi", "Uzman Rehberlik", "Transfer"] 
-        },
-        { 
-          slug: "zipline", 
-          name: "5'i Bir Arada Mega Adrenalin Kombo: Antalya'nın En Büyük Macerası", 
-          price: "€75", 
-          duration: "10 Saat", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp", "https://www.schweitzer.com/-/media/schweitzer/summer-activities/schweitzer-zipline-1920x1080.jpg"], 
-          desc: "Rafting, Zipline, Tazı Kanyonu, Quad, Buggy ve Jeep Safari - hepsi tek bir muhteşem günde.", 
-          longDesc: "Neden birini seçesiniz ki? Gerçek macera tutkunları için hazırladığımız bu en kapsamlı pakette adrenalin hiç bitmiyor. Gününüz 4x4 Jeep Safari ile Toroslar'ın kalbindeki efsanevi Tazı Kanyonu'na tırmanarak başlıyor. 'Kartal Yuvası'nda fotoğraf molasının ardından nehre iniyor ve 14 km'lik rafting macerasına atılıyoruz. Heyecan bununla sınırlı değil; kanyon üzerinde zipline ile uçacak ve ardından ATV veya Buggy motorlarla orman safariye çıkacaksınız. 10 saatlik bu mega tur, Antalya'nın vahşi doğasını tek bir günde yaşamanın en efsane yolu.",
-          highlights: ["Tazı Kanyonu Keşfi", "14km Coşkulu Rafting", "Dev Kanyon Zipline Hattı", "Off-road Atv/Buggy Safari", "4x4 Jip Dağ Safarisi"], 
-          included: ["Tüm Macera Ekipmanları", "Profesyonel Rehberler", "Otelden Alma ve Bırakma"] 
-        },
-        { 
-          slug: "paragliding", 
-          name: "Yamaç Paraşütü: Alanya Üzerinde Uçuş", 
-          price: "€75", 
-          duration: "2 Saat", 
-          images: ["https://www.talyatur.com/images/tour/105418_b.jpg", "https://cdn.getyourguide.com/img/tour/e810d4a42de4ba2a359f6f25116205e419dba160cf49862c412bff4a32843011.jpg/99.jpg"], 
-          desc: "700 metreden Kleopatra Plajı'na unutulmaz bir süzülüş.", 
-          longDesc: "Alanya'yı görmenin en huzurlu ve en büyüleyici yolu budur. Sizi 700 metre yükseklikteki 'Yassı Tepe' zirvesine çıkarıyoruz. Burada, uçuşun tüm teknik detaylarını yönetecek profesyonel pilotunuzla tanışacaksınız. Birkaç adım koştuktan sonra rüzgarın gücüyle havalanacak ve gökyüzüyle buluşacaksınız. Yaklaşık 20-30 dakika boyunca turkuaz Akdeniz'in, görkemli Alanya Kalesi'nin ve bembeyaz Kleopatra Plajı'nın üzerinde sessizce süzüleceksiniz. Eğer isterseniz, pilotunuz adrenalin seviyesini artırmak için akrobatik hareketler de yapabilir. Uçuşunuz, Kleopatra Plajı'nın yumuşak kumlarına yapacağınız konforlu bir inişle son bulacak. Bu deneyim, hayatınız boyunca anlatacağınız eşsiz bir masal gibi kalacak.",
-          highlights: ["700 Metre Rakımdan Kalkış", "Kleopatra Plajı'na İniş", "Kale ve Deniz Panoraması", "Tandem Profesyonel Pilot", "Uçuş Esnasında Fotoğraf/Video İmkanı"], 
-          included: ["Otel Transferi", "Uçuş Ekipmanları", "Deneyimli Pilot", "Uçuş Sigortası", "Brifing"] 
+          images: ["https://www.besttimetravel.com.tr/public/uploads/0000/1/2026/04/04/copilot-20260404-113528.png"], 
+          desc: "All in 1 Alanya City Tour ile Dim Çayı, Dim Mağarası, portakal bahçeleri, şelale, aquapark ve köpük partili tekne turuyla unutulmaz bir gün yaşayın!", 
+          longDesc: "Alanya’nın eşsiz güzelliklerini tek bir günde keşfetmeye hazır olun! Bu tur, doğa, tarih, kültür ve eğlencenin harmanlandığı unutulmaz bir deneyim. Profesyonel ve güler yüzlü şoförlerimiz eşliğinde, konforlu araçlarımızla sizi sabah otelinizden alıyor ve gün boyu dolu dolu bir programla Alanya’nın en özel noktalarına götürüyoruz. Dim Çayı’nın serin sularında yüzme molası verirken çevrenizi saran yemyeşil doğa size huzur veriyor. Alanya’nın en ünlü doğal güzelliklerinden biri olan Dim Mağarası’na giriyoruz. Binlerce yıllık sarkıt ve dikitlerin büyüleyici atmosferinde doğanın mucizesine tanıklık edeceksiniz. Tarihi köy evini ziyaret ederek Alanya’nın geçmişine tanıklık ediyor, ardından cami ziyaretimizle yerel kültürü ve mimariyi yakından tanıyorsunuz. Portakal bahçelerinde yürüyüş yapıyor, ardından küçük şelalenin serin sularında doğanın melodisini dinliyorsunuz. Dim Çayı kenarında bulunan aquaparkta eğlenceli dakikalar sizi bekliyor. Akdeniz’in maviliklerinde 1 saatlik özel tekne turuna çıkıyoruz. Açık denizde yüzme molası veriyor, ardından köpük partisiyle eğlencenin doruğuna ulaşıyoruz! 🎉",
+          highlights: ["🏞️ Seyir Terası", "🏊 Dim Çayı Yüzme ve Aquapark", "🎯 Su Savaşı", "🕳️ Dim Mağarası", "🏡 Tarihi Köy Evi Ziyareti", "🕌 Cami Ziyareti", "🍊 Portakal Bahçeleri", "💦 Küçük Şelale Ziyareti", "🍽️ Öğle Yemeği", "🚤 1 Saatlik Köpük Partili Tekne Turu", "🌊 Açık Denizde Yüzme Molası", "🎉 Köpük Partisi"], 
+          included: ["Van Konforlu Ulaşım", "🎓 Profesyonel Rehberlik", "🍽️ Lezzetli Öğle Yemeği", "🚤 1 Saatlik Tekne Turu"]
         },
         { 
           slug: "luxury-boat", 
@@ -561,73 +442,73 @@ export const translations = {
           desc: "Mağaralar, yüzme molaları ve teknede büyük parti.", 
           longDesc: "Akdeniz'in tadını çıkarmak için klasik bir gün sizi bekliyor! Korsan temalı teknemiz Alanya'nın tarihi limanından demir alarak Kızıl Kule ve Tersane boyunca süzülür. Alanya Kalesi yarımadasını çevreleyen tura çıkarak Korsanlar Mağarası, Aşıklar Mağarası ve suyun parladığı Fosforlu Mağarayı ziyaret ediyoruz. Tur boyunca, turkuaz renkli kristal koyların tadını çıkarmanız için many yüzme molaları veriyoruz. Teknede animasyon ekibimiz müzik, oyunlar ve dönüş yolunda dev bir köpük partisiyle eğlenceyi zirvede tutacak. Hem aile eğlencesi hem de arkadaş grupları için mükemmel bir eğlence sunuyoruz.",
           highlights: ["Tarihi Liman Turu", "Deniz Mağaraları Keşfi", "Köpük Partisi ve Animasyon", "Eşsiz Yüzme Durakları"], 
-          included: ["Tekne Turu", "Animasyon Gösterileri", "Otel Transferi"] 
+          included: ["Tekne Turu", "Animasyon Gösterileri", "Otel Transferi"]
         },
         { 
-          slug: "fishing", 
-          name: "Sabahın Erken Saatlerinde Deniz Balıkçılığı", 
-          price: "€40", 
-          duration: "6 Saat", 
-          images: ["https://www.albashop.com.tr/Data/EditorFiles/En_Dog__ru_Bal__k_Av___Zaman___Nas__l_Belirlenir__3.jpg"], 
-          desc: "Profesyonel ekipmanlarla huzurlu bir deniz sabahı.", 
-          longDesc: "Gün ortası sıcağından ve kalabalıktan kaçıp, denizin en huzurlu anında açılmaya ne dersiniz? Balıkçı teknemiz en modern balık bulucu tarayıcılar ve yüksek kaliteli olta takımlarıyla donatılmıştır. İster usta bir balıkçı olun ister ilk kez olta tutacak olun, deneyimli kaptanımız sizi Çupra, Levrek ve diğer Akdeniz balıklarının en bol olduğu noktalara götürecek. Oltanızı denize sallayıp balığın gelmesini beklerken, güneşin doğuşunu ve kıyı şeridinin muhteşem manzarasını izleyebilirsiniz. Tuttuğunuz balıkları isterseniz teknede pişirebilirsiniz. Denizin ortasında huzur dolu bir sabah deneyimi.",
-          highlights: ["Gün Doğumu Kıyı Manzarası", "Modern Balık Bulucu Teknolojisi", "Kaliteli Olta ve Ekipmanlar", "Deneyimli Deniz Kaptanı"], 
-          included: ["Balıkçılık Malzemeleri", "Yemler", "Kaptan Rehberliği", "Ulaşım"] 
-        },
-        { 
-          slug: "turkish-night", 
-          name: "Orient Ekspres: Türk Gecesi Gösterisi", 
-          price: "€45", 
+          slug: "vip-luxury-yacht", 
+          name: "VIP Lüks Tekne Turu", 
+          price: "€250", 
           duration: "4 Saat", 
-          images: ["https://www.touralanya.com/TurResimleri/003837alanyaturkishnight.jpeg", "https://www.goreme.com/image/cache/catalog/Urunler/activities/turkish-night/turkish-night-show-134-900x600.jpg"], 
-          desc: "Türk kültürü, dansı ve mutfağının muhteşem şöleni.", 
-          longDesc: "Osmanlı'nın görkemli geleneklerinden modern Türkiye'nin enerjisine uzanan bir geceye davetlisiniz. Türk Gecesi programımız, profesyonel dansçıların otantik kostümlerle sergilediği yüksek enerjili bir gösteridir. Mevlana'nın semazenlerinden, Türkiye'nin her bölgesinden geleneksel halk oyunlarına ve nefes kesen oryantal şovlara kadar geniş bir program sizi bekliyor. Gösteri interaktiftir; genellikle konuklar sahneye davet edilerek eğlenceye dahil edilir. Türkiye'nin ruhunu tam anlamıyla hissedeceğiniz muhteşem bir atmosfer sunuyoruz.",
-          highlights: ["Semazen Gösterisi", "Yöresel Halk Dansları", "Profesyonel Oryantal Şov", "İnteraktif Sahne Eğlenceleri"], 
-          included: ["Tüm Gösteri ve Şovlar", "Dönüş Transferi"] 
+          images: ["https://www.dailytoursinalanya.com/Content/images/tours/64/-8-hd.webp"], 
+          desc: "Aileniz ve arkadaşlarınızla Alanya'nın berrak sularında özel bir lüks yat deneyimi.", 
+          longDesc: "Akdeniz'de lüksün zirvesini yaşayın. Alanya yarımadası etrafında özel bir tur için VIP yatımızı kiralayın. Rotayı ve yüzme noktalarını siz belirleyin. Profesyonel ekibimiz size taze hazırlanmış yemekler, atıştırmalıklar ve sınırsız alkolsüz içecek sunacaktır. İster özel bir günü kutlamak, ister romantik bir gün batımı gezisi yapmak, isterseniz de sevdiklerinizle kalabalıktan kaçmak isteyin; VIP Lüks Tekne Turumuz size benzersiz bir mahremiyet ve konfor sunuyor.",
+          highlights: ["Özel Yat Kiralama", "Kişiselleştirilebilir Rota", "Taze Hazırlanmış Yemekler", "Gün Batımı veya Gündüz Seçenekleri", "VIP Hizmet"], 
+          included: ["Otel Transferi", "Teknede Öğle/Akşam Yemeği", "Sınırsız Alkolsüz İçecek", "Şnorkel Ekipmanları", "Kaptan ve Mürettebat"] 
         },
         { 
-          slug: "turkish-bath", 
-          name: "Geleneksel Türk Hamamı: Saf Huzur", 
-          price: "€30", 
-          duration: "3 Saat", 
-          images: ["https://cdn.alanyatekmar.com/e6a4a96a-9fc4-442b-87df-a2fff0b99841.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Turkish-Bath-Hamam-Tour-Tursay-Travel-1.webp"], 
-          desc: "Kese, köpük ve yağ masajıyla yenilenme zamanı.", 
-          longDesc: "Kendinizi bin yıllık bir sağlık ve rahatlama geleneğine bırakın. Hamam deneyimimiz, göbek taşının sıcaklığında gözeneklerinizin açılmasıyla başlar. Ardından profesyonel bir tellak tarafından vücudunuza yapılan ipek kese işlemiyle tüm ölü derilerinizden ve toxinslerinizden arınırsınız. Bunu, devasa sabun köpüğü bulutları içinde yapılan cennetvari bir köpük masajı izler. Paketimiz ayrıca tuz odası, sauna ve buhar odası erişimini de kapsar. Son olarak, dinlenme salonunda içeceğiniz Türk çayından sonra, uzman masörlerimiz tarafından yapılan 20 dakikalık tam vücut yağ masajı ile turu sonlandırıyoruz. Hamamdan çıktığınızda kendinizi kuş gibi hafif hissedecek ve cildinizin ne kadar pürüzsüzleştiğine inanamayacaksınız.",
-          highlights: ["Otantik Mermer Hamam Ortamı", "Tam Vücut İpek Kese Uygulaması", "Pamuk Gibi Köpük Masajı", "Dinlendirici Yağ Masajı", "Sauna & Tuz Odası Erişimi"], 
-          included: ["Kese & Peeling", "Köpük Masajı", "20 Dakika Yağ Masajı", "Sauna & Tuz Odası", "Bitki Çayları", "Transfer"] 
+          slug: "city-tour", 
+          name: "Alanya Panoramik Şehir & Kale Turu", 
+          price: "30", 
+          duration: "4 Saat", 
+          images: ["https://upload.wikimedia.org/wikipedia/commons/8/85/Alanyafromcastle.JPG", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/Alanya-Buyuk-Hotel-Genel-269043.jpg"], 
+          desc: "Alanya'nın En İyileri: Kale, Teleferik ve Gün Batımı.", 
+          longDesc: "Alanya'nın neden Türk Rivierası'nın incisi olduğunu bu kapsamlı şehir turuyla keşfedin. Turumuza dünyaca ünlü Kleopatra Plajı'ndan Alanya Kalesi'nin zirvesine çıkan Teleferik yolculuğuyla başlıyoruz. Kalenin burçlarından limanı, feneri ve Toros Dağları'nı 360 derecelik bir açıyla göreceksiniz. 13. yüzyıldan kalma tarihi tersaneyi, İç Kale'yi ve şehrin simgesi Kızıl Kule'yi profesyonel anlatımlarla gezeceğiz. Turumuzu, şehrin en popüler noktalarından biri olan 'I Love Alanya' terasında sonlandırıyoruz. Burası, güneş batarken tüm şehri ayaklarınızın altında hissedeceğiniz en güzel panoramik noktadır.",
+          highlights: ["Teleferik ile Kale Keyfi", "Alanya Kalesi Keşfi", "Kleopatra Plajı Panoraması", "Seyir Terası Fotoğraf Molası"], 
+          included: ["Adresten Alış-Bırakış", "Teleferik Biletleri", "Profesyonel Rehber"]
         },
         { 
-          slug: "aquapark", 
-          name: "Aquapark Macerası & Otel Konforu", 
-          price: "€45", 
-          duration: "Tüm Gün", 
-          images: ["https://www.aquafuncity.com/images/galeri/aqua1.jpg", "https://cdn.alanyatekmar.com/f48067f0-fc19-4515-8b5c-17b64703c6bf.jpg"], 
-          desc: "Tüm gün kaydırak keyfi, Açık Büfe yemek ve Bira/Şarap dahil!", 
-          longDesc: "Kusursuz bir yaz gününe hazır mısınız? Aquapark paketimiz sadece kaydıraklardan ibaret değil. Bölgenin en popüler su parkında 20'den fazla adrenalin dolu kaydırağın, dalga havuzlarının ve tembel nehirlerin tadını çıkarırken; anlaşmalı otelimizde sunulan zengin Açık Büfe öğle yemeği ve sınırsız Bira/Şarap ikramıyla keyfinizi ikiye katlayın. Hem aile eğlencesi hem de her şey dahil konforu bir arada sunuyoruz. Profesyonel cankurtaranlar ve çocuklar için özel alanlar ile güvenli bir ortamda eğlencenin tadını çıkarın.",
-          highlights: ["20+ Adrenalin Kaydırağı", "Zengin Açık Büfe Yemek", "Sınırsız Bira & Şarap Dahil", "Dev Dalga Havuzu", "Tam Gün Otel Erişimi"], 
-          included: ["Giriş Bileti", "Açık Büfe Öğle Yemeği", "Sınırsız Bira & Şarap", "Şezlong & Şemsiye", "Otel Transferi"] 
+          slug: "jeep-safari", 
+          name: "Toros Dağları Jeep Safari & Dim Çayı", 
+          price: "€40", 
+          duration: "7 Saat", 
+          images: ["https://travelagencyapp-storage.s3.eu-central-1.amazonaws.com/sunnytour/31c5b512-0b91-4762-8b51-4d8ef2c7e645_c35d5ee1-4e4d-4d53-92a0-57f22e041aec_.webp", "https://cdn.vigotours.com/23898/conversions/187-1770148388-698252242f4a3-gallery.jpg", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/5dc9d110c84b5.jpeg"], 
+          desc: "Su savaşları, dağ zirveleri ve Dim Çayı'nda dinlenme.", 
+          longDesc: "Bu sadece bir tur değil; tekerlekler üzerindeki koca bir parti! Üstü açık 4x4 Land Rover ciplerimize atlayıp görkemli Toros Dağları'na tırmanıyoruz. Yolculuk boyunca cipler arasında bitmek bilmeyen su savaşları olduğu için ıslanmaya hazırlıklı olun! Alanya'yı en tepeden göreceğimiz panoramik noktalarda mola veriyoruz. Geleneksel bir köy camisini ziyaret edip yerel kültürü öğreniyor, meyve bahçelerinde meyve tadımı yapıyoruz. Günün en keyifli kısmı ise Dim Çayı durağımızdır. Nehrin içine kurulmuş masalarda dinlenebilir, buz gibi suya ayaklarınızı sokabilirsiniz. Atlama platformlarımızdan nehre atlayabilir, su yataklarında dinlenebilir veya tesisimizdeki balık tutma havuzunda şansınızı deneyebilirsiniz. Kahkaha, doğa ve kültürel keşiflerin iç içe olduğu bir gün sizi bekliyor.",
+          highlights: ["Cipler Arası Su Savaşları", "Toroslar Off-road Parkuru", "Çay İçindeki Yemek Masaları", "Geleneksel Köy Ziyareti", "Meyve Bahçesi Tadımı"], 
+          included: ["4x4 Jip Konforu", "Eğlenceli Safari Rehberi", "Köy Evi Girişleri"]
         },
         { 
-          slug: "dolphin-show", 
-          name: "Yunus & Fok Balığı Gösterisi", 
-          price: "€30", 
-          duration: "3 Saat", 
-          images: ["https://travelagencyapp-storage.s3.eu-central-1.amazonaws.com/sunnytour/407fa665-6440-402c-bc91-0668a2ad1a1e_f2fd438e-2a26-48c0-ba4a-a6fb6c3652b1_.webp", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/57b10374eb10bb1a58dd1a71.jpg"], 
-          desc: "Okyanusun en zeki canlılarından büyüleyici şovlar.", 
-          longDesc: "Yunusların ve fok balıklarının inanılmaz zekasına ve çevikliğine hayran kalmaya hazır olun. Parkımız, Türkiye'nin en iyi prodüksiyonlu yunus gösterilerine ev sahipliği yapmaktadır. Yunusların senkronize danslarını, metrelerce yükseğe zıplayışlarını ve hatta tuval üzerine yaptıkları 'resimleri' şaşkınlıkla izleyeceksiniz. Fok balıkları ise komik tavırları ve denge yetenekleriyle sizi güldürecek. Bu eğitici ve eğlenceli şov, sadece bir eğlence değil, aynı zamanda deniz yaşamını korumanın önemini de vurgulayan bir deneyimdir. Gösteri sonrasında bu dost canlısı hayvanlarla yakından tanışma ve fotoğraf çekilme imkanınız olacaktır. Çocuklar için ömür boyu unutulmayacak duygusal bir deneyimdir.",
-          highlights: ["Akrobatik Yunus Şovu", "Komik Fok Balığı Skeçleri", "Deniz Yaşamı Bilgilendirmeleri", "Canlılarla Fotoğraf İmkanı", "Aile Dostu Zamanlama"], 
-          included: ["Giriş Bileti", "Arena İçinde Oturma Düzeni", "Otel Transferi", "Rehberlik Hizmeti"] 
+          slug: "paragliding", 
+          name: "Yamaç Paraşütü: Alanya Üzerinde Uçuş", 
+          price: "€75", 
+          duration: "2 Saat", 
+          images: ["https://www.talyatur.com/images/tour/105418_b.jpg", "https://cdn.getyourguide.com/img/tour/e810d4a42de4ba2a359f6f25116205e419dba160cf49862c412bff4a32843011.jpg/99.jpg"], 
+          desc: "700 metreden Kleopatra Plajı'na unutulmaz bir süzülüş.", 
+          longDesc: "Alanya'yı görmenin en huzurlu ve en büyüleyici yolu budur. Sizi 700 metre yükseklikteki 'Yassı Tepe' zirvesine çıkarıyoruz. Burada, uçuşun tüm teknik detaylarını yönetecek profesyonel pilotunuzla tanışacaksınız. Birkaç adım koştuktan sonra rüzgarın gücüyle havalanacak ve gökyüzüyle buluşacaksınız. Yaklaşık 20-30 dakika boyunca turkuaz Akdeniz'in, görkemli Alanya Kalesi'nin ve bembeyaz Kleopatra Plajı'nın üzerinde sessizce süzüleceksiniz. Eğer isterseniz, pilotunuz adrenalin seviyesini artırmak için akrobatik hareketler de yapabilir. Uçuşunuz, Kleopatra Plajı'nın yumuşak kumlarına yapacağınız konforlu bir inişle son bulacak. Bu deneyim, hayatınız boyunca anlatacağınız eşsiz bir masal gibi kalacak.",
+          highlights: ["700 Metre Rakımdan Kalkış", "Kleopatra Plajı'na İniş", "Kale ve Deniz Panoraması", "Tandem Profesyonel Pilot", "Uçuş Esnasında Fotoğraf/Video İmkanı"], 
+          included: ["Otel Transferi", "Uçuş Ekipmanları", "Deneyimli Pilot", "Uçuş Sigortası", "Brifing"]
         },
         { 
-          slug: "horse-tour", 
-          name: "Nehir ve Orman At Safarisi", 
+          slug: "quad-safari", 
+          name: "ATV Safari Macerası", 
           price: "€40", 
           duration: "3 Saat", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Horse-Riding-Tour-Tursay-Travel-13.webp", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Horse-Riding-Tour-Tursay-Travel-1.webp", "https://sencaptour.com/wp-content/uploads/2023/06/Alanya-At-binme-turu-4.webp"], 
-          desc: "Toros ormanlarında ve çay kenarında at sırtında huzurlu bir yolculuk.", 
-          longDesc: "Şehrin gürültüsünü arkanızda bırakın ve at sırtında gerçek huzuru bulun. At safari turumuz sizi eşsiz orman yollarından, çay kenarındaki patikalara götürür. Atlarımız son derece eğitimli, uysal ve her yaş grubuna uygundur. Daha önce hiç ata binmediyseniz bile, eğitmenlerimizin kısa brifingi ve yol boyunca size eşlik etmesi sayesinde güvenli bir sürüş yapacaksınız. Çam kokulu ormanların içinden geçecek, küçük dereleri aşacak ve fotoğraf çekimi için manzaralı bir noktada kısa bir mola vereceksiniz.",
-          highlights: ["Uysal ve Eğitimli Atlar", "Manzaralı Orman Patikaları", "Çam Ormanı Sürüşü", "Profesyonel Binicilik Rehberi", "Fotoğraf Molaları"], 
-          included: ["Size Özel At", "Binicilik Ekipmanı", "Uzman Rehber", "Kısa Eğitim", "Transfer"] 
+          images: ["https://cloudbasetravel.com/wp-content/uploads/2021/06/ATV-Safari-1.jpeg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Quad-Atv-Safari-Tour-Tursay-Travel-1.webp"], 
+          desc: "Toros ormanlarında toz, çamur ve heyecan dolu bir sürüş.", 
+          longDesc: "Şehrin gürültüsünden uzaklaşın ve Toros Dağları'nın engebeli arazisinde kendi motorunuzun kontrolünü elinize alın! ATV Safari turumuz, size adrenalini ve doğayı aynı anda sunuyor. Profesyonel rehberlerimiz eşliğinde çam ormanları içindeki teknik parkurlardan geçecek, tozlu yolları ve çamurlu su birikintilerini aşacaksınız. Sürüş ehliyeti gerektirmeyen bu turda, kısa bir eğitimden sonra herkes kendi aracını kullanabilir. Yol boyunca nehir kenarında vereceğimiz molada tozunuzu atabilir ve buz gibi suda serinleyebilirsiniz. Bu tur, Alanya'nın vahşi doğasını keşfetmenin en heyecan verici yoludur.",
+          highlights: ["Kendi Aracını Kullanma Deneyimi", "Orman İçi Teknik Parkurlar", "Çamurlu Su Geçişleri", "Nehir Kenarı Dinlenme Molası", "Yüksek Hızlı Düzlükler"], 
+          included: ["ATV Motor & Yakıt", "Güvenlik Kaskı", "Kullanım Eğitimi", "Uzman Rehberlik", "Transfer"]
+        },
+        { 
+          slug: "sapadere-canyon", 
+          name: "Sapadere Kanyonu: Saklı Cennet", 
+          price: "€45", 
+          duration: "8 Saat", 
+          images: ["https://www.kulturportali.gov.tr/contents/images/sapanderekanyonulogolu_20180914111051287.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Sapadere-Canyon-Tour-Tursay-Travel-13.webp"], 
+          desc: "Kanyon içindeki ahşap yol ve dondurucu şelaleler.", 
+          longDesc: "Yaz sıcağından kaçıp Sapadere Kanyonu'nun ferahlatıcı kollarına kendinizi bırakın. Alanya'dan 40km uzaklıkta bulunan bu dev yarık, ancak 2008 yılında turizme açılmış ve bakir kalmayı başarmış doğal bir cevherdir. Kanyon boyunca uzanan 750 metrelik ahşap asma yol üzerinde yürüyecek, her iki yanınızda yükselen devasa kayalıkların görkemine tanık olacaksınız. Yol boyunca irili ufaklı onlarca şelale size eşlik edecek. En cesurlar, doğal havuzlara girip yüzebilir; yazın en sıcak gününde bile su sıcaklığı nadiren 12 dereceyi aşar! Kanyondan sonra, geleneksel yaşamın devam ettiği Sapadere Köyü'nü ve ipek dokuma atölyesini ziyaret edeceğiz. Ayrıca muhteşem sarkıt ve dikitlerle dolu olan 'Cüceler Mağarası'nı da keşfedeceğiz.",
+          highlights: ["Asma Yol Yürüyüşü", "Dondurucu Şelale Yüzmesi", "Cüceler Mağarası Keşfi", "İpek Dokuma Gösterisi", "Geleneksel Köy Turu"], 
+          included: ["Transfer Hizmeti", "Tüm Giriş Ücretleri", "Rehberlik Hizmeti"]
         },
         { 
           slug: "night-jeep-safari", 
@@ -638,18 +519,7 @@ export const translations = {
           desc: "Yıldızlar altında Toros Dağları'nı müzik ve off-road eğlencesiyle keşfedin.", 
           longDesc: "Güneş batmaya başladığında asıl macera başlar. Gece Jip Safarimiz sizi farklı bir heyecan için Toros Dağları'na götürür. Üstü açık 4x4 jiplerle Alanya şehri ve Akdeniz üzerinden gün batımını izlemek için panoramik seyir noktalarına sürüyoruz. Serin dağ havası ve aşağıda şehrin parıldayan ışıkları büyülü bir atmosfer yaratır. Müzik ve ateş dansı gösterisiyle geceyi zirvede tamamlıyoruz. Gündüz sıcağından kurtulup Alanya'nın vahşi yüzünü gece deneyimlemek için mükemmel bir yoldur.",
           highlights: ["Toros Dağları Gün Batımı Manzarası", "Gece Off-road Sürüşü", "Dağ Restoranında Akşam Yemeği", "Canlı Eğlence & Ateş Şovu", "Yıldızlı Panoramik Görünüm"], 
-          included: ["Otelden Alma ve Bırakma", "4x4 Jip Ulaşımı", "Rehberlik Hizmetleri", "Eğlence Şovu"] 
-        },
-        { 
-          slug: "land-of-legends", 
-          name: "The Land of Legends Tema Park", 
-          price: "€80", 
-          duration: "Tüm Gün", 
-          images: ["https://www.alanya-tours.com/public/content/images/Tours/49/big/The-Land-of-Legends-Theme-Park-from-Alanya_175671848968b56599334b0.webp", "https://www.touralanya.com/TurResimleri/031813landoflegandstripsfromalanya.jpeg"], 
-          desc: "40'tan fazla kaydırak ve inanılmaz hız trenleri ile Türkiye'nin en büyük tema parkı.", 
-          longDesc: "Fantezi ve macera dünyasına adım atın. The Land of Legends sadece bir tema parkı değil; devasa bir su parkı (Kingdom of Sea) ve bir tema parkı (Adventure Park) içeren dev bir eğlence kompleksidir. 62 metre yüksekliğindeki Hyper Coaster'a meydan okuyun, 525 metre uzunluğundaki Typhoon Coaster'ı deneyimleyin veya dalga havuzunda rahatlayın. Park ayrıca inanılmaz yunus ve beyaz balina gösterilerine ev sahipliği yapar. Akşamları 'Château' alanı muhteşem bir tekne geçit töreni ve müzikli ışık şovuyla dönüşür. Tüm aile için adrenalin, su eğlencesi ve büyülü hikaye anlatımını birleştiren dünya standartlarında bir deneyimdir.",
-          highlights: ["Hyper Coaster (62m Yükseklik)", "Devasa Su Parkı Alanı", "Yunus & Fok Gösterileri", "5. Boyut Sinema", "Efsanevi Tekne Geçit Töreni"], 
-          included: ["Tüm Günlük Giriş Bileti", "Su Parkına Erişim", "Adrenalin Üniteleri", "Yunus Şovu Erişimi", "Dönüş Transferi"] 
+          included: ["Otelden Alma ve Bırakma", "4x4 Jip Ulaşımı", "Rehberlik Hizmetleri", "Eğlence Şovu"]
         },
         { 
           slug: "diving", 
@@ -660,18 +530,84 @@ export const translations = {
           desc: "Profesyonel eğitmenler eşliğinde Alanya'nın su altı dünyasını keşfedin.", 
           longDesc: "Akdeniz'in gizli hazinelerini keşfedin. İster yeni başlayan ister deneyimli bir dalgıç olun, Alanya kristal berraklığında sular ve diverse deniz yaşamı sunar. Turumuz, PADI/CMAS sertifikalı eğitmenler tarafından ekipman ve dalış teknikleri üzerine detaylı bir bilgilendirme ile başlar. Tekneyle su altı mağaraları ve resifleri içeren iki farklı dalış noktasına gidiyoruz. Renkli balıklar, ahtapotlar ve hatta deniz kaplumbağalarıyla birlikte yüzeceksiniz. Yeni başlayanlar için ilk dalış, ekipmana alışmak için sığ bir keşif dalışıdır. Derin maviliğin sessizliğinde unutulmaz bir deneyimdir.",
           highlights: ["İki Farklı Dalış Noktası", "Su Altı Mağara Sistemi", "Profesyonel PADI/CMAS Rehberler", "Tam Modern Ekipman", "Tekne Turu"], 
-          included: ["Tüm Profesyonel Ekipmanlar", "İki Rehberli Dalış", "Sigorta", "Otel Transferi"] 
+          included: ["Tüm Profesyonel Ekipmanlar", "İki Rehberli Dalış", "Sigorta", "Otel Transferi"]
         },
         { 
-          slug: "antalya-aquarium", 
-          name: "Antalya Teleferik ve Akvaryum Turu", 
+          slug: "fishing", 
+          name: "Sabahın Erken Saatlerinde Deniz Balıkçılığı", 
+          price: "€40", 
+          duration: "6 Saat", 
+          images: ["https://www.albashop.com.tr/Data/EditorFiles/En_Dog__ru_Bal__k_Av___Zaman___Nas__l_Belirlenir__3.jpg"], 
+          desc: "Profesyonel ekipmanlarla huzurlu bir deniz sabahı.", 
+          longDesc: "Gün ortası sıcağından ve kalabalıktan kaçıp, denizin en huzurlu anında açılmaya ne dersiniz? Balıkçı teknemiz en modern balık bulucu tarayıcılar ve yüksek kaliteli olta takımlarıyla donatılmıştır. İster usta bir balıkçı olun ister ilk kez olta tutacak olun, deneyimli kaptanımız sizi Çupra, Levrek ve diğer Akdeniz balıklarının en bol olduğu noktalara götürecek. Oltanızı denize sallayıp balığın gelmesini beklerken, güneşin doğuşunu ve kıyı şeridinin muhteşem manzarasını izleyebilirsiniz. Tuttuğunuz balıkları isterseniz teknede pişirebilirsiniz. Denizin ortasında huzur dolu bir sabah deneyimi.",
+          highlights: ["Gün Doğumu Kıyı Manzarası", "Modern Balık Bulucu Teknolojisi", "Kaliteli Olta ve Ekipmanlar", "Deneyimli Deniz Kaptanı"], 
+          included: ["Balıkçılık Malzemeleri", "Yemler", "Kaptan Rehberliği", "Ulaşım"]
+        },
+        { 
+          slug: "turkish-bath", 
+          name: "Geleneksel Türk Hamamı: Saf Huzur", 
+          price: "€30", 
+          duration: "3 Saat", 
+          images: ["https://cdn.alanyatekmar.com/e6a4a96a-9fc4-442b-87df-a2fff0b99841.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Turkish-Bath-Hamam-Tour-Tursay-Travel-1.webp"], 
+          desc: "Kese, köpük ve yağ masajıyla yenilenme zamanı.", 
+          longDesc: "Kendinizi bin yıllık bir sağlık ve rahatlama geleneğine bırakın. Hamam deneyimimiz, göbek taşının sıcaklığında gözeneklerinizin açılmasıyla başlar. Ardından profesyonel bir tellak tarafından vücudunuza yapılan ipek kese işlemiyle tüm ölü derilerinizden ve toxinslerinizden arınırsınız. Bunu, devasa sabun köpüğü bulutları içinde yapılan cennetvari bir köpük masajı izler. Paketimiz ayrıca tuz odası, sauna ve buhar odası erişimini de kapsar. Son olarak, dinlenme salonunda içeceğiniz Türk çayından sonra, uzman masörlerimiz tarafından yapılan 20 dakikalık tam vücut yağ masajı ile turu sonlandırıyoruz. Hamamdan çıktığınızda kendinizi kuş gibi hafif hissedecek ve cildinizin ne kadar pürüzsüzleştiğine inanamayacaksınız.",
+          highlights: ["Otantik Mermer Hamam Ortamı", "Tam Vücut İpek Kese Uygulaması", "Pamuk Gibi Köpük Masajı", "Dinlendirici Yağ Masajı", "Sauna & Tuz Odası Erişimi"], 
+          included: ["Kese & Peeling", "Köpük Masajı", "20 Dakika Yağ Masajı", "Sauna & Tuz Odası", "Bitki Çayları", "Transfer"]
+        },
+        { 
+          slug: "turkish-night", 
+          name: "Orient Ekspres: Türk Gecesi Gösterisi", 
           price: "€45", 
-          duration: "8 Saat", 
-          images: ["https://www.talyatur.com/images/tour/104912_b.jpg", "https://royalfuntour.com/media-uploads/Oceanarium-Antalya.jpg"], 
-          desc: "Teleferik ile panoramik manzara ve dünyanın en büyük tünel akvaryumlarından birini ziyaret edin.", 
-          longDesc: "Antalya Akvaryum'da dünyanın en büyük tünel akvaryumunda su altı büyüsünü yaşayın. Turumuz ayrıca tarihi Kaleiçi, Düden Şelalesi ve panoramik şehir manzarası için Tünektepe teleferik sürüşünü de içermektedir.",
-          highlights: ["131m Dünyanın En Büyük Tünel Akvaryumu", "Kaleiçi Rehberli Yürüyüş", "Düden Şelalesi Ziyareti", "Panoramik Teleferik Turu", "Binlerce Deniz Canlısı"], 
-          included: ["Otelden Alma ve Bırakma", "Akvaryum Giriş Bileti", "Teleferik Bileti", "Profesyonel Tur Rehberi"] 
+          duration: "4 Saat", 
+          images: ["https://www.touralanya.com/TurResimleri/003837alanyaturkishnight.jpeg", "https://www.goreme.com/image/cache/catalog/Urunler/activities/turkish-night/turkish-night-show-134-900x600.jpg"], 
+          desc: "Türk kültürü, dansı ve mutfağının muhteşem şöleni.", 
+          longDesc: "Osmanlı'nın görkemli geleneklerinden modern Türkiye'nin enerjisine uzanan bir geceye davetlisiniz. Türk Gecesi programımız, profesyonel dansçıların otantik kostümlerle sergilediği yüksek enerjili bir gösteridir. Mevlana'nın semazenlerinden, Türkiye'nin her bölgesinden geleneksel halk oyunlarına ve nefes kesen oryantal şovlara kadar geniş bir program sizi bekliyor. Gösteri interaktiftir; genellikle konuklar sahneye davet edilerek eğlenceye dahil edilir. Türkiye'nin ruhunu tam anlamıyla hissedeceğiniz muhteşem bir atmosfer sunuyoruz.",
+          highlights: ["Semazen Gösterisi", "Yöresel Halk Dansları", "Profesyonel Oryantal Şov", "İnteraktif Sahne Eğlenceleri"], 
+          included: ["Tüm Gösteri ve Şovlar", "Dönüş Transferi"]
+        },
+        { 
+          slug: "horse-tour", 
+          name: "Nehir ve Orman At Safarisi", 
+          price: "€40", 
+          duration: "3 Saat", 
+          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Horse-Riding-Tour-Tursay-Travel-13.webp", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Horse-Riding-Tour-Tursay-Travel-1.webp", "https://sencaptour.com/wp-content/uploads/2023/06/Alanya-At-binme-turu-4.webp"], 
+          desc: "Toros ormanlarında ve çay kenarında at sırtında huzurlu bir yolculuk.", 
+          longDesc: "Şehrin gürültüsünü arkanızda bırakın ve at sırtında gerçek huzuru bulun. At safari turumuz sizi eşsiz orman yollarından, çay kenarındaki patikalara götürür. Atlarımız son derece eğitimli, uysal ve her yaş grubuna uygundur. Daha önce hiç ata binmediyseniz bile, eğitmenlerimizin kısa brifingi ve yol boyunca size eşlik etmesi sayesinde güvenli bir sürüş yapacaksınız. Çam kokulu ormanların içinden geçecek, küçük dereleri aşacak ve fotoğraf çekimi için manzaralı bir noktada kısa bir mola vereceksiniz.",
+          highlights: ["Uysal ve Eğitimli Atlar", "Manzaralı Orman Patikaları", "Çam Ormanı Sürüşü", "Profesyonel Binicilik Rehberi", "Fotoğraf Molaları"], 
+          included: ["Size Özel At", "Binicilik Ekipmanı", "Uzman Rehber", "Kısa Eğitim", "Transfer"]
+        },
+        { 
+          slug: "aquapark", 
+          name: "Aquapark Macerası & Otel Konforu", 
+          price: "€45", 
+          duration: "Tüm Gün", 
+          images: ["https://www.aquafuncity.com/images/galeri/aqua1.jpg", "https://cdn.alanyatekmar.com/f48067f0-fc19-4515-8b5c-17b64703c6bf.jpg"], 
+          desc: "Tüm gün kaydırak keyfi, Açık Büfe yemek ve Bira/Şarap dahil!", 
+          longDesc: "Kusursuz bir yaz gününe hazır mısınız? Aquapark paketimiz sadece kaydıraklardan ibaret değil. Bölgenin en popüler su parkında 20'den fazla adrenalin dolu kaydırağın, dalga havuzlarının ve tembel nehirlerin tadını çıkarırken; anlaşmalı otelimizde sunulan zengin Açık Büfe öğle yemeği ve sınırsız Bira/Şarap ikramıyla keyfinizi ikiye katlayın. Hem aile eğlencesi hem de her şey dahil konforu bir arada sunuyoruz. Profesyonel cankurtaranlar ve çocuklar için özel alanlar ile güvenli bir ortamda eğlencenin tadını çıkarın.",
+          highlights: ["20+ Adrenalin Kaydırağı", "Zengin Açık Büfe Yemek", "Sınırsız Bira & Şarap Dahil", "Dev Dalga Havuzu", "Tam Gün Otel Erişimi"], 
+          included: ["Giriş Bileti", "Açık Büfe Öğle Yemeği", "Sınırsız Bira & Şarap", "Şezlong & Şemsiye", "Otel Transferi"]
+        },
+        { 
+          slug: "dolphin-show", 
+          name: "Yunus & Fok Balığı Gösterisi", 
+          price: "€30", 
+          duration: "3 Saat", 
+          images: ["https://travelagencyapp-storage.s3.eu-central-1.amazonaws.com/sunnytour/407fa665-6440-402c-bc91-0668a2ad1a1e_f2fd438e-2a26-48c0-ba4a-a6fb6c3652b1_.webp", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/57b10374eb10bb1a58dd1a71.jpg"], 
+          desc: "Okyanusun en zeki canlılarından büyüleyici şovlar.", 
+          longDesc: "Yunusların ve fok balıklarının inanılmaz zekasına ve çevikliğine hayran kalmaya hazır olun. Parkımız, Türkiye'nin en iyi prodüksiyonlu yunus gösterilerine ev sahipliği yapmaktadır. Yunusların senkronize danslarını, metrelerce yükseğe zıplayışlarını ve hatta tuval üzerine yaptıkları 'resimleri' şaşkınlıkla izleyeceksiniz. Fok balıkları ise komik tavırları ve denge yetenekleriyle sizi güldürecek. Bu eğitici ve eğlenceli şov, sadece bir eğlence değil, aynı zamanda deniz yaşamını korumanın önemini de vurgulayan bir deneyimdir. Gösteri sonrasında bu dost canlısı hayvanlarla yakından tanışma ve fotoğraf çekilme imkanınız olacaktır. Çocuklar için ömür boyu unutulmayacak duygusal bir deneyimdir.",
+          highlights: ["Akrobatik Yunus Şovu", "Komik Fok Balığı Skeçleri", "Deniz Yaşamı Bilgilendirmeleri", "Canlılarla Fotoğraf İmkanı", "Aile Dostu Zamanlama"], 
+          included: ["Giriş Bileti", "Arena İçinde Oturma Düzeni", "Otel Transferi", "Rehberlik Hizmeti"]
+        },
+        { 
+          slug: "side-manavgat", 
+          name: "Antik Üçleme: Side – Aspendos – Manavgat", 
+          price: "€45", 
+          duration: "9 Saat", 
+          images: ["https://calista.com.tr/media/3jhj2jz0/aspendos006-1170x650.jpg?format=webp&quality=85", "https://www.gezire.com/wp-content/uploads/2025/10/Manavgat-Selalesi-764x500.jpg", "https://www.kulturportali.gov.tr/contents/images/SELEUK%20(4).JPG"], 
+          desc: "Roma mimarisinin görkemi ve şelalenin ferahlığı bir arada.", 
+          longDesc: "Roma İmparatorluğu'nun altın çağına doğru sanat ve tarih odaklı bir yolculuk. İlk durağımız, dünyanın en iyi korunmuş Roma Tiyatrosu olan Aspendos. MS 2. yüzyılda inşa edilen bu tiyatronun akustiği bugün hala kusursuzdur ve hala uluslararası festivallere ev sahipliği yapmaktadır. Ardından, antik liman kenti Side'ye geçiyoruz. Sütunlu caddelerde yürüyecek, antik hastaneyi görecek ve Antonius ile Kleopatra'nın buluştuğu iddia edilen deniz kenarındaki Apollon Tapınağı'nda tarihe tanıklık edeceksiniz. Son olarak, Manavgat Şelalesi'nde ferahlatıcı bir mola veriyoruz. Şelale çok yüksek olmasa da genişliği ve debisiyle muazzam bir görsel sunar. Suyun kenarında kahvenizi yudumlayabilir ve Akdeniz rüzgarının tadını çıkarabilirsiniz. Bu tur, tarihi hayranlık ile doğal huzuru mükemmel dengeler.",
+          highlights: ["Aspendos Roma Tiyatrosu", "Side Apollon Tapınağı", "Manavgat Şelalesi", "Side Antik Limanı", "Antik Tiyatro Girişi"], 
+          included: ["Gidiş-Dönüş Transfer", "Tarihçi Uzman Rehber", "Aspendos & Side Giriş Ücretleri"]
         },
         { 
           slug: "green-canyon", 
@@ -682,7 +618,104 @@ export const translations = {
           desc: "Oymapınar Barajı'nın zümrüt yeşili sularında huzur dolu bir gün geçirin.", 
           longDesc: "Green Kanyon tekne turumuzla doğanın kalbine kaçın. Toros Dağları'nın yükselen zirveleriyle çevrili zümrüt yeşili sular arasında yelken açın. Büyük ve Küçük Kanyonları keşfedin, serin gölde yüzme molası verin.",
           highlights: ["Zümrüt Yeşili Suda Tekne Turu", "Oymapınar Barajı'nda Yüzme", "Büyük ve Küçük Kanyon Keşfi", "Muhteşem Toros Dağları Manzarası", "El Değmemiş Doğa ve Yaban Hayatı"], 
-          included: ["Otel Transferi", "Tekne Turu", "Sigorta"] 
+          included: ["Otel Transferi", "Tekne Turu", "Sigorta"]
+        },
+        { 
+          slug: "rafting", 
+          name: "Köprüçay Rafting Macerası", 
+          price: "€35", 
+          duration: "6 Saat", 
+          images: ["https://cmsal.argeya.com/Content/CompanyFiles/YazilarYeniImg/alanya-rafting.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
+          desc: "Antik Köprülü Kanyon'un turkuaz sularında maceraya atılın.", 
+          longDesc: "Kürekleri elinize alın ve ıslanmaya hazır olun! Köprüçay Nehri üzerinde rafting yapmak, Antalya'nın en popüler aktivitesidir ve bunun iyi bir sebebi var. Nehir, kanyona ismini veren antik Roma köprülerinin altından, muhteşem bir milli parkın kalbinden geçer. Turumuz, detaylı bir güvenlik eğitimi ve ekipman teslimiyle başlar. Ardından 8-10 kişilik botlarımıza veya ekstra macera isteyenler için 2 kişilik kanolarımıza biniyoruz. Parkurumuz 14 km uzunluğundadır ve kalbinizi hızlandıracak akıntılarla doludur. Akıntılar arasında nehrin buz gibi ama tertemiz sularına atlayıp yüzme şansınız olacak. Ayrıca rehberlerimizin yapacağı 'body rafting' ve eğlenceli animasyonlarla gününüz unutulmaz bir şölene dönüşecek. Tur sonunda nehir kenarındaki tesisimizde dinlenebilirsiniz.",
+          highlights: ["14km Profesyonel Rafting", "Antik Roma Köprüsü Turu", "Body Rafting Seansları", "Buz Gibi Nehirde Yüzme", "Eğlenceli Grup Oyunları"], 
+          included: ["Kask & Can Yeleği", "Bot & Kürek", "Uzman Bot Kaptanı", "Otel Transferi"]
+        },
+        { 
+          slug: "mix-adventure", 
+          name: "Efsane Mix Macera (3'ü 1 Arada Adrenalin)", 
+          price: "€55", 
+          duration: "8 Saat", 
+          images: ["https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=1210,dpr=1/tour_img/640b4d905f5e4.png", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,height=755,dpr=1/tour_img/5b8b721278a099cfddd9975af2c8dd627c2259fd05374f4f7efa7ef96e0b5775.png"], 
+          desc: "Vahşi kanyonda Rafting, Zipline ve Atv/Buggy Safari.", 
+          longDesc: "Yerinde duramayanlar ve macera tutkunları için bu tur en üst noktadır! Sizi Türkiye'nin doğa sporları kalbi olan Köprülü Kanyon Milli Parkı'na götürüyoruz. Gününüz 14 kilometrelik heyecan dolu bir Rafting yolculuğuyla başlıyor. Profesyonel eğitmenlerimizle dalgalara karşı koyacak, eğlencenin doruğuna çıkacaksınız. Nehrin ortasında dev bir heyecan molası veriyoruz: Zipline! Nehrin üzerinden kuş gibi süzülürken adrenalin tavan yapacak. Safariye geçiyoruz: Çam ormanları arasındaki çamurlu ve engebeli parkurlarda ister ATV ister Buggy ile tozu dumana katacaksınız. Bu tur, bir güne sığdırılabilecek en yüksek dozda eğlence ve adrenalini vaat ediyor.",
+          highlights: ["14km Rafting Parkuru", "Kanyon Üzerinde Zipline", "Off-road Safari (Buggy/ATV)", "Nehre Atlama Molaları", "Tazı Kanyonu Fotoğraf Durağı"], 
+          included: ["Tam Güvenlik Ekipmanları", "Profesyonel Eğitmenler", "Tüm Transferler", "Ferdi Kaza Sigortası"]
+        },
+        { 
+          slug: "zipline", 
+          name: "5'i Bir Arada Mega Adrenalin Kombo: Antalya'nın En Büyük Macerası", 
+          price: "€75", 
+          duration: "10 Saat", 
+          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp", "https://www.schweitzer.com/-/media/schweitzer/summer-activities/schweitzer-zipline-1920x1080.jpg"], 
+          desc: "Rafting, Zipline, Tazı Kanyonu, Quad, Buggy ve Jeep Safari - hepsi tek bir muhteşem günde.", 
+          longDesc: "Neden birini seçesiniz ki? Gerçek macera tutkunları için hazırladığımız bu en kapsamlı pakette adrenalin hiç bitmiyor. Gününüz 4x4 Jeep Safari ile Toroslar'ın kalbindeki efsanevi Tazı Kanyonu'na tırmanarak başlıyor. 'Kartal Yuvası'nda fotoğraf molasının ardından nehre iniyor ve 14 km'lik rafting macerasına atılıyoruz. Heyecan bununla sınırlı değil; kanyon üzerinde zipline ile uçacak ve ardından ATV veya Buggy motorlarla orman safariye çıkacaksınız. 10 saatlik bu mega tur, Antalya'nın vahşi doğasını tek bir günde yaşamanın en efsane yolu.",
+          highlights: ["Tazı Kanyonu Keşfi", "14km Coşkulu Rafting", "Dev Kanyon Zipline Hattı", "Off-road Atv/Buggy Safari", "4x4 Jip Dağ Safarisi"], 
+          included: ["Tüm Macera Ekipmanları", "Profesyonel Rehberler", "Otelden Alma ve Bırakma"]
+        },
+        { 
+          slug: "land-of-legends", 
+          name: "The Land of Legends Tema Park", 
+          price: "€80", 
+          duration: "Tüm Gün", 
+          images: ["https://www.alanya-tours.com/public/content/images/Tours/49/big/The-Land-of-Legends-Theme-Park-from-Alanya_175671848968b56599334b0.webp", "https://www.touralanya.com/TurResimleri/031813landoflegandstripsfromalanya.jpeg"], 
+          desc: "40'tan fazla kaydırak ve inanılmaz hız trenleri ile Türkiye'nin en büyük tema parkı.", 
+          longDesc: "Fantezi ve macera dünyasına adım atın. The Land of Legends sadece bir tema parkı değil; devasa bir su parkı (Kingdom of Sea) ve bir tema parkı (Adventure Park) içeren dev bir eğlence kompleksidir. 62 metre yüksekliğindeki Hyper Coaster'a meydan okuyun, 525 metre uzunluğundaki Typhoon Coaster'ı deneyimleyin veya dalga havuzunda rahatlayın. Park ayrıca inanılmaz yunus ve beyaz balina gösterilerine ev sahipliği yapar. Akşamları 'Château' alanı muhteşem bir tekne geçit töreni ve müzikli ışık şovuyla dönüşür. Tüm aile için adrenalin, su eğlencesi ve büyülü hikaye anlatımını birleştiren dünya standartlarında bir deneyimdir.",
+          highlights: ["Hyper Coaster (62m Yükseklik)", "Devasa Su Parkı Alanı", "Yunus & Fok Gösterileri", "5. Boyut Sinema", "Efsanevi Tekne Geçit Töreni"], 
+          included: ["Tüm Günlük Giriş Bileti", "Su Parkına Erişim", "Adrenalin Üniteleri", "Yunus Şovu Erişimi", "Dönüş Transferi"]
+        },
+        { 
+          slug: "antalya-aquarium", 
+          name: "Antalya Teleferik ve Akvaryum Turu", 
+          price: "€45", 
+          duration: "8 Saat", 
+          images: ["https://www.talyatur.com/images/tour/104912_b.jpg", "https://royalfuntour.com/media-uploads/Oceanarium-Antalya.jpg"], 
+          desc: "Teleferik ile panoramik manzara ve dünyanın en büyük tünel akvaryumlarından birini ziyaret edin.", 
+          longDesc: "Antalya Akvaryum'da dünyanın en büyük tünel akvaryumunda su altı büyüsünü yaşayın. Turumuz ayrıca tarihi Kaleiçi, Düden Şelalesi ve panoramik şehir manzarası için Tünektepe teleferik sürüşünü de içermektedir.",
+          highlights: ["131m Dünyanın En Büyük Tünel Akvaryumu", "Kaleiçi Rehberli Yürüyüş", "Düden Şelalesi Ziyareti", "Panoramik Teleferik Turu", "Binlerce Deniz Canlısı"], 
+          included: ["Otelden Alma ve Bırakma", "Akvaryum Giriş Bileti", "Teleferik Bileti", "Profesyonel Tur Rehberi"]
+        },
+        { 
+          slug: "kekova", 
+          name: "Kekova – Demre – Myra (Antik Medeniyetler Yolculuğu)", 
+          price: "€50", 
+          duration: "11 Saat", 
+          images: ["https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_PE7wwOiCWscwlqcEpg2A_pvpGnfmQROdLw&s", "https://gunluktur.net/wp-content/uploads/2021/12/tourbooking-turkey.jpeg"], 
+          desc: "Antik kalıntılar ve Noel Baba'nın mirasına tarihsel bir yolculuk.", 
+          longDesc: "Likya kıyılarının gizli tarihini keşfedeceğimiz bu tur, hem deniz hem de kültür meraklıları için hazırlanmıştır. Güne Demre'de, Noel Baba'nın (Aziz Nikolaos) yaşadığı ve mucizelerini gerçekleştirdiği kiliseyi ziyaret ederek başlıyoruz. Kilisedeki Bizans dönemi freskleri sizi büyüleyecek. Ardından, devasa kaya mezarlarıyla ünlü Myra Antik Kenti'ne geçiyoruz. Dağlara oyulmuş bu yapılar, antik mühendisliğin zirvesini temsil ediyor. Günün zirve noktası ise Kekova Batık Şehir tekne turumuzdur. Turkuaz suların altındaki antik ev kalıntılarını ve merdivenleri göreceksiniz. Tur boyunca Akvaryum Koyu ve Esmeralda Koyu gibi bakir noktalarda yüzme molaları verecek, turkuaz suların tadını çıkaracaksınız.",
+          highlights: ["Özel Tekne Turu", "Kekova Batık Şehir", "Myra Kaya Mezarları", "Noel Baba Kilisesi", "Mavi Bayraklı Yüzme Koyları"], 
+          included: ["Otel Transferi", "Batık Şehir Tekne Turu", "Tüm Giriş Biletleri", "Sigorta"]
+        },
+        { 
+          slug: "pamukkale", 
+          name: "Pamukkale & Salda Gölü (Beyaz Cennet)", 
+          images: ["https://cdn.getyourguide.com/img/location/49d723a60f36e112.jpeg/99.jpg", "https://www.barcelo.com/guia-turismo/wp-content/uploads/pamukkale.jpg"], 
+          desc: "Bembeyaz travertenler, Hierapolis Antik Kenti ve Türkiye'nin Maldivleri Salda Gölü.", 
+          longDesc: "Dünyanın 8. harikası olarak kabul edilen Pamukkale'ye unutulmaz bir yolculuğa çıkın. UNESCO Dünya Mirası listesinde yer alan bu bölge, kalsiyum zengini termal suların oluşturduğu bembeyaz traverten teraslarıyla ünlüdür. Bu doğa harikası üzerinde çıplak ayakla yürüyebilir ve şifalı suların sıcaklığını hissedebilirsiniz. Turumuz, antik Roma döneminin en önemli termal merkezi olan Hierapolis Antik Kenti ile devam ediyor. Burada devasa antik tiyatroyu, Anadolu'nun en büyük Nekropolü'nü ve tarihi kapıları göreceksiniz. Gerçekten eşsiz bir deneyim için, içinde binlerce yıllık Roma sütunlarının bulunduğu Kleopatra Antik Havuzu'nda yüzebilirsiniz. Günün ikinci yarısında ise kristal berraklığında turkuaz suyu ve beyaz magnezyum kumlarıyla 'Türkiye'nin Maldivleri' olarak bilinen Salda Gölü'nü ziyaret ediyoruz. Burası, dünyanın en temiz göllerinden birinde yüzmek ve hayatınızın en güzel fotoğraflarını çekmek için kusursuz bir noktadır.",
+          highlights: ["Beyaz Traverten Teraslar", "Hierapolis Antik Kenti", "Salda Gölü (Türkiye'nin Maldivleri)", "Kleopatra Antik Havuzu", "Antik Roma Tiyatrosu"], 
+          included: ["VIP Otel Transferi", "Profesyonel Rehberlik", "Klimalı Ulaşım", "Salda Gölü Giriş Ücreti"]
+        },
+        { 
+          slug: "lavanta-garden", 
+          name: "Lavanta Rüyaları & Salda Büyüsü", 
+          price: "€40", 
+          duration: "12 Saat", 
+          images: ["https://burdur.com.tr/wp-content/uploads/2022/03/MKXT0132.jpg"], 
+          desc: "Kuyucak'ın sonsuz mor tarlaları ve Salda Gölü'nün beyaz kumları.", 
+          longDesc: "Renk ve koku dolu bir dünyaya kaçmaya ne dersiniz? Yaz aylarında Kuyucak köyü, lavantaların tam açmasıyla birlikte mor bir denize dönüşür. Turumuzda bu aromatik tarlalarda yürüyebilir, lavanta yağı üretimini öğrenebilir ve hayatınızın en güzel fotoğraflarını çekebilirsiniz. Köylülerin kendi elleriyle hazırladığı hediyelik eşyalar sizi bekliyor. Turun ikinci yarısında ise Türkiye'nin en güzel doğal alanlarından biri olan Salda Gölü'nü ziyaret ediyoruz. Yüksek magnezyum içeriği sayesinde oluşan beyaz kumları ve canlı turkuaz suyuyla bu göl, görsel bir şölen sunuyor. Sahilde dinlenebilir, şifalı sularda yüzebilir ve bu koruma altındaki doğa parkında huzur bulabilirsiniz. Bu tur, duyularınıza hitap eden ve ruhunuzu dinlendiren mükemmel bir doğa kaçamağıdır.",
+          highlights: ["Lavanta Hasatı Fotoğraf Çekimi", "Kuyucak Köy Deneyimi", "Salda Gölü Yüzme Keyfi", "Lavanta Ürünleri Tadımı", "Doğa Yürüyüşü"], 
+          included: ["Tam Transfer Hizmeti", "Profesyonel Rehberlik", "Park Giriş Ücretleri"]
+        },
+        { 
+          slug: "cappadocia", 
+          name: "Kapadokya: Bir Masal Yolculuğu (2 Günlük)", 
+          price: "€120", 
+          duration: "2 Gün", 
+          images: ["https://blog.obilet.com/wp-content/uploads/2018/10/kapadokya.jpg"], 
+          desc: "Peri bacaları, yeraltı şehirleri ve gün doğumu balonlarının büyüsünü yaşayın.", 
+          longDesc: "Kendinizi başka bir gezegendeymiş gibi hissettiren topraklara adım atın. 2 günlük Kapadokya turumuz, bu mistik bölgenin ruhunu tam anlamıyla yaşamanız için tasarlandı. 1. Gün, büyüleyici fresklerle süslenmiş orta çağ kaya kiliselerinin bulunduğu Göreme Açık Hava Müzesi'ni keşfediyoruz. Paşabağ (Keşişler Vadisi) bölgesinde en ikonik üç başlı peri bacalarını görecek, öğleden sonra ise ilk Hristiyanların saklanmak için inşa ettiği devasa yer altı şehirlerinden birine ineceğiz. 2. Günümüz, güneş doğmadan önce dünyaca ünlü Sıcak Hava Balonu uçuşuyla (opsiyonel) başlıyor. Yüzlerce renkli balonun arasından güneşin doğuşunu izlemek, ruhunuzu dinlendiren bir deneyim olacak. Ayrıca bölgenin en yüksek noktası olan Uçhisar Kalesi'ni ziyaret ederek Kapadokya'yı panoramik olarak göreceğiz. Geceyi otantik bir kaya veya taş otelde geçirerek masalsı atmosferi sonuna kadar hissedeceksiniz.",
+          highlights: ["Göreme Açık Hava Müzesi", "Paşabağ Peri Bacaları", "Derin Yer Altı Şehri", "Uçhisar Panoramik Kalesi", "Devrent (Hayal) Vadisi"], 
+          included: ["Lüks Butik Otel Konaklaması", "Alanında Uzman Rehber", "VIP Ulaşım", "Köy Ziyaretleri"]
         },
         { 
           slug: "istanbul-tour", 
@@ -693,18 +726,7 @@ export const translations = {
           desc: "İki kıtanın birleştiği şehre uçun ve dünya tarihinin ikonlarını ziyaret edin.", 
           longDesc: "Antalya'dan uçuşla başlayan bu turda Sultanahmet Camii, Ayasofya ve Topkapı Sarayı'nı keşfedin. Mısır Çarşısı'nın atmosferini soluyun ve Boğaz Turu ile Avrupa-Asya arasında yelken açın. Akşam uçuşuyla Antalya'ya dönerek günü tamamlayın.",
           highlights: ["Sultanahmet Camii & Ayasofya", "Rehberli Topkapı Sarayı Turu", "Boğaz Turu (Avrupa ve Asya Arası)", "Hipodrom & Mısır Çarşısı", "Tam VIP Gün Yönetimi"], 
-          included: ["Gidiş-Dönüş Uçak Biletleri", "Tüm VIP Transferler", "Profesyonel Tur Rehberi", "Tüm Müze Giriş Ücretleri"] 
-        },
-        { 
-          slug: "alanya-all-in-one", 
-          name: "Alanya City Tour – All in 1 Experience", 
-          price: "€40", 
-          duration: "8 Saat", 
-          images: ["https://www.besttimetravel.com.tr/public/uploads/0000/1/2026/04/04/copilot-20260404-113528.png"], 
-          desc: "All in 1 Alanya City Tour ile Dim Çayı, Dim Mağarası, portakal bahçeleri, şelale, aquapark ve köpük partili tekne turuyla unutulmaz bir gün yaşayın!", 
-          longDesc: "Alanya’nın eşsiz güzelliklerini tek bir günde keşfetmeye hazır olun! Bu tur, doğa, tarih, kültür ve eğlencenin harmanlandığı unutulmaz bir deneyim. Profesyonel ve güler yüzlü şoförlerimiz eşliğinde, konforlu araçlarımızla sizi sabah otelinizden alıyor ve gün boyu dolu dolu bir programla Alanya’nın en özel noktalarına götürüyoruz. Dim Çayı’nın serin sularında yüzme molası verirken çevrenizi saran yemyeşil doğa size huzur veriyor. Alanya’nın en ünlü doğal güzelliklerinden biri olan Dim Mağarası’na giriyoruz. Binlerce yıllık sarkıt ve dikitlerin büyüleyici atmosferinde doğanın mucizesine tanıklık edeceksiniz. Tarihi köy evini ziyaret ederek Alanya’nın geçmişine tanıklık ediyor, ardından cami ziyaretimizle yerel kültürü ve mimariyi yakından tanıyorsunuz. Portakal bahçelerinde yürüyüş yapıyor, ardından küçük şelalenin serin sularında doğanın melodisini dinliyorsunuz. Dim Çayı kenarında bulunan aquaparkta eğlenceli dakikalar sizi bekliyor. Akdeniz’in maviliklerinde 1 saatlik özel tekne turuna çıkıyoruz. Açık denizde yüzme molası veriyor, ardından köpük partisiyle eğlencenin doruğuna ulaşıyoruz! 🎉",
-          highlights: ["🏞️ Seyir Terası", "🏊 Dim Çayı Yüzme ve Aquapark", "🎯 Su Savaşı", "🕳️ Dim Mağarası", "🏡 Tarihi Köy Evi Ziyareti", "🕌 Cami Ziyareti", "🍊 Portakal Bahçeleri", "💦 Küçük Şelale Ziyareti", "🍽️ Öğle Yemeği", "🚤 1 Saatlik Köpük Partili Tekne Turu", "🌊 Açık Denizde Yüzme Molası", "🎉 Köpük Partisi"], 
-          included: ["Van Konforlu Ulaşım", "🎓 Profesyonel Rehberlik", "🍽️ Lezzetli Öğle Yemeği", "🚤 1 Saatlik Tekne Turu"] 
+          included: ["Gidiş-Dönüş Uçak Biletleri", "Tüm VIP Transferler", "Profesyonel Tur Rehberi", "Tüm Müze Giriş Ücretleri"]
         }
       ]
     },
@@ -772,147 +794,15 @@ export const translations = {
       includedLabel: "Inklusive Leistungen",
       list: [
         { 
-          slug: "pamukkale", 
-          name: "Pamukkale & Salda See (Weißes Paradies)", 
-          price: "€45", 
-          duration: "13 Stunden", 
-          images: ["https://cdn.getyourguide.com/img/location/49d723a60f36e112.jpeg/99.jpg", "https://www.barcelo.com/guia-turismo/wp-content/uploads/pamukkale.jpg"], 
-          desc: "Weiße Sinterterrassen, die antike Stadt Hierapolis und das türkische Malediven-Feeling am Salda See.", 
-          longDesc: "Begleiten Sie uns auf eine unvergessliche Reise zum 8. Weltwunder: Pamukkale. Dieses UNESCO-Welterbe ist weltberühmt für seine schneeweißen Kalksinterterrassen, die über Jahrtausende durch kalkhaltiges Thermalwasser geformt wurden. Sie können barfuß über diese natürlichen Stufen wandern und das heilende Wasser spüren. Unsere Tour führt uns weiter zur antiken Stadt Hierapolis, dem bedeutendsten Thermalzentrum der römischen Zeit. Hier besichtigen Sie das gigantische antike Theater, die größte Nekropole Anatoliens und den berühmten Kleopatra-Pool, in dem Sie zwischen antiken Säulen schwimmen können. Am Nachmittag besuchen wir den Salda See, der mit seinem kristallklaren, türkisfarbenen Wasser und dem weißen Magnesiumsand als 'Malediven der Türkei' bekannt ist. Ein perfekter Ort für traumhafte Fotos und ein erfrischendes Bad in einem der saubersten Seen der Welt.",
-          highlights: ["Weiße Kalkterrassen", "Antike Stadt Hierapolis", "Salda See (Türkische Malediven)", "Antiker Kleopatra-Pool", "Römisches Theater von Hierapolis"], 
-          included: ["Luxus-Hoteltransfer", "Professionelle Reiseleitung", "Klimatisierter Transport", "Eintritt Salda See"] 
-        },
-        { 
-          slug: "kekova", 
-          name: "Kekova – Demre – Myra (Expedition der antiken Zivilisationen)", 
-          price: "€50", 
-          duration: "11 Stunden", 
-          images: ["https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_PE7wwOiCWscwlqcEpg2A_pvpGnfmQROdLw&s", "https://gunluktur.net/wp-content/uploads/2021/12/tourbooking-turkey.jpeg"], 
-          desc: "Eine historische Reise zu den antiken Ruinen und dem Erbe des Heiligen Nikolaus.", 
-          longDesc: "Diese Tour wurde für Geschichts- und Naturliebhaber konzipiert, um die verborgenen Schätze der lykischen Küste zu entdecken. Wir starten in Demre mit dem Besuch der St.-Nikolaus-Kirche, in der der echte Weihnachtsmann lebte und wirkte. Die byzantinischen Fresken werden Sie beeindrucken. Weiter geht es zur antiken Stadt Myra, bekannt für ihre beeindruckenden lykischen Felsengräber, die direkt in die steilen Felswände gemeißelt wurden. Der absolute Höhepunkt ist die Bootsfahrt zur versunkenen Stadt Kekova. Sie werden die überfluteten Ruinen, Treppen und Mauern einer 2000 Jahre alten Zivilisation sehen. Während der Fahrt legen wir Badepausen in traumhaften Buchten wie der Aquarium-Bucht ein, um das azurblaue Wasser des Mittelmeers zu genießen.",
-          highlights: ["Exklusive Bootstour", "Versunkene Stadt Kekova", "Lykische Felsengräber in Myra", "St.-Nikolaus-Gedächtniskirche", "Baden in türkisfarbenen Buchten"], 
-          included: ["Transfer ab Hotel", "Bootstour zur versunkenen Stadt", "Alle Eintrittskarten", "Reiseversicherung"] 
-        },
-        { 
-          slug: "cappadocia", 
-          name: "Kappadokien: Eine Märchenreise (2 Tage)", 
-          price: "€120", 
-          duration: "2 Tage", 
-          images: ["https://blog.obilet.com/wp-content/uploads/2018/10/kapadokya.jpg"], 
-          desc: "Erleben Sie die Magie der Feenkamine, unterirdischen Städte und Heißluftballons.", 
-          longDesc: "Tauchen Sie ein in eine world, die wie von einem anderen Planeten wirkt. Unsere 2-tägige Kappadokien-Tour lässt Sie den Geist dieser mystischen Region hautnah spüren. Am 1. Tag erkunden wir das Freilichtmuseum von Göreme mit seinen beeindruckenden felsen Kirchen aus dem Mittelalter. Im Tal der Mönche (Pasabag) sehen Sie die ikonischen dreiköpfigen Feenkamine, und am Nachmittag steigen wir in eine der riesigen unterirdischen Städte hinab, die früher als Zufluchtsort dienten. Der 2. Tag beginnt auf Wunsch vor Sonnenaufgang mit einer der berühmtesten Aktivitäten weltweit: einer Heißluftballonfahrt (optional). Hunderte bunte Ballons am Morgenhimmel zu sehen, ist ein magischer Moment. Wir besuchen zudem die Burg von Uçhisar für einen Panoramablick über die gesamte Region. Sie übernachten in einem authentischen Höhlen- oder Stein-Hotel, um die Atmosphäre Kappadokiens voll auszuschöpfen.",
-          highlights: ["Freilichtmuseum Göreme", "Feenkamine von Pasabag", "Beeindruckende Untergrundstadt", "Panoramafestung Uçhisar", "Devrent (Imagination) Valley"], 
-          included: ["Übernachtung in Boutique-Hotel", "Fachkundiger Reiseleiter", "Komfortabler VIP-Transport", "Dorfbesichtigungen"] 
-        },
-        { 
-          slug: "lavanta-garden", 
-          name: "Lavendel-Träume & Salda-Magie", 
+          slug: "alanya-all-in-one", 
+          name: "Alanya City Tour – All-in-1 Erlebnis", 
           price: "€40", 
-          duration: "12 Stunden", 
-          images: ["https://burdur.com.tr/wp-content/uploads/2022/03/MKXT0132.jpg"], 
-          desc: "Die endlosen lila Felder von Kuyucak and der weiße Zauber des Salda Sees.", 
-          longDesc: "Möchten Sie in eine Welt voller Farben und Düfte entfliehen? In den Sommermonaten verwandelt sich das Dorf Kuyucak in ein lila schimmerndes Meer aus Lavendel. Auf unserer Tour können Sie durch diese aromatischen Felder spazieren, etwas über die Gewinnung von Lavendelöl lernen und die besten Fotos Ihres Lebens machen. Die Dorfbewohner erwarten Sie mit Souvenirs. Der zweite Teil der Tour führt zum Salda See, einem der schönsten Naturgebiete der Türkei. Dank seines hohen Magnesiumgehalts verfügt der See über strahlend weißen Sand und leuchtend türkisfarbenes Wasser. Entspannen Sie am Ufer, schwimmen Sie im heilenden Wasser und finden Sie Ruhe in diesem geschützten Naturpark. Diese Tour ist ein Balsam für die Sinne und perfekt für eine Auszeit in der Natur.",
-          highlights: ["Lavendelfelder Fotoshooting", "Kuyucak Dorferlebnis", "Baden im Salda See", "Naturspaziergang"], 
-          included: ["Kompletter Transferservice", "Professionelle Reiseleitung", "Eintrittspreise für Naturparks"] 
-        },
-        { 
-          slug: "side-manavgat", 
-          name: "Antike Trilogie: Side – Aspendos – Manavgat", 
-          price: "€45", 
-          duration: "9 Saat", 
-          images: ["https://calista.com.tr/media/3jhj2jz0/aspendos006-1170x650.jpg?format=webp&quality=85", "https://www.gezire.com/wp-content/uploads/2025/10/Manavgat-Selalesi-764x500.jpg", "https://www.kulturportali.gov.tr/contents/images/SELEUK%20(4).JPG"], 
-          desc: "Die Pracht der römischen Architektur und die Frische der Wasserfälle.", 
-          longDesc: "Begeben Sie sich auf eine Reise in das goldene Zeitalter des Römischen Reiches. Unser erster Halt ist das am besten erhaltene römische Theater der Welt: Aspendos. Das im 2. Jahrhundert n. Chr. erbaute Theater besitzt eine akustische Perfektion, die noch heute für internationale Festivals genutzt wird. Weiter geht es in die antike Hafenstadt Side. Schlendern Sie durch die von Säulen gesäumten Straßen und besichtigen Sie den Apollon-Tempel direkt am Meer, wo sich laut Legende Antonius und Kleopatra trafen. Zum Abschluss genießen wir eine erfrischende Pause am Manavgat Wasserfall. Er ist zwar nicht besonders hoch, bietet aber durch seine enorme Breite ein beeindruckendes Naturschauspiel. Genießen Sie die mediterrane Brise auf sich wirken. Diese Tour verbindet archäologische Wunder ideal mit natürlicher Erholung.",
-          highlights: ["Römisches Theater Aspendos", "Apollon-Tempel in Side", "Manavgat Wasserfall", "Antike Hafenstadt Side", "Antikes Theater-Museum"], 
-          included: ["Hin- und Rücktransfer", "Historiker als Reiseleiter", "Eintrittsgelder Aspendos & Side"] 
-        },
-        { 
-          slug: "city-tour", 
-          name: "Alanya Panorama Stadt- & Burgtour", 
-          price: "30", 
-          duration: "4 Stunden", 
-          images: ["https://upload.wikimedia.org/wikipedia/commons/8/85/Alanyafromcastle.JPG", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/Alanya-Buyuk-Hotel-Genel-269043.jpg"], 
-          desc: "Das Beste von Alanya: Burg, Seilbahn, Höhle und Sonnenuntergang.", 
-          longDesc: "Entdecken Sie auf dieser umfassenden Stadttour, warum Alanya als Perle der türkischen Riviera gilt. Wir beginnen am weltberühmten Kleopatra-Strand mit einer Fahrt in der Seilbahn (Teleferik) hinauf zur Burg von Alanya. Von den Burgmauern genießen Sie einen 360-Grad-Blick auf den Hafen, den Leuchtturm und das Taurusgebirge. Wir besichtigen die historische Werft aus dem 13. Jahrhundert, den Roten Turm (Kizil Kule) und die Zitadelle. Ein weiterer Halt ist die Damlatas-Höhle, die 1948 durch Zufall entdeckt wurde und für ihre heilende Luft bei Asthmapatienten bekannt ist. Die Tour endet am 'I Love Alanya' Aussichtspunkt, von wo aus Sie den schönsten Sonnenuntergang über der Stadt erleben können.",
-          highlights: ["Seilbahnfahrt zur Burg", "Burg von Alanya Erkundung", "Kleopatra-Strand Panorama", "Foto-Stopp an der Aussichtsterrasse"], 
-          included: ["Abholung & Rücktransfer", "Seilbahntickets inklusive", "Professioneller Stadtführer"] 
-        },
-        { 
-          slug: "mix-adventure", 
-          name: "Legendäre Mix-Abenteuer (3-in-1 Adrenalin)", 
-          price: "€55", 
           duration: "8 Stunden", 
-          images: ["https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=1210,dpr=1/tour_img/640b4d905f5e4.png", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,height=755,dpr=1/tour_img/5b8b721278a099cfddd9975af2c8dd627c2259fd05374f4f7efa7ef96e0b5775.png"], 
-          desc: "Wildwasser-Rafting, Zipline und Atv/Buggy-Safari in einer Schlucht.", 
-          longDesc: "Für alle, die Action lieben, ist diese Tour das Nonplusultra! Wir bringen Sie in den Köprülü-Kanyon-Nationalpark, das Herz des Abenteuersports in der Türkei. Ihr Tag beginnt mit einer 14 Kilometer langen, spannenden Rafting-Tour auf dem Köprücay Fluss. Unter Anleitung professioneller Instruktoren bezwingen Sie die Wellen. Mitten im Fluss machen wir eine Pause für den nächsten Kick: Zipline! Sie schweben wie ein Vogel über den Fluss. Safari. Auf schlammigen und unebenen Wegen durch Pinienwälder geben Sie mit dem ATV oder Buggy ordentlich Gas. Diese Tour verspricht die maximale Dosis Spaß und Adrenalin an nur einem einzigen Tag.",
-          highlights: ["14km Rafting-Strecke", "Zipline über den Canyon", "Off-road Safari (Buggy/ATV)", "Sprung ins kühle Nass", "Fotostopp am Tazi Canyon"], 
-          included: ["Komplette Schutzausrüstung", "Professionelle Guides", "Alle Transfers", "Unfallversicherung"] 
-        },
-        { 
-          slug: "rafting", 
-          name: "Köprüçay Rafting-Abenteuer", 
-          price: "€35", 
-          duration: "6 Stunden", 
-          images: ["https://cmsal.argeya.com/Content/CompanyFiles/YazilarYeniImg/alanya-rafting.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
-          desc: "Stürzen Sie sich ins Abenteuer auf dem türkisfarbenen Wasser des Köprülü Canyons.", 
-          longDesc: "Schnappen Sie sich ein Paddel und machen Sie sich bereit, nass zu werden! Rafting auf dem Köprücay-Fluss ist das beliebteste Abenteuer in der Region Antalya – und das aus gutem Grund. Der Fluss fließt unter antiken römischen Brücken hindurch, mitten durch das Herz eines wunderschönen Nationalparks. Die Tour beginnt mit einer ausführlichen Sicherheitseinweisung und der Ausgabe der Ausrüstung. Dann steigen wir in Boote für 8-10 Personen oder für die Mutigeren in 2er-Kanus. Die Strecke ist 14 km lang und bietet spannende Stromschnellen. Zwischendurch haben Sie die Möglichkeit, in das eiskalte, aber kristallklare Wasser zu springen. Unsere Guides sorgen mit Spielen und Animationen für zusätzliche Unterhaltung.",
-          highlights: ["14km Professionelles Rafting", "Antike Römerbrücke Besichtigung", "Body-Rafting-Einheiten", "Baden im eiskalten Fluss", "Lustige Gruppenspiele"], 
-          included: ["Helm & Schwimmweste", "Boot & Paddel", "Erfahrener Bootsführer", "Hoteltransfer"] 
-        },
-        { 
-          slug: "jeep-safari", 
-          name: "Taurusgebirge Jeep-Safari & Dimfluss", 
-          price: "€40", 
-          duration: "7 Stunden", 
-          images: ["https://travelagencyapp-storage.s3.eu-central-1.amazonaws.com/sunnytour/31c5b512-0b91-4762-8b51-4d8ef2c7e645_c35d5ee1-4e4d-4d53-92a0-57f22e041aec_.webp", "https://cdn.vigotours.com/23898/conversions/187-1770148388-698252242f4a3-gallery.jpg", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/5dc9d110c84b5.jpeg"], 
-          desc: "Wasserschlachten, Berggipfel und Entspannung am Dimfluss.", 
-          longDesc: "Das ist nicht nur eine Tour, sondern eine große Party auf Rädern! Wir steigen in offene 4x4 Land Rover Jeeps und fahren hinauf in das majestätische Taurusgebirge. Machen Sie sich bereit für actionreiche Wasserschlachten zwischen den Fahrzeugen! Wir halten an Panoramapunkten mit Blick auf ganz Alanya. Wir besuchen eine traditionelle Dorfmoschee, lernen die lokale Kultur kennen und probieren saisonale Früchte direkt in den Gärten. Der entspannteste Teil ist unser Aufenthalt am Dimfluss. Sie können von Sprungplattformen in den Fluss springen, sich auf Wasserbetten ausruhen oder in unserer Anlage angeln. Ein Tag voller Lachen, Natur und kultureller Entdeckungen erwartet Sie.",
-          highlights: ["Wasserschlachten zwischen den Jeeps", "Off-road-Strecken im Taurus", "Besuch in einem traditionellen Dorf"], 
-          included: ["4x4 Jeep Komfort", "Unterhaltsame Safari-Guides", "Eintritt in Dorfhäuser"] 
-        },
-        { 
-          slug: "sapadere-canyon", 
-          name: "Sapadere Schlucht: Das verborgene Paradies", 
-          price: "€45", 
-          duration: "8 Stunden", 
-          images: ["https://www.kulturportali.gov.tr/contents/images/sapanderekanyonulogolu_20180914111051287.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Sapadere-Canyon-Tour-Tursay-Travel-13.webp"], 
-          desc: "Ein Holzsteg durch die Schlucht und eiskalte Wasserfälle.", 
-          longDesc: "Entfliehen Sie der Sommerhitze und lassen Sie sich von der erfrischenden Atmosphäre der Sapadere-Schlucht verzaubern. Nur 40 km von Alanya entfernt, wurde dieser Ort erst 2008 für den Tourismus erschlossen und hat sich seine unberührte Schönheit bewahrt. Auf einem 750 Meter langen Holzsteg wandern Sie durch die Schlucht und bestaunen die gewaltigen Felswände zu beiden Seiten. Zahlreiche kleine und große Wasserfälle begleiten Ihren Weg. Die Mutigsten unter Ihnen können in den natürlichen Becken schwimmen – selbst im Hochsommer steigt die Wassertemperatur selten über 12 Grad! Nach der Schlucht besuchen wir das Dorf Sapadere, wo noch immer traditionelle Seidenweberei betrieben wird. Außerdem erkunden wir die 'Zwergenhöhle' (Cüceler Mağarası) mit ihren beeindruckenden Stalaktiten und Stalagmiten.",
-          highlights: ["Wanderung auf dem Holzsteg", "Schwimmen im Wasserfall", "Besuch der Zwergenhöhle", "Seidenweberei-Vorführung", "Traditionelle Dorftour"], 
-          included: ["Transferservice", "Alle Eintrittsgelder", "Reiseleitung"] 
-        },
-        { 
-          slug: "quad-safari", 
-          name: "ATV-Safari-Abenteuer", 
-          price: "€40", 
-          duration: "3 Stunden", 
-          images: ["https://cloudbasetravel.com/wp-content/uploads/2021/06/ATV-Safari-1.jpeg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Quad-Atv-Safari-Tour-Tursay-Travel-1.webp"], 
-          desc: "Staub, Schlamm und pure Erheiterung in den Tauruswäldern.", 
-          longDesc: "Verlassen Sie den Lärm der Stadt und übernehmen Sie die Kontrolle über Ihr eigenes Fahrzeug in den rauen Bergen des Taurusgebirges! Unsere ATV-Safari bietet Ihnen Adrenalin und Natur pur. Unter Anleitung unserer professionellen Guides durchfahren Sie technische Strecken durch Pinienwälder, meistern staubige Pisten und Schlammpfützen. Ein Führerschein ist nicht erforderlich; nach einer kurzen Einweisung kann jeder sein eigenes Quad steuern. Bei einer Pause am Fluss können Sie sich den Staub abwaschen und im kühlen Wasser erfrischen. Die aufregendste Art, die Wildnis von Alanya zu entdecken!",
-          highlights: ["Fahrspaß mit dem eigenen Quad", "Technische Waldstrecken", "Schlammige Passagen", "Erholungspause am Fluss", "High-Speed-Etappen"], 
-          included: ["ATV-Quad & Kraftstoff", "Schutzhelm", "Einweisung & Training", "Fachkundige Begleitung", "Transfer"] 
-        },
-        { 
-          slug: "zipline", 
-          name: "5-in-1 Mega Adrenalin-Kombi: Das ultimative Antalya-Abenteuer", 
-          price: "€75", 
-          duration: "10 Stunden", 
-          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp", "https://www.schweitzer.com/-/media/schweitzer/summer-activities/schweitzer-zipline-1920x1080.jpg"], 
-          desc: "Rafting, Zipline, Tazi Canyon, Quad und Buggy-Safari - alles an einem unglaublichen Tag.", 
-          longDesc: "Warum wählen, wenn man alles haben kann? Dies ist unser umfassendstes Abenteuerpaket für echte Adrenalinjunkies. Ihr Tag beginnt mit einer Reise durch das Taurusgebirge zum prächtigen Tazi Canyon. Nach einem Fotostopp am Aussichtspunkt 'Adlernest' geht es zum Fluss für eine 14 km lange Rafting-Tour. Doch der Spaß hört hier nicht auf – du fliegst mit der Zipline über den Canyon und übernimmst dann die Kontrolle über ein Quad oder einen Buggy für eine Offroad-Waldsafari.",
-          highlights: ["Tazi Canyon Erkundung", "14km Wildwasser-Rafting", "Riesen-Canyon-Zipline", "Off-road Quad/Buggy Safari", "Doğa-Abenteuer"], 
-          included: ["Alle Abenteuer-Ausrüstungen", "Professionelle Guides", "Hotelabholung & Rücktransfer"] 
-        },
-        { 
-          slug: "paragliding", 
-          name: "Gleitschirmfliegen: Flug über Alanya", 
-          price: "€75", 
-          duration: "2 Stunden", 
-          images: ["https://www.talyatur.com/images/tour/105418_b.jpg", "https://cdn.getyourguide.com/img/tour/e810d4a42de4ba2a359f6f25116205e419dba160cf49862c412bff4a32843011.jpg/99.jpg"], 
-          desc: "Ein unvergesslicher Flug aus 700 Metern Höhe zum Kleopatra-Strand.", 
-          longDesc: "Dies ist die friedlichste und faszinierendste Art, Alanya zu sehen. Wir bringen Sie zum Gipfel 'Yassi Tepe' auf 700 Metern Höhe. Dort lernen Sie Ihren Tandem-Piloten kennen, der alle technischen Details des Fluges übernimmt. Nach ein paar Schritten Anlauf heben Sie ab und treffen auf den Himmel. Etwa 20-30 Minuten lang gleiten Sie lautlos über das türkisfarbene Mittelmeer, die imposante Burg von Alanya und den weißen Kleopatra-Strand. Wenn Sie möchten, kann Ihr Pilot akrobatische Manöver einbauen, um den Adrenalinspiegel zu steigern. Ihr Flug endet mit einer sanften Landung auf dem feinen Sand des Kleopatra-Strandes. Ein Erlebnis wie aus dem Bilderbuch!",
-          highlights: ["Start aus 700m Höhe", "Landung am Kleopatra-Strand", "Panorama von Burg und Meer", "Professioneller Tandem-Pilot", "Foto/Video-Option während des Fluges"], 
-          included: ["Hoteltransfer", "Flugausrüstung", "Erfahrener Pilot", "Flugversicherung", "Briefing"] 
+          images: ["https://www.besttimetravel.com.tr/public/uploads/0000/1/2026/04/04/copilot-20260404-113528.png"], 
+          desc: "Erleben Sie einen unvergesslichen Tag mit der All-in-1 Alanya City Tour mit Dim-Fluss, Dim-Höhle, Orangengärten, Wasserfall, Aquapark and einer Bootstour mit Schaumparty!", 
+          longDesc: "Machen Sie sich bereit, die einzigartigen Schönheiten von Alanya an einem einzigen Tag zu entdecken! Diese Tour ist ein unvergessliches Erlebnis, das Natur, Geschichte, Kultur und Spaß verbindet. Begleitet von unseren professionellen und freundlichen Fahrern holen wir Sie morgens von Ihrem Hotel ab und bringen Sie mit einem ganztägigen Programm zu den besondersten Orten Alanyas. Wir reisen in das Herz der Natur im kühlen Paradies des Dim-Flusses. Während Sie eine Badepause im eiskalten Wasser einlegen, bringt die üppige grüne Natur um Sie herum Frieden. Wir betreten die Dim-Höhle, eine der berühmtesten Naturschönheiten Alanyas. Unsere Tour bietet auch kulturelle Erkundungen. Durch den Besuch eines historischen Dorfhauses werden Sie Zeuge der Vergangenheit Alanyas, und anschließend lernen Sie bei unserem Moscheebesuch die lokale Kultur und Architektur aus nächster Nähe kennen. Sie spazieren durch Orangengärten inmitten duftender Zitrusdüfte und lauschen dann der Melodie der Natur im kühlen Wasser des kleinen Wasserfalls. Auf den Rutschen im Aquapark am Dim-Fluss erwarten Sie lustige Momente. Wir begeben uns auf eine einstündige private Bootstour im Blau des Mittelmeers. Wir legen eine Badepause auf offener See ein und erreichen dann mit einer Schaumparty den Gipfel des Vergnügens! 🎉",
+          highlights: ["Panorama-Terrassenblick", "Dim-Fluss Schwimmen & Aquapark", "Wasserschlacht-Spaß", "Erkundung der Dim-Höhle", "Besuch eines historischen Dorfhauses", "Moschee & lokale Kultur", "Spaziergang im Orangengarten", "Besuch des kleinen Wasserfalls", "Köstliches Mittagessen", "1-stündige Bootstour", "Schwimmen im offenen Meer", "Schaumparty-Feier"], 
+          included: ["Komfortabler Transport", "Professionelle Reiseleitung", "Köstliches Mittagessen", "Bootstour-Erlebnis"]
         },
         { 
           slug: "luxury-boat", 
@@ -923,51 +813,73 @@ export const translations = {
           desc: "Höhlen, Badestopps und eine große Bord-Party.", 
           longDesc: "Ein klassischer Tag auf dem Mittelmeer erwartet Sie! Unser Schiff im Piraten-Design sticht am historischen Hafen von Alanya in See und gleitet entlang des Roten Turms und der alten Werft. Wir umrunden die Halbinsel der Burg von Alanya und besuchen die Piratenhöhle, die Liebeshöhle und die Phosphorhöhle, in der das Wasser magisch leuchtet. Während der Tour legen wir zahlreiche Badestopps in kristallklaren Buchten ein. An Bord sorgt unser Animationsteam mit Musik, Spielen und einer riesigen Schaumparty auf dem Rückweg für beste Stimmung. Perfekt für Familien und Gruppen!",
           highlights: ["Historische Hafenrundfahrt", "Erkundung der Meereshöhlen", "Schaumparty & Animation", "Traumhafte Badestopps"], 
-          included: ["Bootstour", "Animationsprogramm", "Hoteltransfer"] 
+          included: ["Bootstour", "Animationsprogramm", "Hoteltransfer"]
         },
         { 
-          slug: "fishing", 
-          name: "Morgendliches Hochseefischen", 
-          price: "€40", 
-          duration: "6 Stunden", 
-          images: ["https://www.albashop.com.tr/Data/EditorFiles/En_Dog__ru_Bal__k_Av___Zaman___Nas__l_Belirlenir__3.jpg"], 
-          desc: "Friedlicher Vormittag auf See mit Profi-Ausrüstung.", 
-          longDesc: "Möchten Sie der Mittagshitze und dem Trubel entfliehen und die friedlichste Zeit auf dem Meer genießen? Unser Fischerboot ist mit modernsten Echoloten zum Aufspüren von Fischen und hochwertigen Ruten ausgestattet. Egal, ob Sie Profi oder Anfänger sind, unser erfahrener Kapitän bringt Sie zu den Stellen, an denen Doraden, Wolfsbarsche und andere Köstlichkeiten am zahlreichsten sind. Genießen Sie den Sonnenaufgang und den Blick auf die Küste, während Sie Ihre Angel auswerfen.",
-          highlights: ["Sonnenaufgang an der Küste", "Moderne Fischfinder-Technologie", "Hochwertige Angelruten", "Erfahrener Kapitän"], 
-          included: ["Angelausrüstung", "Köder", "Kapitän-Guiding", "Transport"] 
-        },
-        { 
-          slug: "turkish-night", 
-          name: "Orient-Express: Türkische Nacht Show", 
-          price: "€45", 
+          slug: "vip-luxury-yacht", 
+          name: "VIP Luxusyacht Tour", 
+          price: "€250", 
           duration: "4 Stunden", 
-          images: ["https://www.touralanya.com/TurResimleri/003837alanyaturkishnight.jpeg", "https://www.goreme.com/image/cache/catalog/Urunler/activities/turkish-night/turkish-night-show-134-900x600.jpg"], 
-          desc: "Ein Fest der türkischen Kultur, Tänze und Küche.", 
-          longDesc: "Wir laden Sie ein zu einer Nacht, die von den prächtigen Traditionen der Osmanen bis zur Energie der modernen Türkei reicht. Unsere Türkische Nacht ist eine energiegeladene Show mit professionellen Tänzern in authentischen Kostümen. Das Programm reicht von den wirbelnden Derwischen Mevlanas bis zu traditionellen Tänzen aus allen Regionen der Türkei und atemberaubenden Bauchtanzshows. Die Show ist interaktiv – oft werden Gäste eingeladen, auf der Bühne mitzumachen. Wir bieten Ihnen eine Atmosphäre, in der Sie die Seele der Türkei voll spüren können.",
-          highlights: ["Sufi-Derwisch-Tanz", "Regionale Folkloretänze", "Professionelle Bauchtanzshow", "Interaktive Bühnenshow"], 
-          included: ["Alle Shows & Programme", "Rücktransfer"] 
+          images: ["https://www.dailytoursinalanya.com/Content/images/tours/64/-8-hd.webp"], 
+          desc: "Ein privates Luxusyacht-Erlebnis mit Ihrer Familie und Freunden in den klaren Gewässern von Alanya.", 
+          longDesc: "Erleben Sie ultimativen Luxus auf dem Mittelmeer. Chartern Sie unsere VIP-Yacht für eine private Tour um die Halbinsel Alanya. Sie bestimmen die Route und die Badeplätze. Unsere professionelle Crew serviert Ihnen frisch zubereitete Mahlzeiten, Snacks und unbegrenzt alkoholfreie Getränke. Ob Sie einen besonderen Anlass feiern, eine romantische Fahrt in den Sonnenuntergang machen oder einfach nur mit Ihren Lieben den Massen entfliehen möchten, unsere VIP-Yachttour bietet unvergleichliche Privatsphäre und Komfort.",
+          highlights: ["Privater Yacht-Charter", "Anpassbare Route", "Frisch zubereitete Mahlzeiten", "Sonnenuntergang oder Tagsüber", "VIP-Service"], 
+          included: ["Hoteltransfer", "Mittag-/Abendessen an Bord", "Unbegrenzte Erfrischungsgetränke", "Schnorchelausrüstung", "Kapitän und Crew"] 
         },
         { 
-          slug: "turkish-bath", 
-          name: "Traditionelles Hamam: Pure Entspannung", 
-          price: "€30", 
+          slug: "city-tour", 
+          name: "Alanya Panorama Stadt- & Burgtour", 
+          price: "30", 
+          duration: "4 Stunden", 
+          images: ["https://upload.wikimedia.org/wikipedia/commons/8/85/Alanyafromcastle.JPG", "https://cmsal.argeya.com/Content/CompanyFiles/SliderResimleri/Alanya-Buyuk-Hotel-Genel-269043.jpg"], 
+          desc: "Das Beste von Alanya: Burg, Seilbahn, Höhle und Sonnenuntergang.", 
+          longDesc: "Entdecken Sie auf dieser umfassenden Stadttour, warum Alanya als Perle der türkischen Riviera gilt. Wir beginnen am weltberühmten Kleopatra-Strand mit einer Fahrt in der Seilbahn (Teleferik) hinauf zur Burg von Alanya. Von den Burgmauern genießen Sie einen 360-Grad-Blick auf den Hafen, den Leuchtturm und das Taurusgebirge. Wir besichtigen die historische Werft aus dem 13. Jahrhundert, den Roten Turm (Kizil Kule) und die Zitadelle. Ein weiterer Halt ist die Damlatas-Höhle, die 1948 durch Zufall entdeckt wurde und für ihre heilende Luft bei Asthmapatienten bekannt ist. Die Tour endet am 'I Love Alanya' Aussichtspunkt, von wo aus Sie den schönsten Sonnenuntergang über der Stadt erleben können.",
+          highlights: ["Seilbahnfahrt zur Burg", "Burg von Alanya Erkundung", "Kleopatra-Strand Panorama", "Foto-Stopp an der Aussichtsterrasse"], 
+          included: ["Abholung & Rücktransfer", "Seilbahntickets inklusive", "Professioneller Stadtführer"]
+        },
+        { 
+          slug: "jeep-safari", 
+          name: "Taurusgebirge Jeep-Safari & Dimfluss", 
+          price: "€40", 
+          duration: "7 Stunden", 
+          images: ["https://travelagencyapp-storage.s3.eu-central-1.amazonaws.com/sunnytour/31c5b512-0b91-4762-8b51-4d8ef2c7e645_c35d5ee1-4e4d-4d53-92a0-57f22e041aec_.webp", "https://cdn.vigotours.com/23898/conversions/187-1770148388-698252242f4a3-gallery.jpg", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/5dc9d110c84b5.jpeg"], 
+          desc: "Wasserschlachten, Berggipfel und Entspannung am Dimfluss.", 
+          longDesc: "Das ist nicht nur eine Tour, sondern eine große Party auf Rädern! Wir steigen in offene 4x4 Land Rover Jeeps und fahren hinauf in das majestätische Taurusgebirge. Machen Sie sich bereit für actionreiche Wasserschlachten zwischen den Fahrzeugen! Wir halten an Panoramapunkten mit Blick auf ganz Alanya. Wir besuchen eine traditionelle Dorfmoschee, lernen die lokale Kultur kennen und probieren saisonale Früchte direkt in den Gärten. Der entspannteste Teil ist unser Aufenthalt am Dimfluss. Sie können von Sprungplattformen in den Fluss springen, sich auf Wasserbetten ausruhen oder in unserer Anlage angeln. Ein Tag voller Lachen, Natur und kultureller Entdeckungen erwartet Sie.",
+          highlights: ["Wasserschlachten zwischen den Jeeps", "Off-road-Strecken im Taurus", "Besuch in einem traditionellen Dorf"], 
+          included: ["4x4 Jeep Komfort", "Unterhaltsame Safari-Guides", "Eintritt in Dorfhäuser"]
+        },
+        { 
+          slug: "paragliding", 
+          name: "Gleitschirmfliegen: Flug über Alanya", 
+          price: "€75", 
+          duration: "2 Stunden", 
+          images: ["https://www.talyatur.com/images/tour/105418_b.jpg", "https://cdn.getyourguide.com/img/tour/e810d4a42de4ba2a359f6f25116205e419dba160cf49862c412bff4a32843011.jpg/99.jpg"], 
+          desc: "Ein unvergesslicher Flug aus 700 Metern Höhe zum Kleopatra-Strand.", 
+          longDesc: "Dies ist die friedlichste und faszinierendste Art, Alanya zu sehen. Wir bringen Sie zum Gipfel 'Yassi Tepe' auf 700 Metern Höhe. Dort lernen Sie Ihren Tandem-Piloten kennen, der alle technischen Details des Fluges übernimmt. Nach ein paar Schritten Anlauf heben Sie ab und treffen auf den Himmel. Etwa 20-30 Minuten lang gleiten Sie lautlos über das türkisfarbene Mittelmeer, die imposante Burg von Alanya und den weißen Kleopatra-Strand. Wenn Sie möchten, kann Ihr Pilot akrobatische Manöver einbauen, um den Adrenalinspiegel zu steigern. Ihr Flug endet mit einer sanften Landung auf dem feinen Sand des Kleopatra-Strandes. Ein Erlebnis wie aus dem Bilderbuch!",
+          highlights: ["Start aus 700m Höhe", "Landung am Kleopatra-Strand", "Panorama von Burg und Meer", "Professioneller Tandem-Pilot", "Foto/Video-Option während des Fluges"], 
+          included: ["Hoteltransfer", "Flugausrüstung", "Erfahrener Pilot", "Flugversicherung", "Briefing"]
+        },
+        { 
+          slug: "quad-safari", 
+          name: "ATV-Safari-Abenteuer", 
+          price: "€40", 
           duration: "3 Stunden", 
-          images: ["https://cdn.alanyatekmar.com/e6a4a96a-9fc4-442b-87df-a2fff0b99841.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Turkish-Bath-Hamam-Tour-Tursay-Travel-1.webp"], 
-          desc: "Zeit für Erneuerung mit Peeling, Schaum und Ölmassage.", 
-          longDesc: "Gönnen Sie sich eine jahrtausendealte Tradition für Gesundheit und Wohlbefinden. Ihr Hamam-Erlebnis beginnt in der Wärme des 'Göbek tasi' (Marmorstein), wo sich Ihre Poren öffnen. Danach folgt eine professionelle Peeling-Massage mit dem Seidenhandschuh (Kese). Es folgt eine himmlische Schaummassage inmitten riesiger Seifenblasenwolken. Unser Paket beinhaltet auch Zugang zur Salzgrotte, Sauna und zum Dampfbad. Zum Abschluss verwöhnen wir Sie im Ruheraum mit einem türkischen Tee, gefolgt von einer 20-minütigen Ganzkörper-Ölmassage durch unsere Experten. Wenn Sie das Hamam verlassen, werden Sie sich federleicht fühlen und von Ihrer samtweichen Haut begeistert sein.",
-          highlights: ["Authentisches Marmor-Hamam", "Ganzkörper-Seidenpeeling", "Sanfte Schaummassage", "Entspannende Ölmassage", "Sauna & Salzgrotte inklusive"], 
-          included: ["Peeling & Kese", "Schaummassage", "20 Min. Ölmassage", "Sauna & Salzgrotte", "Kräutertees", "Transfer"] 
+          images: ["https://cloudbasetravel.com/wp-content/uploads/2021/06/ATV-Safari-1.jpeg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Quad-Atv-Safari-Tour-Tursay-Travel-1.webp"], 
+          desc: "Staub, Schlamm und pure Erheiterung in den Tauruswäldern.", 
+          longDesc: "Verlassen Sie den Lärm der Stadt und übernehmen Sie die Kontrolle über Ihr eigenes Fahrzeug in den rauen Bergen des Taurusgebirges! Unsere ATV-Safari bietet Ihnen Adrenalin und Natur pur. Unter Anleitung unserer professionellen Guides durchfahren Sie technische Strecken durch Pinienwälder, meistern staubige Pisten und Schlammpfützen. Ein Führerschein ist nicht erforderlich; nach einer kurzen Einweisung kann jeder sein eigenes Quad steuern. Bei einer Pause am Fluss können Sie sich den Staub abwaschen und im kühlen Wasser erfrischen. Die aufregendste Art, die Wildnis von Alanya zu entdecken!",
+          highlights: ["Fahrspaß mit dem eigenen Quad", "Technische Waldstrecken", "Schlammige Passagen", "Erholungspause am Fluss", "High-Speed-Etappen"], 
+          included: ["ATV-Quad & Kraftstoff", "Schutzhelm", "Einweisung & Training", "Fachkundige Begleitung", "Transfer"]
         },
         { 
-          slug: "aquapark", 
-          name: "Wasserpark-Abenteuer & Hotel-Luxus", 
+          slug: "sapadere-canyon", 
+          name: "Sapadere Schlucht: Das verborgene Paradies", 
           price: "€45", 
-          duration: "Ganztägig", 
-          images: ["https://www.aquafuncity.com/images/galeri/aqua1.jpg", "https://cdn.alanyatekmar.com/f48067f0-fc19-4515-8b5c-17b64703c6bf.jpg"], 
-          desc: "Ein ganzer Tag Wasserspaß mit offenem Buffet und Bier/Wein inklusive.", 
-          longDesc: "Bereiten Sie sich auf den ultimativen Sommertag vor! Unser Wasserpark-Paket bietet mehr als nur Rutschen. Genießen Sie einen Tag voller Action im besten Wasserpark der Region mit über 20 Rutschen und Wellenbecken. Das Highlight: In unserem Partnerhotel erwartet Sie ein hochwertiges offenes Buffet zum Mittagessen sowie unbegrenzt Bier und Wein zur Erfrischung. Die perfekte Kombination aus Familienspaß und All-inclusive-Komfort.",
-          highlights: ["20+ High-Speed-Rutschen", "Offenes Mittagsbuffet inklusive", "Bier & Wein inklusive", "Riesiges Wellenbecken", "Ganztägiger Hotelzugang"], 
-          included: ["Eintrittskarte", "Offenes Buffet-Mittagessen", "Unbegrenzt Bier & Wein", "Sonnenliegen & Schirme", "Hoteltransfer"] 
+          duration: "8 Stunden", 
+          images: ["https://www.kulturportali.gov.tr/contents/images/sapanderekanyonulogolu_20180914111051287.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Sapadere-Canyon-Tour-Tursay-Travel-13.webp"], 
+          desc: "Ein Holzsteg durch die Schlucht und eiskalte Wasserfälle.", 
+          longDesc: "Entfliehen Sie der Sommerhitze und lassen Sie sich von der erfrischenden Atmosphäre der Sapadere-Schlucht verzaubern. Nur 40 km von Alanya entfernt, wurde dieser Ort erst 2008 für den Tourismus erschlossen und hat sich seine unberührte Schönheit bewahrt. Auf einem 750 Meter langen Holzsteg wandern Sie durch die Schlucht und bestaunen die gewaltigen Felswände zu beiden Seiten. Zahlreiche kleine und große Wasserfälle begleiten Ihren Weg. Die Mutigsten unter Ihnen können in den natürlichen Becken schwimmen – selbst im Hochsommer steigt die Wassertemperatur selten über 12 Grad! Nach der Schlucht besuchen wir das Dorf Sapadere, wo noch immer traditionelle Seidenweberei betrieben wird. Außerdem erkunden wir die 'Zwergenhöhle' (Cüceler Mağarası) mit ihren beeindruckenden Stalaktiten und Stalagmiten.",
+          highlights: ["Wanderung auf dem Holzsteg", "Schwimmen im Wasserfall", "Besuch der Zwergenhöhle", "Seidenweberei-Vorführung", "Traditionelle Dorftour"], 
+          included: ["Transferservice", "Alle Eintrittsgelder", "Reiseleitung"]
         },
         { 
           slug: "night-jeep-safari", 
@@ -978,18 +890,7 @@ export const translations = {
           desc: "Erleben Sie das Taurusgebirge unter dem Sternenhimmel mit Musik und Offroad-Spaß.", 
           longDesc: "Wenn die Sonne untergeht, beginnt das wahre Abenteuer. Unsere Nacht-Jeep-Safari führt Sie in das Taurusgebirge für einen Nervenkitzel der besonderen Art. Wir fahren mit offenen 4x4-Jeeps zu Panoramapunkten, um den Sonnenuntergang über der Stadt Alanya und dem Mittelmeer zu beobachten. Die kühle Bergluft und die funkelnden Lichter der Stadt erzeugen eine magische Atmosphäre. Der perfekte Weg, um der Tageshitze zu entkommen und die wilde Seite Alanyas bei Nacht zu erleben.",
           highlights: ["Taurusgebirge Sonnenuntergangsblick", "Offroad-Nachtfahrt", "Live-Unterhaltung & Feuershow", "Sternenklare Panoramaaussichten"], 
-          included: ["Abholung & Rücktransfer", "4x4-Jeep-Transport", "Reiseleitung", "Unterhaltungsshow"] 
-        },
-        { 
-          slug: "land-of-legends", 
-          name: "The Land of Legends Themenpark", 
-          price: "€80", 
-          duration: "Ganztägig", 
-          images: ["https://www.alanya-tours.com/public/content/images/Tours/49/big/The-Land-of-Legends-Theme-Park-from-Alanya_175671848968b56599334b0.webp", "https://www.touralanya.com/TurResimleri/031813landoflegandstripsfromalanya.jpeg"], 
-          desc: "Türkei's größter Themenpark mit 40+ Rutschen und erstaunlichen Achterbahnen.", 
-          longDesc: "Treten Sie ein in eine Welt voller Fantesie und Abenteuer. The Land of Legends ist nicht nur ein Themenpark; es ist ein riesiger Unterhaltungskomplex mit einem großen Wasserpark (Kingdom of Sea) und einem Themenpark (Adventure Park). Trotzen Sie dem 62 Meter hohen Hyper Coaster, erleben Sie den 525 Meter langen Typhoon Coaster oder entspannen Sie im Wellenbecken. Der Park bietet außerdem unglaubliche Delfin- und Weißwal-Shows. Am Abend verwandelt sich der 'Château'-Bereich mit einer spektakulären Bootsparade und musikalischer Lichtshow. Ein Weltklasse-Erlebnis, das Adrenalin, Wasserspaß und magisches Geschichtenerzählen für die ganze Familie verbindet.",
-          highlights: ["Hyper Coaster (62m hoch)", "Riesiger Wasserparkbereich", "Delfin- und Seelöwen-Shows", "5D-Kino", "Legendäre Bootsparade"], 
-          included: ["Ganztages-Eintrittsticket", "Zugang zum Wasserpark", "Adrenalin-Fahrgeschäfte", "Delfin-Show-Zugang", "Rücktransfer"] 
+          included: ["Abholung & Rücktransfer", "4x4-Jeep-Transport", "Reiseleitung", "Unterhaltungsshow"]
         },
         { 
           slug: "diving", 
@@ -1000,18 +901,62 @@ export const translations = {
           desc: "Erkunden Sie die Unterwasserwelt von Alanya mit professionellen Tauchlehrern.", 
           longDesc: "Entdecken Sie die verborgenen Schätze des Mittelmeers. Egal, ob Sie Anfänger oder erfahrener Taucher sind, Alanya bietet kristallklares Wasser und eine vielfältige Meereswelt. Unsere Tour beginnt mit einer ausführlichen Einweisung in Ausrüstung und Tauchtechniken durch PADI/CMAS-zertifizierte Tauchlehrer. Wir fahren mit dem Boot zu zwei verschiedenen Tauchplätzen, darunter Unterwasserhöhlen und Riffe. Sie schwimmen an farbenfrohen Fischen, Kraken und vielleicht sogar Meeresschildkröten vorbei. Für Anfänger ist der erste Tauchgang ein flacher Einführungstauchgang, um sich mit der Ausrüstung vertraut zu machen. Ein unvergessliches Erlebnis in der Stille des tiefen Blaus.",
           highlights: ["Zwei verschiedene Tauchplätze", "Unterwasser-Höhlensystem", "Professionelle PADI/CMAS-Guides", "Komplette moderne Ausrüstung", "Bootsfahrt"], 
-          included: ["Komplette Profi-Ausrüstung", "Zwei geführte Tauchgänge", "Versicherung", "Hoteltransfer"] 
+          included: ["Komplette Profi-Ausrüstung", "Zwei geführte Tauchgänge", "Versicherung", "Hoteltransfer"]
         },
         { 
-          slug: "antalya-aquarium", 
-          name: "Antalya Seilbahn & Aquarium Tour", 
+          slug: "fishing", 
+          name: "Morgendliches Hochseefischen", 
+          price: "€40", 
+          duration: "6 Stunden", 
+          images: ["https://www.albashop.com.tr/Data/EditorFiles/En_Dog__ru_Bal__k_Av___Zaman___Nas__l_Belirlenir__3.jpg"], 
+          desc: "Friedlicher Vormittag auf See mit Profi-Ausrüstung.", 
+          longDesc: "Möchten Sie der Mittagshitze und dem Trubel entfliehen und die friedlichste Zeit auf dem Meer genießen? Unser Fischerboot ist mit modernsten Echoloten zum Aufspüren von Fischen und hochwertigen Ruten ausgestattet. Egal, ob Sie Profi oder Anfänger sind, unser erfahrener Kapitän bringt Sie zu den Stellen, an denen Doraden, Wolfsbarsche und andere Köstlichkeiten am zahlreichsten sind. Genießen Sie den Sonnenaufgang und den Blick auf die Küste, während Sie Ihre Angel auswerfen.",
+          highlights: ["Sonnenaufgang an der Küste", "Moderne Fischfinder-Technologie", "Hochwertige Angelruten", "Erfahrener Kapitän"], 
+          included: ["Angelausrüstung", "Köder", "Kapitän-Guiding", "Transport"]
+        },
+        { 
+          slug: "turkish-bath", 
+          name: "Traditionelles Hamam: Pure Entspannung", 
+          price: "€30", 
+          duration: "3 Stunden", 
+          images: ["https://cdn.alanyatekmar.com/e6a4a96a-9fc4-442b-87df-a2fff0b99841.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Turkish-Bath-Hamam-Tour-Tursay-Travel-1.webp"], 
+          desc: "Zeit für Erneuerung mit Peeling, Schaum und Ölmassage.", 
+          longDesc: "Gönnen Sie sich eine jahrtausendealte Tradition für Gesundheit und Wohlbefinden. Ihr Hamam-Erlebnis beginnt in der Wärme des 'Göbek tasi' (Marmorstein), wo sich Ihre Poren öffnen. Danach folgt eine professionelle Peeling-Massage mit dem Seidenhandschuh (Kese). Es folgt eine himmlische Schaummassage inmitten riesiger Seifenblasenwolken. Unser Paket beinhaltet auch Zugang zur Salzgrotte, Sauna und zum Dampfbad. Zum Abschluss verwöhnen wir Sie im Ruheraum mit einem türkischen Tee, gefolgt von einer 20-minütigen Ganzkörper-Ölmassage durch unsere Experten. Wenn Sie das Hamam verlassen, werden Sie sich federleicht fühlen und von Ihrer samtweichen Haut begeistert sein.",
+          highlights: ["Authentisches Marmor-Hamam", "Ganzkörper-Seidenpeeling", "Sanfte Schaummassage", "Entspannende Ölmassage", "Sauna & Salzgrotte inklusive"], 
+          included: ["Peeling & Kese", "Schaummassage", "20 Min. Ölmassage", "Sauna & Salzgrotte", "Kräutertees", "Transfer"]
+        },
+        { 
+          slug: "turkish-night", 
+          name: "Orient-Express: Türkische Nacht Show", 
           price: "€45", 
-          duration: "8 Stunden", 
-          images: ["https://www.talyatur.com/images/tour/104912_b.jpg", "https://royalfuntour.com/media-uploads/Oceanarium-Antalya.jpg"], 
-          desc: "Erleben Sie Unterwasser-Magie im Antalya Aquarium und eine Panorama-Seilbahnfahrt.", 
-          longDesc: "Erleben Sie Unterwasser-Magie im Antalya Aquarium mit dem größten Tunnel-Aquarium der Welt. Die Tour beinhaltet auch den Besuch der historischen Altstadt (Kaleiçi), die Düden-Wasserfälle und eine Panorama-Seilbahnfahrt auf den Tünektepe.",
-          highlights: ["131m Weltweit größtes Tunnel-Aquarium", "Geführter Rundgang durch die Altstadt", "Besuch der Düden-Wasserfälle", "Panorama-Seilbahnfahrt", "Tausende von Meeresbewohnern"], 
-          included: ["Hotelabholung & Rücktransfer", "Eintrittskarte fürs Aquarium", "Seilbahnticket", "Professioneller Reiseleiter"] 
+          duration: "4 Stunden", 
+          images: ["https://www.touralanya.com/TurResimleri/003837alanyaturkishnight.jpeg", "https://www.goreme.com/image/cache/catalog/Urunler/activities/turkish-night/turkish-night-show-134-900x600.jpg"], 
+          desc: "Ein Fest der türkischen Kultur, Tänze und Küche.", 
+          longDesc: "Wir laden Sie ein zu einer Nacht, die von den prächtigen Traditionen der Osmanen bis zur Energie der modernen Türkei reicht. Unsere Türkische Nacht ist eine energiegeladene Show mit professionellen Tänzern in authentischen Kostümen. Das Programm reicht von den wirbelnden Derwischen Mevlanas bis zu traditionellen Tänzen aus allen Regionen der Türkei und atemberaubenden Bauchtanzshows. Die Show ist interaktiv – oft werden Gäste eingeladen, auf der Bühne mitzumachen. Wir bieten Ihnen eine Atmosphäre, in der Sie die Seele der Türkei voll spüren können.",
+          highlights: ["Sufi-Derwisch-Tanz", "Regionale Folkloretänze", "Professionelle Bauchtanzshow", "Interaktive Bühnenshow"], 
+          included: ["Alle Shows & Programme", "Rücktransfer"]
+        },
+        { 
+          slug: "aquapark", 
+          name: "Wasserpark-Abenteuer & Hotel-Luxus", 
+          price: "€45", 
+          duration: "Ganztägig", 
+          images: ["https://www.aquafuncity.com/images/galeri/aqua1.jpg", "https://cdn.alanyatekmar.com/f48067f0-fc19-4515-8b5c-17b64703c6bf.jpg"], 
+          desc: "Ein ganzer Tag Wasserspaß mit offenem Buffet und Bier/Wein inklusive.", 
+          longDesc: "Bereiten Sie sich auf den ultimativen Sommertag vor! Unser Wasserpark-Paket bietet mehr als nur Rutschen. Genießen Sie einen Tag voller Action im besten Wasserpark der Region mit über 20 Rutschen und Wellenbecken. Das Highlight: In unserem Partnerhotel erwartet Sie ein hochwertiges offenes Buffet zum Mittagessen sowie unbegrenzt Bier und Wein zur Erfrischung. Die perfekte Kombination aus Familienspaß und All-inclusive-Komfort.",
+          highlights: ["20+ High-Speed-Rutschen", "Offenes Mittagsbuffet inklusive", "Bier & Wein inklusive", "Riesiges Wellenbecken", "Ganztägiger Hotelzugang"], 
+          included: ["Eintrittskarte", "Offenes Buffet-Mittagessen", "Unbegrenzt Bier & Wein", "Sonnenliegen & Schirme", "Hoteltransfer"]
+        },
+        { 
+          slug: "side-manavgat", 
+          name: "Antike Trilogie: Side – Aspendos – Manavgat", 
+          price: "€45", 
+          duration: "9 Saat", 
+          images: ["https://calista.com.tr/media/3jhj2jz0/aspendos006-1170x650.jpg?format=webp&quality=85", "https://www.gezire.com/wp-content/uploads/2025/10/Manavgat-Selalesi-764x500.jpg", "https://www.kulturportali.gov.tr/contents/images/SELEUK%20(4).JPG"], 
+          desc: "Die Pracht der römischen Architektur und die Frische der Wasserfälle.", 
+          longDesc: "Begeben Sie sich auf eine Reise in das goldene Zeitalter des Römischen Reiches. Unser erster Halt ist das am besten erhaltene römische Theater der Welt: Aspendos. Das im 2. Jahrhundert n. Chr. erbaute Theater besitzt eine akustische Perfektion, die noch heute für internationale Festivals genutzt wird. Weiter geht es in die antike Hafenstadt Side. Schlendern Sie durch die von Säulen gesäumten Straßen und besichtigen Sie den Apollon-Tempel direkt am Meer, wo sich laut Legende Antonius und Kleopatra trafen. Zum Abschluss genießen wir eine erfrischende Pause am Manavgat Wasserfall. Er ist zwar nicht besonders hoch, bietet aber durch seine enorme Breite ein beeindruckendes Naturschauspiel. Genießen Sie die mediterrane Brise auf sich wirken. Diese Tour verbindet archäologische Wunder ideal mit natürlicher Erholung.",
+          highlights: ["Römisches Theater Aspendos", "Apollon-Tempel in Side", "Manavgat Wasserfall", "Antike Hafenstadt Side", "Antikes Theater-Museum"], 
+          included: ["Hin- und Rücktransfer", "Historiker als Reiseleiter", "Eintrittsgelder Aspendos & Side"]
         },
         { 
           slug: "green-canyon", 
@@ -1022,7 +967,106 @@ export const translations = {
           desc: "Entspannen Sie auf dem smaragdgrünen Wasser des Oymapınar-Stausees.", 
           longDesc: "Entfliehen Sie in das Herz der Natur im Green Canyon. Segeln Sie durch das smaragdgrüne Wasser umgeben vom Taurusgebirge. Erkunden Sie den Großen und Kleinen Canyon und schwimmen Sie im erfrischenden See.",
           highlights: ["Smaragdgrüne Wasser-Kreuzfahrt", "Schwimmen im Oymapınar-Staudamm", "Große & Kleine Canyon-Erkundung", "Atemberaubende Aussichten auf das Taurusgebirge", "Unberührte Natur & Tierwelt"], 
-          included: ["Hoteltransfer", "Bootsfahrt", "Versicherung"] 
+          included: ["Hoteltransfer", "Bootsfahrt", "Versicherung"]
+        },
+        { 
+          slug: "rafting", 
+          name: "Köprüçay Rafting-Abenteuer", 
+          price: "€35", 
+          duration: "6 Stunden", 
+          images: ["https://cmsal.argeya.com/Content/CompanyFiles/YazilarYeniImg/alanya-rafting.jpg", "https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp"], 
+          desc: "Stürzen Sie sich ins Abenteuer auf dem türkisfarbenen Wasser des Köprülü Canyons.", 
+          longDesc: "Schnappen Sie sich ein Paddel und machen Sie sich bereit, nass zu werden! Rafting auf dem Köprücay-Fluss ist das beliebteste Abenteuer in der Region Antalya – und das aus gutem Grund. Der Fluss fließt unter antiken römischen Brücken hindurch, mitten durch das Herz eines wunderschönen Nationalparks. Die Tour beginnt mit einer ausführlichen Sicherheitseinweisung und der Ausgabe der Ausrüstung. Dann steigen wir in Boote für 8-10 Personen oder für die Mutigeren in 2er-Kanus. Die Strecke ist 14 km lang und bietet spannende Stromschnellen. Zwischendurch haben Sie die Möglichkeit, in das eiskalte, aber kristallklare Wasser zu springen. Unsere Guides sorgen mit Spielen und Animationen für zusätzliche Unterhaltung.",
+          highlights: ["14km Professionelles Rafting", "Antike Römerbrücke Besichtigung", "Body-Rafting-Einheiten", "Baden im eiskalten Fluss", "Lustige Gruppenspiele"], 
+          included: ["Helm & Schwimmweste", "Boot & Paddel", "Erfahrener Bootsführer", "Hoteltransfer"]
+        },
+        { 
+          slug: "mix-adventure", 
+          name: "Legendäre Mix-Abenteuer (3-in-1 Adrenalin)", 
+          price: "€55", 
+          duration: "8 Stunden", 
+          images: ["https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=1210,dpr=1/tour_img/640b4d905f5e4.png", "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,height=755,dpr=1/tour_img/5b8b721278a099cfddd9975af2c8dd627c2259fd05374f4f7efa7ef96e0b5775.png"], 
+          desc: "Wildwasser-Rafting, Zipline und Atv/Buggy-Safari in einer Schlucht.", 
+          longDesc: "Für alle, die Action lieben, ist diese Tour das Nonplusultra! Wir bringen Sie in den Köprülü-Kanyon-Nationalpark, das Herz des Abenteuersports in der Türkei. Ihr Tag beginnt mit einer 14 Kilometer langen, spannenden Rafting-Tour auf dem Köprücay Fluss. Unter Anleitung professioneller Instruktoren bezwingen Sie die Wellen. Mitten im Fluss machen wir eine Pause für den nächsten Kick: Zipline! Sie schweben wie ein Vogel über den Fluss. Safari. Auf schlammigen und unebenen Wegen durch Pinienwälder geben Sie mit dem ATV oder Buggy ordentlich Gas. Diese Tour verspricht die maximale Dosis Spaß und Adrenalin an nur einem einzigen Tag.",
+          highlights: ["14km Rafting-Strecke", "Zipline über den Canyon", "Off-road Safari (Buggy/ATV)", "Sprung ins kühle Nass", "Fotostopp am Tazi Canyon"], 
+          included: ["Komplette Schutzausrüstung", "Professionelle Guides", "Alle Transfers", "Unfallversicherung"]
+        },
+        { 
+          slug: "zipline", 
+          name: "5-in-1 Mega Adrenalin-Kombi: Das ultimative Antalya-Abenteuer", 
+          price: "€75", 
+          duration: "10 Stunden", 
+          images: ["https://tursaytravel.com/wp-content/uploads/2024/05/Alanya-Buggy-Rafting-Zipline-Tour-Tursay-Travel-13.webp", "https://www.schweitzer.com/-/media/schweitzer/summer-activities/schweitzer-zipline-1920x1080.jpg"], 
+          desc: "Rafting, Zipline, Tazi Canyon, Quad und Buggy-Safari - alles an einem unglaublichen Tag.", 
+          longDesc: "Warum wählen, wenn man alles haben kann? Dies ist unser umfassendstes Abenteuerpaket für echte Adrenalinjunkies. Ihr Tag beginnt mit einer Reise durch das Taurusgebirge zum prächtigen Tazi Canyon. Nach einem Fotostopp am Aussichtspunkt 'Adlernest' geht es zum Fluss für eine 14 km lange Rafting-Tour. Doch der Spaß hört hier nicht auf – du fliegst mit der Zipline über den Canyon und übernimmst dann die Kontrolle über ein Quad oder einen Buggy für eine Offroad-Waldsafari.",
+          highlights: ["Tazi Canyon Erkundung", "14km Wildwasser-Rafting", "Riesen-Canyon-Zipline", "Off-road Quad/Buggy Safari", "Doğa-Abenteuer"], 
+          included: ["Alle Abenteuer-Ausrüstungen", "Professionelle Guides", "Hotelabholung & Rücktransfer"]
+        },
+        { 
+          slug: "land-of-legends", 
+          name: "The Land of Legends Themenpark", 
+          price: "€80", 
+          duration: "Ganztägig", 
+          images: ["https://www.alanya-tours.com/public/content/images/Tours/49/big/The-Land-of-Legends-Theme-Park-from-Alanya_175671848968b56599334b0.webp", "https://www.touralanya.com/TurResimleri/031813landoflegandstripsfromalanya.jpeg"], 
+          desc: "Türkei's größter Themenpark mit 40+ Rutschen und erstaunlichen Achterbahnen.", 
+          longDesc: "Treten Sie ein in eine Welt voller Fantesie und Abenteuer. The Land of Legends ist nicht nur ein Themenpark; es ist ein riesiger Unterhaltungskomplex mit einem großen Wasserpark (Kingdom of Sea) und einem Themenpark (Adventure Park). Trotzen Sie dem 62 Meter hohen Hyper Coaster, erleben Sie den 525 Meter langen Typhoon Coaster oder entspannen Sie im Wellenbecken. Der Park bietet außerdem unglaubliche Delfin- und Weißwal-Shows. Am Abend verwandelt sich der 'Château'-Bereich mit einer spektakulären Bootsparade und musikalischer Lichtshow. Ein Weltklasse-Erlebnis, das Adrenalin, Wasserspaß und magisches Geschichtenerzählen für die ganze Familie verbindet.",
+          highlights: ["Hyper Coaster (62m hoch)", "Riesiger Wasserparkbereich", "Delfin- und Seelöwen-Shows", "5D-Kino", "Legendäre Bootsparade"], 
+          included: ["Ganztages-Eintrittsticket", "Zugang zum Wasserpark", "Adrenalin-Fahrgeschäfte", "Delfin-Show-Zugang", "Rücktransfer"]
+        },
+        { 
+          slug: "antalya-aquarium", 
+          name: "Antalya Seilbahn & Aquarium Tour", 
+          price: "€45", 
+          duration: "8 Stunden", 
+          images: ["https://www.talyatur.com/images/tour/104912_b.jpg", "https://royalfuntour.com/media-uploads/Oceanarium-Antalya.jpg"], 
+          desc: "Erleben Sie Unterwasser-Magie im Antalya Aquarium und eine Panorama-Seilbahnfahrt.", 
+          longDesc: "Erleben Sie Unterwasser-Magie im Antalya Aquarium mit dem größten Tunnel-Aquarium der Welt. Die Tour beinhaltet auch den Besuch der historischen Altstadt (Kaleiçi), die Düden-Wasserfälle und eine Panorama-Seilbahnfahrt auf den Tünektepe.",
+          highlights: ["131m Weltweit größtes Tunnel-Aquarium", "Geführter Rundgang durch die Altstadt", "Besuch der Düden-Wasserfälle", "Panorama-Seilbahnfahrt", "Tausende von Meeresbewohnern"], 
+          included: ["Hotelabholung & Rücktransfer", "Eintrittskarte fürs Aquarium", "Seilbahnticket", "Professioneller Reiseleiter"]
+        },
+        { 
+          slug: "kekova", 
+          name: "Kekova – Demre – Myra (Expedition der antiken Zivilisationen)", 
+          price: "€50", 
+          duration: "11 Stunden", 
+          images: ["https://kekovatekneturu.com/wp-content/uploads/Simena-Grave-Tomb-Demre.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_PE7wwOiCWscwlqcEpg2A_pvpGnfmQROdLw&s", "https://gunluktur.net/wp-content/uploads/2021/12/tourbooking-turkey.jpeg"], 
+          desc: "Eine historische Reise zu den antiken Ruinen und dem Erbe des Heiligen Nikolaus.", 
+          longDesc: "Diese Tour wurde für Geschichts- und Naturliebhaber konzipiert, um die verborgenen Schätze der lykischen Küste zu entdecken. Wir starten in Demre mit dem Besuch der St.-Nikolaus-Kirche, in der der echte Weihnachtsmann lebte und wirkte. Die byzantinischen Fresken werden Sie beeindrucken. Weiter geht es zur antiken Stadt Myra, bekannt für ihre beeindruckenden lykischen Felsengräber, die direkt in die steilen Felswände gemeißelt wurden. Der absolute Höhepunkt ist die Bootsfahrt zur versunkenen Stadt Kekova. Sie werden die überfluteten Ruinen, Treppen und Mauern einer 2000 Jahre alten Zivilisation sehen. Während der Fahrt legen wir Badepausen in traumhaften Buchten wie der Aquarium-Bucht ein, um das azurblaue Wasser des Mittelmeers zu genießen.",
+          highlights: ["Exklusive Bootstour", "Versunkene Stadt Kekova", "Lykische Felsengräber in Myra", "St.-Nikolaus-Gedächtniskirche", "Baden in türkisfarbenen Buchten"], 
+          included: ["Transfer ab Hotel", "Bootstour zur versunkenen Stadt", "Alle Eintrittskarten", "Reiseversicherung"]
+        },
+        { 
+          slug: "pamukkale", 
+          name: "Pamukkale & Salda See (Weißes Paradies)", 
+          price: "€45", 
+          duration: "13 Stunden", 
+          images: ["https://cdn.getyourguide.com/img/location/49d723a60f36e112.jpeg/99.jpg", "https://www.barcelo.com/guia-turismo/wp-content/uploads/pamukkale.jpg"], 
+          desc: "Weiße Sinterterrassen, die antike Stadt Hierapolis und das türkische Malediven-Feeling am Salda See.", 
+          longDesc: "Begleiten Sie uns auf eine unvergessliche Reise zum 8. Weltwunder: Pamukkale. Dieses UNESCO-Welterbe ist weltberühmt für seine schneeweißen Kalksinterterrassen, die über Jahrtausende durch kalkhaltiges Thermalwasser geformt wurden. Sie können barfuß über diese natürlichen Stufen wandern und das heilende Wasser spüren. Unsere Tour führt uns weiter zur antiken Stadt Hierapolis, dem bedeutendsten Thermalzentrum der römischen Zeit. Hier besichtigen Sie das gigantische antike Theater, die größte Nekropole Anatoliens und den berühmten Kleopatra-Pool, in dem Sie zwischen antiken Säulen schwimmen können. Am Nachmittag besuchen wir den Salda See, der mit seinem kristallklaren, türkisfarbenen Wasser und dem weißen Magnesiumsand als 'Malediven der Türkei' bekannt ist. Ein perfekter Ort für traumhafte Fotos und ein erfrischendes Bad in einem der saubersten Seen der Welt.",
+          highlights: ["Weiße Kalkterrassen", "Antike Stadt Hierapolis", "Salda See (Türkische Malediven)", "Antiker Kleopatra-Pool", "Römisches Theater von Hierapolis"], 
+          included: ["Luxus-Hoteltransfer", "Professionelle Reiseleitung", "Klimatisierter Transport", "Eintritt Salda See"]
+        },
+        { 
+          slug: "lavanta-garden", 
+          name: "Lavendel-Träume & Salda-Magie", 
+          price: "€40", 
+          duration: "12 Stunden", 
+          images: ["https://burdur.com.tr/wp-content/uploads/2022/03/MKXT0132.jpg"], 
+          desc: "Die endlosen lila Felder von Kuyucak and der weiße Zauber des Salda Sees.", 
+          longDesc: "Möchten Sie in eine Welt voller Farben und Düfte entfliehen? In den Sommermonaten verwandelt sich das Dorf Kuyucak in ein lila schimmerndes Meer aus Lavendel. Auf unserer Tour können Sie durch diese aromatischen Felder spazieren, etwas über die Gewinnung von Lavendelöl lernen und die besten Fotos Ihres Lebens machen. Die Dorfbewohner erwarten Sie mit Souvenirs. Der zweite Teil der Tour führt zum Salda See, einem der schönsten Naturgebiete der Türkei. Dank seines hohen Magnesiumgehalts verfügt der See über strahlend weißen Sand und leuchtend türkisfarbenes Wasser. Entspannen Sie am Ufer, schwimmen Sie im heilenden Wasser und finden Sie Ruhe in diesem geschützten Naturpark. Diese Tour ist ein Balsam für die Sinne und perfekt für eine Auszeit in der Natur.",
+          highlights: ["Lavendelfelder Fotoshooting", "Kuyucak Dorferlebnis", "Baden im Salda See", "Naturspaziergang"], 
+          included: ["Kompletter Transferservice", "Professionelle Reiseleitung", "Eintrittspreise für Naturparks"]
+        },
+        { 
+          slug: "cappadocia", 
+          name: "Kappadokien: Eine Märchenreise (2 Tage)", 
+          price: "€120", 
+          duration: "2 Tage", 
+          images: ["https://blog.obilet.com/wp-content/uploads/2018/10/kapadokya.jpg"], 
+          desc: "Erleben Sie die Magie der Feenkamine, unterirdischen Städte und Heißluftballons.", 
+          longDesc: "Tauchen Sie ein in eine world, die wie von einem anderen Planeten wirkt. Unsere 2-tägige Kappadokien-Tour lässt Sie den Geist dieser mystischen Region hautnah spüren. Am 1. Tag erkunden wir das Freilichtmuseum von Göreme mit seinen beeindruckenden felsen Kirchen aus dem Mittelalter. Im Tal der Mönche (Pasabag) sehen Sie die ikonischen dreiköpfigen Feenkamine, und am Nachmittag steigen wir in eine der riesigen unterirdischen Städte hinab, die früher als Zufluchtsort dienten. Der 2. Tag beginnt auf Wunsch vor Sonnenaufgang mit einer der berühmtesten Aktivitäten weltweit: einer Heißluftballonfahrt (optional). Hunderte bunte Ballons am Morgenhimmel zu sehen, ist ein magischer Moment. Wir besuchen zudem die Burg von Uçhisar für einen Panoramablick über die gesamte Region. Sie übernachten in einem authentischen Höhlen- oder Stein-Hotel, um die Atmosphäre Kappadokiens voll auszuschöpfen.",
+          highlights: ["Freilichtmuseum Göreme", "Feenkamine von Pasabag", "Beeindruckende Untergrundstadt", "Panoramafestung Uçhisar", "Devrent (Imagination) Valley"], 
+          included: ["Übernachtung in Boutique-Hotel", "Fachkundiger Reiseleiter", "Komfortabler VIP-Transport", "Dorfbesichtigungen"]
         },
         { 
           slug: "istanbul-tour", 
@@ -1033,18 +1077,7 @@ export const translations = {
           desc: "Fliegen Sie in die Stadt der zwei Kontinente und besuchen Sie die Ikonen der Weltgeschichte.", 
           longDesc: "Ein Tagesausflug nach Istanbul per Flugzeug. Besuchen Sie die Blaue Moschee, Hagia Sophia und den Topkapi-Palast. Genießen Sie eine Bosphorus-Kreuzfahrt zwischen Europa und Asien und stöbern Sie auf dem Gewürzmarkt, bevor Sie abends nach Antalya zurückkehren.",
           highlights: ["Blaue Moschee & Hagia Sophia", "Geführte Topkapi-Palast Tour", "Bosphorus-Kreuzfahrt (Europa vs. Asien)", "Hippodrome & Ägyptischer Basar", "Volles VIP-Tagesmanagement"], 
-          included: ["Hin- und Rückflugtickets", "Alle VIP-Transfers", "Professioneller Reiseleiter", "Alle Eintrittsgelder für Museen"] 
-        },
-        { 
-          slug: "alanya-all-in-one", 
-          name: "Alanya City Tour – All-in-1 Erlebnis", 
-          price: "€40", 
-          duration: "8 Stunden", 
-          images: ["https://www.besttimetravel.com.tr/public/uploads/0000/1/2026/04/04/copilot-20260404-113528.png"], 
-          desc: "Erleben Sie einen unvergesslichen Tag mit der All-in-1 Alanya City Tour mit Dim-Fluss, Dim-Höhle, Orangengärten, Wasserfall, Aquapark and einer Bootstour mit Schaumparty!", 
-          longDesc: "Machen Sie sich bereit, die einzigartigen Schönheiten von Alanya an einem einzigen Tag zu entdecken! Diese Tour ist ein unvergessliches Erlebnis, das Natur, Geschichte, Kultur und Spaß verbindet. Begleitet von unseren professionellen und freundlichen Fahrern holen wir Sie morgens von Ihrem Hotel ab und bringen Sie mit einem ganztägigen Programm zu den besondersten Orten Alanyas. Wir reisen in das Herz der Natur im kühlen Paradies des Dim-Flusses. Während Sie eine Badepause im eiskalten Wasser einlegen, bringt die üppige grüne Natur um Sie herum Frieden. Wir betreten die Dim-Höhle, eine der berühmtesten Naturschönheiten Alanyas. Unsere Tour bietet auch kulturelle Erkundungen. Durch den Besuch eines historischen Dorfhauses werden Sie Zeuge der Vergangenheit Alanyas, und anschließend lernen Sie bei unserem Moscheebesuch die lokale Kultur und Architektur aus nächster Nähe kennen. Sie spazieren durch Orangengärten inmitten duftender Zitrusdüfte und lauschen dann der Melodie der Natur im kühlen Wasser des kleinen Wasserfalls. Auf den Rutschen im Aquapark am Dim-Fluss erwarten Sie lustige Momente. Wir begeben uns auf eine einstündige private Bootstour im Blau des Mittelmeers. Wir legen eine Badepause auf offener See ein und erreichen dann mit einer Schaumparty den Gipfel des Vergnügens! 🎉",
-          highlights: ["Panorama-Terrassenblick", "Dim-Fluss Schwimmen & Aquapark", "Wasserschlacht-Spaß", "Erkundung der Dim-Höhle", "Besuch eines historischen Dorfhauses", "Moschee & lokale Kultur", "Spaziergang im Orangengarten", "Besuch des kleinen Wasserfalls", "Köstliches Mittagessen", "1-stündige Bootstour", "Schwimmen im offenen Meer", "Schaumparty-Feier"], 
-          included: ["Komfortabler Transport", "Professionelle Reiseleitung", "Köstliches Mittagessen", "Bootstour-Erlebnis"] 
+          included: ["Hin- und Rückflugtickets", "Alle VIP-Transfers", "Professioneller Reiseleiter", "Alle Eintrittsgelder für Museen"]
         }
       ]
     },

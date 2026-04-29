@@ -341,7 +341,7 @@ const fetchPrices = async () => {
                 <h3 className="serif" style={{ fontSize: '1.8rem' }}>Tour Prices</h3>
               </div>
               <div style={{ display: 'grid', gap: '15px' }}>
-                {['pamukkale', 'rafting', 'mix-adventure', 'kekova', 'paragliding', 'jeep-safari', 'night-jeep-safari', 'land-of-legends', 'diving', 'cappadocia', 'zipline', 'luxury-boat', 'quad-safari', 'sapadere-canyon', 'side-manavgat', 'fishing', 'city-tour'].map(slug => (
+                {['alanya-all-in-one', 'luxury-boat', 'vip-luxury-yacht', 'city-tour', 'jeep-safari', 'paragliding', 'quad-safari', 'sapadere-canyon', 'night-jeep-safari', 'diving', 'fishing', 'turkish-bath', 'turkish-night', 'horse-tour', 'aquapark', 'dolphin-show', 'side-manavgat', 'green-canyon', 'rafting', 'mix-adventure', 'zipline', 'land-of-legends', 'antalya-aquarium', 'kekova', 'pamukkale', 'lavanta-garden', 'cappadocia', 'istanbul-tour'].map(slug => (
                   <div key={slug} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px', background: 'rgba(0,0,0,0.02)', borderRadius: '20px' }}>
                     <span style={{ textTransform: 'capitalize', fontWeight: '600' }}>{slug.replace(/-/g, ' ')}</span>
                     <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
