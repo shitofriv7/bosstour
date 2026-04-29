@@ -8,6 +8,7 @@ import { translations } from '../translations';
 import Navbar from '../../components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import { supabase } from '@/lib/supabase';
 
 export default function TransferPage() {
   
@@ -17,6 +18,40 @@ export default function TransferPage() {
   const [showSuccess, setShowSuccess] = useState(false);
   
   const { lang, setLang, t } = useLanguage();
+
+  const [dbPrices, setDbPrices] = useState({});
+  const [pricesLoading, setPricesLoading] = useState(true);
+
+  React.useEffect(() => {
+    const fetchPrices = async () => {
+      setPricesLoading(true);
+      const { data } = await supabase.from('prices').select('*').eq('type', 'transfer');
+      if (data) {
+        const priceMap = {};
+        data.forEach(item => {
+          priceMap[item.id] = item.price;
+        });
+        setDbPrices(priceMap);
+      }
+      setPricesLoading(false);
+    };
+    fetchPrices();
+  }, []);
+
+  const getTransferSlug = (name) => {
+    if (!name) return '';
+    return name.toLowerCase()
+      .replace(/[\s\W-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  };
+
+  const transfers = (t?.transfer?.list || []).map(item => {
+    const slug = getTransferSlug(item.name);
+    return {
+      ...item,
+      price: dbPrices[slug] || item.price
+    };
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -95,7 +130,7 @@ export default function TransferPage() {
           </div>
 
           <div style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '40px' }}>
-            {(t?.transfer?.list || []).map((item, i) => (
+            {transfers.map((item, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 30 }} 
@@ -109,7 +144,9 @@ export default function TransferPage() {
                   {item?.images?.[0] && (
                     <Image src={item.images[0]} alt={item?.name || ''} fill style={{ objectFit: 'cover' }} />
                   )}
-                  <div className="vibrant-badge" style={{ position: 'absolute', top: '25px', right: '25px' }}>{item?.price}</div>
+                  <div className="vibrant-badge" style={{ position: 'absolute', top: '25px', right: '25px' }}>
+                    {pricesLoading ? <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }}>•••</motion.div> : item?.price}
+                  </div>
                 </div>
                 <div style={{ padding: '40px' }}>
                   <h3 className="serif" style={{ fontSize: '2.2rem', marginBottom: '15px' }}>{item?.name}</h3>

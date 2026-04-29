@@ -51,7 +51,7 @@ export default function AboutPage() {
                 style={{ background: '#f8fafc', padding: '50px', borderRadius: '40px', flex: 1, border: '1px solid #eee', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
               >
                  <Star color="var(--primary)" size={32} style={{ marginBottom: '30px' }} />
-                 <h3 className="serif" style={{ fontSize: '2.2rem', marginBottom: '20px' }}>{lang === 'tr' ? 'Neden Biz?' : 'Why Us?'}</h3>
+                 <h2 className="serif" style={{ fontSize: '2.2rem', marginBottom: '20px' }}>{lang === 'tr' ? 'Neden Biz?' : 'Why Us?'}</h2>
                  <p style={{ opacity: 0.6, lineHeight: 1.6, marginBottom: '30px' }}>
                    {lang === 'tr' ? 
                      '12 yılı aşkın süredir Antalya’nın en seçkin noktalarında, en lüks araçlarla misafirlerimize hizmet veriyoruz.' : 
@@ -137,9 +137,9 @@ export default function AboutPage() {
                         <span>AVSALLAR MAH. SÖGÜT CAD. ÜNAL APTARTMANI SİTESİ ÜNAL APARTMAN NO: 17A ALANYA / ANTALYA</span>
                      </p>
                      <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                        <a href="tel:+905434499552" style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '1.8rem', fontWeight: '900', color: '#000', textDecoration: 'none' }}>
+                        <a href="tel:+905424142586" style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '1.8rem', fontWeight: '900', color: '#000', textDecoration: 'none' }}>
                            <Phone size={24} color="var(--primary)" />
-                           +90 543 449 95 52
+                           +90 542 414 25 86
                         </a>
                         <a href="mailto:bosstourrentacar@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '15px', fontSize: '1.4rem', fontWeight: '800', color: '#000', textDecoration: 'none' }}>
                            <Mail size={24} color="var(--primary)" />
@@ -148,7 +148,7 @@ export default function AboutPage() {
                      </div>
                   </div>
                   <div style={{ display: 'flex', gap: '20px' }}>
-                     <a href="https://wa.me/905434499552" target="_blank" className="btn-gold" style={{ padding: '18px 40px', fontSize: '11px' }}>WHATSAPP CHAT</a>
+                     <a href="https://wa.me/905424142586" target="_blank" className="btn-gold" style={{ padding: '18px 40px', fontSize: '11px' }}>WHATSAPP CHAT</a>
                      <a href="https://www.google.com/maps/search/?api=1&query=AVSALLAR+MAH+SÖGÜT+CAD+ÜNAL+APTARTMANI+SİTESİ+ALANYA" target="_blank" className="btn-outline" style={{ padding: '18px 40px', fontSize: '11px' }}>DIRECTIONS</a>
                   </div>
                </motion.div>

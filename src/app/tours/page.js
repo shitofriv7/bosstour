@@ -115,7 +115,7 @@ export default function ToursPage() {
               >
                 <Link href={`/tours/${tour?.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div style={{ height: '240px', position: 'relative' }}>
-                    <Image src={tour?.images?.[0]} alt={tour?.name} fill style={{ objectFit: 'cover' }} />
+                    <Image src={tour?.images?.[0]} alt={`${tour?.name} - Private Tour Antalya Alanya`} fill style={{ objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', top: '20px', right: '20px', background: 'var(--primary)', color: '#fff', padding: '8px 15px', borderRadius: '100px', fontWeight: '900', fontSize: '14px', minWidth: '60px', textAlign: 'center' }}>
                       {pricesLoading ? (
                         <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1.5 }}>•••</motion.div>
@@ -125,7 +125,7 @@ export default function ToursPage() {
                     </div>
                   </div>
                   <div style={{ padding: '30px' }}>
-                    <h3 className="serif" style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{tour?.name}</h3>
+                    <h2 className="serif" style={{ fontSize: '1.8rem', marginBottom: '15px' }}>{tour?.name}</h2>
                     <p style={{ opacity: 0.6, fontSize: '14px', marginBottom: '25px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{tour?.desc}</p>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.5, fontSize: '12px' }}>

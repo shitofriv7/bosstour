@@ -6,7 +6,7 @@ import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 export default function WhatsAppButton() {
   const [activeTab, setActiveTab] = useState('whatsapp'); // 'whatsapp' or 'instagram'
-  const phoneNumber = "905434499552";
+  const phoneNumber = "905424142586";
   const message = "Merhaba! Boss Tour ile iletişime geçmek istiyorum.";
   const instagramUrl = "https://www.instagram.com/boss_tour_rentacar/";
 

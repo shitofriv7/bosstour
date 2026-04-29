@@ -400,6 +400,39 @@ const fetchPrices = async () => {
                 ))}
               </div>
             </div>
+
+            <div className="luxury-card" style={{ padding: '40px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
+                <Car style={{ color: 'var(--primary)' }} />
+                <h3 className="serif" style={{ fontSize: '1.8rem' }}>Transfer Prices</h3>
+              </div>
+              <div style={{ display: 'grid', gap: '15px' }}>
+                {['mercedes-vito-vip', 'mercedes-vito-maybach-edition'].map(slug => (
+                  <div key={slug} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px', background: 'rgba(0,0,0,0.02)', borderRadius: '20px' }}>
+                    <span style={{ textTransform: 'capitalize', fontWeight: '600' }}>{slug.replace(/-/g, ' ')}</span>
+                    <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                      <span style={{ fontWeight: '800', color: 'var(--primary)', fontSize: '1.2rem' }}>
+                        {prices.find(p => p.id === slug)?.price || '-'}
+                      </span>
+                      {editingPrice === slug ? (
+                        <div style={{ display: 'flex', gap: '8px' }}>
+                          <input 
+                            className="luxury-input" 
+                            style={{ width: '90px', padding: '8px 15px', background: '#fff' }} 
+                            placeholder="Price" 
+                            value={newPriceValue}
+                            onChange={(e) => setNewPriceValue(e.target.value)}
+                          />
+                          <button onClick={() => handleUpdatePrice(slug, 'transfer')} className="btn-gold" style={{ padding: '10px 15px', fontSize: '10px' }}>Save</button>
+                        </div>
+                      ) : (
+                        <button onClick={() => { setEditingPrice(slug); setNewPriceValue(prices.find(p => p.id === slug)?.price || ''); }} style={{ background: 'none', border: 'none', color: 'var(--secondary)', fontWeight: '700', cursor: 'pointer', fontSize: '13px' }}>Edit</button>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         )}
       </div>

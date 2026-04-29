@@ -295,7 +295,7 @@ export default function Navbar({ lang, setLang, t }) {
               <p style={{ fontSize: '12px', opacity: 0.5, letterSpacing: '2px' }}>{t?.nav?.about?.toUpperCase()}</p>
               
               <a 
-                href="https://wa.me/905434499552" target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/905424142586" target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}
               >
                 <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#25D366', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
@@ -303,7 +303,7 @@ export default function Navbar({ lang, setLang, t }) {
                 </div>
                 <div>
                   <div style={{ fontSize: '10px', opacity: 0.5, fontWeight: '800', color: '#fff' }}>WhatsApp</div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#fff', margin: 0 }}>+90 543 449 95 52</h3>
+                  <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: '#fff', margin: 0 }}>+90 542 414 25 86</h3>
                 </div>
               </a>
 

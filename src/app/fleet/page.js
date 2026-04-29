@@ -132,7 +132,7 @@ export default function FleetPage() {
                 {activeLang === 'tr' ? 'ANA SAYFAYA DÖN' : 'BACK TO HOME'}
               </button>
               <h1 className="serif" style={{ fontSize: 'clamp(3.5rem, 8vw, 6.5rem)', lineHeight: 1, marginBottom: '20px', background: 'var(--vibrant-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                {t?.fleet?.title || 'Fleet'}
+                {t?.fleet?.title || 'Luxury Fleet'}
               </h1>
               <p className="luxury-para" style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem', opacity: 0.7 }}>
                 {t?.fleet?.subtitle || ''}
@@ -154,7 +154,7 @@ export default function FleetPage() {
               >
                 <div style={{ height: '320px', position: 'relative', background: 'linear-gradient(to bottom, #f8fafc, #fff)', borderBottom: '1px solid rgba(0,0,0,0.03)' }}>
                   {car.images && car.images[0] && (
-                    <Image src={car.images[0]} alt={car.name || ''} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'contain', padding: '40px' }} />
+                    <Image src={car.images[0]} alt={`${car.name} Luxury Car Rental Alanya Antalya`} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'contain', padding: '40px' }} />
                   )}
                   <div style={{ 
                     position: 'absolute', 
@@ -179,7 +179,7 @@ export default function FleetPage() {
                 </div>
                 <div style={{ padding: '40px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
-                    <h3 className="serif" style={{ fontSize: '2.4rem' }}>{car?.name}</h3>
+                    <h2 className="serif" style={{ fontSize: '2.4rem' }}>{car?.name}</h2>
                   </div>
                   
                   <div style={{ display: 'flex', gap: '15px', marginBottom: '30px', flexWrap: 'wrap' }}>
